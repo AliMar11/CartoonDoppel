@@ -621,10 +621,10 @@
                                 <exclude reference="kLq-5V-9O9"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="QHh-Nc-FrM"/>
                                 <exclude reference="AFt-Hc-u2T"/>
                                 <exclude reference="PoS-wF-qzK"/>
                                 <exclude reference="cn3-FZ-he2"/>
-                                <exclude reference="QHh-Nc-FrM"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -632,10 +632,10 @@
                                 <include reference="kLq-5V-9O9"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="QHh-Nc-FrM"/>
                                 <include reference="AFt-Hc-u2T"/>
                                 <include reference="PoS-wF-qzK"/>
                                 <include reference="cn3-FZ-he2"/>
-                                <include reference="QHh-Nc-FrM"/>
                             </mask>
                         </variation>
                     </view>
