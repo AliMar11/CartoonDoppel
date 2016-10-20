@@ -25,26 +25,53 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
     [super viewDidLoad];
     
     NSLog(@"COLLECTIONV TIME");
-    [self.collectionViewOne registerClass:[ALMDuppleCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
+    [self.collectionViewOne registerClass: [ALMDuppleCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
     self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk", @"homer2", @"sam", @"sans", @"tina2"];
+
     
-    [self.collectionViewOne reloadData];
+   // [self.collectionViewOne reloadData];
 }
+     
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [UIView animateWithDuration: 4 delay: 0 options: UIViewAnimationOptionRepeat animations:^{
+        NSInteger section = [self numberOfSectionsInCollectionView: self.collectionViewOne] - 1;
+       // NSInteger item = [self collectionView: self.collectionViewOne numberOfItemsInSection: section] - 1;
+        
+        NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem: [self.dupplePictures count] -1 inSection: section];
+        
+        [self.collectionViewOne scrollToItemAtIndexPath: lastIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated: NO];
+    } completion:nil];
+    
+}
+
 
 //trial collectionView auto-scroll
 -(void)viewDidAppear:(BOOL)animated
 {
-    NSIndexPath *currentItem = [self.dupplePictures objectAtIndex:0];
-    NSIndexPath *nextItem = [NSIndexPath indexPathForItem: (long)[self.dupplePictures objectAtIndex: 1] inSection: currentItem.section];
-    
-    [self.collectionViewOne scrollToItemAtIndexPath: nextItem atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
-}
+    [super viewDidAppear: animated];
+    /*
+        NSTimeInterval duration = 4;
+        [UIView animateWithDuration: duration delay: 0 usingSpringWithDamping: 1 initialSpringVelocity: 0.5 options:UIViewAnimationOptionRepeat animations:^{
+            
+            NSInteger section = [self numberOfSectionsInCollectionView: self.collectionViewOne] - 1;
+            NSInteger item = [self collectionView: self.collectionViewOne numberOfItemsInSection: section] - 1;
+            NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem: item inSection: section];
+            [self.collectionViewOne scrollToItemAtIndexPath: lastIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+            
+        }completion:nil];
+   // }];
+     
+     */
+    }
 
 #pragma mark <UICollectionViewDataSource>
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -56,13 +83,20 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
 {
     ALMDuppleCollectionViewCell *cellOne = (ALMDuppleCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath: indexPath];
     
-     [[[cellOne contentView] subviews] makeObjectsPerformSelector: @selector(removeFromSuperview)];
+    //cellOne.layer.shouldRasterize = YES;
+    //cellOne.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    
+    // [[[cellOne contentView] subviews] makeObjectsPerformSelector: @selector(removeFromSuperview)];
 
-        UIImage *mugshot = [[UIImage alloc] init];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
         
+        UIImage *mugshot = [[UIImage alloc] init];
+
         if (cellOne)
         {
             mugshot = [UIImage imageNamed: self.dupplePictures[indexPath.row]];
+            NSLog(@"\n\nIMAGENAME:%@", self.dupplePictures[indexPath.row]);
             
             UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
             mugshotView.autoresizingMask = NO;
@@ -71,10 +105,15 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
             mugshotView.frame = cellOne.bounds;
             mugshotView.contentMode = UIViewContentModeScaleToFill;
             mugshotView.clipsToBounds = YES;
-            mugshotView.layer.cornerRadius = self.view.frame.size.height/2;
-
+            mugshotView.layer.cornerRadius = cellOne.frame.size.height/2;
+            
+            // cellOne.frame = self.collectionViewOne.visibleCells;
+            //[cellOne.heightAnchor constraintEqualToConstant: self.collectionViewOne.];
             [cellOne addSubview: mugshotView];
         }
+    });
+    
+ 
 
     return cellOne;
 }

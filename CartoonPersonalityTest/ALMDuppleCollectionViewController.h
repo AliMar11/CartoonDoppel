@@ -10,6 +10,6 @@
 #import "ALMStartScreenViewController.h"
 #import "ALMCharacter.h"
 
-@interface ALMDuppleCollectionViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface ALMDuppleCollectionViewController : UIViewController 
 
 @end

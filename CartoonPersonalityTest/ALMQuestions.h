@@ -10,7 +10,6 @@
 #import "ALMCharacter.h"
 
 @interface ALMQuestions : NSObject
-//@property (nonatomic, strong) NSMutableArray *questionArray;
 @property (nonatomic, strong) NSString *question;
 @property (nonatomic, strong) NSDictionary *choiceA;
 @property (nonatomic, strong) NSDictionary *choiceB;

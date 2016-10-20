@@ -22,12 +22,14 @@
     [super viewDidLoad];
     
     self.sharedDatastore = [ALMQuestions sharedData];
+  
     [self setUpTheQuest];
     
 }
 
 -(void)setUpTheQuest
-{//perhaps when a Q is anwsered, we delete it from the array? this way the next question will always be item 0. Or we create a counter to keep track
+{//this is helper meth that feeds the Q to the VC
+    
     
     [ALMQuestions createQuestions: ^(NSMutableArray * questionsArray)
      {
@@ -35,45 +37,20 @@
          
          NSLog(@"\n\nSELF.Qlist=\n%@\n\n", self.questionList);
          
-         for (ALMQuestions *question in  self.questionList)
-         {
+   //      for (ALMQuestions *question in  self.questionList)
+    //     {
+         ALMQuestions *question = self.questionList.firstObject;
+         
              self.questionTextField.text = question.question;
-              [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceA] forState:UIControlStateNormal];
-              [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceB] forState:UIControlStateNormal];
-              [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceC] forState:UIControlStateNormal];
-              [self.choiceDbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceD] forState:UIControlStateNormal];
+              [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceA[@"aaa"] ] forState:UIControlStateNormal];
+              [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceB[@"bbb"]] forState:UIControlStateNormal];
+              [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceC[@"ccc"]] forState:UIControlStateNormal];
+              [self.choiceDbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceD[@"ddd"]] forState:UIControlStateNormal];
              
              NSLog(@"\n\nCURRENT question:\n%@\n\n\n", question);
-             
-         }
          
      }];
-    //[ALMQuestions createQuestions];
     
-//    [[ALMQuestions sharedData] createQuestions: ^(NSMutableArray *questionsArray)
-//     {
-//         self.questionList = questionsArray;
-//         
-//         for (ALMQuestions *question in  self.questionList)
-//         {
-//             self.questionTextField.text = question.question;
-////             [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceA] forState:UIControlStateNormal];
-////             [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceB] forState:UIControlStateNormal];
-////             [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceC] forState:UIControlStateNormal];
-////             [self.choiceDbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceD] forState:UIControlStateNormal];
-//             
-//         }
-//         
-//     }];
-    
-    
-    /*
-    self.questionTextField = self.questions[@"Q"];
-    self.choiceAbutton = self.questions[@"A"];
-    self.choiceBbutton = self.questions[@"B"];
-    self.choiceCbutton = self.questions[@"C"];
-    self.choiceDbutton = self.questions[@"D"];
-     */
     
 }
 

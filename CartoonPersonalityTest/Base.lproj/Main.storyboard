@@ -37,11 +37,12 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-sJ-XrX" userLabel="startButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-sJ-XrX" userLabel="startButton">
                                 <rect key="frame" x="190" y="633" width="34" height="30"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" selected="YES"/>
                                 </accessibility>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxA-Pq-WNs"/>
@@ -76,10 +77,10 @@
                             <constraint firstItem="AZe-1c-bF5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="luU-Te-eav">
                                 <variation key="heightClass=regular" constant="174"/>
                             </constraint>
-                            <constraint firstItem="lxz-i1-GPl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.07" id="rdQ-9v-DX8"/>
+                            <constraint firstItem="lxz-i1-GPl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="rdQ-9v-DX8"/>
                             <constraint firstItem="AZe-1c-bF5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tAG-gq-Ppk"/>
                             <constraint firstItem="AZe-1c-bF5" firstAttribute="height" secondItem="qXa-Cy-1a9" secondAttribute="height" id="veO-FJ-VUf"/>
-                            <constraint firstItem="mbl-sJ-XrX" firstAttribute="top" secondItem="AZe-1c-bF5" secondAttribute="bottom" multiplier="1.15" id="wuu-Ph-d22"/>
+                            <constraint firstItem="mbl-sJ-XrX" firstAttribute="top" secondItem="AZe-1c-bF5" secondAttribute="bottom" multiplier="1.1" id="wuu-Ph-d22"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -140,69 +141,77 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAf-DQ-ZmO" userLabel="questionText Field">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="QB3-MN-4Kl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="b29-vW-Bqu" userLabel="multipleChoiceStackView">
-                                <rect key="frame" x="139" y="285" width="137" height="189"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-Qe-sH8" userLabel="choiceCbutton">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                </subviews>
                                 <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Rbn-Nk-hnF"/>
-                                        <exclude reference="zlk-PZ-qan"/>
-                                        <exclude reference="Anf-Qe-sH8"/>
-                                        <exclude reference="zp8-QL-pff"/>
+                                    <mask key="constraints">
+                                        <exclude reference="QB3-MN-4Kl"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" axis="vertical">
-                                    <mask key="subviews">
-                                        <include reference="Rbn-Nk-hnF"/>
-                                        <include reference="zlk-PZ-qan"/>
-                                        <include reference="Anf-Qe-sH8"/>
-                                        <include reference="zp8-QL-pff"/>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="QB3-MN-4Kl"/>
                                     </mask>
                                 </variation>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlR-tX-lo1">
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="VlR-tX-lo1">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Next!"/>
                                 <connections>
                                     <segue destination="cvo-6h-z7Q" kind="show" id="Pfz-6d-0Ig"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
+                                <rect key="frame" x="-50" y="285" width="184" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton">
+                                        <rect key="frame" x="46" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-Qe-sH8" userLabel="choiceCbutton">
+                                        <rect key="frame" x="92" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton">
+                                        <rect key="frame" x="138" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fPj-rx-47a"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fPj-rx-47a"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" alignment="fill" axis="vertical">
+                                    <mask key="constraints">
+                                        <include reference="fPj-rx-47a"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="b29-vW-Bqu" secondAttribute="trailing" id="1Te-KF-s5f"/>
+                            <constraint firstAttribute="trailing" secondItem="nBZ-lR-IKm" secondAttribute="trailing" constant="20" id="7zq-gm-HN1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eAf-DQ-ZmO" secondAttribute="trailing" id="I1f-xa-OEz"/>
-                            <constraint firstItem="b29-vW-Bqu" firstAttribute="top" secondItem="eAf-DQ-ZmO" secondAttribute="bottom" multiplier="1.65" id="J7j-Do-rJt"/>
                             <constraint firstItem="eAf-DQ-ZmO" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.07" id="KeK-kq-pX0"/>
-                            <constraint firstItem="Xbz-2T-NlP" firstAttribute="top" secondItem="b29-vW-Bqu" secondAttribute="bottom" multiplier="1.3" id="REs-PK-3UW"/>
+                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leading" constant="20" id="OzY-7a-qts"/>
                             <constraint firstItem="eAf-DQ-ZmO" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" id="RxR-kb-W3P"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="width" secondItem="zwY-Ad-kXO" secondAttribute="width" id="WeA-F0-JW0">
-                                <variation key="heightClass=regular" constant="-368"/>
+                                <variation key="heightClass=regular" constant="-357"/>
                             </constraint>
-                            <constraint firstItem="b29-vW-Bqu" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="Zqx-xz-PQV"/>
-                            <constraint firstItem="b29-vW-Bqu" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" id="acZ-E4-6Dm"/>
-                            <constraint firstItem="VlR-tX-lo1" firstAttribute="centerX" secondItem="b29-vW-Bqu" secondAttribute="centerX" id="h0k-7h-NQQ"/>
+                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="eAf-DQ-ZmO" secondAttribute="bottom" constant="78" id="daa-aE-agG"/>
+                            <constraint firstItem="VlR-tX-lo1" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="hL4-BF-Y4C"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.2" id="hvN-KL-iQf">
                                 <variation key="heightClass=regular" constant="-117.20000000000002"/>
                             </constraint>
@@ -221,14 +230,12 @@
                                 <exclude reference="KeK-kq-pX0"/>
                                 <exclude reference="RxR-kb-W3P"/>
                                 <exclude reference="oGs-Pv-8JG"/>
+                                <exclude reference="7zq-gm-HN1"/>
+                                <exclude reference="OzY-7a-qts"/>
+                                <exclude reference="daa-aE-agG"/>
                                 <exclude reference="WeA-F0-JW0"/>
-                                <exclude reference="h0k-7h-NQQ"/>
+                                <exclude reference="hL4-BF-Y4C"/>
                                 <exclude reference="hvN-KL-iQf"/>
-                                <exclude reference="1Te-KF-s5f"/>
-                                <exclude reference="J7j-Do-rJt"/>
-                                <exclude reference="Zqx-xz-PQV"/>
-                                <exclude reference="acZ-E4-6Dm"/>
-                                <exclude reference="REs-PK-3UW"/>
                                 <exclude reference="q5J-BJ-8Af"/>
                             </mask>
                         </variation>
@@ -239,17 +246,15 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="I1f-xa-OEz"/>
-                                <include reference="KeK-kq-pX0"/>
+                                <exclude reference="KeK-kq-pX0"/>
                                 <include reference="RxR-kb-W3P"/>
                                 <include reference="oGs-Pv-8JG"/>
+                                <include reference="7zq-gm-HN1"/>
+                                <include reference="OzY-7a-qts"/>
+                                <include reference="daa-aE-agG"/>
                                 <include reference="WeA-F0-JW0"/>
-                                <include reference="h0k-7h-NQQ"/>
+                                <include reference="hL4-BF-Y4C"/>
                                 <include reference="hvN-KL-iQf"/>
-                                <include reference="1Te-KF-s5f"/>
-                                <include reference="J7j-Do-rJt"/>
-                                <include reference="Zqx-xz-PQV"/>
-                                <include reference="acZ-E4-6Dm"/>
-                                <include reference="REs-PK-3UW"/>
                                 <include reference="q5J-BJ-8Af"/>
                             </mask>
                         </variation>
