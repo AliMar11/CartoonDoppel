@@ -11,6 +11,7 @@
 #import "ALMQuestionViewController.h"
 
 @interface ALMStartScreenViewController : UIViewController 
+@property (strong, nonatomic) NSString *userName;
 
 @end
 

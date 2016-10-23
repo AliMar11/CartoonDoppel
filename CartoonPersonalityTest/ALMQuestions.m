@@ -52,10 +52,10 @@
     [questionArray addObject: question];
     
     ALMQuestions *questionOne = [[ALMQuestions alloc] initWithQuestion: @"This is a Q"
-choiceA: @{@"This is choiceA" : @"comidic"}
-choiceB: @{@"This is choiceB" : @"arrogant"}
-choiceC: @{@"This is choiceC" : @"selfish"}
-choiceD: @{@"This is choiceD" : @"caring"}];
+                                                               choiceA: @{@"This is choiceA" : @"comidic"}
+                                                               choiceB: @{@"This is choiceB" : @"arrogant"}
+                                                               choiceC: @{@"This is choiceC" : @"selfish"}
+                                                               choiceD: @{@"This is choiceD" : @"caring"}];
     
     [questionArray addObject: questionOne];
     

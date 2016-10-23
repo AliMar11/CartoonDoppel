@@ -39,7 +39,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    ALMEndViewController *endVC = segue.destinationViewController;
+   // ALMEndViewController *endVC = segue.destinationViewController;
    // NSIndexPath *indexP = self.topFive.firstObject;
    // ALMCharacter *firstPlace = self.topFive[indexP];
    // endVC.theOne = firstPlace;

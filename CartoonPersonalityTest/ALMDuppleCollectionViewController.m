@@ -28,9 +28,8 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
     [self.collectionViewOne registerClass: [ALMDuppleCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
     self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk", @"homer2", @"sam", @"sans", @"tina2"];
-
     
-   // [self.collectionViewOne reloadData];
+    [self.collectionViewOne reloadData];
 }
      
 -(void)viewWillAppear:(BOOL)animated
@@ -48,12 +47,12 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
     
 }
 
-
+/*
 //trial collectionView auto-scroll
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear: animated];
-    /*
+ 
         NSTimeInterval duration = 4;
         [UIView animateWithDuration: duration delay: 0 usingSpringWithDamping: 1 initialSpringVelocity: 0.5 options:UIViewAnimationOptionRepeat animations:^{
             
@@ -65,8 +64,9 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
         }completion:nil];
    // }];
      
-     */
+ 
     }
+*/
 
 #pragma mark <UICollectionViewDataSource>
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -96,7 +96,7 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
         if (cellOne)
         {
             mugshot = [UIImage imageNamed: self.dupplePictures[indexPath.row]];
-            NSLog(@"\n\nIMAGENAME:%@", self.dupplePictures[indexPath.row]);
+            //NSLog(@"\n\nIMAGENAME:%@", self.dupplePictures[indexPath.row]);
             
             UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
             mugshotView.autoresizingMask = NO;
@@ -107,13 +107,9 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
             mugshotView.clipsToBounds = YES;
             mugshotView.layer.cornerRadius = cellOne.frame.size.height/2;
             
-            // cellOne.frame = self.collectionViewOne.visibleCells;
-            //[cellOne.heightAnchor constraintEqualToConstant: self.collectionViewOne.];
             [cellOne addSubview: mugshotView];
         }
     });
-    
- 
 
     return cellOne;
 }

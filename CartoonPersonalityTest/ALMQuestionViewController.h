@@ -11,7 +11,8 @@
 #import "ALMCharacter.h"
 
 @interface ALMQuestionViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *questionTextField;
+
+@property (weak, nonatomic) IBOutlet UITextView *questionTextView;
 @property (weak, nonatomic) IBOutlet UIButton *choiceAbutton;
 @property (weak, nonatomic) IBOutlet UIButton *choiceBbutton;
 @property (weak, nonatomic) IBOutlet UIButton *choiceCbutton;

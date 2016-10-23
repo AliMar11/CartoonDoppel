@@ -46,7 +46,6 @@
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxA-Pq-WNs"/>
-                                    <segue destination="1fu-ia-xTs" kind="show" id="eeM-Iu-S1S"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXa-Cy-1a9" userLabel="CVOneContainerView">
@@ -72,14 +71,18 @@
                             <constraint firstItem="lxz-i1-GPl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" multiplier="6" id="Tr0-c4-T4M"/>
                             <constraint firstItem="qXa-Cy-1a9" firstAttribute="top" secondItem="lxz-i1-GPl" secondAttribute="bottom" multiplier="1.35" constant="8" symbolic="YES" id="X0A-73-1H9"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lxz-i1-GPl" secondAttribute="leading" id="crq-26-44K"/>
-                            <constraint firstItem="AZe-1c-bF5" firstAttribute="top" secondItem="qXa-Cy-1a9" secondAttribute="bottom" multiplier="1.3" id="dUV-Hs-NHd"/>
+                            <constraint firstItem="AZe-1c-bF5" firstAttribute="top" secondItem="qXa-Cy-1a9" secondAttribute="bottom" multiplier="1.3" id="dUV-Hs-NHd">
+                                <variation key="heightClass=regular" constant="1"/>
+                            </constraint>
                             <constraint firstItem="lxz-i1-GPl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgd-4h-FBW"/>
                             <constraint firstItem="AZe-1c-bF5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="luU-Te-eav">
                                 <variation key="heightClass=regular" constant="174"/>
                             </constraint>
                             <constraint firstItem="lxz-i1-GPl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="rdQ-9v-DX8"/>
                             <constraint firstItem="AZe-1c-bF5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tAG-gq-Ppk"/>
-                            <constraint firstItem="AZe-1c-bF5" firstAttribute="height" secondItem="qXa-Cy-1a9" secondAttribute="height" id="veO-FJ-VUf"/>
+                            <constraint firstItem="AZe-1c-bF5" firstAttribute="height" secondItem="qXa-Cy-1a9" secondAttribute="height" id="veO-FJ-VUf">
+                                <variation key="heightClass=regular" constant="-1"/>
+                            </constraint>
                             <constraint firstItem="mbl-sJ-XrX" firstAttribute="top" secondItem="AZe-1c-bF5" secondAttribute="bottom" multiplier="1.1" id="wuu-Ph-d22"/>
                         </constraints>
                         <variation key="default">
@@ -122,6 +125,9 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="1fu-ia-xTs" kind="show" identifier="questionVCSegue" id="2W3-qk-QPl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,24 +145,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAf-DQ-ZmO" userLabel="questionText Field">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="QB3-MN-4Kl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="QB3-MN-4Kl"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="QB3-MN-4Kl"/>
-                                    </mask>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="VlR-tX-lo1">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -168,21 +156,33 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
                                 <rect key="frame" x="-50" y="285" width="184" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton">
+                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="0JT-jD-I57"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton">
                                         <rect key="frame" x="46" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="430-ah-9Ng"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-Qe-sH8" userLabel="choiceCbutton">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-Qe-sH8" userLabel="choiceCbutton">
                                         <rect key="frame" x="92" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="wkv-rb-06K"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton">
                                         <rect key="frame" x="138" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="mtk-7C-S0q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -199,40 +199,68 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAv-NC-cCV" userLabel="QuestionTextView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="mG8-Bp-U3S"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mG8-Bp-U3S"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <mask key="constraints">
+                                        <include reference="mG8-Bp-U3S"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nBZ-lR-IKm" secondAttribute="trailing" constant="20" id="7zq-gm-HN1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eAf-DQ-ZmO" secondAttribute="trailing" id="I1f-xa-OEz"/>
-                            <constraint firstItem="eAf-DQ-ZmO" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.07" id="KeK-kq-pX0"/>
+                            <constraint firstItem="JAv-NC-cCV" firstAttribute="top" secondItem="oFX-lS-3xi" secondAttribute="bottom" multiplier="5.5" id="DBF-8p-9Nm"/>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leading" constant="20" id="OzY-7a-qts"/>
-                            <constraint firstItem="eAf-DQ-ZmO" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" id="RxR-kb-W3P"/>
+                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="JAv-NC-cCV" secondAttribute="bottom" multiplier="1.8" id="TUb-ug-kQB"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="width" secondItem="zwY-Ad-kXO" secondAttribute="width" id="WeA-F0-JW0">
                                 <variation key="heightClass=regular" constant="-357"/>
                             </constraint>
-                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="eAf-DQ-ZmO" secondAttribute="bottom" constant="78" id="daa-aE-agG"/>
+                            <constraint firstItem="JAv-NC-cCV" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" constant="20" id="X1p-xD-IVq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JAv-NC-cCV" secondAttribute="trailing" constant="20" id="afZ-Qp-Siv"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="hL4-BF-Y4C"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.2" id="hvN-KL-iQf">
                                 <variation key="heightClass=regular" constant="-117.20000000000002"/>
                             </constraint>
-                            <constraint firstItem="eAf-DQ-ZmO" firstAttribute="top" secondItem="oFX-lS-3xi" secondAttribute="bottom" multiplier="6" id="oGs-Pv-8JG"/>
                             <constraint firstItem="Xbz-2T-NlP" firstAttribute="top" secondItem="VlR-tX-lo1" secondAttribute="bottom" multiplier="1.1" id="q5J-BJ-8Af">
                                 <variation key="heightClass=regular" constant="-51.600000000000023"/>
                             </constraint>
+                            <constraint firstItem="JAv-NC-cCV" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="zzH-cg-4s7"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="eAf-DQ-ZmO"/>
                                 <exclude reference="VlR-tX-lo1"/>
+                                <exclude reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="I1f-xa-OEz"/>
-                                <exclude reference="KeK-kq-pX0"/>
-                                <exclude reference="RxR-kb-W3P"/>
-                                <exclude reference="oGs-Pv-8JG"/>
+                                <exclude reference="DBF-8p-9Nm"/>
+                                <exclude reference="X1p-xD-IVq"/>
+                                <exclude reference="afZ-Qp-Siv"/>
+                                <exclude reference="zzH-cg-4s7"/>
                                 <exclude reference="7zq-gm-HN1"/>
                                 <exclude reference="OzY-7a-qts"/>
-                                <exclude reference="daa-aE-agG"/>
+                                <exclude reference="TUb-ug-kQB"/>
                                 <exclude reference="WeA-F0-JW0"/>
                                 <exclude reference="hL4-BF-Y4C"/>
                                 <exclude reference="hvN-KL-iQf"/>
@@ -241,17 +269,17 @@
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="eAf-DQ-ZmO"/>
                                 <include reference="VlR-tX-lo1"/>
+                                <include reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="I1f-xa-OEz"/>
-                                <exclude reference="KeK-kq-pX0"/>
-                                <include reference="RxR-kb-W3P"/>
-                                <include reference="oGs-Pv-8JG"/>
+                                <include reference="DBF-8p-9Nm"/>
+                                <include reference="X1p-xD-IVq"/>
+                                <include reference="afZ-Qp-Siv"/>
+                                <include reference="zzH-cg-4s7"/>
                                 <include reference="7zq-gm-HN1"/>
                                 <include reference="OzY-7a-qts"/>
-                                <include reference="daa-aE-agG"/>
+                                <include reference="TUb-ug-kQB"/>
                                 <include reference="WeA-F0-JW0"/>
                                 <include reference="hL4-BF-Y4C"/>
                                 <include reference="hvN-KL-iQf"/>
@@ -265,7 +293,7 @@
                         <outlet property="choiceBbutton" destination="zlk-PZ-qan" id="ZBQ-pG-zGO"/>
                         <outlet property="choiceCbutton" destination="Anf-Qe-sH8" id="c09-1n-iBv"/>
                         <outlet property="choiceDbutton" destination="zp8-QL-pff" id="l6e-o0-IEZ"/>
-                        <outlet property="questionTextField" destination="eAf-DQ-ZmO" id="ReW-Nu-AqG"/>
+                        <outlet property="questionTextView" destination="JAv-NC-cCV" id="YnC-mA-mJD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4E0-iv-AoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

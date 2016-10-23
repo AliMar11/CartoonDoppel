@@ -26,7 +26,7 @@
 //-(instancetype)initWithUserCharacter: (NSString*)userName
 //                     characterTraits: (ALMCharacterTraits*)traits;
 
-//-(void)createUser: (NSString*)userName;
++(void)createUser: (NSString*)userName;
 -(void)populateCharacterList;
 
 @end
