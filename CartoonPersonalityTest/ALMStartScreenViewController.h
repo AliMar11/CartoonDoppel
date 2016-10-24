@@ -12,6 +12,6 @@
 
 @interface ALMStartScreenViewController : UIViewController 
 @property (strong, nonatomic) NSString *userName;
-
+@property (strong, nonatomic) ALMCharacter *player;
 @end
 

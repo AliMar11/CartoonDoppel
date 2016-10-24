@@ -18,7 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *choiceCbutton;
 @property (weak, nonatomic) IBOutlet UIButton *choiceDbutton;
 @property (strong, nonatomic) NSMutableArray *questionList;
+@property (assign, nonatomic) int questionCounter;
 
--(void)setUpTheQuest;
+-(void)setUpTheQuest:(int)questionCounter;
 
 @end

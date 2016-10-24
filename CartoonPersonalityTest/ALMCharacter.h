@@ -22,11 +22,9 @@
 -(instancetype)initWithCharacter: (NSString*)characterName
                          picture: (UIImage*)mugshot
                  characterTraits: (ALMCharacterTraits*)traits;
-
-//-(instancetype)initWithUserCharacter: (NSString*)userName
-//                     characterTraits: (ALMCharacterTraits*)traits;
-
-+(void)createUser: (NSString*)userName;
 -(void)populateCharacterList;
+-(instancetype)initWithUserCharacter: (NSString*)userName
+                     characterTraits: (ALMCharacterTraits*)traits;
++(void)createUser: (NSString *)userName withCompletion: (void(^)())completion;
 
 @end

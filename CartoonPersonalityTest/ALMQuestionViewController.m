@@ -21,47 +21,40 @@
     [super viewDidLoad];
     
     self.sharedDatastore = [ALMQuestions sharedData];
-    [self setUpTheQuest];
+    [self setUpTheQuest: self.questionCounter];
     
     self.choiceAbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.choiceBbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.choiceCbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.choiceDbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.questionCounter = 0;
 }
 
--(void)setUpTheQuest
+-(void)setUpTheQuest:(int)questionCounter
 {//this is helper meth that feeds the Q to the VC
-    
     
     [ALMQuestions createQuestions: ^(NSMutableArray * questionsArray)
      {
          self.questionList = questionsArray;
          
-         int questionCounter = 0;
-         ALMQuestions *question = self.questionList[questionCounter];
+         ALMQuestions *question = self.questionList[self.questionCounter];
 
          NSLog(@"\n\nQUESTION: %@\n", question);
          
-        NSArray *key = [NSArray new];
-        [key arrayByAddingObjectsFromArray: question.choiceA.allKeys];
-         
-             self.questionTextView.text = question.question;
-             [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@",[NSArray arrayWithObject: question.choiceA.allKeys]] forState:UIControlStateNormal];
-             [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceB.allKeys]] forState: UIControlStateNormal];
-              [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceC.allKeys]] forState:UIControlStateNormal];
-              [self.choiceDbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceD.allKeys]] forState:UIControlStateNormal];
-         
-             NSLog(@"\n\nCURRENT question:\n%@\n\n\n", question);
+        self.questionTextView.text = question.question;
+        [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@",[NSArray arrayWithObject: question.choiceA.allKeys]] forState:UIControlStateNormal];
+        [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceB.allKeys]] forState: UIControlStateNormal];
+        [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceC.allKeys]] forState: UIControlStateNormal];
+        [self.choiceDbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceD.allKeys]] forState: UIControlStateNormal];
      }];
 }
 
 -(IBAction)buttClicked:(id)sender
 {
     NSLog(@"\n\nA BUTTON CLICKED DETECTED!\n\n\n");
-    //get the value of ButtonChoice.value and ++ it to the users trait characteristics.
-
+    self.questionCounter += 1;
+    [self setUpTheQuest: self.questionCounter];
 }
-
 
 -(void)allQuestionsAnswered
 {
@@ -81,7 +74,7 @@
     //pass userCharacterPoints
     
    // ALMAnalysisViewController *analysisVC = segue.destinationViewController;
-    //ALMCharacter *characterPoints = self.characterPoints;
+   // ALMCharacter *characterPoints = self.characterPoints;
    // analysisVC.characterPoints = characterPoints;
     
     

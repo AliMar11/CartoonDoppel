@@ -85,7 +85,6 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
     
     //cellOne.layer.shouldRasterize = YES;
     //cellOne.layer.rasterizationScale = [UIScreen mainScreen].scale;
-    
     // [[[cellOne contentView] subviews] makeObjectsPerformSelector: @selector(removeFromSuperview)];
 
     

@@ -254,6 +254,9 @@
                                 <exclude reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="WeA-F0-JW0"/>
+                                <exclude reference="hL4-BF-Y4C"/>
+                                <exclude reference="hvN-KL-iQf"/>
                                 <exclude reference="DBF-8p-9Nm"/>
                                 <exclude reference="X1p-xD-IVq"/>
                                 <exclude reference="afZ-Qp-Siv"/>
@@ -261,9 +264,6 @@
                                 <exclude reference="7zq-gm-HN1"/>
                                 <exclude reference="OzY-7a-qts"/>
                                 <exclude reference="TUb-ug-kQB"/>
-                                <exclude reference="WeA-F0-JW0"/>
-                                <exclude reference="hL4-BF-Y4C"/>
-                                <exclude reference="hvN-KL-iQf"/>
                                 <exclude reference="q5J-BJ-8Af"/>
                             </mask>
                         </variation>
@@ -273,6 +273,9 @@
                                 <include reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="WeA-F0-JW0"/>
+                                <include reference="hL4-BF-Y4C"/>
+                                <include reference="hvN-KL-iQf"/>
                                 <include reference="DBF-8p-9Nm"/>
                                 <include reference="X1p-xD-IVq"/>
                                 <include reference="afZ-Qp-Siv"/>
@@ -280,9 +283,6 @@
                                 <include reference="7zq-gm-HN1"/>
                                 <include reference="OzY-7a-qts"/>
                                 <include reference="TUb-ug-kQB"/>
-                                <include reference="WeA-F0-JW0"/>
-                                <include reference="hL4-BF-Y4C"/>
-                                <include reference="hvN-KL-iQf"/>
                                 <include reference="q5J-BJ-8Af"/>
                             </mask>
                         </variation>

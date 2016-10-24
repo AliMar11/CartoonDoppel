@@ -17,49 +17,51 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
 }
 
 -(void)setUpTheUser
 {
     UIAlertController *enterUserName = [UIAlertController alertControllerWithTitle:@"Let's get started!" message: @"Enter your name" preferredStyle: (UIAlertControllerStyleAlert)];
-    
-    UITextField *nameTextField = [[UITextField alloc]init];
-    
-    [enterUserName addTextFieldWithConfigurationHandler:^(UITextField *nameTextField)
+        
+    [enterUserName addTextFieldWithConfigurationHandler:^(UITextField *textField)
      {
-         nameTextField.placeholder = @"your name here";
-         nameTextField.textColor = [UIColor blueColor];
-         nameTextField.borderStyle = UITextBorderStyleRoundedRect;
-     }];
+         textField.placeholder = @"your name here";
+         textField.textColor = [UIColor blueColor];
+         textField.borderStyle = UITextBorderStyleRoundedRect;
+    
     
     UIAlertAction *enterUserNameAction = [UIAlertAction actionWithTitle:@"Done!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
                                           {
-                                              self.userName = nameTextField.text;
+                                              self.userName = textField.text;
+                                              NSLog(@"\n\nUSERNAME:%@\nUITEXTFILD:%@\n\n", self.userName, textField.text);
+                                              NSLog(@"\n\nSELF.USERRRRRR:%@\n\n", self.userName);
                                               
-                                              [ALMCharacter createUser:(NSString*)self.userName];
+                                              [ALMCharacter createUser: self.userName withCompletion:^(ALMCharacter *user)
+                                              {
+                                                  user = self.player;
+                                              }];
                                               
-                                              //[self dismissViewControllerAnimated: YES completion:nil];
-                                            //  ALMQuestionViewController *questionVC = [[ALMQuestionViewController alloc] init];
-                                              [self performSegueWithIdentifier: @"questionVCSegue" sender:nil];
-                                        
+                                              NSLog(@"\n\nDO WE HAVE A USER CHARACTER??\n: %@\n\n", self.player
+                                                    );
+                                              [self performSegueWithIdentifier: @"questionVCSegue" sender: nil];
                                           }];
+         
     
     [enterUserName addAction: enterUserNameAction];
-    
     [self presentViewController: enterUserName animated: YES completion: nil];
-    
-    
+          }];
 }
 
-- (IBAction)startTapped:(id)sender
-{
-    [self setUpTheUser];
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+
+- (IBAction)startTapped:(id)sender
+{
+    [self setUpTheUser];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
