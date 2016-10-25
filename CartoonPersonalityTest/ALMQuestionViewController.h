@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *choiceDbutton;
 @property (strong, nonatomic) NSMutableArray *questionList;
 @property (assign, nonatomic) int questionCounter;
+@property (strong, nonatomic) ALMCharacter *theUser;
 
 -(void)setUpTheQuest:(int)questionCounter;
 

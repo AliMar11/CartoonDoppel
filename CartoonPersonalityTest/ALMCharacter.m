@@ -25,14 +25,36 @@
     
     return  self;
 }
+
+-(instancetype)initWithUserCharacter:(NSString *)userName characterTraits:(ALMCharacterTraits *)traits
+{
+    self = [super init];
+    if(self)
+    {
+        _userName = userName;
+        _traits = traits;
+    }
+    return self;
+}
+
+
 +(void)createUser: (NSString *)userName  withCompletion: (void(^)())completion
 {
-    ALMCharacter *user = [[ALMCharacter alloc] initWithUserCharacter: userName characterTraits:\
-                          [[ALMCharacterTraits alloc] initWithAggressive: 0
-                                                            ambition: 0 cheerfulness: 0 clever: 0 comedic: 0 courageous: 0 creative: 0 despicable: 0 determined: 0 dorky: 0 eccentric: 0 enthusiastic: 0 genius: 0 fighter: 0 harmless: 0 lucky: 0 naive: 0 optimistic: 0 negative: 0 passionate: 0 positive: 0 prankster: 0 sassy: 0 sympathetic: 0 talented: 0  troublemaker: 0 trusting: 0 vulnerability: 0]];
+    ALMCharacterTraits *traits = [[ALMCharacterTraits alloc]initWithAggressive:0 ambition:0 cheerfulness:0 clever:0 comedic:0 courageous:0 creative:0 despicable:0 determined:0 dorky:0 eccentric:0 enthusiastic:0 genius:0 fighter:0 harmless:0 lucky:0 naive:0 optimistic:0 negative:0 passionate:0 positive:0 prankster:0 sassy:0 sympathetic:0 talented:0 troublemaker:0 trusting:0 vulnerability:0];
+    
+    NSLog(@"\n\nTRAITS:%@\n\n\n\n", traits);
+    ALMCharacter *user = [[ALMCharacter alloc] initWithUserCharacter: userName characterTraits:traits];
+                    
     
     NSLog(@"\n\n\nINIT IF 'USER' IN CHARACTER CLASS:%@\n\n\n", user);
     completion(user);
+}
+
++(void)tallyUserAnswers
+{
+    NSLog(@"\n\n\nTALLY TAKEN\n\n\n");
+    //take value for button
+    //search user traits for buttonValue trait and ++
 }
 
 -(void)populateCharacterList

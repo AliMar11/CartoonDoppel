@@ -38,26 +38,22 @@
                                               
                                               [ALMCharacter createUser: self.userName withCompletion:^(ALMCharacter *user)
                                               {
-                                                  user = self.player;
+                                                   self.player = user;
                                               }];
                                               
-                                              NSLog(@"\n\nDO WE HAVE A USER CHARACTER??\n: %@\n\n", self.player
-                                                    );
-                                              [self performSegueWithIdentifier: @"questionVCSegue" sender: nil];
+                                              [self performSegueWithIdentifier: @"questionVCSegue" sender: self];
+                                              NSLog(@"\n\nDO WE HAVE A USER CHARACTER??\n: %@\n\n", self.player);
                                           }];
-         
     
     [enterUserName addAction: enterUserNameAction];
     [self presentViewController: enterUserName animated: YES completion: nil];
           }];
 }
 
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 }
-
 
 - (IBAction)startTapped:(id)sender
 {
@@ -66,8 +62,12 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-      ALMQuestionViewController *questionVC = [[ALMQuestionViewController alloc] init];
-      questionVC = segue.destinationViewController;
+    if ([segue.identifier isEqualToString: @"questionVCSegue"])
+    {
+        ALMQuestionViewController *questionVC = segue.destinationViewController;
+        questionVC.theUser = self.player;
+    }
+
 }
 
 @end

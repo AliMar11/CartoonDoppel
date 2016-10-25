@@ -23,11 +23,13 @@
     self.sharedDatastore = [ALMQuestions sharedData];
     [self setUpTheQuest: self.questionCounter];
     
-    self.choiceAbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.choiceBbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.choiceCbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.choiceDbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//    self.choiceAbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//    self.choiceBbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//    self.choiceCbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//    self.choiceDbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.questionCounter = 0;
+    
+    NSLog(@"\n\n\n\n\nDO WE HAVE A USER AT QUESTIONSVC??:%@\n\n\n\n\n\n", self.theUser);
 }
 
 -(void)setUpTheQuest:(int)questionCounter
@@ -42,7 +44,7 @@
          NSLog(@"\n\nQUESTION: %@\n", question);
          
         self.questionTextView.text = question.question;
-        [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@",[NSArray arrayWithObject: question.choiceA.allKeys]] forState:UIControlStateNormal];
+        [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceA.allKeys[0]] forState:UIControlStateNormal];
         [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceB.allKeys]] forState: UIControlStateNormal];
         [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceC.allKeys]] forState: UIControlStateNormal];
         [self.choiceDbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceD.allKeys]] forState: UIControlStateNormal];
@@ -51,7 +53,8 @@
 
 -(IBAction)buttClicked:(id)sender
 {
-    NSLog(@"\n\nA BUTTON CLICKED DETECTED!\n\n\n");
+    NSLog(@"\n\nBUTTON CLICKED DETECTED!\n\n");
+    [ALMCharacter tallyUserAnswers];
     self.questionCounter += 1;
     [self setUpTheQuest: self.questionCounter];
 }

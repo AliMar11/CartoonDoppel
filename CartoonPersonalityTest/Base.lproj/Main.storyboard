@@ -153,7 +153,7 @@
                                     <segue destination="cvo-6h-z7Q" kind="show" id="Pfz-6d-0Ig"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
                                 <rect key="frame" x="-50" y="285" width="184" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton">

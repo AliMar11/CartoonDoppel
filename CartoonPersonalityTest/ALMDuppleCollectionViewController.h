@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ALMStartScreenViewController.h"
-#import "ALMCharacter.h"
 
 @interface ALMDuppleCollectionViewController : UIViewController 
 

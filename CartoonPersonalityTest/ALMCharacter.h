@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "ALMQuestions.h"
-#import "ALMQuestionViewController.h"
 #import "ALMCharacterTraits.h"
 
 @interface ALMCharacter : NSObject
@@ -22,9 +22,14 @@
 -(instancetype)initWithCharacter: (NSString*)characterName
                          picture: (UIImage*)mugshot
                  characterTraits: (ALMCharacterTraits*)traits;
+
 -(void)populateCharacterList;
+
 -(instancetype)initWithUserCharacter: (NSString*)userName
                      characterTraits: (ALMCharacterTraits*)traits;
+
 +(void)createUser: (NSString *)userName withCompletion: (void(^)())completion;
++(void)tallyUserAnswers;
+
 
 @end

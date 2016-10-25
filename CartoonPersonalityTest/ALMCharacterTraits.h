@@ -11,6 +11,7 @@
 @interface ALMCharacterTraits : NSObject
 @property (nonatomic, assign)int *aggressive;
 @property (nonatomic, assign)int *ambitious;
+@property (nonatomic, assign)int *careful;
 @property (nonatomic, assign)int *cheerful;
 @property (nonatomic, assign)int *clever;
 @property (nonatomic, assign)int *comedic;
@@ -29,9 +30,11 @@
 @property (nonatomic, assign)int *optimistic;
 @property (nonatomic, assign)int *negative;
 @property (nonatomic, assign)int *passionate;
+@property (nonatomic, assign)int *passive;
 @property (nonatomic, assign)int *positive;
 @property (nonatomic, assign)int *prankster;
 @property (nonatomic, assign)int *sassy;
+@property (nonatomic, assign)int *shy;
 @property (nonatomic, assign)int *sympathetic;
 @property (nonatomic, assign)int *talented;
 @property (nonatomic, assign)int *troublemaker;
@@ -40,9 +43,10 @@
 
 -(instancetype) initWithAggressive: (int)aggression
                           ambition: (int)ambition
+                           careful: (int)careful
                       cheerfulness: (int)cheerfulness
                             clever: (int)cleverness
-                           comedic: (int)comedy
+                           comedic: (int)comedic
                         courageous: (int)courage
                           creative: (int)creativity
                         despicable: (int)despicableness
@@ -58,9 +62,11 @@
                         optimistic: (int)optimisticness
                           negative: (int)negativity
                         passionate: (int)passion
+                           passive: (int)passive
                           positive: (int)positivity
                          prankster: (int)pracksterness
                              sassy: (int)sass
+                               shy: (int)shy
                        sympathetic: (int)sympathy
                           talented: (int)talent
                       troublemaker: (int)troublemaker

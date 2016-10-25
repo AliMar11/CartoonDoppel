@@ -29,20 +29,45 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
     
     self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk", @"homer2", @"sam", @"sans", @"tina2"];
     
-    [self.collectionViewOne reloadData];
+//    [self.collectionViewOne reloadData];
 }
      
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
+//    [UIView animateWithDuration: 4 delay: 0 options: UIViewAnimationOptionRepeat animations:^{
+////        NSInteger section = [self numberOfSectionsInCollectionView: self.collectionViewOne] - 1;
+//       // NSInteger item = [self collectionView: self.collectionViewOne numberOfItemsInSection: section] - 1;
+//        
+//        NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem: [self.dupplePictures count] -1 inSection: 1];
+//        
+//        [self.collectionViewOne scrollToItemAtIndexPath: lastIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated: NO];
+//        
+//        
+//        
+//    } completion:nil];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear: animated];
+    
+    NSIndexPath *firstIndexPath = [NSIndexPath indexPathForItem: 0 inSection: 0];
+    
+    [self.collectionViewOne scrollToItemAtIndexPath:firstIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    
     [UIView animateWithDuration: 4 delay: 0 options: UIViewAnimationOptionRepeat animations:^{
-        NSInteger section = [self numberOfSectionsInCollectionView: self.collectionViewOne] - 1;
-       // NSInteger item = [self collectionView: self.collectionViewOne numberOfItemsInSection: section] - 1;
+        //        NSInteger section = [self numberOfSectionsInCollectionView: self.collectionViewOne] - 1;
+        // NSInteger item = [self collectionView: self.collectionViewOne numberOfItemsInSection: section] - 1;
         
-        NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem: [self.dupplePictures count] -1 inSection: section];
+        NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem: [self.dupplePictures count] -1 inSection: 0];
         
         [self.collectionViewOne scrollToItemAtIndexPath: lastIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated: NO];
+        
+        
+        
     } completion:nil];
     
 }
