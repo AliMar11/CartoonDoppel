@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "ALMAnalysisViewController.h"
 #import "ALMCharacter.h"
 
@@ -21,6 +22,7 @@
 @property (assign, nonatomic) int questionCounter;
 @property (strong, nonatomic) ALMCharacter *theUser;
 
+-(void)viewSetup;
 -(void)setUpTheQuest:(int)questionCounter;
 
 @end

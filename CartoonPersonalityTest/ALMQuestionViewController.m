@@ -11,6 +11,7 @@
 
 @interface ALMQuestionViewController ()
 @property (nonatomic, strong) ALMQuestions *sharedDatastore;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @end
 
@@ -20,48 +21,84 @@
 {
     [super viewDidLoad];
     
+    self.nextButton.hidden = YES;
+
     self.sharedDatastore = [ALMQuestions sharedData];
-    [self setUpTheQuest: self.questionCounter];
+    [self viewSetup];
     
-//    self.choiceAbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-//    self.choiceBbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-//    self.choiceCbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-//    self.choiceDbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.questionCounter = 0;
+    [self setUpTheQuest: self.questionCounter];
+    self.questionTextView.layer.cornerRadius = 5;
+    self.questionTextView.clipsToBounds = YES;
+    [self.questionTextView.layer setBorderColor: [[[UIColor purpleColor] colorWithAlphaComponent: 0.2] CGColor]];
+    [self.questionTextView.layer setBorderWidth: 1.0];
     
-    NSLog(@"\n\n\n\n\nDO WE HAVE A USER AT QUESTIONSVC??:%@\n\n\n\n\n\n", self.theUser);
 }
 
 -(void)setUpTheQuest:(int)questionCounter
 {//this is helper meth that feeds the Q to the VC
-    
+
     [ALMQuestions createQuestions: ^(NSMutableArray * questionsArray)
      {
          self.questionList = questionsArray;
          
          ALMQuestions *question = self.questionList[self.questionCounter];
-
-         NSLog(@"\n\nQUESTION: %@\n", question);
          
+         NSLog(@"\n\nCOUNTER:%d  QUESTIONLIST COUNT: %ld\n\n", self.questionCounter, [self.questionList indexOfObject: question]);
+
         self.questionTextView.text = question.question;
+
         [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceA.allKeys[0]] forState:UIControlStateNormal];
-        [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceB.allKeys]] forState: UIControlStateNormal];
-        [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceC.allKeys]] forState: UIControlStateNormal];
-        [self.choiceDbutton setTitle: [NSString stringWithFormat: @"%@", [NSArray arrayWithObject: question.choiceD.allKeys]] forState: UIControlStateNormal];
+        [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceB.allKeys[0]] forState: UIControlStateNormal];
+        [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceC.allKeys[0]] forState: UIControlStateNormal];
+        [self.choiceDbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceD.allKeys[0]] forState: UIControlStateNormal];
+         
+         if (self.questionCounter == 10)
+         {
+             [self allQuestionsAnswered];
+         }
      }];
+}
+
+-(void)viewSetup
+{
+    self.choiceAbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.choiceAbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+    [self.choiceAbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
+    
+    self.choiceBbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.choiceBbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+    [self.choiceBbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
+    
+    self.choiceCbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.choiceCbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+    [self.choiceCbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
+    
+    self.choiceDbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.choiceDbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+    [self.choiceDbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
 }
 
 -(IBAction)buttClicked:(id)sender
 {
     NSLog(@"\n\nBUTTON CLICKED DETECTED!\n\n");
+
     [ALMCharacter tallyUserAnswers];
+    
     self.questionCounter += 1;
     [self setUpTheQuest: self.questionCounter];
+
 }
 
 -(void)allQuestionsAnswered
 {
-    //when questionsArray == 0 call segue to analysis VC
+    //when questionsArray == 0 call segue to analysis VC and appear the next button
+    self.choiceAbutton.hidden = YES;
+    self.choiceBbutton.hidden = YES;
+    self.choiceCbutton.hidden = YES;
+    self.choiceDbutton.hidden = YES;
+    
+    self.nextButton.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning

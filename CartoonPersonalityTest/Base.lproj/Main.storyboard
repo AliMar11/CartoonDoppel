@@ -153,32 +153,33 @@
                                     <segue destination="cvo-6h-z7Q" kind="show" id="Pfz-6d-0Ig"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
-                                <rect key="frame" x="-50" y="285" width="184" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
+                                <rect key="frame" x="-50" y="285" width="250" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="0JT-jD-I57"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton">
-                                        <rect key="frame" x="46" y="0.0" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton">
+                                        <rect key="frame" x="68" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="430-ah-9Ng"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-Qe-sH8" userLabel="choiceCbutton">
-                                        <rect key="frame" x="92" y="0.0" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-Qe-sH8" userLabel="choiceCbutton">
+                                        <rect key="frame" x="136" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="wkv-rb-06K"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton">
-                                        <rect key="frame" x="138" y="0.0" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton">
+                                        <rect key="frame" x="204" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="mtk-7C-S0q"/>
@@ -186,7 +187,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="fPj-rx-47a"/>
+                                    <constraint firstAttribute="height" constant="300" id="fPj-rx-47a"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -199,7 +200,7 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAv-NC-cCV" userLabel="QuestionTextView">
+                            <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAv-NC-cCV" userLabel="QuestionTextView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -233,7 +234,7 @@
                             <constraint firstAttribute="trailing" secondItem="nBZ-lR-IKm" secondAttribute="trailing" constant="20" id="7zq-gm-HN1"/>
                             <constraint firstItem="JAv-NC-cCV" firstAttribute="top" secondItem="oFX-lS-3xi" secondAttribute="bottom" multiplier="5.5" id="DBF-8p-9Nm"/>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leading" constant="20" id="OzY-7a-qts"/>
-                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="JAv-NC-cCV" secondAttribute="bottom" multiplier="1.8" id="TUb-ug-kQB"/>
+                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="JAv-NC-cCV" secondAttribute="bottom" multiplier="1.7" id="TUb-ug-kQB"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="width" secondItem="zwY-Ad-kXO" secondAttribute="width" id="WeA-F0-JW0">
                                 <variation key="heightClass=regular" constant="-357"/>
                             </constraint>
@@ -293,6 +294,7 @@
                         <outlet property="choiceBbutton" destination="zlk-PZ-qan" id="ZBQ-pG-zGO"/>
                         <outlet property="choiceCbutton" destination="Anf-Qe-sH8" id="c09-1n-iBv"/>
                         <outlet property="choiceDbutton" destination="zp8-QL-pff" id="l6e-o0-IEZ"/>
+                        <outlet property="nextButton" destination="VlR-tX-lo1" id="L2T-Pf-YM9"/>
                         <outlet property="questionTextView" destination="JAv-NC-cCV" id="YnC-mA-mJD"/>
                     </connections>
                 </viewController>
