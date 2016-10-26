@@ -11,6 +11,6 @@
 #import "ALMEndViewController.h"
 
 @interface ALMAnalysisViewController : UIViewController
-//@property (nonatomic, strong) ALMCharacter *topFive;
+@property (nonatomic, strong) ALMCharacter *topFive;
 
 @end

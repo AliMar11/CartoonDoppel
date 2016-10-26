@@ -18,7 +18,7 @@
 
 @implementation ALMDuppleCollectionViewController
 
-static NSString * const reuseIdentifier = @"collectionCellOne";
+static NSString * const reuseIdentifier = @"dupplePictureCell";
 
 - (void)viewDidLoad
 {
@@ -28,25 +28,6 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
     [self.collectionViewOne registerClass: [ALMDuppleCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
     self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk", @"homer2", @"sam", @"sans", @"tina2"];
-    
-//    [self.collectionViewOne reloadData];
-}
-     
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-//    [UIView animateWithDuration: 4 delay: 0 options: UIViewAnimationOptionRepeat animations:^{
-////        NSInteger section = [self numberOfSectionsInCollectionView: self.collectionViewOne] - 1;
-//       // NSInteger item = [self collectionView: self.collectionViewOne numberOfItemsInSection: section] - 1;
-//        
-//        NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem: [self.dupplePictures count] -1 inSection: 1];
-//        
-//        [self.collectionViewOne scrollToItemAtIndexPath: lastIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated: NO];
-//        
-//        
-//        
-//    } completion:nil];
     
 }
 
@@ -59,45 +40,15 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
     [self.collectionViewOne scrollToItemAtIndexPath:firstIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
     
     [UIView animateWithDuration: 4 delay: 0 options: UIViewAnimationOptionRepeat animations:^{
-        //        NSInteger section = [self numberOfSectionsInCollectionView: self.collectionViewOne] - 1;
-        // NSInteger item = [self collectionView: self.collectionViewOne numberOfItemsInSection: section] - 1;
         
         NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem: [self.dupplePictures count] -1 inSection: 0];
         
         [self.collectionViewOne scrollToItemAtIndexPath: lastIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated: NO];
         
-        
-        
     } completion:nil];
-    
 }
-
-/*
-//trial collectionView auto-scroll
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear: animated];
- 
-        NSTimeInterval duration = 4;
-        [UIView animateWithDuration: duration delay: 0 usingSpringWithDamping: 1 initialSpringVelocity: 0.5 options:UIViewAnimationOptionRepeat animations:^{
-            
-            NSInteger section = [self numberOfSectionsInCollectionView: self.collectionViewOne] - 1;
-            NSInteger item = [self collectionView: self.collectionViewOne numberOfItemsInSection: section] - 1;
-            NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem: item inSection: section];
-            [self.collectionViewOne scrollToItemAtIndexPath: lastIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-            
-        }completion:nil];
-   // }];
-     
- 
-    }
-*/
 
 #pragma mark <UICollectionViewDataSource>
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -108,13 +59,6 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
 {
     ALMDuppleCollectionViewCell *cellOne = (ALMDuppleCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath: indexPath];
     
-    //cellOne.layer.shouldRasterize = YES;
-    //cellOne.layer.rasterizationScale = [UIScreen mainScreen].scale;
-    // [[[cellOne contentView] subviews] makeObjectsPerformSelector: @selector(removeFromSuperview)];
-
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
         UIImage *mugshot = [[UIImage alloc] init];
 
         if (cellOne)
@@ -133,7 +77,6 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
             
             [cellOne addSubview: mugshotView];
         }
-    });
 
     return cellOne;
 }
@@ -144,7 +87,7 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
                  layout:(UICollectionViewLayout *) collectionViewLayout
  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat cellLeg = (self.collectionViewOne.frame.size.width/3);
+    CGFloat cellLeg = (self.collectionViewOne.frame.size.width/4.5);
     
     return CGSizeMake(cellLeg, cellLeg);
 }
@@ -162,7 +105,7 @@ static NSString * const reuseIdentifier = @"collectionCellOne";
                   layout:(UICollectionViewLayout *)collectionViewLayout
 minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 45;
+    return 35;
 }
 
 - (void)didReceiveMemoryWarning

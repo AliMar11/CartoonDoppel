@@ -44,7 +44,8 @@
                                               [self performSegueWithIdentifier: @"questionVCSegue" sender: self];
                                               NSLog(@"\n\nDO WE HAVE A USER CHARACTER??\n: %@\n\n", self.player);
                                           }];
-    
+
+//TODO: come up with a better way to grab the userName Textfield
     [enterUserName addAction: enterUserNameAction];
     [self presentViewController: enterUserName animated: YES completion: nil];
           }];

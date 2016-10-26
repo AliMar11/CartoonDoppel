@@ -10,6 +10,6 @@
 #import "ALMCharacter.h"
 
 @interface ALMEndViewController : UIViewController
-//@property (nonatomic, strong) ALMCharacter *theOne;
+@property (nonatomic, strong) ALMCharacter *theOne;
 
 @end

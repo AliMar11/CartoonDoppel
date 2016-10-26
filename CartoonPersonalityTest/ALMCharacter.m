@@ -45,9 +45,7 @@
     NSLog(@"\n\nTRAITS:%@\n\n\n\n", traits);
     ALMCharacter *user = [[ALMCharacter alloc] initWithUserCharacter: userName characterTraits:traits];
                     
-    
-    NSLog(@"\n\n\nINIT IF 'USER' IN CHARACTER CLASS:%@\n\n\n", user);
-    completion(user);
+        completion(user);
 }
 
 +(void)tallyUserAnswers

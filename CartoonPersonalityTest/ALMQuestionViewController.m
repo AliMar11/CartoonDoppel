@@ -35,9 +35,9 @@
     
 }
 
+//this is helper meth that feeds the Q to the VC
 -(void)setUpTheQuest:(int)questionCounter
-{//this is helper meth that feeds the Q to the VC
-
+{
     [ALMQuestions createQuestions: ^(NSMutableArray * questionsArray)
      {
          self.questionList = questionsArray;
@@ -58,25 +58,6 @@
              [self allQuestionsAnswered];
          }
      }];
-}
-
--(void)viewSetup
-{
-    self.choiceAbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    [self.choiceAbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
-    [self.choiceAbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
-    
-    self.choiceBbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    [self.choiceBbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
-    [self.choiceBbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
-    
-    self.choiceCbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    [self.choiceCbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
-    [self.choiceCbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
-    
-    self.choiceDbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    [self.choiceDbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
-    [self.choiceDbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
 }
 
 -(IBAction)buttClicked:(id)sender
@@ -104,6 +85,25 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+-(void)viewSetup
+{
+    self.choiceAbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.choiceAbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+    [self.choiceAbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
+    
+    self.choiceBbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.choiceBbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+    [self.choiceBbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
+    
+    self.choiceCbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.choiceCbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+    [self.choiceCbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
+    
+    self.choiceDbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    [self.choiceDbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+    [self.choiceDbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
 }
 
 #pragma mark - Navigation

@@ -41,7 +41,6 @@
 
 +(void) createQuestions:(void(^)(NSMutableArray* questionArray))completion
 {
-    //access questionArray. Each question obj is a (nss)question w/(nsd)answers.
     NSMutableArray *questionArray = [[NSMutableArray alloc] init];
     
     ALMQuestions *emotionalOne = [[ALMQuestions alloc]initWithQuestion: @"You're on line for your morning Java, and someone cuts in front of you... you"
