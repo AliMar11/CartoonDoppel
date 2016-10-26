@@ -28,25 +28,43 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
     [self.collectionViewOne registerClass: [ALMDuppleCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
     self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk", @"homer2", @"sam", @"sans", @"tina2"];
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear: animated];
     
-    NSIndexPath *firstIndexPath = [NSIndexPath indexPathForItem: 0 inSection: 0];
     
-    [self.collectionViewOne scrollToItemAtIndexPath:firstIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    [UIView animateKeyframesWithDuration:1 delay:0 options: UIViewKeyframeAnimationOptionRepeat animations:^
+    {
+        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration: 5.0 animations:^
+        {
+            
+            [self.collectionViewOne setContentOffset: CGPointMake(0, 0) animated:YES];
+            
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime: 5.0 relativeDuration: 10.0 animations:^
+        {
+            //CGPoint *lastItem = CFBridgingRetain(self.dupplePictures.lastObject);
+            [self.collectionViewOne setContentOffset: CGPointMake(960, 0) animated:YES];
+        }];
+        
+    } completion:^(BOOL finished)
+    {
+        NSLog(@"complete ^_^");
+    }];
     
-    [UIView animateWithDuration: 4 delay: 0 options: UIViewAnimationOptionRepeat animations:^{
-        
-        NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem: [self.dupplePictures count] -1 inSection: 0];
-        
-        [self.collectionViewOne scrollToItemAtIndexPath: lastIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated: NO];
-        
-    } completion:nil];
 }
+
+-(void)scrollViewDidScroll: (UIScrollView *) scrollView
+{
+    [UIView performWithoutAnimation:^
+    {
+        [self reloadInputViews];
+    }];
+}
+
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -57,7 +75,7 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ALMDuppleCollectionViewCell *cellOne = (ALMDuppleCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath: indexPath];
+    ALMDuppleCollectionViewCell *cellOne = (ALMDuppleCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
     
         UIImage *mugshot = [[UIImage alloc] init];
 
