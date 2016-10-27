@@ -26,44 +26,86 @@
     return  self;
 }
 
--(instancetype)initWithUserCharacter:(NSString *)userName characterTraits:(ALMCharacterTraits *)traits
+-(instancetype)initWithUserCharacter:(NSString *)userName characterTraits:(ALMCharacterTraits *)traitDictionary
 {
     self = [super init];
     if(self)
     {
         _userName = userName;
-        _traits = traits;
+        _traitDictionary = traitDictionary;
     }
     return self;
 }
 
-
 +(void)createUser: (NSString *)userName  withCompletion: (void(^)())completion
 {
-    ALMCharacterTraits *traits = [[ALMCharacterTraits alloc]initWithAggressive:0 ambition:0 cheerfulness:0 clever:0 comedic:0 courageous:0 creative:0 despicable:0 determined:0 dorky:0 eccentric:0 enthusiastic:0 genius:0 fighter:0 harmless:0 lucky:0 naive:0 optimistic:0 negative:0 passionate:0 positive:0 prankster:0 sassy:0 sympathetic:0 talented:0 troublemaker:0 trusting:0 vulnerability:0];
+    NSDictionary *traitDictionary = @{@"aggressive": @0,
+                                      @"ambition" : @0,
+                                      @"cheerfulness" : @0,
+                                      @"clever" : @0,
+                                      @"comedic" : @0,
+                                      @"courageous" : @0,
+                                      @"creative" : @0,
+                                      @"dispicable" : @0,
+                                      @"determined" : @0,
+                                      @"dorky" : @0,
+                                      @"eccentric" : @0,
+                                      @"enthusiastic" : @0,
+                                      @"lucky" : @0,
+                                      @"naive" : @0,
+                                      @"optimistic" : @0,
+                                      @"negative" : @0,
+                                      @"passionate" : @0,
+                                      @"positive" : @0,
+                                      @"prankster" : @0,
+                                      @"sassy" : @0,
+                                      @"sympathetic" : @0,
+                                      @"troublemaker" : @0,
+                                      @"trusting" : @0,
+                                      @"vulnerability" : @0};
     
-    NSLog(@"\n\nTRAITS:%@\n\n\n\n", traits);
-    ALMCharacter *user = [[ALMCharacter alloc] initWithUserCharacter: userName characterTraits:traits];
+   // NSLog(@"\n\nTRAITS:%d\n\n\n\n", (int)traits + 1);
+    
+    ALMCharacter *user = [[ALMCharacter alloc] initWithUserCharacter: userName characterTraits: traitDictionary];
                     
         completion(user);
 }
 
-+(void)tallyUserAnswers
++(void)tallyUserAnswers:(ALMCharacter *)player :(ALMCharacterTraits *) selectedTrait
 {
-    NSLog(@"\n\n\nTALLY TAKEN\n\n\n");
     //take value for button
+    
+    for (ALMCharacterTraits *trait in player.traitDictionary)
+    {
+        
+        NSLog(@"\nDO WE HAVE A TRAIT MATCH???: %@", [selectedTrait isEqual: trait] ? @"YES" : @"NO");
+      
+        
+        
+        if ([selectedTrait isEqual: trait])
+        {
+            NSLog(@"MATCH FOOL!");
+            
+        }
+        
+        
+        
+    }
+    
     //search user traits for buttonValue trait and ++
+    NSLog(@"\n\n\nTALLY TAKEN\n\n\n");
+
 }
 
 -(void)populateCharacterList
 {
     ALMCharacter *bugs = [[ALMCharacter alloc] initWithCharacter: @"Bugs Bunny"
                 picture: [UIImage imageNamed: @"buggs"]
-                                                 characterTraits: self.traits = [[ALMCharacterTraits alloc] initWithAggressive:0 ambition:2 cheerfulness:3 clever:20 comedic:8 courageous:7 creative:20 despicable:3 determined:9 dorky:0 eccentric:0 enthusiastic:8 genius:8 fighter:0 harmless:5 lucky:9 naive:0 optimistic:5 negative:3 passionate:3 positive:5 prankster:8 sassy:8 sympathetic:8 talented:10 troublemaker:5 trusting:5 vulnerability: 3]];
+                                                 characterTraits: self.traits = [[ALMCharacterTraits alloc] initWithAggressive:@0 ambition:@2 cheerfulness:@3 clever:@20 comedic:@8 courageous:@7 creative:@20 despicable:@3 determined:@9 dorky:@0 eccentric:@0 enthusiastic:@8 genius:@8 fighter:@0 harmless:@5 lucky:@9 naive:@0 optimistic:@5 negative:@3 passionate:@3 positive:@5 prankster:@8 sassy:@8 sympathetic:@8 talented:@10 troublemaker:@5 trusting:@5 vulnerability: @3]];
     
     [self.characterList arrayByAddingObject: bugs];
     
-    
+ /*
     ALMCharacter *daffy = [[ALMCharacter alloc] initWithCharacter: @"Daffy Duck"
                                                          picture: [UIImage imageNamed: @"daffy5"]
                                                  characterTraits: self.traits = [[ALMCharacterTraits alloc] initWithAggressive:10 ambition:8 cheerfulness:5 clever:8 comedic:10 courageous:4 creative:9 despicable:10 determined:10 dorky:5 eccentric:10 enthusiastic:8 genius:5 fighter:6 harmless:5 lucky:2 naive:4 optimistic:0 negative:6 passionate:8 positive:5 prankster:10 sassy:10 sympathetic:0 talented:7 troublemaker:10 trusting:7 vulnerability: 9]];
@@ -130,6 +172,7 @@ ALMCharacter *frisk = [[ALMCharacter alloc] initWithCharacter: @"Frisk"
                                              characterTraits: self.traits = [[ALMCharacterTraits alloc] initWithAggressive:7 ambition:8 cheerfulness:5 clever:10 comedic:10 courageous:8 creative:7 despicable:5 determined:8 dorky:0 eccentric:0 enthusiastic:3 genius:5 fighter:3 harmless:4 lucky:4 naive:3 optimistic:5 negative:5 passionate:0 positive:7 prankster:10 sassy:10 sympathetic:0 talented:6 troublemaker:10 trusting:3 vulnerability:0]];
     
     [self.characterList arrayByAddingObject: bart];
+  */
 }
 
 

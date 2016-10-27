@@ -12,6 +12,7 @@
 @interface ALMQuestions : NSObject
 // property array of questions
 @property (nonatomic, strong) NSString *question;
+@property (nonatomic, strong) NSArray *answers;
 @property (nonatomic, strong) NSDictionary *choiceA;
 @property (nonatomic, strong) NSDictionary *choiceB;
 @property (nonatomic, strong) NSDictionary *choiceC;
@@ -20,6 +21,7 @@
 +(instancetype)sharedData;
 +(void) createQuestions:(void(^)(NSMutableArray * questionArray))completion;
 -(instancetype)initWithQuestion: (NSString*) question
+                        answers: (NSArray *) answers
                         choiceA: (NSDictionary*) choiceA
                         choiceB: (NSDictionary*) choiceB
                         choiceC: (NSDictionary*) choiceC

@@ -32,19 +32,14 @@
     self.questionTextView.clipsToBounds = YES;
     [self.questionTextView.layer setBorderColor: [[[UIColor purpleColor] colorWithAlphaComponent: 0.2] CGColor]];
     [self.questionTextView.layer setBorderWidth: 1.0];
-    
 }
 
-//this is helper meth that feeds the Q to the VC
 -(void)setUpTheQuest:(int)questionCounter
 {
     [ALMQuestions createQuestions: ^(NSMutableArray * questionsArray)
      {
          self.questionList = questionsArray;
-         
          ALMQuestions *question = self.questionList[self.questionCounter];
-         
-         NSLog(@"\n\nCOUNTER:%d  QUESTIONLIST COUNT: %ld\n\n", self.questionCounter, [self.questionList indexOfObject: question]);
 
         self.questionTextView.text = question.question;
 
@@ -62,9 +57,27 @@
 
 -(IBAction)buttClicked:(id)sender
 {
-    NSLog(@"\n\nBUTTON CLICKED DETECTED!\n\n");
-
-    [ALMCharacter tallyUserAnswers];
+    UIButton *selected = [[UIButton alloc]init];
+    selected = sender;
+    
+    for (NSDictionary *possibleAnswer in [self.questionList[self.questionCounter] answers])
+    {
+        if ([possibleAnswer.allKeys[0] isEqualToString: [selected titleForState:UIControlStateNormal]])
+        {
+            NSLog(@"\n\nWe've found the selected answer pal! -->%@\n\n", possibleAnswer.allValues[0]);
+            
+            [ALMCharacter tallyUserAnswers: self.theUser :possibleAnswer.allValues[0]];
+        }
+        
+    }
+    
+    //TODO: Insert some awesome error handling here <3
+    /*
+    if (!)
+    {
+        NSLog(@"COULD NOT DEFINE CHOSEN ANSWER BRO!");
+    }
+     */
     
     self.questionCounter += 1;
     [self setUpTheQuest: self.questionCounter];
@@ -100,27 +113,17 @@
         CALayer *buttLayer = button.layer;
         buttonGrades.frame = button.bounds;
         button.backgroundColor = [UIColor grayColor];
+        
        // [buttLayer setMasksToBounds: YES];
+        
         [buttLayer setCornerRadius: 7.0f];
         [buttLayer setBorderWidth: 1.5f];
-        //[button ];
-        //[buttLayer setBorderColor: [[UIColor colorWithRed:<#(CGFloat)#> green:<#(CGFloat)#> blue:<#(CGFloat)#> alpha:<#(CGFloat)#>] CGColor]];
+        
+        //[buttLayer setBorderColor: [[UIColor colorWithRed:0 green:0 blue:0 alpha:0] CGColor]];
+   
+        [button.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+        [button setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
     }
-    
-    [self.choiceAbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
-    [self.choiceAbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
-    
-    self.choiceBbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    [self.choiceBbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
-    [self.choiceBbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
-    
-    self.choiceCbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    [self.choiceCbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
-    [self.choiceCbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
-    
-    self.choiceDbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    [self.choiceDbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
-    [self.choiceDbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
 }
 
 #pragma mark - Navigation

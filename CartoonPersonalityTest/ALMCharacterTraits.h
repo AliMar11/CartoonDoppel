@@ -9,68 +9,65 @@
 #import <Foundation/Foundation.h>
 
 @interface ALMCharacterTraits : NSObject
-@property (nonatomic, assign)int *aggressive;
-@property (nonatomic, assign)int *ambitious;
-//@property (nonatomic, assign)int *careful;
-@property (nonatomic, assign)int *cheerful;
-@property (nonatomic, assign)int *clever;
-@property (nonatomic, assign)int *comedic;
-@property (nonatomic, assign)int *courageous;
-@property (nonatomic, assign)int *creative;
-@property (nonatomic, assign)int *despicable;
-@property (nonatomic, assign)int *determined;
-@property (nonatomic, assign)int *dorky;
-@property (nonatomic, assign)int *eccentric;
-@property (nonatomic, assign)int *enthusiastic;
-@property (nonatomic, assign)int *genius;
-@property (nonatomic, assign)int *fighter;
-@property (nonatomic, assign)int *harmless;
-@property (nonatomic, assign)int *lucky;
-@property (nonatomic, assign)int *naive;
-@property (nonatomic, assign)int *optimistic;
-@property (nonatomic, assign)int *negative;
-@property (nonatomic, assign)int *passionate;
-//@property (nonatomic, assign)int *passive;
-@property (nonatomic, assign)int *positive;
-@property (nonatomic, assign)int *prankster;
-@property (nonatomic, assign)int *sassy;
-//@property (nonatomic, assign)int *shy;
-@property (nonatomic, assign)int *sympathetic;
-@property (nonatomic, assign)int *talented;
-@property (nonatomic, assign)int *troublemaker;
-@property (nonatomic, assign)int *trusting;
-@property (nonatomic, assign)int *vulnerability;
 
--(instancetype) initWithAggressive: (int)aggression
-                          ambition: (int)ambition
-//                          careful: (int)careful
-                      cheerfulness: (int)cheerfulness
-                            clever: (int)cleverness
-                           comedic: (int)comedic
-                        courageous: (int)courage
-                          creative: (int)creativity
-                        despicable: (int)despicableness
-                        determined: (int)determination
-                             dorky: (int)dorkiness
-                         eccentric: (int)eccentricity
-                      enthusiastic: (int)enthusiasm
-                            genius: (int)genius
-                           fighter: (int)fight
-                          harmless: (int)harmlessness
-                             lucky: (int)luck
-                             naive: (int)naivity
-                        optimistic: (int)optimisticness
-                          negative: (int)negativity
-                        passionate: (int)passion
-//                           passive: (int)passive
-                          positive: (int)positivity
-                         prankster: (int)pracksterness
-                             sassy: (int)sass
-//                               shy: (int)shy
-                       sympathetic: (int)sympathy
-                          talented: (int)talent
-                      troublemaker: (int)troublemaker
-                          trusting: (int)trust
-                     vulnerability: (int)vulnurability;
+@property (nonatomic, strong) NSDictionary *traitDictionary;
+@property (nonatomic, strong)  NSNumber  *aggressive;
+@property (nonatomic, strong)  NSNumber  *ambitious;
+@property (nonatomic, strong)  NSNumber  *cheerful;
+@property (nonatomic, strong)  NSNumber  *clever;
+@property (nonatomic, strong)  NSNumber  *comedic;
+@property (nonatomic, strong)  NSNumber  *courageous;
+@property (nonatomic, strong)  NSNumber  *creative;
+@property (nonatomic, strong)  NSNumber  *despicable;
+@property (nonatomic, strong)  NSNumber  *determined;
+@property (nonatomic, strong)  NSNumber  *dorky;
+@property (nonatomic, strong)  NSNumber  *eccentric;
+@property (nonatomic, strong)  NSNumber  *enthusiastic;
+@property (nonatomic, strong)  NSNumber  *genius;
+@property (nonatomic, strong)  NSNumber  *fighter;
+@property (nonatomic, strong)  NSNumber  *harmless;
+@property (nonatomic, strong)  NSNumber  *lucky;
+@property (nonatomic, strong)  NSNumber  *naive;
+@property (nonatomic, strong)  NSNumber  *optimistic;
+@property (nonatomic, strong)  NSNumber  *negative;
+@property (nonatomic, strong)  NSNumber  *passionate;
+@property (nonatomic, strong)  NSNumber  *positive;
+@property (nonatomic, strong)  NSNumber  *prankster;
+@property (nonatomic, strong)  NSNumber  *sassy;
+@property (nonatomic, strong)  NSNumber  *sympathetic;
+@property (nonatomic, strong)  NSNumber  *talented;
+@property (nonatomic, strong)  NSNumber  *troublemaker;
+@property (nonatomic, strong)  NSNumber  *trusting;
+@property (nonatomic, strong)  NSNumber  *vulnerability;
 
+-(instancetype) initWithAggressive: (NSNumber *)aggression
+                          ambition: (NSNumber *)ambition
+                      cheerfulness: (NSNumber *)cheerfulness
+                            clever: (NSNumber *)cleverness
+                           comedic: (NSNumber *)comedic
+                        courageous: (NSNumber *)courage
+                          creative: (NSNumber *)creativity
+                        despicable: (NSNumber *)despicableness
+                        determined: (NSNumber *)determination
+                             dorky: (NSNumber *)dorkiness
+                         eccentric: (NSNumber *)eccentricity
+                      enthusiastic: (NSNumber *)enthusiasm
+                            genius: (NSNumber *)genius
+                           fighter: (NSNumber *)fight
+                          harmless: (NSNumber *)harmlessness
+                             lucky: (NSNumber *)luck
+                             naive: (NSNumber *)naivity
+                        optimistic: (NSNumber *)optimisticness
+                          negative: (NSNumber *)negativity
+                        passionate: (NSNumber *)passion
+                          positive: (NSNumber *)positivity
+                         prankster: (NSNumber *)pracksterness
+                             sassy: (NSNumber *)sass
+                       sympathetic: (NSNumber *)sympathy
+                          talented: (NSNumber *)talent
+                      troublemaker: (NSNumber *)troublemaker
+                          trusting: (NSNumber *)trust
+                     vulnerability: (NSNumber *)vulnurability;
+
+ 
 @end

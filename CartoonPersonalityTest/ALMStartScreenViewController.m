@@ -33,8 +33,6 @@
     UIAlertAction *enterUserNameAction = [UIAlertAction actionWithTitle:@"Done!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
                                           {
                                               self.userName = textField.text;
-                                              NSLog(@"\n\nUSERNAME:%@\nUITEXTFILD:%@\n\n", self.userName, textField.text);
-                                              NSLog(@"\n\nSELF.USERRRRRR:%@\n\n", self.userName);
                                               
                                               [ALMCharacter createUser: self.userName withCompletion:^(ALMCharacter *user)
                                               {
@@ -42,7 +40,6 @@
                                               }];
                                               
                                               [self performSegueWithIdentifier: @"questionVCSegue" sender: self];
-                                              NSLog(@"\n\nDO WE HAVE A USER CHARACTER??\n: %@\n\n", self.player);
                                           }];
 
 //TODO: come up with a better way to grab the userName Textfield

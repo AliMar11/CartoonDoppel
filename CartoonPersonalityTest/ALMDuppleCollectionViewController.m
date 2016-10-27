@@ -27,7 +27,7 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
     NSLog(@"COLLECTIONV TIME");
     [self.collectionViewOne registerClass: [ALMDuppleCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
-    self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2cropped", @"homer2", @"sam", @"sans", @"tina3"];
+    self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -40,21 +40,20 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
         [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration: 5.0 animations:^
         {
             
-            [self.collectionViewOne setContentOffset: CGPointMake(0, 0) animated:YES];
+            [self.collectionViewOne setContentOffset: CGPointMake(0, 0) animated: YES];
             
         }];
         
         [UIView addKeyframeWithRelativeStartTime: 5.0 relativeDuration: 10.0 animations:^
         {
             //CGPoint *lastItem = CFBridgingRetain(self.dupplePictures.lastObject);
-            [self.collectionViewOne setContentOffset: CGPointMake(960, 0) animated:YES];
+            [self.collectionViewOne setContentOffset: CGPointMake(960, 0) animated: YES];
         }];
         
     } completion:^(BOOL finished)
     {
-        NSLog(@"complete ^_^");
+        NSLog(@"complete ^_^ ");
     }];
-    
 }
 
 -(void)scrollViewDidScroll: (UIScrollView *) scrollView
@@ -64,7 +63,6 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
         [self reloadInputViews];
     }];
 }
-
 
 #pragma mark <UICollectionViewDataSource>
 
