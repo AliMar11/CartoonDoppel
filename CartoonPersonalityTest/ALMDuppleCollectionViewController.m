@@ -27,7 +27,7 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
     NSLog(@"COLLECTIONV TIME");
     [self.collectionViewOne registerClass: [ALMDuppleCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
-    self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk", @"homer2", @"sam", @"sans", @"tina2"];
+    self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2cropped", @"homer2", @"sam", @"sans", @"tina3"];
 }
 
 -(void)viewDidAppear:(BOOL)animated

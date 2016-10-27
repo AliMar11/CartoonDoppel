@@ -89,7 +89,24 @@
 
 -(void)viewSetup
 {
+    NSArray *buttonArray = [NSArray arrayWithObjects:self.choiceAbutton, self.choiceBbutton, self.choiceCbutton, self.choiceDbutton, nil];
+
     self.choiceAbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    CAGradientLayer *buttonGrades = [CAGradientLayer layer];
+
+    for (UIButton *button in buttonArray)
+    {
+        //[button.layer insertSublayer: buttonGrades atIndex: 0];
+        CALayer *buttLayer = button.layer;
+        buttonGrades.frame = button.bounds;
+        button.backgroundColor = [UIColor grayColor];
+       // [buttLayer setMasksToBounds: YES];
+        [buttLayer setCornerRadius: 7.0f];
+        [buttLayer setBorderWidth: 1.5f];
+        //[button ];
+        //[buttLayer setBorderColor: [[UIColor colorWithRed:<#(CGFloat)#> green:<#(CGFloat)#> blue:<#(CGFloat)#> alpha:<#(CGFloat)#>] CGColor]];
+    }
+    
     [self.choiceAbutton.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
     [self.choiceAbutton setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
     
