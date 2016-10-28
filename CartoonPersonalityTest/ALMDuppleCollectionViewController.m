@@ -34,8 +34,9 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
 {
     [super viewDidAppear: animated];
     animated = NO;
-    
-NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 0.03
+//TODO - make the cells repeat when item.last is on screen/collectionV width is reached
+//TODO - make 2nd collectionView move from item.last to item.first/ from width to zero
+NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 0.02
                                                   target: self
                                                 selector: @selector(scroll)
                                                 userInfo: nil
@@ -46,7 +47,7 @@ NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 0.03
 }
 -(void)scroll
 {
-    self.horiScroll += 5;
+    self.horiScroll += 2;
     self.collectionViewOne.contentOffset = CGPointMake(self.horiScroll, 0);
 }
 
