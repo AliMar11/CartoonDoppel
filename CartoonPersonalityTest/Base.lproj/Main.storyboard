@@ -198,11 +198,11 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAv-NC-cCV" userLabel="QuestionTextView">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAv-NC-cCV" userLabel="QuestionTextView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="mG8-Bp-U3S"/>
+                                    <constraint firstAttribute="height" constant="70" id="mG8-Bp-U3S"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -229,18 +229,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="nBZ-lR-IKm" secondAttribute="trailing" constant="20" id="7zq-gm-HN1"/>
                             <constraint firstItem="JAv-NC-cCV" firstAttribute="top" secondItem="oFX-lS-3xi" secondAttribute="bottom" multiplier="5.5" id="DBF-8p-9Nm"/>
-                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="JAv-NC-cCV" secondAttribute="bottom" multiplier="1.7" id="TUb-ug-kQB"/>
-                            <constraint firstItem="VlR-tX-lo1" firstAttribute="width" secondItem="zwY-Ad-kXO" secondAttribute="width" id="WeA-F0-JW0">
-                                <variation key="heightClass=regular" constant="-357"/>
+                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="JAv-NC-cCV" secondAttribute="bottom" multiplier="1.6" id="TUb-ug-kQB"/>
+                            <constraint firstItem="VlR-tX-lo1" firstAttribute="width" secondItem="zwY-Ad-kXO" secondAttribute="width" multiplier="0.2" id="WeA-F0-JW0">
+                                <variation key="heightClass=regular" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="JAv-NC-cCV" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" constant="20" id="X1p-xD-IVq"/>
+                            <constraint firstItem="JAv-NC-cCV" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" constant="19" id="X1p-xD-IVq"/>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="aXr-7E-woY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JAv-NC-cCV" secondAttribute="trailing" constant="20" id="afZ-Qp-Siv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JAv-NC-cCV" secondAttribute="trailing" constant="19" id="afZ-Qp-Siv"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="hL4-BF-Y4C"/>
-                            <constraint firstItem="VlR-tX-lo1" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.2" id="hvN-KL-iQf">
-                                <variation key="heightClass=regular" constant="-117.20000000000002"/>
+                            <constraint firstItem="VlR-tX-lo1" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.05" id="hvN-KL-iQf">
+                                <variation key="heightClass=regular" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="Xbz-2T-NlP" firstAttribute="top" secondItem="VlR-tX-lo1" secondAttribute="bottom" multiplier="1.1" id="q5J-BJ-8Af">
                                 <variation key="heightClass=regular" constant="-51.600000000000023"/>
@@ -261,7 +260,6 @@
                                 <exclude reference="X1p-xD-IVq"/>
                                 <exclude reference="afZ-Qp-Siv"/>
                                 <exclude reference="zzH-cg-4s7"/>
-                                <exclude reference="7zq-gm-HN1"/>
                                 <exclude reference="TUb-ug-kQB"/>
                                 <exclude reference="aXr-7E-woY"/>
                                 <exclude reference="sAC-Wf-J63"/>
@@ -281,7 +279,6 @@
                                 <include reference="X1p-xD-IVq"/>
                                 <include reference="afZ-Qp-Siv"/>
                                 <include reference="zzH-cg-4s7"/>
-                                <exclude reference="7zq-gm-HN1"/>
                                 <include reference="TUb-ug-kQB"/>
                                 <include reference="aXr-7E-woY"/>
                                 <include reference="sAC-Wf-J63"/>

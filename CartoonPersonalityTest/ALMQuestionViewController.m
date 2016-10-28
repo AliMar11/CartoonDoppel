@@ -86,12 +86,10 @@
 
 -(void)allQuestionsAnswered
 {
-    //when questionsArray == 0 call segue to analysis VC and appear the next button
     self.choiceAbutton.hidden = YES;
     self.choiceBbutton.hidden = YES;
     self.choiceCbutton.hidden = YES;
     self.choiceDbutton.hidden = YES;
-    
     self.nextButton.hidden = NO;
 }
 
@@ -102,14 +100,15 @@
 
 -(void)viewSetup
 {
+    self.questionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
     NSArray *buttonArray = [NSArray arrayWithObjects:self.choiceAbutton, self.choiceBbutton, self.choiceCbutton, self.choiceDbutton, nil];
-
-    self.choiceAbutton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//TODO: implement cool button gradients here ^_^
     CAGradientLayer *buttonGrades = [CAGradientLayer layer];
 
     for (UIButton *button in buttonArray)
     {
         //[button.layer insertSublayer: buttonGrades atIndex: 0];
+        button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         CALayer *buttLayer = button.layer;
         buttonGrades.frame = button.bounds;
         button.backgroundColor = [UIColor grayColor];

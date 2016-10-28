@@ -48,96 +48,97 @@
 {
     NSMutableArray *questionArray = [[NSMutableArray alloc] init];
     
-    ALMQuestions *emotionalOne = [[ALMQuestions alloc]initWithQuestion: @"You're on line for your morning Java, and someone cuts in front of you... you"    answers: @[]
-                                                           choiceA: @{@"Tell them to get to the back of the line." : @"fighter"}
-                                                           choiceB: @{@"Get mad but decide it's best not to say. anything." : @"negative"}
-                                                           choiceC: @{@"Sheepishly tell them you've been waiting in line." : @"harmless"}
+    ALMQuestions *emotionalOne = [[ALMQuestions alloc]initWithQuestion: @"You're on line for your morning java and someone cuts in front of you... you"
+                                                               answers: @[]
+                                                           choiceA: @{@"Apologize and inform them there's a line." : @"sympathetic"}
+                                                           choiceB: @{@"Get mad but decide it's best not to say anything." : @"negative"}
+                                                           choiceC: @{@"Sheepishly tell them you've been waiting in line." : @"passive"}
                                                            choiceD: @{@"Give them a piece of youe mind! Who do they think they are?!" : @"aggressive"}];
     [questionArray addObject: emotionalOne];
     
     ALMQuestions *esteemOne = [[ALMQuestions alloc] initWithQuestion: @"Your dream job includes..."
-                               answers: @[]
+                                                             answers: @[]
                                                                choiceA: @{@"Idk, I'm just trying to do my own thing." : @"passive"}
-                                                               choiceB: @{@"I want to make people happy." : @"determination"}
-                                                               choiceC: @{@"I'm gonna lead!" : @"eccentric"}
+                                                               choiceB: @{@"I to do something people look up to." : @"careful"}
+                                                               choiceC: @{@"I'm gonna lead!" : @"determined"}
                                                                choiceD: @{@"I want to create." : @"courage"}];
     
     [questionArray addObject: esteemOne];
     
-    ALMQuestions *brainOne = [[ALMQuestions alloc] initWithQuestion: @"When confronted with a problem..."
-                              answers: @[]
+    ALMQuestions *personalityOne = [[ALMQuestions alloc] initWithQuestion: @"When confronted with a problem..."
+                                                                  answers: @[]
                                                                choiceA: @{@"I tend to think my way to my goal." : @"clever"}
                                                                choiceB: @{@"I tend to think a way around the problem." : @"creative"}
-                                                               choiceC: @{@"I fight whatever is in my way." : @"fighter"}
-                                                               choiceD: @{@"I think of how the problem affects me and how to solve it." : @"naive"}];
+                                                               choiceC: @{@"I fight whatever is in my way." : @"sassy"}
+                                                               choiceD: @{@"I think of how the problem affects me and how to solve it." : @"shy"}];
     
-    [questionArray addObject: brainOne];
+    [questionArray addObject: personalityOne];
     
-    ALMQuestions *personalityOne = [[ALMQuestions alloc] initWithQuestion: @"You tend to look back at past problems and..."
-                                    answers: @[]
+    ALMQuestions *personalityTwo = [[ALMQuestions alloc] initWithQuestion: @"You tend to look back at past problems and..."
+                                                                  answers: @[]
                                                     choiceA: @{@"Make fun of them." : @"comedic"}
-                                                    choiceB: @{@"Look for what I did well." : @"cheerful"}
+                                                    choiceB: @{@"Think of how I'll do better next time!" : @"enthusiastic"}
                                                     choiceC: @{@"Hmmm... that sucked." : @"dorky"}
                                                     choiceD: @{@"I... am always right." : @"sassy"}];
     
-    [questionArray addObject: personalityOne];
+    [questionArray addObject: personalityTwo];
  //Below is Q five
     ALMQuestions *emotionalTwo = [[ALMQuestions alloc] initWithQuestion: @"When I realize I'm succeeding I tend to think..."
-                                  answers: @[]
-                                                    choiceA: @{@"I gotta keep going." : @"aggressive"}
+                                                                answers: @[]
+                                                    choiceA: @{@"I gotta keep this up." : @"aggressive"}
                                                     choiceB: @{@"This means I'm gonna mess up at some point soon..." : @"negative"}
                                                     choiceC: @{@"This is awesome!" : @"optimistic"}
                                                     choiceD: @{@"Cool I guess." : @"passive"}];
     
     [questionArray addObject: emotionalTwo];
     
-    ALMQuestions *personalityTwo = [[ALMQuestions alloc] initWithQuestion: @"You took an exam you weren't sure about, what do you expect of the outcome?"
-                                    answers: @[]
-                                                    choiceA: @{@"I expect I did okay." : @"cheerful"}
-                                                    choiceB: @{@"Well, I won't be able to do as bad next time around" : @"comedic"}
-                                                    choiceC: @{@"I better pass that studic test." : @"despicable"}
+    ALMQuestions *personalityThree = [[ALMQuestions alloc] initWithQuestion: @"You took an exam you weren't sure about, what do you expect of the outcome?"
+                                                                    answers: @[]
+                                                    choiceA: @{@"I expect I did okay." : @"enthusiastic"}
+                                                    choiceB: @{@"Well, I won't be able to do as bad next time around!" : @"comedic"}
+                                                    choiceC: @{@"I better pass that stupic test." : @"despicable"}
                                                     choiceD: @{@"eeeeh, I have no idea." : @"dorky"}];
     
-    [questionArray addObject: personalityTwo];
+    [questionArray addObject: personalityThree];
     
-    ALMQuestions *brainTwo = [[ALMQuestions alloc] initWithQuestion: @"You're given an opportunity to spend a week in another country you think..."
-                              answers: @[]
-                                                    choiceA: @{@"What! I'm gonna do it all!" : @"ambition"}
+    ALMQuestions *esteemTwo = [[ALMQuestions alloc] initWithQuestion: @"You're given an opportunity to spend a week in another country you think..."
+                                                             answers: @[]
+                                                    choiceA: @{@"What! This is amazing- can't wait!" : @"courage"}
                                                     choiceB: @{@"There are a million things that can go wrong." : @"careful"}
-                                                    choiceC: @{@"I have to figure out how to divide my time for the things I want to do." : @"clever"}
+                                                    choiceC: @{@"Ha! Time to do all the things I usually can't!." : @"despicable"}
                                                     choiceD: @{@"Why me?" : @"naive"}];
-    
-    [questionArray addObject: brainTwo];
-    
-    ALMQuestions *esteemTwo = [[ALMQuestions alloc] initWithQuestion: @"Someone just wrongly put you on blast... what do you do?"
-                               answers: @[]
-                                                    choiceA: @{@"Let them know they're wrong." : @"courage"}
-                                                    choiceB: @{@"You'll talk to them one-on-one." : @"passive"}
-                                                    choiceC: @{@"Why did they feel the need to do that?" : @"sympathetic"}
-                                                    choiceD: @{@"Ooooh you want to do that? It's on" : @"troublemaker"}];
     
     [questionArray addObject: esteemTwo];
     
-    ALMQuestions *personalityThree = [[ALMQuestions alloc] initWithQuestion: @"Time to pick a movie with your friends! What are you thinking?"
-                                      answers: @[]
-                                                    choiceA: @{@"I'll watch whatever ^_^" : @"cheerful"}
-                                                    choiceB: @{@"I'm really only interested in one or two." : @"despicable"}
-                                                    choiceC: @{@"I don't know what to watch... you pick." : @"dorky"}
-                                                    choiceD: @{@"We are watching this one." : @"sass"}];
-    
-    [questionArray addObject: personalityThree];
- //Below is Q 10
-    ALMQuestions *esteemThree = [[ALMQuestions alloc] initWithQuestion: @"You see a scared baby pup in the street, what do you do?"
-                                 answers: @[]
-                                                    choiceA: @{@"Go get him!" : @"courage"}
-                                                    choiceB: @{@"Wait is this a prank?" : @"troublemaker"}
-                                                    choiceC: @{@"I'm sure it'll be fine, I'm not going out there" : @"passive."}
-                                                    choiceD: @{@"Call it to you from the edge of the street when it's clear." : @"trusting"}];
+    ALMQuestions *esteemThree = [[ALMQuestions alloc] initWithQuestion: @"Someone just wrongly put you on blast... what do you do?"
+                                                               answers: @[]
+                                                    choiceA: @{@"Let them know they're wrong." : @"courage"}
+                                                    choiceB: @{@"You'll talk to them one-on-one." : @"careful"}
+                                                    choiceC: @{@"Wow, they must really not like me." : @"naive"}
+                                                    choiceD: @{@"Ooooh you want to do that? It's on." : @"troublemaker"}];
     
     [questionArray addObject: esteemThree];
     
-    ALMQuestions *blank = [[ALMQuestions alloc] initWithQuestion: @" "
-                           answers: @[]
+    ALMQuestions *personalityFour = [[ALMQuestions alloc] initWithQuestion: @"Time to pick a movie with your friends! What are you thinking?"
+                                                                   answers: @[]
+                                                    choiceA: @{@"I'll watch whatever ^_^" : @"enthusiastic"}
+                                                    choiceB: @{@"I'm really only interested in one or two." : @"despicable"}
+                                                    choiceC: @{@"I don't know what to watch... you pick." : @"dorky"}
+                                                    choiceD: @{@"We are watching this one." : @"sassy"}];
+    
+    [questionArray addObject: personalityFour];
+ //Below is Q 10
+    ALMQuestions *esteemFour = [[ALMQuestions alloc] initWithQuestion: @"You see a scared baby pup in the street, what do you do?"
+                                                              answers: @[]
+                                                    choiceA: @{@"Go get him!" : @"courage"}
+                                                    choiceB: @{@"Wait is this a prank?" : @"troublemaker"}
+                                                    choiceC: @{@"I'm sure it'll be fine, I'm not going out there." : @"naive"}
+                                                    choiceD: @{@"Call it to you from the edge of the street when it's clear." : @"careful"}];
+    
+    [questionArray addObject: esteemFour];
+    
+    ALMQuestions *blank = [[ALMQuestions alloc] initWithQuestion: @"Hey you! With the FACE...time to figure out your twin.Press the 'next' button dork!"
+                                                         answers: @[]
                                                                choiceA: @{@" " : @" "}
                                                                choiceB: @{@" " : @" "}
                                                                choiceC: @{@" " : @" "}
