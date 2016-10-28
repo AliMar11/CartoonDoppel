@@ -113,15 +113,12 @@
         CALayer *buttLayer = button.layer;
         buttonGrades.frame = button.bounds;
         button.backgroundColor = [UIColor grayColor];
-        
-       // [buttLayer setMasksToBounds: YES];
-        
         [buttLayer setCornerRadius: 7.0f];
-        [buttLayer setBorderWidth: 1.5f];
+        [buttLayer setBorderWidth: 1.3f];
         
         //[buttLayer setBorderColor: [[UIColor colorWithRed:0 green:0 blue:0 alpha:0] CGColor]];
    
-        [button.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:18]];
+        [button.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:15]];
         [button setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
     }
 }

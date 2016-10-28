@@ -16,10 +16,9 @@
 @property (nonatomic, strong) ALMCharacter *character;
 @property (nonatomic, strong) ALMCharacter *player;
 @property (nonatomic, strong) NSString *characterName;
-@property (nonatomic, strong) ALMCharacterTraits *traitDictionary;
+@property (nonatomic, strong) NSMutableDictionary *traitDictionary;
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) UIImage *mugshot;
-@property (nonatomic, strong) NSString *playerAnswer;
 @property (nonatomic, strong) ALMCharacterTraits *traits;
 
 -(instancetype)initWithCharacter: (NSString*)characterName
@@ -29,7 +28,7 @@
 -(void)populateCharacterList;
 
 -(instancetype)initWithUserCharacter: (NSString*)userName
-                     characterTraits: (NSDictionary*)traitDictionary;
+                     characterTraits: (NSMutableDictionary*)traitDictionary;
 
 +(void)createUser: (NSString *)userName withCompletion: (void(^)())completion;
 +(void)tallyUserAnswers:(ALMCharacter*) player :(ALMCharacterTraits *) selectedTrait;

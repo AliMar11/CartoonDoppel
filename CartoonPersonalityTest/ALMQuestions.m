@@ -24,13 +24,18 @@
     return _sharedData;
 }
 
--(instancetype)initWithQuestion:(NSString *)question answers:(NSArray *)answers choiceA:(NSDictionary *)choiceA choiceB:(NSDictionary *)choiceB choiceC:(NSDictionary *)choiceC choiceD:(NSDictionary *)choiceD
+-(instancetype)initWithQuestion:(NSString *)question
+                        answers:(NSArray *)answers
+                        choiceA:(NSDictionary *)choiceA
+                        choiceB:(NSDictionary *)choiceB
+                        choiceC:(NSDictionary *)choiceC
+                        choiceD:(NSDictionary *)choiceD
 {
     self = [super init];
     if (self)
         {
             _question = question;
-            _answers = @[choiceA, choiceB, choiceC , choiceD];
+            _answers = @[choiceA, choiceB, choiceC, choiceD];
             _choiceA = choiceA;
             _choiceB = choiceB;
             _choiceC = choiceC;
@@ -73,7 +78,7 @@
                                                     choiceA: @{@"Make fun of them." : @"comedic"}
                                                     choiceB: @{@"Look for what I did well." : @"cheerful"}
                                                     choiceC: @{@"Hmmm... that sucked." : @"dorky"}
-                                                    choiceD: @{@"I... am always right." : @"sass"}];
+                                                    choiceD: @{@"I... am always right." : @"sassy"}];
     
     [questionArray addObject: personalityOne];
  //Below is Q five
@@ -82,14 +87,14 @@
                                                     choiceA: @{@"I gotta keep going." : @"aggressive"}
                                                     choiceB: @{@"This means I'm gonna mess up at some point soon..." : @"negative"}
                                                     choiceC: @{@"This is awesome!" : @"optimistic"}
-                                                    choiceD: @{@"Cool I guess." : @"passive/harmless/Tina/Bart"}];
+                                                    choiceD: @{@"Cool I guess." : @"passive"}];
     
     [questionArray addObject: emotionalTwo];
     
     ALMQuestions *personalityTwo = [[ALMQuestions alloc] initWithQuestion: @"You took an exam you weren't sure about, what do you expect of the outcome?"
                                     answers: @[]
                                                     choiceA: @{@"I expect I did okay." : @"cheerful"}
-                                                    choiceB: @{@"Well, I won't be able to do as bad next time around" : @"comedic."}
+                                                    choiceB: @{@"Well, I won't be able to do as bad next time around" : @"comedic"}
                                                     choiceC: @{@"I better pass that studic test." : @"despicable"}
                                                     choiceD: @{@"eeeeh, I have no idea." : @"dorky"}];
     

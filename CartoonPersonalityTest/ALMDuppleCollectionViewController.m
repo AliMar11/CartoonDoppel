@@ -11,8 +11,8 @@
 
 @interface ALMDuppleCollectionViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewOne;
-
 @property (nonatomic, strong) NSArray *dupplePictures;
+@property (nonatomic, assign) int horiScroll;
 
 @end
 
@@ -33,56 +33,43 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear: animated];
+    animated = NO;
     
+NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 0.03
+                                                  target: self
+                                                selector: @selector(scroll)
+                                                userInfo: nil
+                                                 repeats: YES];
     
-    [UIView animateKeyframesWithDuration:1 delay:0 options: UIViewKeyframeAnimationOptionRepeat animations:^
-    {
-        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration: 5.0 animations:^
-        {
-            
-            [self.collectionViewOne setContentOffset: CGPointMake(0, 0) animated: YES];
-            
-        }];
-        
-        [UIView addKeyframeWithRelativeStartTime: 5.0 relativeDuration: 10.0 animations:^
-        {
-            //CGPoint *lastItem = CFBridgingRetain(self.dupplePictures.lastObject);
-            [self.collectionViewOne setContentOffset: CGPointMake(960, 0) animated: YES];
-        }];
-        
-    } completion:^(BOOL finished)
-    {
-        NSLog(@"complete ^_^ ");
-    }];
+[[NSRunLoop currentRunLoop ]addTimer: timer forMode: NSRunLoopCommonModes];
+    
 }
-
--(void)scrollViewDidScroll: (UIScrollView *) scrollView
+-(void)scroll
 {
-    [UIView performWithoutAnimation:^
-    {
-        [self reloadInputViews];
-    }];
+    self.horiScroll += 5;
+    self.collectionViewOne.contentOffset = CGPointMake(self.horiScroll, 0);
 }
 
 #pragma mark <UICollectionViewDataSource>
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)collectionView: (UICollectionView *)collectionView numberOfItemsInSection: (NSInteger)section
 {
     return self.dupplePictures.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView: (UICollectionView *)collectionView cellForItemAtIndexPath: (NSIndexPath *)indexPath
 {
     ALMDuppleCollectionViewCell *cellOne = (ALMDuppleCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
+    [[[cellOne contentView] subviews] makeObjectsPerformSelector: @selector(removeFromSuperview)];
+
     
         UIImage *mugshot = [[UIImage alloc] init];
 
         if (cellOne)
         {
             mugshot = [UIImage imageNamed: self.dupplePictures[indexPath.row]];
-            //NSLog(@"\n\nIMAGENAME:%@", self.dupplePictures[indexPath.row]);
-            
             UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
+            
             mugshotView.autoresizingMask = NO;
             mugshotView.autoresizesSubviews = NO;
             mugshotView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -91,6 +78,11 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
             mugshotView.clipsToBounds = YES;
             mugshotView.layer.cornerRadius = cellOne.frame.size.height/2;
             
+            if ([self.dupplePictures[indexPath.row]  isEqual: @"sans3"])
+            {
+                mugshotView.backgroundColor = [UIColor blueColor];
+            }
+            
             [cellOne addSubview: mugshotView];
         }
 
@@ -98,6 +90,7 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
 }
 
 #pragma mark <collectionView visualSetup>
+
 //size of each item in dequeCell
 -(CGSize)collectionView: (UICollectionView *) collectionView
                  layout:(UICollectionViewLayout *) collectionViewLayout

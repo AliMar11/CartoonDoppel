@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ALMDuppleCollectionViewController.h"
 #import "ALMQuestionViewController.h"
-#import "ALMCharacter.h"
 
 @interface ALMStartScreenViewController : UIViewController 
 @property (strong, nonatomic) NSString *userName;

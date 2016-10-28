@@ -10,7 +10,6 @@
 
 @interface ALMCharacterTraits : NSObject
 
-@property (nonatomic, strong) NSDictionary *traitDictionary;
 @property (nonatomic, strong)  NSNumber  *aggressive;
 @property (nonatomic, strong)  NSNumber  *ambitious;
 @property (nonatomic, strong)  NSNumber  *cheerful;
@@ -68,6 +67,4 @@
                       troublemaker: (NSNumber *)troublemaker
                           trusting: (NSNumber *)trust
                      vulnerability: (NSNumber *)vulnurability;
-
- 
 @end
