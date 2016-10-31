@@ -12,7 +12,7 @@
 
 +(void)dataAnalysis:(ALMCharacter *)player withCompletion:(void (^)(NSArray *topFive))completion
 {
-    NSArray *test = [player.traitDictionary keysSortedByValueUsingComparator: ^(id obj1, id obj2)
+    NSArray *playerTraits = [player.traitDictionary keysSortedByValueUsingComparator: ^(id obj1, id obj2)
     {
         
         if ([obj1 integerValue] > [obj2 integerValue])
@@ -29,13 +29,19 @@
         return (NSComparisonResult)NSOrderedAscending;
     }];
     
-    NSMutableArray *topFive = [[NSMutableArray alloc]init];
+    NSLog(@"PLAYER TRAITS:%@", playerTraits);
+   // NSMutableArray *topFive = [[NSMutableArray alloc]init];
+    
     [ALMCharacter populateCharacterListWithCompletion:^(NSArray *characterList)
      {
-         [ALMCharacter characterSort: characterList];
+         [ALMCharacter characterSort: characterList withCompletion:^(NSArray *characterList)
+         {
+//TODO here we need to compare the player's traits with dupple traits according to values. Return the top 5 to next VC.
+             
+
+         }];
         
      }];
-    //TODO HERE WE NEED TO COMPARE THE KEYS ACCORDING TO VALUES
 
 }
 

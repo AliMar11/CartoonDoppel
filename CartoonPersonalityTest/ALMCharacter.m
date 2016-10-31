@@ -154,19 +154,14 @@ ALMCharacter *frisk = [[ALMCharacter alloc] initWithCharacter: @"Frisk"
     completion(characterList);
 }
 
-+(NSArray*)characterSort:(NSArray*)characterList
+//TODO!!! Fix dupple init so it's not crazy like so: characterList.dupple.traits.duppleTraits.... a dupple only needs dupple traits ^_^ (delete unnecessary steps)
++(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray *characterList))completion
 {
-    
-    
-    NSArray *sortedDupps = [[NSArray alloc]init];
-    
-    //ALMCharacter *testCharacter = [characterList objectAtIndex:0];
-    
-    
     for (ALMCharacter *aDupple in characterList)
                {
-                //   testCharacter.traits.duppleTraits
-        NSArray *characterTest = [aDupple.character.traits.duppleTraits keysSortedByValueUsingComparator: ^(id obj1, id obj2)
+                   NSDictionary *test = aDupple.traits.duppleTraits;
+                   
+        NSArray *characterTest = [test keysSortedByValueUsingComparator: ^(id obj1, id obj2)
                                                  {
                                                      
                                                      if ([obj1 integerValue] > [obj2 integerValue])
@@ -181,15 +176,11 @@ ALMCharacter *frisk = [[ALMCharacter alloc] initWithCharacter: @"Frisk"
                                                      }
                                                      
                                                      return (NSComparisonResult)NSOrderedAscending;
+                                                     
                                                  }];
-                       
-                       NSLog(@"CHARACTER TEST\n%@",characterTest);
-                   
-
+                       NSLog(@"name:%@\nCHARACTER TEST\n%@",aDupple.characterName ,characterTest.description);
                 }
     
-    return sortedDupps;
-
 }
 
 

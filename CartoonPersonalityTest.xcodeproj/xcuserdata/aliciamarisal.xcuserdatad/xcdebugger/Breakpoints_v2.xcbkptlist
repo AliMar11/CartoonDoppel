@@ -19,29 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMCharacter.m"
-            timestampString = "499578627.816169"
+            filePath = "CartoonPersonalityTest/ALMAnalysis.m"
+            timestampString = "499582904.723548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "+characterSort:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMCharacter.m"
-            timestampString = "499578863.014912"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "+characterSort:"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "+dataAnalysis:withCompletion:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -12,7 +12,7 @@
 @interface ALMAnalysis : NSObject
 
 @property (nonatomic, strong) ALMCharacter *player;
+@property (nonatomic, strong) NSArray *topFiveHanchos;
 
 +(void)dataAnalysis:(ALMCharacter*)player withCompletion: (void(^)(NSArray *topFive))completion;
-//-(void)orderTheTraits: (ALMCharacter*)playerData : (NSDictionary*)duppleList;
 @end
