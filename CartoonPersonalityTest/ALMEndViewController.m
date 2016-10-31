@@ -9,6 +9,13 @@
 #import "ALMEndViewController.h"
 
 @interface ALMEndViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *duppleImageView;
+@property (weak, nonatomic) IBOutlet UITextField *traitOne;
+@property (weak, nonatomic) IBOutlet UITextField *traitTwo;
+@property (weak, nonatomic) IBOutlet UITextField *traitThree;
+@property (weak, nonatomic) IBOutlet UITextField *traitFour;
+@property (weak, nonatomic) IBOutlet UITextField *TraitFive;
+@property (weak, nonatomic) IBOutlet UITextField *thankYou; //add cool gradients here!
 
 @end
 
@@ -18,6 +25,7 @@
 {
     [super viewDidLoad];
     
+    [self.duppleImageView setImage: self.theOne.mugshot];
 
 }
 

@@ -11,7 +11,6 @@
 		2B33EA6B1DADF55A00B71096 /* ALMQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA6A1DADF55A00B71096 /* ALMQuestionViewController.m */; };
 		2B33EA6E1DAE0F1E00B71096 /* ALMAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA6D1DAE0F1E00B71096 /* ALMAnalysisViewController.m */; };
 		2B33EA711DAE1D7D00B71096 /* ALMEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA701DAE1D7D00B71096 /* ALMEndViewController.m */; };
-		2B33EA751DAE888000B71096 /* ALMDuppleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA741DAE888000B71096 /* ALMDuppleCollectionViewCell.m */; };
 		2B33EA781DAF468F00B71096 /* ALMCharacterTraits.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA771DAF468F00B71096 /* ALMCharacterTraits.m */; };
 		2B60C2E91D93212D00587B77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2E81D93212D00587B77 /* main.m */; };
 		2B60C2EC1D93212D00587B77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2EB1D93212D00587B77 /* AppDelegate.m */; };
@@ -24,6 +23,8 @@
 		2B60C3061D9449D800587B77 /* ALMCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C3051D9449D800587B77 /* ALMCharacter.m */; };
 		2B60C3121D95713B00587B77 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C30F1D95713B00587B77 /* User+CoreDataProperties.m */; };
 		2B60C3131D95713B00587B77 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C3111D95713B00587B77 /* User.m */; };
+		2BC1BB271DC6B3D600A680FE /* ALMDuppleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1BB261DC6B3D600A680FE /* ALMDuppleCollectionViewCell.m */; };
+		2BC522C51DC40D9D00A4ED02 /* ALMAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC522C41DC40D9D00A4ED02 /* ALMAnalysis.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +36,6 @@
 		2B33EA6D1DAE0F1E00B71096 /* ALMAnalysisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMAnalysisViewController.m; sourceTree = "<group>"; };
 		2B33EA6F1DAE1D7C00B71096 /* ALMEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMEndViewController.h; sourceTree = "<group>"; };
 		2B33EA701DAE1D7D00B71096 /* ALMEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMEndViewController.m; sourceTree = "<group>"; };
-		2B33EA731DAE888000B71096 /* ALMDuppleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMDuppleCollectionViewCell.h; sourceTree = "<group>"; };
-		2B33EA741DAE888000B71096 /* ALMDuppleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMDuppleCollectionViewCell.m; sourceTree = "<group>"; };
 		2B33EA761DAF468F00B71096 /* ALMCharacterTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMCharacterTraits.h; sourceTree = "<group>"; };
 		2B33EA771DAF468F00B71096 /* ALMCharacterTraits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMCharacterTraits.m; sourceTree = "<group>"; };
 		2B60C2E41D93212D00587B77 /* CartoonPersonalityTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoonPersonalityTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +57,10 @@
 		2B60C30F1D95713B00587B77 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2B60C3101D95713B00587B77 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		2B60C3111D95713B00587B77 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2BC1BB261DC6B3D600A680FE /* ALMDuppleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMDuppleCollectionViewCell.m; sourceTree = "<group>"; };
+		2BC1BB281DC6B3EF00A680FE /* ALMDuppleCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMDuppleCollectionViewCell.h; sourceTree = "<group>"; };
+		2BC522C31DC40D9D00A4ED02 /* ALMAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMAnalysis.h; sourceTree = "<group>"; };
+		2BC522C41DC40D9D00A4ED02 /* ALMAnalysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMAnalysis.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +74,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B33EA721DAE882400B71096 /* Views */ = {
+		2B33EA721DAE882400B71096 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2B60C2EA1D93212D00587B77 /* AppDelegate.h */,
-				2B60C2EB1D93212D00587B77 /* AppDelegate.m */,
-				2B33EA731DAE888000B71096 /* ALMDuppleCollectionViewCell.h */,
-				2B33EA741DAE888000B71096 /* ALMDuppleCollectionViewCell.m */,
 			);
-			name = Views;
+			name = View;
 			sourceTree = "<group>";
 		};
 		2B60C2DB1D93212D00587B77 = {
@@ -101,10 +100,13 @@
 		2B60C2E61D93212D00587B77 /* CartoonPersonalityTest */ = {
 			isa = PBXGroup;
 			children = (
-				2B60C30D1D944ADE00587B77 /* Models */,
-				2B33EA721DAE882400B71096 /* Views */,
+				2B60C30D1D944ADE00587B77 /* Model */,
+				2BC522C21DC4028500A4ED02 /* Controller */,
+				2B33EA721DAE882400B71096 /* View */,
 				2B60C2ED1D93212D00587B77 /* ALMStartScreenViewController.h */,
 				2B60C2EE1D93212D00587B77 /* ALMStartScreenViewController.m */,
+				2BC1BB281DC6B3EF00A680FE /* ALMDuppleCollectionViewCell.h */,
+				2BC1BB261DC6B3D600A680FE /* ALMDuppleCollectionViewCell.m */,
 				2B32F0DD1DABF924009E08D9 /* ALMDuppleCollectionViewController.h */,
 				2B32F0DE1DABF924009E08D9 /* ALMDuppleCollectionViewController.m */,
 				2B33EA691DADF55A00B71096 /* ALMQuestionViewController.h */,
@@ -130,7 +132,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2B60C30D1D944ADE00587B77 /* Models */ = {
+		2B60C30D1D944ADE00587B77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2B60C30E1D95713B00587B77 /* User+CoreDataProperties.h */,
@@ -145,7 +147,18 @@
 				2B33EA771DAF468F00B71096 /* ALMCharacterTraits.m */,
 				2B60C2F31D93212D00587B77 /* CartoonPersonalityTest.xcdatamodeld */,
 			);
-			name = Models;
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2BC522C21DC4028500A4ED02 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B60C2EA1D93212D00587B77 /* AppDelegate.h */,
+				2B60C2EB1D93212D00587B77 /* AppDelegate.m */,
+				2BC522C31DC40D9D00A4ED02 /* ALMAnalysis.h */,
+				2BC522C41DC40D9D00A4ED02 /* ALMAnalysis.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,12 +235,13 @@
 				2B33EA711DAE1D7D00B71096 /* ALMEndViewController.m in Sources */,
 				2B60C3031D94493A00587B77 /* ALMQuestions.m in Sources */,
 				2B60C3121D95713B00587B77 /* User+CoreDataProperties.m in Sources */,
+				2BC522C51DC40D9D00A4ED02 /* ALMAnalysis.m in Sources */,
 				2B32F0DF1DABF924009E08D9 /* ALMDuppleCollectionViewController.m in Sources */,
+				2BC1BB271DC6B3D600A680FE /* ALMDuppleCollectionViewCell.m in Sources */,
 				2B60C2EF1D93212D00587B77 /* ALMStartScreenViewController.m in Sources */,
 				2B60C3061D9449D800587B77 /* ALMCharacter.m in Sources */,
 				2B60C2EC1D93212D00587B77 /* AppDelegate.m in Sources */,
 				2B33EA6E1DAE0F1E00B71096 /* ALMAnalysisViewController.m in Sources */,
-				2B33EA751DAE888000B71096 /* ALMDuppleCollectionViewCell.m in Sources */,
 				2B60C2E91D93212D00587B77 /* main.m in Sources */,
 				2B33EA781DAF468F00B71096 /* ALMCharacterTraits.m in Sources */,
 				2B60C2F51D93212D00587B77 /* CartoonPersonalityTest.xcdatamodeld in Sources */,

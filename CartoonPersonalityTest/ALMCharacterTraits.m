@@ -33,25 +33,27 @@
     
     self = [super init];
     if (self)
-    {
-                _aggressive = @0;
-                _careful = @0;
-                _clever = @0;
-                _comedic = @0;
-                _courage = @0;
-                _creative = @0;
-                _despicable = @0;
-                _determined = @0;
-                _dorky = @0;
-                _eccentric = @0;
-                _enthusiastic = @0;
-                _naive = @0;
-                _optimistic = @0;
-                _negative = @0;
-                _sassy = @0;
-                _shy = @0;
-                _sympathetic = @0;
-                _troublemaker = @0;
+    {           _duppleTraits = [NSMutableDictionary new];
+  
+        _duppleTraits = @{@"AGGRESSIVE" : aggressive,
+                          @"CAREFUL" : careful,
+                          @"CLEVER" : clever,
+                          @"COMEDIC" :comedic,
+                          @"COURAGE" :courage,
+                          @"CREATIVITY" : creativity ,
+                          @"DESPICABLE" :despicableness ,
+                          @"DETERMINED" :determination ,
+                          @"DORKY" : dorky ,
+                          @"ECCENTRIC" :  eccentricity ,
+                          @"ENTHUSIASM" :enthusiasm ,
+                          @"NAIVE" : naive ,
+                          @"OPTIMISTIC" : optimistic ,
+                          @"NEGATIVE" :  negative ,
+                          @"PASSIVE" :passive ,
+                          @"SASSY" :sassy ,
+                          @"SHY" : shy,
+                          @"SYMPATHETHIC" :  sympathy ,
+                          @"TROUBLEMAKER" : troublemaker};
     }
 
     return self;

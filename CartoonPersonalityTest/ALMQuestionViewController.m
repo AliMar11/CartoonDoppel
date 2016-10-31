@@ -64,7 +64,7 @@
     {
         if ([possibleAnswer.allKeys[0] isEqualToString: [selected titleForState:UIControlStateNormal]])
         {
-            NSLog(@"\n\nWe've found the selected answer pal! -->%@\n\n", possibleAnswer.allValues[0]);
+          //  NSLog(@"\n\nWe've found the selected answer pal! -->%@\n\n", possibleAnswer.allValues[0]);
             
             [ALMCharacter tallyUserAnswers: self.theUser :possibleAnswer.allValues[0]];
         }
@@ -102,20 +102,21 @@
 {
     self.questionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
     NSArray *buttonArray = [NSArray arrayWithObjects:self.choiceAbutton, self.choiceBbutton, self.choiceCbutton, self.choiceDbutton, nil];
+    
 //TODO: implement cool button gradients here ^_^
     CAGradientLayer *buttonGrades = [CAGradientLayer layer];
 
     for (UIButton *button in buttonArray)
     {
         //[button.layer insertSublayer: buttonGrades atIndex: 0];
+        //[buttLayer setBorderColor: [[UIColor colorWithRed:0 green:0 blue:0 alpha:0] CGColor]];
+
         button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         CALayer *buttLayer = button.layer;
         buttonGrades.frame = button.bounds;
         button.backgroundColor = [UIColor grayColor];
         [buttLayer setCornerRadius: 7.0f];
         [buttLayer setBorderWidth: 1.3f];
-        
-        //[buttLayer setBorderColor: [[UIColor colorWithRed:0 green:0 blue:0 alpha:0] CGColor]];
    
         [button.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:15]];
         [button setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
@@ -123,19 +124,11 @@
 }
 
 #pragma mark - Navigation
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    //create VC destinationSegue
-    //pass userCharacterPoints
-    
-   // ALMAnalysisViewController *analysisVC = segue.destinationViewController;
-   // ALMCharacter *characterPoints = self.characterPoints;
-   // analysisVC.characterPoints = characterPoints;
-    
-    
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    ALMAnalysisViewController *analysisVC = segue.destinationViewController;
+    ALMCharacter *playerTraits = self.theUser;
+    analysisVC.playerTraits = playerTraits;
 }
 
 @end

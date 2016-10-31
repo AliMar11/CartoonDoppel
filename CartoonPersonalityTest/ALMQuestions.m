@@ -137,7 +137,7 @@
     
     [questionArray addObject: esteemFour];
     
-    ALMQuestions *blank = [[ALMQuestions alloc] initWithQuestion: @"Hey you! With the FACE...time to figure out your twin.Press the 'next' button dork!"
+    ALMQuestions *blank = [[ALMQuestions alloc] initWithQuestion: @"Hey you! With the FACE...time to figure out your twin.Press 'next' button dork!"
                                                          answers: @[]
                                                                choiceA: @{@" " : @" "}
                                                                choiceB: @{@" " : @" "}

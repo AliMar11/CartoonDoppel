@@ -12,7 +12,7 @@
 #import "ALMCharacterTraits.h"
 
 @interface ALMCharacter : NSObject
-@property (nonatomic,  strong) NSArray *characterList;
+//@property (nonatomic,  strong) NSArray *characterList;
 @property (nonatomic, strong) ALMCharacter *character;
 @property (nonatomic, strong) ALMCharacter *player;
 @property (nonatomic, strong) NSString *characterName;
@@ -20,17 +20,22 @@
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) UIImage *mugshot;
 @property (nonatomic, strong) ALMCharacterTraits *traits;
+@property (nonatomic, strong) NSArray *characters;
+//@property (nonatomic, strong) NSMutableArray *duppleTraits;
+
+-(instancetype)initWithUserCharacter: (NSString*)userName
+                     characterTraits: (NSMutableDictionary*)traitDictionary;
 
 -(instancetype)initWithCharacter: (NSString*)characterName
                          picture: (UIImage*)mugshot
                  characterTraits: (ALMCharacterTraits*)traits;
 
--(void)populateCharacterList;
-
--(instancetype)initWithUserCharacter: (NSString*)userName
-                     characterTraits: (NSMutableDictionary*)traitDictionary;
-
++(void)populateCharacterListWithCompletion: (void(^)(NSMutableArray *characterList))completion;
++(NSArray*)characterSort:(NSArray*)characterList;
 +(void)createUser: (NSString *)userName withCompletion: (void(^)())completion;
 +(void)tallyUserAnswers:(ALMCharacter*) player :(ALMCharacterTraits *) selectedTrait;
+//-(void)populateCharacterListWithCompletion: (void(^)(NSMutableArray *characterList))completion;
++(ALMCharacter*)test: (NSArray *)characterList : (ALMCharacterTraits*) traits;
+
 
 @end

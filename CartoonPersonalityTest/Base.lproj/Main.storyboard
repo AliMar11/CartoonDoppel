@@ -44,6 +44,9 @@
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="184" y="582" width="46" height="36"/>
+                                </variation>
                                 <connections>
                                     <action selector="startTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxA-Pq-WNs"/>
                                 </connections>
@@ -56,6 +59,9 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-1c-bF5" userLabel="CVTwoContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="440" width="414" height="89"/>
+                                </variation>
                                 <connections>
                                     <segue destination="FIY-dB-Zg9" kind="embed" id="OFf-dN-zFR"/>
                                 </connections>
@@ -192,7 +198,8 @@
                                         <exclude reference="fPj-rx-47a"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" alignment="fill" axis="vertical">
+                                <variation key="heightClass=regular" alignment="fill" axis="vertical" misplaced="YES">
+                                    <rect key="frame" x="39" y="304" width="357" height="300"/>
                                     <mask key="constraints">
                                         <include reference="fPj-rx-47a"/>
                                     </mask>
@@ -202,7 +209,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="mG8-Bp-U3S"/>
+                                    <constraint firstAttribute="height" constant="80" id="mG8-Bp-U3S"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -234,9 +241,9 @@
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="width" secondItem="zwY-Ad-kXO" secondAttribute="width" multiplier="0.2" id="WeA-F0-JW0">
                                 <variation key="heightClass=regular" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="JAv-NC-cCV" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" constant="19" id="X1p-xD-IVq"/>
+                            <constraint firstItem="JAv-NC-cCV" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" constant="17" id="X1p-xD-IVq"/>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="aXr-7E-woY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JAv-NC-cCV" secondAttribute="trailing" constant="19" id="afZ-Qp-Siv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JAv-NC-cCV" secondAttribute="trailing" id="afZ-Qp-Siv"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="hL4-BF-Y4C"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.05" id="hvN-KL-iQf">
                                 <variation key="heightClass=regular" constant="0.0"/>
@@ -314,7 +321,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shf-1F-k12">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Let's find out who's your dupple!"/>
                                 <connections>
                                     <segue destination="aIw-RU-tpD" kind="show" id="Q4P-Zd-uQp"/>
                                 </connections>
@@ -396,6 +403,13 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="characterFive" destination="pj6-Hx-Z2j" id="6Mz-Y1-wBx"/>
+                        <outlet property="characterFour" destination="lAO-hs-9EC" id="Ypk-Ie-afE"/>
+                        <outlet property="characterThree" destination="PsM-cZ-ZUn" id="Eb6-QZ-sEy"/>
+                        <outlet property="characterTwo" destination="Gpm-Us-f7A" id="yBf-ds-Y9R"/>
+                        <outlet property="finallyButton" destination="shf-1F-k12" id="Mab-hr-w85"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1b5-aU-xRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,7 +470,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fHw-ES-nCu" firstAttribute="centerY" secondItem="6pi-GK-Qfl" secondAttribute="centerY" id="AiA-p9-iXC"/>
                             <constraint firstItem="fHw-ES-nCu" firstAttribute="height" secondItem="6pi-GK-Qfl" secondAttribute="height" multiplier="0.7" id="BRw-zh-kLt"/>
@@ -524,6 +538,15 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="TraitFive" destination="RDm-N2-RUH" id="eBo-R8-Jja"/>
+                        <outlet property="duppleImageView" destination="fHw-ES-nCu" id="lOD-9f-MAi"/>
+                        <outlet property="thankYou" destination="c15-KZ-RHL" id="M7s-nc-xow"/>
+                        <outlet property="traitFour" destination="rGe-aU-ehC" id="ksD-wG-Tb5"/>
+                        <outlet property="traitOne" destination="P80-hG-gCh" id="8it-P3-CvY"/>
+                        <outlet property="traitThree" destination="Elm-60-TSf" id="88a-ha-Wq2"/>
+                        <outlet property="traitTwo" destination="NOa-yT-jZj" id="Qq5-w9-fOI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmn-It-SPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
