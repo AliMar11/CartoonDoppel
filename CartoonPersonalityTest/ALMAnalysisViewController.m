@@ -25,14 +25,47 @@
 {
     [super viewDidLoad];
     
-    [ALMAnalysis dataAnalysis: self.playerTraits withCompletion:^(NSArray *topFive)
+//TODO break up the sizable code below
+    [ALMAnalysis sortUserTraits: self.playerTraits withCompletion:^(NSArray *topPlayerTraits)
+     {
+         //Here we have the sorted Player traits
+         NSLog(@"\n\nPLAYERRR TRAITS... GIVEN TO ANALYSIS VC--->\n%@\n\n", topPlayerTraits);
+    
+         self.sortedUserTraits = topPlayerTraits;
+    
+    [ALMCharacter populateCharacterListWithCompletion:^(NSMutableArray *characterList)
     {
+        //now we have each dupple
+        NSLog(@"\n\nDUP CHARACTERS GIVEN TO ANALYSIS VC--->\n%@\n\n", characterList);
+
         
-    
+        [ALMAnalysis characterSort: characterList withCompletion:^(NSMutableArray *topDuppleTraits)
+        {
+            //here all dupple traits are sorted
+            [self.duppleListWithTraits  arrayByAddingObject: topDuppleTraits];
+        //    NSLog(@"\n\nSORTED CHARACTERS GIVEN TO ANALYSIS VC--->\n%@\n\n", topDuppleTraits);
+            
+            self.duppleListWithTraits =  topDuppleTraits;
+            
+            [ALMAnalysis dataAnalysis: self.sortedUserTraits : self.duppleListWithTraits withCompletion:^(NSArray *topFiveHanchos)
+             {
+                 
+                 //Here we do the work of comparing player.traits with dupple.traits and post image of lower 4, give topDog to nextVC.
+            
+             }];
+
+       
+        }];
+        
+   
     }];
+         
+         
+     }];
     
+    //self.characterTwo.image = [UIImage imageNamed: topFiveHanchos[1].mugshot];
     
-}
+       }
 
 - (void)didReceiveMemoryWarning
 {

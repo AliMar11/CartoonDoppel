@@ -28,10 +28,7 @@
                          picture: (UIImage*)mugshot
                  characterTraits: (ALMCharacterTraits*)traits;
 
-+(void)populateCharacterListWithCompletion: (void(^)(NSMutableArray *characterList))completion;
-+(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray *characterList))completion;
 +(void)createUser: (NSString *)userName withCompletion: (void(^)())completion;
-+(void)tallyUserAnswers:(ALMCharacter*) player :(ALMCharacterTraits *) selectedTrait;
-//-(void)populateCharacterListWithCompletion: (void(^)(NSMutableArray *characterList))completion;
++(void)populateCharacterListWithCompletion: (void(^)(NSMutableArray *characterList))completion;
 
 @end

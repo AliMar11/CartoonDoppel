@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *traitThree;
 @property (weak, nonatomic) IBOutlet UITextField *traitFour;
 @property (weak, nonatomic) IBOutlet UITextField *TraitFive;
-@property (weak, nonatomic) IBOutlet UITextField *thankYou; //add cool gradients here!
+@property (weak, nonatomic) IBOutlet UITextField *thankYou; //TODO: add cool gradients here!
 
 @end
 

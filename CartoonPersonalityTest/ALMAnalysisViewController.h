@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) ALMCharacter *topMatch;
 @property (nonatomic, strong) ALMCharacter *playerTraits;
-//@property (nonatomic, strong) NSArray *duppleCharacters;
+@property (nonatomic, strong) NSArray *sortedUserTraits;
+@property (nonatomic, strong) NSArray *duppleListWithTraits;
 
 @end

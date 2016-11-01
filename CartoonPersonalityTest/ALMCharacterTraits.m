@@ -35,7 +35,7 @@
     if (self)
     {           _duppleTraits = [NSMutableDictionary new];
   
-        _duppleTraits = @{@"AGGRESSIVE" : aggressive,
+        _duppleTraits = [@{@"AGGRESSIVE" : aggressive,
                           @"CAREFUL" : careful,
                           @"CLEVER" : clever,
                           @"COMEDIC" :comedic,
@@ -53,7 +53,7 @@
                           @"SASSY" :sassy ,
                           @"SHY" : shy,
                           @"SYMPATHETHIC" :  sympathy ,
-                          @"TROUBLEMAKER" : troublemaker};
+                          @"TROUBLEMAKER" : troublemaker}mutableCopy];
     }
 
     return self;

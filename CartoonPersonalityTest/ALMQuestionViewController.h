@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ALMAnalysisViewController.h"
 #import "ALMCharacter.h"
+#import "ALMAnalysis.h"
 
 @interface ALMQuestionViewController : UIViewController
 

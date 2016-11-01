@@ -64,21 +64,6 @@
         completion(user);
 }
 
-//TODO put tallyTheUser in ALMAnalysis
-+(void)tallyUserAnswers:(ALMCharacter *)player :(ALMCharacterTraits *) selectedTrait
-{
-    if (player.traitDictionary[selectedTrait] != nil)
-    {
-    
-        int traitValue = [player.traitDictionary[selectedTrait] intValue];
-        traitValue += 1;
-        player.traitDictionary[(NSString *)selectedTrait] = [[NSNumber alloc] initWithInt: traitValue];
-    }
-    
-   // NSLog(@"\n\nTALLY TAKEN for trait:%@\nPROOF:%@\n\n", player.traitDictionary[selectedTrait], player.traitDictionary);
-
-}
-
 +(void)populateCharacterListWithCompletion: (void(^)(NSMutableArray *characterList))completion
 {
     NSMutableArray* characterList = [[NSMutableArray alloc] init];
@@ -153,43 +138,5 @@ ALMCharacter *frisk = [[ALMCharacter alloc] initWithCharacter: @"Frisk"
 
     completion(characterList);
 }
-
-//TODO!!! Fix dupple init so it's not crazy like so: characterList.dupple.traits.duppleTraits.... a dupple only needs dupple traits ^_^ (delete unnecessary steps)
-+(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray *topDuppleTraits))completion
-{
-    NSArray *topDuppleTraits = [NSArray new];
-    
-    for (ALMCharacter *aDupple in characterList)
-               {
-                   NSDictionary *test = aDupple.traits.duppleTraits;
-                   
-                 //  if (test.count < 7)
-            //       {
-        NSArray *characterTest = [test keysSortedByValueUsingComparator: ^(id obj1, id obj2)
-                                                 {
-                                      
-                                                         if ([obj1 integerValue] > [obj2 integerValue])
-                                                         {
-                                                             
-                                                             return (NSComparisonResult)NSOrderedAscending;
-                                                         }
-                                                         if ([obj1 integerValue] < [obj2 integerValue])
-                                                         {
-                                                             
-                                                             return (NSComparisonResult)NSOrderedDescending;
-                                                         }
-                                                         
-                                                         return (NSComparisonResult)NSOrderedAscending;
-
-                        
-                                                }];
-                   
-                      [topDuppleTraits arrayByAddingObjectsFromArray: [characterTest subarrayWithRange: NSMakeRange(0, 7)] ];
-                       NSLog(@"name:%@\nCHARACTER TEST\n%@\n%@'s top traits:%@",aDupple.characterName ,characterTest.description, aDupple.characterName, topDuppleTraits);
-                   //}
-                }
-    
-}
-
 
 @end

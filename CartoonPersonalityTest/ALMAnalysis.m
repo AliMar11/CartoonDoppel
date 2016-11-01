@@ -10,60 +10,81 @@
 
 @implementation ALMAnalysis
 
-+(void)dataAnalysis:(ALMCharacter *)player withCompletion:(void (^)(NSArray *topFive))completion
++(void)tallyUserAnswers:(ALMCharacter *)player :(ALMCharacterTraits *) selectedTrait
 {
-    NSArray *playerTraits = [player.traitDictionary keysSortedByValueUsingComparator: ^(id obj1, id obj2)
+    if (player.traitDictionary[selectedTrait] != nil)
     {
-        
-        if ([obj1 integerValue] > [obj2 integerValue])
-        {
-            
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        if ([obj1 integerValue] < [obj2 integerValue])
-        {
-            
-            return (NSComparisonResult)NSOrderedDescending;
-        }
-        
-        return (NSComparisonResult)NSOrderedAscending;
-    }];
-    
-    NSLog(@"PLAYER TRAITS:%@", playerTraits);
-   // NSMutableArray *topFive = [[NSMutableArray alloc]init];
-    
-    [ALMCharacter populateCharacterListWithCompletion:^(NSArray *characterList)
-     {
-         NSLog(@"POP CHARA LIST ON ALMANALYSIS");
-         [ALMCharacter characterSort: characterList withCompletion:^(NSArray *characterList)
-         {
-             NSArray *topDuppleTraits = [NSArray new];
-             
-             for (ALMCharacter *dupple in characterList)
-             {
-                           [topDuppleTraits arrayByAddingObjectsFromArray: [characterList subarrayWithRange: NSMakeRange(0, 7)] ];
-                 
-                 NSLog(@"\n%@'s top traits:%@",dupple.characterName, topDuppleTraits);
-             }
-             [topDuppleTraits arrayByAddingObjectsFromArray: [characterList subarrayWithRange: NSMakeRange(0, 7)] ];
-             //                   NSLog(@"name:%@\nCHARACTER TEST\n%@\n%@'s top traits:%@",aDupple.characterName ,characterTest.description, aDupple.characterName, topDuppleTraits);
-             //                       NSLog(@"name:%@\nCHARACTER TEST\n%@\n%@'s top traits:%@",aDupple.characterName ,characterTest.description, aDupple.characterName, topDuppleTraits);
-             //}
-
-            
-         }];
-         //TODO here we need to compare the player's traits with dupple traits according to values. Return the top 5 to next VC.
-         NSArray *topPlayerTraits = [playerTraits subarrayWithRange: NSMakeRange(0, 7)];
-        // NSLog(@"PLAYER TOPS-->%@", topPlayerTraits);
-         
-         
-        
-     }];
-
+        int traitValue = [player.traitDictionary[selectedTrait] intValue];
+        traitValue += 1;
+        player.traitDictionary[(NSString *)selectedTrait] = [[NSNumber alloc] initWithInt: traitValue];
+    }
 }
 
 
 
++(void)sortUserTraits:(ALMCharacter*)player withCompletion: (void(^)(NSArray *topPlayerTraits))completion
+{
+    NSArray *playerTraits = [player.traitDictionary keysSortedByValueUsingComparator: ^(id obj1, id obj2)
+                             {
+                                 if ([obj1 integerValue] > [obj2 integerValue])
+                                 {
+                                     
+                                     return (NSComparisonResult)NSOrderedAscending;
+                                 }
+                                 if ([obj1 integerValue] < [obj2 integerValue])
+                                 {
+                                     
+                                     return (NSComparisonResult)NSOrderedDescending;
+                                 }
+                                 
+                                 return (NSComparisonResult)NSOrderedAscending;
+                             }];
+    
+    //NSLog(@"1PLAYER TRAITS:%@", playerTraits);
+    NSArray *topPlayerTraits = [playerTraits subarrayWithRange: NSMakeRange(0, 7)];
+   // NSLog(@"1.2PLAYER TOPS-->%@", topPlayerTraits);
+    
+    completion(topPlayerTraits);
+    
+}
 
+//TODO!!! Fix dupple init so it's not crazy like so: characterList.dupple.traits.duppleTraits.... a dupple only needs dupple traits ^_^ (delete unnecessary steps)
++(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSMutableArray *topDuppleTraits))completion
+{
+    for (ALMCharacter *character in characterList)
+    {
+        NSArray *characterTest = [character.traits.duppleTraits keysSortedByValueUsingComparator: ^(id obj1, id obj2)
+                                  {
+                                      if ([obj1 integerValue] > [obj2 integerValue])
+                                      {
+                                          
+                                          return (NSComparisonResult)NSOrderedAscending;
+                                      }
+                                      if ([obj1 integerValue] < [obj2 integerValue])
+                                      {
+                                          
+                                          return (NSComparisonResult)NSOrderedDescending;
+                                      }
+                                      
+                                      return (NSComparisonResult)NSOrderedAscending;
+                                  }];
+        
+        NSMutableArray *topDuppleTraits = [[NSMutableArray alloc] init];
+        [ topDuppleTraits addObjectsFromArray:[characterTest subarrayWithRange: NSMakeRange(0, 7)] ];
+        
+        completion(topDuppleTraits);
+    }
+   // NSLog(@"2 DUPPLE TRAITS--SORTED%@", characterList);
+    
+}
+
++(void)dataAnalysis:(NSArray*)player :(NSArray*)topDuppleTraits withCompletion: (void(^)(NSArray *topFiveHanchos))completion
+{
+    NSArray *topFiveHanchos = [NSArray new];
+    NSLog(@"3 DATA ANALYSIS:%@",topFiveHanchos );
+
+ //take player and topDupps and compare each Dupp with player to give back most compatable dupps.
+    completion(topFiveHanchos);
+}
 
 @end

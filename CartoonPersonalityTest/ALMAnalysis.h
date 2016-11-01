@@ -14,5 +14,12 @@
 @property (nonatomic, strong) ALMCharacter *player;
 @property (nonatomic, strong) NSArray *topFiveHanchos;
 
-+(void)dataAnalysis:(ALMCharacter*)player withCompletion: (void(^)(NSArray *topFive))completion;
++(void)tallyUserAnswers:(ALMCharacter*) player :(ALMCharacterTraits *) selectedTrait;
+
++(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSMutableArray *topDuppleTraits))completion;
+
++(void)sortUserTraits:(ALMCharacter*)player withCompletion: (void(^)(NSArray *topPlayerTraits))completion;
+
++(void)dataAnalysis:(NSArray*)player :(NSArray*)topDuppleTraits withCompletion: (void(^)(NSArray *topFiveHanchos))completion;
+
 @end

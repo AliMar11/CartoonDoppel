@@ -64,9 +64,7 @@
     {
         if ([possibleAnswer.allKeys[0] isEqualToString: [selected titleForState:UIControlStateNormal]])
         {
-          //  NSLog(@"\n\nWe've found the selected answer pal! -->%@\n\n", possibleAnswer.allValues[0]);
-            
-            [ALMCharacter tallyUserAnswers: self.theUser :possibleAnswer.allValues[0]];
+            [ALMAnalysis tallyUserAnswers: self.theUser :possibleAnswer.allValues[0]];
         }
         
     }
