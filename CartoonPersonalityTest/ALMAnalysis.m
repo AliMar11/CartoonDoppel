@@ -34,12 +34,29 @@
     
     [ALMCharacter populateCharacterListWithCompletion:^(NSArray *characterList)
      {
+         NSLog(@"POP CHARA LIST ON ALMANALYSIS");
          [ALMCharacter characterSort: characterList withCompletion:^(NSArray *characterList)
          {
-//TODO here we need to compare the player's traits with dupple traits according to values. Return the top 5 to next VC.
+             NSArray *topDuppleTraits = [NSArray new];
              
+             for (ALMCharacter *dupple in characterList)
+             {
+                           [topDuppleTraits arrayByAddingObjectsFromArray: [characterList subarrayWithRange: NSMakeRange(0, 7)] ];
+                 
+                 NSLog(@"\n%@'s top traits:%@",dupple.characterName, topDuppleTraits);
+             }
+             [topDuppleTraits arrayByAddingObjectsFromArray: [characterList subarrayWithRange: NSMakeRange(0, 7)] ];
+             //                   NSLog(@"name:%@\nCHARACTER TEST\n%@\n%@'s top traits:%@",aDupple.characterName ,characterTest.description, aDupple.characterName, topDuppleTraits);
+             //                       NSLog(@"name:%@\nCHARACTER TEST\n%@\n%@'s top traits:%@",aDupple.characterName ,characterTest.description, aDupple.characterName, topDuppleTraits);
+             //}
 
+            
          }];
+         //TODO here we need to compare the player's traits with dupple traits according to values. Return the top 5 to next VC.
+         NSArray *topPlayerTraits = [playerTraits subarrayWithRange: NSMakeRange(0, 7)];
+        // NSLog(@"PLAYER TOPS-->%@", topPlayerTraits);
+         
+         
         
      }];
 

@@ -155,30 +155,38 @@ ALMCharacter *frisk = [[ALMCharacter alloc] initWithCharacter: @"Frisk"
 }
 
 //TODO!!! Fix dupple init so it's not crazy like so: characterList.dupple.traits.duppleTraits.... a dupple only needs dupple traits ^_^ (delete unnecessary steps)
-+(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray *characterList))completion
++(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray *topDuppleTraits))completion
 {
+    NSArray *topDuppleTraits = [NSArray new];
+    
     for (ALMCharacter *aDupple in characterList)
                {
                    NSDictionary *test = aDupple.traits.duppleTraits;
                    
+                 //  if (test.count < 7)
+            //       {
         NSArray *characterTest = [test keysSortedByValueUsingComparator: ^(id obj1, id obj2)
                                                  {
-                                                     
-                                                     if ([obj1 integerValue] > [obj2 integerValue])
-                                                     {
+                                      
+                                                         if ([obj1 integerValue] > [obj2 integerValue])
+                                                         {
+                                                             
+                                                             return (NSComparisonResult)NSOrderedAscending;
+                                                         }
+                                                         if ([obj1 integerValue] < [obj2 integerValue])
+                                                         {
+                                                             
+                                                             return (NSComparisonResult)NSOrderedDescending;
+                                                         }
                                                          
                                                          return (NSComparisonResult)NSOrderedAscending;
-                                                     }
-                                                     if ([obj1 integerValue] < [obj2 integerValue])
-                                                     {
-                                                         
-                                                         return (NSComparisonResult)NSOrderedDescending;
-                                                     }
-                                                     
-                                                     return (NSComparisonResult)NSOrderedAscending;
-                                                     
-                                                 }];
-                       NSLog(@"name:%@\nCHARACTER TEST\n%@",aDupple.characterName ,characterTest.description);
+
+                        
+                                                }];
+                   
+                      [topDuppleTraits arrayByAddingObjectsFromArray: [characterTest subarrayWithRange: NSMakeRange(0, 7)] ];
+                       NSLog(@"name:%@\nCHARACTER TEST\n%@\n%@'s top traits:%@",aDupple.characterName ,characterTest.description, aDupple.characterName, topDuppleTraits);
+                   //}
                 }
     
 }

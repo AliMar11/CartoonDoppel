@@ -25,8 +25,9 @@
 {
     [super viewDidLoad];
     
-    [ALMAnalysis dataAnalysis:self.playerTraits withCompletion:^(NSArray *topFive)
+    [ALMAnalysis dataAnalysis: self.playerTraits withCompletion:^(NSArray *topFive)
     {
+        
     
     }];
     
