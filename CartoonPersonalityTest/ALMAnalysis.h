@@ -20,6 +20,6 @@
 
 +(void)sortUserTraits:(ALMCharacter*)player withCompletion: (void(^)(NSArray *topPlayerTraits))completion;
 
-+(void)dataAnalysis:(NSArray*)player :(NSArray*)topDuppleTraits withCompletion: (void(^)(NSArray *topFiveHanchos))completion;
++(void)dataAnalysis:(NSArray*)player :(NSArray <ALMCharacter*> *)topDuppleTraits withCompletion: (void(^)(NSArray *topFiveHanchos))completion;
 
 @end

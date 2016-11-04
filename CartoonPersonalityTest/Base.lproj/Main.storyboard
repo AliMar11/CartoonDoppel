@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -198,8 +198,7 @@
                                         <exclude reference="fPj-rx-47a"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" alignment="fill" axis="vertical" misplaced="YES">
-                                    <rect key="frame" x="39" y="304" width="357" height="300"/>
+                                <variation key="heightClass=regular" alignment="fill" axis="vertical">
                                     <mask key="constraints">
                                         <include reference="fPj-rx-47a"/>
                                     </mask>
@@ -243,7 +242,6 @@
                             </constraint>
                             <constraint firstItem="JAv-NC-cCV" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" constant="17" id="X1p-xD-IVq"/>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="aXr-7E-woY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JAv-NC-cCV" secondAttribute="trailing" id="afZ-Qp-Siv"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="hL4-BF-Y4C"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.05" id="hvN-KL-iQf">
                                 <variation key="heightClass=regular" constant="0.0"/>
@@ -265,7 +263,6 @@
                                 <exclude reference="hvN-KL-iQf"/>
                                 <exclude reference="DBF-8p-9Nm"/>
                                 <exclude reference="X1p-xD-IVq"/>
-                                <exclude reference="afZ-Qp-Siv"/>
                                 <exclude reference="zzH-cg-4s7"/>
                                 <exclude reference="TUb-ug-kQB"/>
                                 <exclude reference="aXr-7E-woY"/>
@@ -284,7 +281,6 @@
                                 <include reference="hvN-KL-iQf"/>
                                 <include reference="DBF-8p-9Nm"/>
                                 <include reference="X1p-xD-IVq"/>
-                                <include reference="afZ-Qp-Siv"/>
                                 <include reference="zzH-cg-4s7"/>
                                 <include reference="TUb-ug-kQB"/>
                                 <include reference="aXr-7E-woY"/>
@@ -436,27 +432,27 @@
                             <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2eS-Jo-Egj" userLabel="duppleTraintsStackView">
                                 <rect key="frame" x="139" y="435" width="25" height="150"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P80-hG-gCh">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P80-hG-gCh">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NOa-yT-jZj">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NOa-yT-jZj">
                                         <rect key="frame" x="0.0" y="30" width="25" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Elm-60-TSf">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Elm-60-TSf">
                                         <rect key="frame" x="0.0" y="60" width="25" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGe-aU-ehC">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rGe-aU-ehC">
                                         <rect key="frame" x="0.0" y="90" width="25" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RDm-N2-RUH">
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RDm-N2-RUH">
                                         <rect key="frame" x="0.0" y="120" width="25" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -464,7 +460,7 @@
                                 </subviews>
                                 <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Thanks for Playing!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c15-KZ-RHL" userLabel="thanksTextField">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Thanks for Playing!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c15-KZ-RHL" userLabel="thanksTextField">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

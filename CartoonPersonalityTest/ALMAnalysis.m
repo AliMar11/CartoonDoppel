@@ -74,16 +74,28 @@
         
         completion(topDuppleTraits);
     }
-   // NSLog(@"2 DUPPLE TRAITS--SORTED%@", characterList);
+    // NSLog(@"2 DUPPLE TRAITS--SORTED%@", characterList);
     
 }
-
 +(void)dataAnalysis:(NSArray*)player :(NSArray*)topDuppleTraits withCompletion: (void(^)(NSArray *topFiveHanchos))completion
 {
     NSArray *topFiveHanchos = [NSArray new];
     NSLog(@"3 DATA ANALYSIS:%@",topFiveHanchos );
-
  //take player and topDupps and compare each Dupp with player to give back most compatable dupps.
+    
+    //below compares one trait from dupple with all traits from player
+    /*
+    for (ALMCharacter *dupple in topDuppleTraits)
+    {
+        NSLog(@"\nWE ARE COMPARING %@ WITH %@", player, dupple);
+    }
+     */
+    for (int i = 0;  i <= player.count; i++)
+    {
+        NSLog(@"\nWE ARE COMPARING %@ WITH %@", player, topDuppleTraits);
+        
+        //now we want to compare each array for doubles. The dupple with highest doubles count is topHanchose[0], the others get passed as topHanchos
+    }
     completion(topFiveHanchos);
 }
 
