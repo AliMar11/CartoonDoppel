@@ -20,6 +20,7 @@
 @property (nonatomic, strong) UIImage *mugshot;
 @property (nonatomic, strong) ALMCharacterTraits *traits;
 @property (nonatomic, strong) NSArray *characters;
+//@property (nonatomic, strong) NSArray *topTraits;
 
 -(instancetype)initWithUserCharacter: (NSString*)userName
                      characterTraits: (NSMutableDictionary*)traitDictionary;

@@ -105,7 +105,6 @@ ALMCharacter *frisk = [[ALMCharacter alloc] initWithCharacter: @"Frisk"
 
 [characterList addObject: frisk];
 
-
     ALMCharacter *bob = [[ALMCharacter alloc] initWithCharacter: @"Bob Belcher"
                                                      picture: [UIImage imageNamed: @"bob"]
                                              characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@2 careful:@9 clever:@9 comedic:@6 courage:@7 creative:@9 despicable:@0 determined:@9 dorky:@8 eccentric:@5 enthusiastic:@5 naive:@4 optimistic:@4 negative:@8 passive:@10 sassy:@0 shy:@3 sympathetic:@8 troublemaker:@0]];
