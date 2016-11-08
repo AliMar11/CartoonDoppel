@@ -99,7 +99,7 @@
 -(void)viewSetup
 {
     self.questionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
-    NSArray *buttonArray = [NSArray arrayWithObjects:self.choiceAbutton, self.choiceBbutton, self.choiceCbutton, self.choiceDbutton, nil];
+    NSArray *buttonArray = [NSArray arrayWithObjects: self.choiceAbutton, self.choiceBbutton, self.choiceCbutton, self.choiceDbutton, nil];
     
 //TODO: implement cool button gradients here ^_^
     CAGradientLayer *buttonGrades = [CAGradientLayer layer];

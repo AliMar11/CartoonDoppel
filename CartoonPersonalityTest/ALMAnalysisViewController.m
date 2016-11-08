@@ -26,29 +26,33 @@
     [super viewDidLoad];
     
 //TODO break up the sizable code below
-    [ALMAnalysis sortUserTraits: self.playerTraits withCompletion:^(NSArray *topPlayerTraits)
+    [ALMAnalysis sortUserTraits: self.playerTraits withCompletion:^(NSMutableDictionary *topPlayerTraits)
      {
          //Here we have the sorted Player traits
          NSLog(@"\n\nPLAYERRR TRAITS... GIVEN TO ANALYSIS VC--->\n%@\n\n", topPlayerTraits);
     
-         self.sortedUserTraits = topPlayerTraits;
+         self.topPlayerTraits = topPlayerTraits;
     
+         NSLog(@"self.playerTraits:%@", self.topPlayerTraits);
+         
     [ALMCharacter populateCharacterListWithCompletion:^(NSMutableArray *characterList)
     {
         //now we have each dupple
         NSLog(@"\n\nDUP CHARACTERS GIVEN TO ANALYSIS VC--->\n%@\n\n", characterList);
 
         
-        [ALMAnalysis characterSort: characterList withCompletion:^(NSMutableArray *topDuppleTraits)
+        [ALMAnalysis characterSort: characterList withCompletion: ^(NSMutableDictionary *topDuppleTraits)
         {
             //here all dupple traits are sorted
-            [self.duppleListWithTraits  arrayByAddingObject: topDuppleTraits];
+           // [self.duppleListWithTraits  arrayByAddingObject: topDuppleTraits];
         //    NSLog(@"\n\nSORTED CHARACTERS GIVEN TO ANALYSIS VC--->\n%@\n\n", topDuppleTraits);
             
             self.duppleListWithTraits =  topDuppleTraits;
             
-            [ALMAnalysis dataAnalysis: self.sortedUserTraits : self.duppleListWithTraits withCompletion:^(NSArray *topFiveHanchos)
+            //dataAnalysis:(NSArray*)player :(NSMutableDictionary *)sortedDupple withCompletion: (void(^)(NSArray *topFiveHanchos))completion;
+            [ALMAnalysis dataAnalysis: self.topPlayerTraits : self.duppleListWithTraits withCompletion:^(NSArray *topFiveHanchos)
              {
+                 
                  
                  //Here we do the work of comparing player.traits with dupple.traits and post image of lower 4, give topDog to nextVC.
             

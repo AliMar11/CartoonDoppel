@@ -34,26 +34,28 @@
     self = [super init];
     if (self)
     {           _duppleTraits = [NSMutableDictionary new];
+                _topDuppleTraits = [NSMutableArray new];
   
+        _topDuppleTraits = [@[
         _duppleTraits = [@{@"AGGRESSIVE" : aggressive,
-                          @"CAREFUL" : careful,
-                          @"CLEVER" : clever,
-                          @"COMEDIC" :comedic,
-                          @"COURAGE" :courage,
-                          @"CREATIVITY" : creativity ,
-                          @"DESPICABLE" :despicableness ,
-                          @"DETERMINED" :determination ,
-                          @"DORKY" : dorky ,
-                          @"ECCENTRIC" :  eccentricity ,
-                          @"ENTHUSIASM" :enthusiasm ,
-                          @"NAIVE" : naive ,
-                          @"OPTIMISTIC" : optimistic ,
-                          @"NEGATIVE" :  negative ,
-                          @"PASSIVE" :passive ,
-                          @"SASSY" :sassy ,
-                          @"SHY" : shy,
-                          @"SYMPATHETHIC" :  sympathy ,
-                          @"TROUBLEMAKER" : troublemaker}mutableCopy];
+                           @"CAREFUL" : careful,
+                           @"CLEVER" : clever,
+                           @"COMEDIC" : comedic,
+                           @"COURAGE" : courage,
+                           @"CREATIVITY" : creativity,
+                           @"DESPICABLE" : despicableness,
+                           @"DETERMINED" : determination,
+                           @"DORKY" : dorky,
+                           @"ECCENTRIC" : eccentricity,
+                           @"ENTHUSIASM" : enthusiasm,
+                           @"NAIVE" : naive,
+                           @"OPTIMISTIC" : optimistic,
+                           @"NEGATIVE" : negative,
+                           @"PASSIVE" : passive,
+                           @"SASSY" : sassy,
+                           @"SHY" : shy,
+                           @"SYMPATHETHIC" : sympathy,
+                           @"TROUBLEMAKER" : troublemaker} mutableCopy] ] mutableCopy];
     }
 
     return self;

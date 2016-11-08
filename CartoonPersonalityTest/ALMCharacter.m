@@ -26,7 +26,7 @@
     return  self;
 }
 
--(instancetype)initWithUserCharacter:(NSString *)userName characterTraits:(NSMutableDictionary *)traitDictionary
+-(instancetype)initWithUserCharacter: (NSString *)userName characterTraits: (NSMutableDictionary *)traitDictionary
 {
     self = [super init];
     if(self)
