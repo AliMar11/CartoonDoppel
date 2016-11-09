@@ -72,67 +72,67 @@
     //[ALMCharacter test:characterList :traits];
     ALMCharacter *bugs = [[ALMCharacter alloc] initWithCharacter: @"Bugs Bunny"
                 picture: [UIImage imageNamed: @"buggs"]
-                                                 characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@3 careful:@4 clever:@10 comedic:@7 courage:@9 creative:@7 despicable:@3 determined:@6 dorky:@3 eccentric:@3 enthusiastic:@5 naive:@1 optimistic:@3 negative:@1 passive:@5 sassy:@8 shy:@3 sympathetic:@7 troublemaker:@5]];
+                                                 characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@0 careful:@1 clever:@4 comedic:@3 courage:@3 creative:@2 despicable:@0 determined:@1 dorky:@0 eccentric:@1 enthusiastic:@1 naive:@0 optimistic:@1 negative:@0 passive:@1 sassy:@2 shy:@0 sympathetic:@2 troublemaker:@1]];
 
     [characterList arrayByAddingObject: bugs];
  
     ALMCharacter *daffy = [[ALMCharacter alloc] initWithCharacter: @"Daffy Duck"
                                                          picture: [UIImage imageNamed: @"daffy5"]
-                                                  characterTraits:  traits = [[ALMCharacterTraits alloc] initWithAggressive:@9 careful:@3 clever:@5 comedic:@9 courage:@4 creative:@6 despicable:@9 determined:@7 dorky:@6 eccentric:@10 enthusiastic:@5 naive:@5 optimistic:@4 negative:@4 passive:@0 sassy:@10 shy:@0 sympathetic:@1 troublemaker:@7]];
+                                                  characterTraits:  traits = [[ALMCharacterTraits alloc] initWithAggressive:@3 careful:@0 clever:@1 comedic:@3 courage:@1 creative:@1 despicable:@4 determined:@1 dorky:@0 eccentric:@3 enthusiastic:@1 naive:@1 optimistic:@1 negative:@1 passive:@0 sassy:@4 shy:@0 sympathetic:@0 troublemaker:@2]];
    [characterList addObject: daffy];
     
     ALMCharacter *simity = [[ALMCharacter alloc] initWithCharacter: @"Yosimite Sam"
                                                          picture: [UIImage imageNamed: @"sam"]
-                                                 characterTraits:  traits = [[ALMCharacterTraits alloc] initWithAggressive:@10 careful:@0 clever:@1 comedic:@2 courage:@9 creative:@5 despicable:@10 determined:@8 dorky:@1 eccentric:@9 enthusiastic:@5 naive:@7 optimistic:@5 negative:@5 passive:@1 sassy:@10 shy:@0 sympathetic:@0 troublemaker:@10]];
+                                                 characterTraits:  traits = [[ALMCharacterTraits alloc] initWithAggressive:@4 careful:@0 clever:@0 comedic:@0 courage:@2 creative:@1 despicable:@4 determined:@2 dorky:@0 eccentric:@1 enthusiastic:@0 naive:@1 optimistic:@0 negative:@1 passive:@0 sassy:@3 shy:@0 sympathetic:@0 troublemaker:@3]];
     
    [characterList addObject: simity];
     
     ALMCharacter *sans = [[ALMCharacter alloc] initWithCharacter: @"Sans ;)"
                                                      picture: [UIImage imageNamed: @"sans3"]
-                                             characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@5 careful:@1 clever:@10 comedic:@10 courage:@9 creative:@8 despicable:@6 determined:@5 dorky:@7 eccentric:@5 enthusiastic:@5 naive:@5 optimistic:@5 negative:@5 passive:@9 sassy:@9 shy:@0 sympathetic:@5 troublemaker:@7]];
+                                             characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@0 careful:@0 clever:@4 comedic:@4 courage:@3 creative:@3 despicable:@1 determined:@2 dorky:@2 eccentric:@0 enthusiastic:@1 naive:@0 optimistic:@1 negative:@0 passive:@3 sassy:@3 shy:@0 sympathetic:@0 troublemaker:@1]];
     
     [characterList addObject: sans];
     
     ALMCharacter *flowey = [[ALMCharacter alloc] initWithCharacter: @"Flowey the Flower"
                                                      picture: [UIImage imageNamed: @"flowey2"]
-                                             characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@10 careful:@0 clever:@8 comedic:@5 courage:@4 creative:@5 despicable:@10 determined:@10 dorky:@0 eccentric:@8 enthusiastic:@6 naive:@9 optimistic:@2 negative:@6 passive:@2 sassy:@6 shy:@5 sympathetic:@0 troublemaker:@9]];
+                                             characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@4 careful: @0 clever: @1 comedic: @1 courage: @1 creative: @1 despicable: @4 determined: @2 dorky: @0 eccentric: @0 enthusiastic: @0 naive: @1 optimistic: @0 negative: @1 passive: @0 sassy: @2 shy: @0 sympathetic: @0 troublemaker: @3]];
     
     [characterList addObject: flowey];
 
 ALMCharacter *frisk = [[ALMCharacter alloc] initWithCharacter: @"Frisk"
                                                  picture: [UIImage imageNamed: @"frisk2"]
-                                         characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@5 careful:@4 clever:@7 comedic:@0 courage:@8 creative:@5 despicable:@5 determined:@10 dorky:@4 eccentric:@0 enthusiastic:@0 naive:@7 optimistic:@7 negative:@5 passive:@8 sassy:@0 shy:@10 sympathetic:@10 troublemaker:@5]];
+                                         characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive: @0 careful: @1 clever: @1 comedic: @0 courage: @2 creative: @1 despicable: @0 determined: @4 dorky: @0 eccentric: @0 enthusiastic: @0 naive: @2 optimistic: @2 negative: @0 passive: @3 sassy: @0 shy: @1 sympathetic: @3 troublemaker: @0]];
 
 [characterList addObject: frisk];
 
     ALMCharacter *bob = [[ALMCharacter alloc] initWithCharacter: @"Bob Belcher"
                                                      picture: [UIImage imageNamed: @"bob"]
-                                             characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@2 careful:@9 clever:@9 comedic:@6 courage:@7 creative:@9 despicable:@0 determined:@9 dorky:@8 eccentric:@5 enthusiastic:@5 naive:@4 optimistic:@4 negative:@8 passive:@10 sassy:@0 shy:@3 sympathetic:@8 troublemaker:@0]];
+                                             characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive: @1 careful: @2 clever: @2 comedic: @1 courage: @2 creative: @2 despicable: @0 determined: @3 dorky: @1 eccentric: @0 enthusiastic: @1 naive: @1 optimistic: @1 negative: @2 passive: @2 sassy: @0 shy: @1 sympathetic: @0 troublemaker: @2]];
     
     [characterList addObject: bob];
     
     ALMCharacter *louise = [[ALMCharacter alloc] initWithCharacter: @"Louise Belcher"
                                                      picture: [UIImage imageNamed: @"louise"]
-                                                   characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@10 careful:@6 clever:@10 comedic:@8 courage:@8 creative:@7 despicable:@10 determined:@7 dorky:@6 eccentric:@6 enthusiastic:@5 naive:@0 optimistic:@2 negative:@4 passive:@0 sassy:@10 shy:@2 sympathetic:@5 troublemaker:@10]];
+                                                   characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive: @3 careful: @0 clever: @4 comedic: @2 courage: @1 creative: @1 despicable: @3 determined: @2 dorky: @1 eccentric: @0 enthusiastic: @1 naive: @0 optimistic: @1 negative: @1 passive: @0 sassy: @4 shy: @0 sympathetic: @1 troublemaker: @3]];
     
     [characterList addObject: louise];
     
     ALMCharacter *tina = [[ALMCharacter alloc] initWithCharacter: @"Tina Belcher"
                                                      picture: [UIImage imageNamed: @"tina3"]
-                                                 characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@2 careful:@10 clever:@7 comedic:@5 courage:@7 creative:@7 despicable:@3 determined:@6 dorky:@9 eccentric:@5 enthusiastic:@3 naive:@4 optimistic:@3 negative:@7 passive:@8 sassy:@6 shy:@7 sympathetic:@7 troublemaker:@5]];
+                                                 characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive: @0 careful: @4 clever: @1 comedic: @1 courage: @2 creative: @2 despicable: @0 determined: @1 dorky: @4 eccentric: @0 enthusiastic: @0 naive: @1 optimistic: @0 negative: @2 passive: @2 sassy: @1 shy: @2 sympathetic: @1 troublemaker: @0]];
     
     [characterList addObject: tina];
     
     
     ALMCharacter *homer = [[ALMCharacter alloc] initWithCharacter: @"Homer Simpson"
                                                      picture: [UIImage imageNamed: @"homer2"]
-                                                  characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@4 careful:@0 clever:@2 comedic:@7 courage:@6 creative:@4 despicable:@3 determined:@8 dorky:@3 eccentric:@3 enthusiastic:@4 naive:@9 optimistic:@6 negative:@6 passive:@7 sassy:@5 shy:@0 sympathetic:@0 troublemaker:@6]];
+                                                  characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive: @1 careful: @0 clever: @0 comedic: @2 courage: @1 creative: @1 despicable: @0 determined: @1 dorky: @0 eccentric: @0 enthusiastic: @2 naive: @2 optimistic: @1 negative: @0 passive: @2 sassy: @3 shy: @0 sympathetic: @0 troublemaker: @2]];
     
     [characterList addObject: homer];
     
     ALMCharacter *bart = [[ALMCharacter alloc] initWithCharacter: @"Bart Simpson"
                                                      picture: [UIImage imageNamed: @"bart"]
-                                                 characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive:@5 careful:@0 clever:@6 comedic:@9 courage:@8 creative:@7 despicable:@9 determined:@5 dorky:@0 eccentric:@0 enthusiastic:@3 naive:@3 optimistic:@5 negative:@5 passive:@6 sassy:@9 shy:@0 sympathetic:@3 troublemaker:@10]];
+                                                 characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive: @2 careful: @0 clever: @3 comedic: @4 courage: @2 creative: @1 despicable: @3 determined: @1 dorky: @0 eccentric: @0 enthusiastic: @1 naive: @0 optimistic: @0 negative: @1 passive: @1 sassy: @3 shy: @0 sympathetic: @0 troublemaker: @4]];
     [characterList addObject: bart];
 
     completion(characterList);
