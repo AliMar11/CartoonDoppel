@@ -39,26 +39,21 @@
                                  return (NSComparisonResult)NSOrderedAscending;
                              }];
     
-    //NSLog(@"1PLAYER TRAITS:%@", playerTraits);
     NSArray *sortedPlayerTraits = [playerTraitsArray subarrayWithRange: NSMakeRange(0, 7)];
-   // NSLog(@"1.2PLAYER TOPS-->%@", topPlayerTraits);
     
     for (NSString *trait in sortedPlayerTraits)
     {
         topPlayerTraits[trait] =  [playerTraits.traitDictionary valueForKey:trait];
-        //topPlayerTraits[trait] = (NSDictionary *)playerTraits.traits[trait];
     }
     
     completion(topPlayerTraits);
 }
 
 //TODO!!! Fix dupple init so it's not crazy like so: characterList.dupple.traits.duppleTraits.... a dupple only needs dupple traits ^_^ (delete unnecessary steps)
-+(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSMutableArray * topDuppleTraits))completion
++(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSMutableDictionary * sortedDupple))completion
 {
-    //What we want to do here is redefine each 'duppleTraits' dictionary to the sorted+top7 traits WITH their values.
-  
     NSMutableDictionary *sortedDupple = [NSMutableDictionary new];
-    NSMutableArray *topDuppleTraits = [NSMutableArray new];
+  
     for (ALMCharacter *character in characterList)
     {
         NSArray *characterAnalysisArray = [[NSArray alloc] init];
@@ -80,9 +75,7 @@
                          }];
 
         
-        NSMutableArray *orderedDuppleTraits = [[NSMutableArray alloc] init];
-        [orderedDuppleTraits addObjectsFromArray: [characterAnalysisArray subarrayWithRange: NSMakeRange(0, 7)]];
-        //[character.traits.duppleTraits removeAllObjects];
+        NSArray *orderedDuppleTraits = [characterAnalysisArray subarrayWithRange: NSMakeRange(0, 7)];
         
         for (NSString *testTrait in orderedDuppleTraits)
         {
@@ -91,8 +84,7 @@
             
             NSLog(@"\n%@\n", character.traits.duppleTraits);
 
-
-        completion(topDuppleTraits);
+        completion(sortedDupple);
     }
 }
 
@@ -100,15 +92,7 @@
 {
     NSArray *topFiveHanchos = [NSArray new];
     NSLog(@"3 DATA ANALYSIS:%@",topFiveHanchos);
- //take player and topDupps and compare each Dupp with player to give back most compatable dupps.
-    
-    //below compares one trait from dupple with all traits from player
-    /*
-    for (ALMCharacter *dupple in topDuppleTraits)
-    {
-        NSLog(@"\nWE ARE COMPARING %@ WITH %@", player, dupple);
-    }
-     */
+ 
     for (int i = 0;  i <= player.count; i++)
     {
         NSLog(@"\nWE ARE COMPARING %@ WITH %@", player, sortedDupple);
