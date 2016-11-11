@@ -82,7 +82,7 @@
             sortedDupple[testTrait] = character.traits.duppleTraits[testTrait];
         }
             
-            NSLog(@"\n%@\n", character.traits.duppleTraits);
+            NSLog(@"\nallDuppTraits:%@\nsortedDupleTraitsDic:\n%@\norderedDuppTraitArray:\n%@\n", character.traits.duppleTraits, sortedDupple, orderedDuppleTraits);
 
         completion(sortedDupple);
     }
@@ -97,6 +97,7 @@
     {
         NSLog(@"\nWE ARE COMPARING %@ WITH %@", player, sortedDupple);
         //now we want to compare each array for doubles. The dupple with highest doubles count is topHanchose[0], the others get passed as topHanchos
+        
         
     }
     completion(topFiveHanchos);
