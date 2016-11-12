@@ -26,15 +26,15 @@
     [super viewDidLoad];
     
 //TODO break up the sizable code below
-    [ALMAnalysis sortUserTraits: self.playerTraits withCompletion:^(NSMutableDictionary *topPlayerTraits)
+    [ALMAnalysis sortUserTraits: self.playerTraits withCompletion:^(NSArray *sortedTraitsArray)
      {
-         self.topPlayerTraits = topPlayerTraits;
+         self.topPlayerTraits = sortedTraitsArray;
          
     [ALMCharacter populateCharacterListWithCompletion:^(NSMutableArray *characterList)
     {
-        [ALMAnalysis characterSort: characterList withCompletion: ^(NSMutableDictionary *sortedDupple)
+        [ALMAnalysis characterSort: characterList withCompletion: ^(NSArray * orderedDuppleTraits)
         {
-            self.duppleListWithTraits =  sortedDupple;
+            self.duppleListWithTraits =  orderedDuppleTraits;
             
             [ALMAnalysis dataAnalysis: self.topPlayerTraits : self.duppleListWithTraits withCompletion:^(NSArray *topFiveHanchos)
              {

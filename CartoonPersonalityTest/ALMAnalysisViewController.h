@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) ALMCharacter *topMatch;
 @property (nonatomic, strong) ALMCharacter *playerTraits;
-@property (nonatomic, strong) NSMutableDictionary *duppleListWithTraits;
-@property (nonatomic, strong) NSMutableDictionary *topPlayerTraits;
+@property (nonatomic, strong) NSArray *duppleListWithTraits;
+@property (nonatomic, strong) NSArray *topPlayerTraits;
 
 @end

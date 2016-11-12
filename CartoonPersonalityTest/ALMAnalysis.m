@@ -20,7 +20,7 @@
     }
 }
 
-+(void)sortUserTraits:(ALMCharacter*)playerTraits withCompletion: (void(^)(NSMutableDictionary *topPlayerTraits))completion
++(void)sortUserTraits:(ALMCharacter*)playerTraits withCompletion: (void(^)(NSArray *sortedTraitsArray))completion
 {
     NSMutableDictionary *topPlayerTraits = [NSMutableDictionary new];
     NSArray *playerTraitsArray = [playerTraits.traitDictionary keysSortedByValueUsingComparator: ^(id obj1, id obj2)
@@ -46,14 +46,15 @@
         topPlayerTraits[trait] =  [playerTraits.traitDictionary valueForKey:trait];
     }
     
-    completion(topPlayerTraits);
+    completion(sortedPlayerTraits);
 }
 
 //TODO!!! Fix dupple init so it's not crazy like so: characterList.dupple.traits.duppleTraits.... a dupple only needs dupple traits ^_^ (delete unnecessary steps)
-+(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSMutableDictionary * sortedDupple))completion
++(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray * orderedDuppleTraits))completion
 {
     NSMutableDictionary *sortedDupple = [NSMutableDictionary new];
-  
+    NSArray *orderedDuppleTraits = [NSArray new];
+
     for (ALMCharacter *character in characterList)
     {
         NSArray *characterAnalysisArray = [[NSArray alloc] init];
@@ -70,31 +71,39 @@
                                  
                                  return (NSComparisonResult)NSOrderedDescending;
                              }
-                             
+//                             NSLog(@"SORRRRRRRRRTED A DUP:%@\n%@", character.characterName, orderedDuppleTraits);
+
                              return (NSComparisonResult)NSOrderedAscending;
                          }];
 
         
-        NSArray *orderedDuppleTraits = [characterAnalysisArray subarrayWithRange: NSMakeRange(0, 7)];
-        
+        orderedDuppleTraits = [characterAnalysisArray subarrayWithRange: NSMakeRange(0, 7)];
+       // NSLog(@"SORRRRRRRRRTED A DUP:%@\n%@", character.characterName, orderedDuppleTraits);
+
         for (NSString *testTrait in orderedDuppleTraits)
         {
             sortedDupple[testTrait] = character.traits.duppleTraits[testTrait];
         }
             
-            NSLog(@"\nallDuppTraits:%@\nsortedDupleTraitsDic:\n%@\norderedDuppTraitArray:\n%@\n", character.traits.duppleTraits, sortedDupple, orderedDuppleTraits);
+            NSLog(@"\nsortedDupleTraitsDic:\n%@\norderedDuppTraitArray:\n%@\n", sortedDupple, orderedDuppleTraits);
+        [character.traits.topDuppleTraits removeAllObjects];
+        NSLog(@"\nEMPTY TOP DUPPS:\n%@\norderedDuppTraitArray:\n%@\n", character.traits.topDuppleTraits, orderedDuppleTraits);
 
-        completion(sortedDupple);
+        [character.traits.topDuppleTraits addObjectsFromArray: orderedDuppleTraits];
+            NSLog(@"\nREDEFINED TOP DUPPS:\n%@\norderedDuppTraitArray:\n%@\n", character.traits.topDuppleTraits, orderedDuppleTraits);
     }
+        completion(orderedDuppleTraits);
+    
 }
 
-+(void)dataAnalysis:(NSMutableDictionary*)player :(NSMutableDictionary*)sortedDupple withCompletion: (void(^)(NSArray *topFiveHanchos))completion
++(void)dataAnalysis:(NSArray*)player :(NSArray*)sortedDupple withCompletion: (void(^)(NSArray *topFiveHanchos))completion
 {
     NSArray *topFiveHanchos = [NSArray new];
     NSLog(@"3 DATA ANALYSIS:%@",topFiveHanchos);
  
     for (int i = 0;  i <= player.count; i++)
     {
+        //!!!! here sorted Dupple is ONE dupple character as is.
         NSLog(@"\nWE ARE COMPARING %@ WITH %@", player, sortedDupple);
         //now we want to compare each array for doubles. The dupple with highest doubles count is topHanchose[0], the others get passed as topHanchos
         
