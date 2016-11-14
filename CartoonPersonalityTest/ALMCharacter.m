@@ -21,6 +21,7 @@
         _characterName = characterName;
         _traits =  traits;
         _mugshot = mugshot;
+        _likeness = 0;
     }
     
     return  self;

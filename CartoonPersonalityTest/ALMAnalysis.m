@@ -50,7 +50,7 @@
 }
 
 //TODO!!! Fix dupple init so it's not crazy like so: characterList.dupple.traits.duppleTraits.... a dupple only needs dupple traits ^_^ (delete unnecessary steps)
-+(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray * orderedDuppleTraits))completion
++(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray * characterList))completion
 {
     NSMutableDictionary *sortedDupple = [NSMutableDictionary new];
     NSArray *orderedDuppleTraits = [NSArray new];
@@ -71,7 +71,6 @@
                                  
                                  return (NSComparisonResult)NSOrderedDescending;
                              }
-//                             NSLog(@"SORRRRRRRRRTED A DUP:%@\n%@", character.characterName, orderedDuppleTraits);
 
                              return (NSComparisonResult)NSOrderedAscending;
                          }];
@@ -92,19 +91,48 @@
         [character.traits.topDuppleTraits addObjectsFromArray: orderedDuppleTraits];
             NSLog(@"\nREDEFINED TOP DUPPS:\n%@\norderedDuppTraitArray:\n%@\n", character.traits.topDuppleTraits, orderedDuppleTraits);
     }
-        completion(orderedDuppleTraits);
+        completion(characterList);
     
 }
 
-+(void)dataAnalysis:(NSArray*)player :(NSArray*)sortedDupple withCompletion: (void(^)(NSArray *topFiveHanchos))completion
++(void)dataAnalysis:(NSArray*)playerTraits :(NSArray*)characterList withCompletion: (void(^)(NSArray *topFiveHanchos))completion
 {
     NSArray *topFiveHanchos = [NSArray new];
-    NSLog(@"3 DATA ANALYSIS:%@",topFiveHanchos);
  
-    for (int i = 0;  i <= player.count; i++)
+    for (ALMCharacter *duppel in characterList)
     {
-        //!!!! here sorted Dupple is ONE dupple character as is.
-        NSLog(@"\nWE ARE COMPARING %@ WITH %@", player, sortedDupple);
+        NSLog(@"\nWE ARE COMPARING %@ WITH %@", playerTraits, duppel.traits.topDuppleTraits);
+        //NSArray *leTraits = [NSArray arrayWithArray: duppel.traits.topDuppleTraits];
+
+        for (NSString *trait in playerTraits)
+        {
+            if([duppel.traits.topDuppleTraits containsObject: [trait uppercaseString]] )
+            {
+                duppel.likeness += 1;
+            }
+        }
+        
+        if([playerTraits[0] uppercaseString] == duppel.traits.topDuppleTraits[0] )
+        {
+            duppel.likeness += 3;
+        }
+        
+        if([playerTraits[1] uppercaseString] == duppel.traits.topDuppleTraits[1] )
+        {
+            duppel.likeness += 2;
+        }
+
+        if(playerTraits[2] == duppel.traits.topDuppleTraits[2] )
+        {
+            duppel.likeness += 1;
+        }
+        
+        if(playerTraits[3] == duppel.traits.topDuppleTraits[3] )
+        {
+            duppel.likeness += 1;
+        }
+ 
+        NSLog(@"\n\nLIKENESS POINTS:%d", duppel.likeness);
         //now we want to compare each array for doubles. The dupple with highest doubles count is topHanchose[0], the others get passed as topHanchos
         
         

@@ -16,10 +16,10 @@
 
 +(void)tallyUserAnswers:(ALMCharacter*) player :(ALMCharacterTraits *) selectedTrait;
 
-+(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray * orderedDuppleTraits))completion;
++(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray * characterList))completion;
 
 +(void)sortUserTraits:(ALMCharacter*)player withCompletion: (void(^)(NSArray *sortedTraitsArray))completion;
 
-+(void)dataAnalysis:(NSArray*)player :(NSArray *)sortedDupple withCompletion: (void(^)(NSArray *topFiveHanchos))completion;
++(void)dataAnalysis:(NSArray*)playerTraits :(NSArray *)sortedDupple withCompletion: (void(^)(NSArray *topFiveHanchos))completion;
 
 @end

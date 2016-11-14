@@ -16,16 +16,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMAnalysis.m"
-            timestampString = "500587421.80447"
+            timestampString = "500719332.027483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "+dataAnalysis::withCompletion:"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "+characterSort:withCompletion:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -36,12 +36,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMAnalysis.m"
-            timestampString = "500587130.464658"
+            timestampString = "500843471.105585"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "+characterSort:withCompletion:"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "+dataAnalysis::withCompletion:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
