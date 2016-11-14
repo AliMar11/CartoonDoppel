@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ALMStartScreenViewController.h"
 
-@interface ALMDuppleCollectionViewController : UIViewController 
+@interface ALMDuppelCollectionViewController : UIViewController
 
 @end

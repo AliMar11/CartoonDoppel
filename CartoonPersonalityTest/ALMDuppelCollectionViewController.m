@@ -6,17 +6,17 @@
 //  Copyright © 2016 AliApps. All rights reserved.
 //
 
-#import "ALMDuppleCollectionViewController.h"
-#import "ALMDuppleCollectionViewCell.h"
+#import "ALMDuppelCollectionViewController.h"
+#import "ALMDuppelCollectionViewCell.h"
 
-@interface ALMDuppleCollectionViewController ()
+@interface ALMDuppelCollectionViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewOne;
 @property (nonatomic, strong) NSArray *dupplePictures;
 @property (nonatomic, assign) int horiScroll;
 
 @end
 
-@implementation ALMDuppleCollectionViewController
+@implementation ALMDuppelCollectionViewController
 
 static NSString * const reuseIdentifier = @"dupplePictureCell";
 
@@ -24,7 +24,7 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
 {
     [super viewDidLoad];
     
-    [self.collectionViewOne registerClass: [ALMDuppleCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
+    [self.collectionViewOne registerClass: [ALMDuppelCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
     self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
 }
@@ -63,7 +63,7 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
 
 - (UICollectionViewCell *)collectionView: (UICollectionView *)collectionView cellForItemAtIndexPath: (NSIndexPath *)indexPath
 {
-    ALMDuppleCollectionViewCell *cellOne = (ALMDuppleCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
+    ALMDuppelCollectionViewCell *cellOne = (ALMDuppelCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
 
         UIImage *mugshot = [[UIImage alloc] init];
 

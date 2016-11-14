@@ -27,7 +27,7 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <attributedString key="attributedText">
-                                    <fragment content="Who's your Dopple?">
+                                    <fragment content="Who's your Doppel?">
                                         <attributes>
                                             <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="12" name="Helvetica"/>
@@ -548,10 +548,10 @@
             </objects>
             <point key="canvasLocation" x="1867" y="357.75"/>
         </scene>
-        <!--Dupple Collection View Controller-->
+        <!--Duppel Collection View Controller-->
         <scene sceneID="Ozn-v0-eXi">
             <objects>
-                <viewController id="Tpk-6d-ek5" customClass="ALMDuppleCollectionViewController" sceneMemberID="viewController">
+                <viewController id="Tpk-6d-ek5" customClass="ALMDuppelCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2xW-jx-RM5"/>
                         <viewControllerLayoutGuide type="bottom" id="xuH-x6-awC"/>
@@ -624,10 +624,10 @@
             </objects>
             <point key="canvasLocation" x="579" y="799.875"/>
         </scene>
-        <!--Dupple Collection View Controller-->
+        <!--Duppel Collection View Controller-->
         <scene sceneID="KzT-YK-HqW">
             <objects>
-                <viewController id="FIY-dB-Zg9" customClass="ALMDuppleCollectionViewController" sceneMemberID="viewController">
+                <viewController id="FIY-dB-Zg9" customClass="ALMDuppelCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZMd-Se-BvE"/>
                         <viewControllerLayoutGuide type="bottom" id="y5M-hC-L2M"/>

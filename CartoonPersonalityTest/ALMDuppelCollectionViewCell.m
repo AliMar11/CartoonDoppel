@@ -1,13 +1,13 @@
 //
-//  ALMDuppleCollectionViewCell.h
+//  ALMDuppleCollectionViewCell.m
 //  CartoonPersonalityTest
 //
 //  Created by Alicia Marisal on 10/12/16.
 //  Copyright © 2016 AliApps. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ALMDuppelCollectionViewCell.h"
 
-@interface ALMDuppleCollectionViewCell : UICollectionViewCell
+@implementation ALMDuppelCollectionViewCell
 
 @end

@@ -36,7 +36,7 @@
         {
             self.duppleListWithTraits =  orderedDuppleTraits;
             
-            [ALMAnalysis dataAnalysis: self.topPlayerTraits : self.duppleListWithTraits withCompletion:^(NSArray *topFiveHanchos)
+            [ALMAnalysis dataAnalysis: self.topPlayerTraits : self.duppleListWithTraits withCompletion:^(NSMutableArray *topFiveHanchos)
              {
                  
                  //Here we do the work of comparing player.traits with dupple.traits and post image of lower 4, give topDog to nextVC.
