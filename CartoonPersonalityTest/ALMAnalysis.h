@@ -12,7 +12,7 @@
 @interface ALMAnalysis : NSObject
 
 @property (nonatomic, strong) ALMCharacter *player;
-@property (nonatomic, strong) NSMutableArray *topFiveHanchos;
+@property (nonatomic, strong) NSArray *topFiveHanchos;
 
 +(void)tallyUserAnswers:(ALMCharacter*) player :(ALMCharacterTraits *) selectedTrait;
 
@@ -20,6 +20,6 @@
 
 +(void)sortUserTraits:(ALMCharacter*)player withCompletion: (void(^)(NSArray *sortedTraitsArray))completion;
 
-+(void)dataAnalysis:(NSArray*)playerTraits :(NSArray *)sortedDupple withCompletion: (void(^)(NSMutableArray *topFiveHanchos))completion;
++(void)dataAnalysis:(NSArray*)playerTraits :(NSArray *)sortedDupple withCompletion: (void(^)(NSArray *topFiveHanchos))completion;
 
 @end

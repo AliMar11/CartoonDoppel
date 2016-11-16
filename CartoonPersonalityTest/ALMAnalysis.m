@@ -92,9 +92,9 @@
     
 }
 
-+(void)dataAnalysis:(NSArray*)playerTraits :(NSArray*)characterList withCompletion: (void(^)(NSMutableArray *topFiveHanchos))completion
++(void)dataAnalysis:(NSArray*)playerTraits :(NSArray*)characterList withCompletion: (void(^)(NSArray *topFiveHanchos))completion
 {
-    NSMutableArray *topFiveHanchos = [NSMutableArray new];
+    NSArray *topFiveHanchos = [NSArray new];
  
     for (ALMCharacter *duppel in characterList)
     {
@@ -133,21 +133,14 @@
         
     }
     
-        for (int i = 0; i < characterList.count; i++)
-        {
-            
-            if ([[characterList objectAtIndex: i]likeness] > [characterList[i + 1]likeness])
-            {
-                NSLog(@"currentDup:%@%d\n nextDupp:%@%d",[characterList[i]characterName],(int)[characterList[i]likeness], [characterList[i + 1]characterName], (int)[characterList[i + 1]likeness]);
-                
-                [topFiveHanchos addObject: characterList[i]];
-            }
-            else
-            {
-                NSLog(@"currentDup:%@%d\n nextDupp:%@%d",[characterList[i]characterName],(int)[characterList[i]likeness], [characterList[i + 1]characterName], (int)[characterList[i + 1]likeness]);
-            }
-        }
-    
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey: @"likeness" ascending: NO];
+        NSArray *orderedArray = [characterList sortedArrayUsingDescriptors: [NSArray arrayWithObject: sortDescriptor]];
+        NSLog(@"list:%@", orderedArray);
+
+
+        topFiveHanchos = [orderedArray subarrayWithRange: NSMakeRange(0, 5)];
+        NSLog(@"list:%@", topFiveHanchos);
+
 
     completion(topFiveHanchos);
 }
