@@ -30,31 +30,27 @@
      {
          self.topPlayerTraits = sortedTraitsArray;
          
-    [ALMCharacter populateCharacterListWithCompletion:^(NSMutableArray *characterList)
-    {
-        [ALMAnalysis characterSort: characterList withCompletion: ^(NSArray * orderedDuppleTraits)
+        [ALMCharacter populateCharacterListWithCompletion:^(NSMutableArray *characterList)
         {
-            self.duppleListWithTraits =  orderedDuppleTraits;
-            
-            [ALMAnalysis dataAnalysis: self.topPlayerTraits : self.duppleListWithTraits withCompletion:^(NSMutableArray *topFiveHanchos)
-             {
-                 
-                 //Here we do the work of comparing player.traits with dupple.traits and post image of lower 4, give topDog to nextVC.
-            
-             }];
-
-       
+            [ALMAnalysis characterSort: characterList withCompletion: ^(NSArray * orderedDuppleTraits)
+            {
+                self.duppleListWithTraits =  orderedDuppleTraits;
+                
+                [ALMAnalysis dataAnalysis: self.topPlayerTraits : self.duppleListWithTraits withCompletion:^(NSArray *topFiveHanchos)
+                 {
+                     [self.characterTwo setImage: [topFiveHanchos[1]mugshot]];
+                     [self.characterThree setImage: [topFiveHanchos[2]mugshot]];
+                     [self.characterFour setImage: [topFiveHanchos[3]mugshot]];
+                     [self.characterFive setImage: [topFiveHanchos[4]mugshot]];
+                    //Here we do the work of comparing player.traits with dupple.traits and post image of lower 4, give topDog to nextVC.
+                     self.topMatch = topFiveHanchos[0];
+                
+                 }];
+            }];
         }];
-        
-   
-    }];
-         
-         
      }];
-    
-    //self.characterTwo.image = [UIImage imageNamed: topFiveHanchos[1].mugshot];
-    
-       }
+        
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -62,7 +58,6 @@
 }
 
 #pragma mark - Navigation
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     ALMEndViewController *endVC = segue.destinationViewController;

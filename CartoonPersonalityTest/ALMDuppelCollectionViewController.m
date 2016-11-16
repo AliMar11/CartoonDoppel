@@ -71,7 +71,6 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
         {
             NSInteger otherIndex = indexPath.row % self.dupplePictures.count;
             NSString *test = self.dupplePictures[otherIndex];
-           // NSLog(@"\n\n%@\n\n", test);
             
             mugshot = [UIImage imageNamed: test];
             UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];

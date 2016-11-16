@@ -130,17 +130,12 @@
         }
  
         NSLog(@"\n\nDuppName:%@\nLIKENESS POINTS:%d\n", duppel.characterName,duppel.likeness);
-        
     }
     
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey: @"likeness" ascending: NO];
         NSArray *orderedArray = [characterList sortedArrayUsingDescriptors: [NSArray arrayWithObject: sortDescriptor]];
-        NSLog(@"list:%@", orderedArray);
-
 
         topFiveHanchos = [orderedArray subarrayWithRange: NSMakeRange(0, 5)];
-        NSLog(@"list:%@", topFiveHanchos);
-
 
     completion(topFiveHanchos);
 }

@@ -26,6 +26,11 @@
     [super viewDidLoad];
     
     [self.duppleImageView setImage: self.theOne.mugshot];
+    [self.traitOne setText: self.theOne.traits.topDuppleTraits[0]];
+    [self.traitTwo setText: self.theOne.traits.topDuppleTraits[1]];
+    [self.traitThree setText: self.theOne.traits.topDuppleTraits[2]];
+    [self.traitFour setText: self.theOne.traits.topDuppleTraits[3]];
+    [self.TraitFive setText: self.theOne.traits.topDuppleTraits[4]];
 
 }
 
