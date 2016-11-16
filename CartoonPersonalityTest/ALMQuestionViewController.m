@@ -5,7 +5,7 @@
 //  Created by Alicia Marisal on 10/12/16.
 //  Copyright © 2016 AliApps. All rights reserved.
 //
-
+#import <QuartzCore/QuartzCore.h>
 #import "ALMQuestionViewController.h"
 #import "ALMQuestions.h"
 
@@ -66,9 +66,7 @@
         {
             [ALMAnalysis tallyUserAnswers: self.theUser :possibleAnswer.allValues[0]];
         }
-        
-    }
-    
+    }    
     //TODO: Insert some awesome error handling here <3
     /*
     if (!)

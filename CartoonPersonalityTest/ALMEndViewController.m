@@ -5,7 +5,7 @@
 //  Created by Alicia Marisal on 10/12/16.
 //  Copyright © 2016 AliApps. All rights reserved.
 //
-
+#import <QuartzCore/QuartzCore.h>
 #import "ALMEndViewController.h"
 
 @interface ALMEndViewController ()
@@ -26,6 +26,9 @@
     [super viewDidLoad];
     
     [self.duppleImageView setImage: self.theOne.mugshot];
+    self.duppleImageView.layer.cornerRadius = 10;
+    self.duppleImageView.clipsToBounds = YES;
+    
     [self.traitOne setText: self.theOne.traits.topDuppleTraits[0]];
     [self.traitTwo setText: self.theOne.traits.topDuppleTraits[1]];
     [self.traitThree setText: self.theOne.traits.topDuppleTraits[2]];

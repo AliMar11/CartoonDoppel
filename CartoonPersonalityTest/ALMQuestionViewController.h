@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 #import "ALMAnalysisViewController.h"
 #import "ALMCharacter.h"
 #import "ALMAnalysis.h"
