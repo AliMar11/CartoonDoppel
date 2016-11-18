@@ -12,6 +12,7 @@
 @interface ALMQuestionViewController ()
 @property (nonatomic, strong) ALMQuestions *sharedDatastore;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIStackView *questionStackview;
 
 @end
 
@@ -82,10 +83,7 @@
 
 -(void)allQuestionsAnswered
 {
-    self.choiceAbutton.hidden = YES;
-    self.choiceBbutton.hidden = YES;
-    self.choiceCbutton.hidden = YES;
-    self.choiceDbutton.hidden = YES;
+    self.questionStackview.hidden = YES;
     self.nextButton.hidden = NO;
 }
 
@@ -116,6 +114,7 @@
    
         [button.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:15]];
         [button setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
+        [button.titleLabel setAdjustsFontSizeToFitWidth: YES];
     }
 }
 

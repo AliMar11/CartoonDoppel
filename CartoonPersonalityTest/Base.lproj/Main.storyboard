@@ -89,16 +89,16 @@
                                 <exclude reference="AZe-1c-bF5"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="rdQ-9v-DX8"/>
-                                <exclude reference="3mQ-Dg-8nE"/>
-                                <exclude reference="CZT-T6-pce"/>
-                                <exclude reference="P3T-5j-v4Z"/>
-                                <exclude reference="X0A-73-1H9"/>
-                                <exclude reference="bw9-71-jk1"/>
                                 <exclude reference="QAb-NL-vgE"/>
                                 <exclude reference="dUV-Hs-NHd"/>
                                 <exclude reference="tAG-gq-Ppk"/>
                                 <exclude reference="veO-FJ-VUf"/>
+                                <exclude reference="CZT-T6-pce"/>
+                                <exclude reference="P3T-5j-v4Z"/>
+                                <exclude reference="X0A-73-1H9"/>
+                                <exclude reference="bw9-71-jk1"/>
+                                <exclude reference="rdQ-9v-DX8"/>
+                                <exclude reference="3mQ-Dg-8nE"/>
                                 <exclude reference="RSf-WX-PUe"/>
                             </mask>
                         </variation>
@@ -108,16 +108,16 @@
                                 <include reference="AZe-1c-bF5"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="rdQ-9v-DX8"/>
-                                <include reference="3mQ-Dg-8nE"/>
-                                <include reference="CZT-T6-pce"/>
-                                <include reference="P3T-5j-v4Z"/>
-                                <include reference="X0A-73-1H9"/>
-                                <include reference="bw9-71-jk1"/>
                                 <include reference="QAb-NL-vgE"/>
                                 <include reference="dUV-Hs-NHd"/>
                                 <include reference="tAG-gq-Ppk"/>
                                 <include reference="veO-FJ-VUf"/>
+                                <include reference="CZT-T6-pce"/>
+                                <include reference="P3T-5j-v4Z"/>
+                                <include reference="X0A-73-1H9"/>
+                                <include reference="bw9-71-jk1"/>
+                                <include reference="rdQ-9v-DX8"/>
+                                <include reference="3mQ-Dg-8nE"/>
                                 <include reference="RSf-WX-PUe"/>
                             </mask>
                         </variation>
@@ -151,13 +151,16 @@
                                     <segue destination="cvo-6h-z7Q" kind="show" id="Pfz-6d-0Ig"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
                                 <rect key="frame" x="-50" y="285" width="250" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Button"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="83"/>
+                                        </variation>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="0JT-jD-I57"/>
                                         </connections>
@@ -165,6 +168,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton">
                                         <rect key="frame" x="68" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="95" width="340" height="83"/>
+                                        </variation>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="430-ah-9Ng"/>
                                         </connections>
@@ -179,6 +185,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton">
                                         <rect key="frame" x="204" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <variation key="heightClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="285" width="340" height="83"/>
+                                        </variation>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="mtk-7C-S0q"/>
                                         </connections>
@@ -194,7 +203,7 @@
                                 </variation>
                                 <variation key="heightClass=regular" alignment="fill" axis="vertical">
                                     <mask key="constraints">
-                                        <include reference="fPj-rx-47a"/>
+                                        <exclude reference="fPj-rx-47a"/>
                                     </mask>
                                 </variation>
                             </stackView>
@@ -229,18 +238,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="JAv-NC-cCV" firstAttribute="top" secondItem="oFX-lS-3xi" secondAttribute="bottom" multiplier="5" id="DBF-8p-9Nm"/>
+                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.5" id="7gG-Yv-igb"/>
+                            <constraint firstItem="JAv-NC-cCV" firstAttribute="top" secondItem="oFX-lS-3xi" secondAttribute="bottom" multiplier="4" id="DBF-8p-9Nm"/>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="JAv-NC-cCV" secondAttribute="bottom" multiplier="1.35" id="TUb-ug-kQB"/>
-                            <constraint firstItem="VlR-tX-lo1" firstAttribute="width" secondItem="zwY-Ad-kXO" secondAttribute="width" multiplier="0.2" id="WeA-F0-JW0">
-                                <variation key="heightClass=regular" constant="0.0"/>
-                            </constraint>
                             <constraint firstItem="JAv-NC-cCV" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" constant="17" id="X1p-xD-IVq"/>
                             <constraint firstItem="Xbz-2T-NlP" firstAttribute="top" secondItem="VlR-tX-lo1" secondAttribute="bottom" multiplier="1.1" id="XhK-LX-1sC"/>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="aXr-7E-woY"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="hL4-BF-Y4C"/>
-                            <constraint firstItem="VlR-tX-lo1" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.05" id="hvN-KL-iQf">
-                                <variation key="heightClass=regular" constant="0.0"/>
-                            </constraint>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="width" secondItem="JAv-NC-cCV" secondAttribute="width" id="sAC-Wf-J63"/>
                             <constraint firstItem="JAv-NC-cCV" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="zzH-cg-4s7"/>
                         </constraints>
@@ -250,15 +254,14 @@
                                 <exclude reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="WeA-F0-JW0"/>
-                                <exclude reference="hL4-BF-Y4C"/>
-                                <exclude reference="hvN-KL-iQf"/>
                                 <exclude reference="DBF-8p-9Nm"/>
                                 <exclude reference="X1p-xD-IVq"/>
                                 <exclude reference="zzH-cg-4s7"/>
+                                <exclude reference="7gG-Yv-igb"/>
                                 <exclude reference="TUb-ug-kQB"/>
                                 <exclude reference="aXr-7E-woY"/>
                                 <exclude reference="sAC-Wf-J63"/>
+                                <exclude reference="hL4-BF-Y4C"/>
                                 <exclude reference="XhK-LX-1sC"/>
                             </mask>
                         </variation>
@@ -268,15 +271,14 @@
                                 <include reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="WeA-F0-JW0"/>
-                                <include reference="hL4-BF-Y4C"/>
-                                <exclude reference="hvN-KL-iQf"/>
                                 <include reference="DBF-8p-9Nm"/>
                                 <include reference="X1p-xD-IVq"/>
                                 <include reference="zzH-cg-4s7"/>
+                                <include reference="7gG-Yv-igb"/>
                                 <include reference="TUb-ug-kQB"/>
                                 <include reference="aXr-7E-woY"/>
                                 <include reference="sAC-Wf-J63"/>
+                                <include reference="hL4-BF-Y4C"/>
                                 <include reference="XhK-LX-1sC"/>
                             </mask>
                         </variation>
@@ -288,6 +290,7 @@
                         <outlet property="choiceCbutton" destination="Anf-Qe-sH8" id="c09-1n-iBv"/>
                         <outlet property="choiceDbutton" destination="zp8-QL-pff" id="l6e-o0-IEZ"/>
                         <outlet property="nextButton" destination="VlR-tX-lo1" id="L2T-Pf-YM9"/>
+                        <outlet property="questionStackview" destination="nBZ-lR-IKm" id="AlO-k9-M7a"/>
                         <outlet property="questionTextView" destination="JAv-NC-cCV" id="YnC-mA-mJD"/>
                     </connections>
                 </viewController>
@@ -307,9 +310,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shf-1F-k12">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shf-1F-k12">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Let's find out who's your dupple!"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Let's find out who's your duppel!">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <variation key="heightClass=regular"/>
                                 <connections>
                                     <segue destination="aIw-RU-tpD" kind="show" id="Q4P-Zd-uQp"/>
                                 </connections>
@@ -466,7 +479,7 @@
                             </stackView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Thanks for Playing!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c15-KZ-RHL" userLabel="thanksTextField">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
