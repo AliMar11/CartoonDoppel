@@ -44,9 +44,6 @@
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Start"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="184" y="582" width="46" height="36"/>
-                                </variation>
                                 <connections>
                                     <action selector="startTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxA-Pq-WNs"/>
                                 </connections>
@@ -59,9 +56,6 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-1c-bF5" userLabel="CVTwoContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="440" width="414" height="89"/>
-                                </variation>
                                 <connections>
                                     <segue destination="FIY-dB-Zg9" kind="embed" id="OFf-dN-zFR"/>
                                 </connections>
@@ -235,19 +229,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="JAv-NC-cCV" firstAttribute="top" secondItem="oFX-lS-3xi" secondAttribute="bottom" multiplier="5.5" id="DBF-8p-9Nm"/>
-                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="JAv-NC-cCV" secondAttribute="bottom" multiplier="1.6" id="TUb-ug-kQB"/>
+                            <constraint firstItem="JAv-NC-cCV" firstAttribute="top" secondItem="oFX-lS-3xi" secondAttribute="bottom" multiplier="5" id="DBF-8p-9Nm"/>
+                            <constraint firstItem="nBZ-lR-IKm" firstAttribute="top" secondItem="JAv-NC-cCV" secondAttribute="bottom" multiplier="1.35" id="TUb-ug-kQB"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="width" secondItem="zwY-Ad-kXO" secondAttribute="width" multiplier="0.2" id="WeA-F0-JW0">
                                 <variation key="heightClass=regular" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="JAv-NC-cCV" firstAttribute="leading" secondItem="zwY-Ad-kXO" secondAttribute="leadingMargin" constant="17" id="X1p-xD-IVq"/>
+                            <constraint firstItem="Xbz-2T-NlP" firstAttribute="top" secondItem="VlR-tX-lo1" secondAttribute="bottom" multiplier="1.1" id="XhK-LX-1sC"/>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="aXr-7E-woY"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="hL4-BF-Y4C"/>
                             <constraint firstItem="VlR-tX-lo1" firstAttribute="height" secondItem="zwY-Ad-kXO" secondAttribute="height" multiplier="0.05" id="hvN-KL-iQf">
                                 <variation key="heightClass=regular" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="Xbz-2T-NlP" firstAttribute="top" secondItem="VlR-tX-lo1" secondAttribute="bottom" multiplier="1.1" id="q5J-BJ-8Af">
-                                <variation key="heightClass=regular" constant="-51.600000000000023"/>
                             </constraint>
                             <constraint firstItem="nBZ-lR-IKm" firstAttribute="width" secondItem="JAv-NC-cCV" secondAttribute="width" id="sAC-Wf-J63"/>
                             <constraint firstItem="JAv-NC-cCV" firstAttribute="centerX" secondItem="zwY-Ad-kXO" secondAttribute="centerX" id="zzH-cg-4s7"/>
@@ -258,16 +250,16 @@
                                 <exclude reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="WeA-F0-JW0"/>
-                                <exclude reference="hL4-BF-Y4C"/>
-                                <exclude reference="hvN-KL-iQf"/>
                                 <exclude reference="DBF-8p-9Nm"/>
                                 <exclude reference="X1p-xD-IVq"/>
                                 <exclude reference="zzH-cg-4s7"/>
                                 <exclude reference="TUb-ug-kQB"/>
                                 <exclude reference="aXr-7E-woY"/>
                                 <exclude reference="sAC-Wf-J63"/>
-                                <exclude reference="q5J-BJ-8Af"/>
+                                <exclude reference="WeA-F0-JW0"/>
+                                <exclude reference="hL4-BF-Y4C"/>
+                                <exclude reference="hvN-KL-iQf"/>
+                                <exclude reference="XhK-LX-1sC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -276,16 +268,16 @@
                                 <include reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="WeA-F0-JW0"/>
-                                <include reference="hL4-BF-Y4C"/>
-                                <include reference="hvN-KL-iQf"/>
                                 <include reference="DBF-8p-9Nm"/>
                                 <include reference="X1p-xD-IVq"/>
                                 <include reference="zzH-cg-4s7"/>
                                 <include reference="TUb-ug-kQB"/>
                                 <include reference="aXr-7E-woY"/>
                                 <include reference="sAC-Wf-J63"/>
-                                <include reference="q5J-BJ-8Af"/>
+                                <exclude reference="WeA-F0-JW0"/>
+                                <include reference="hL4-BF-Y4C"/>
+                                <exclude reference="hvN-KL-iQf"/>
+                                <include reference="XhK-LX-1sC"/>
                             </mask>
                         </variation>
                     </view>
@@ -323,7 +315,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zkN-zy-xD9" userLabel="LeftStackView">
-                                <rect key="frame" x="-20" y="0.0" width="480" height="128"/>
+                                <rect key="frame" x="-20" y="0.0" width="484" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpm-Us-f7A" userLabel="ImageViewA">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -332,7 +324,7 @@
                                         </accessibility>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PsM-cZ-ZUn" userLabel="ImageViewB">
-                                        <rect key="frame" x="240" y="0.0" width="240" height="128"/>
+                                        <rect key="frame" x="244" y="0.0" width="240" height="128"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                         </accessibility>
@@ -341,7 +333,7 @@
                                 <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-lW-Nzm" userLabel="RightStackView">
-                                <rect key="frame" x="154" y="0.0" width="480" height="128"/>
+                                <rect key="frame" x="154" y="0.0" width="484" height="128"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAO-hs-9EC" userLabel="ImageViewC">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -350,7 +342,7 @@
                                         </accessibility>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pj6-Hx-Z2j" userLabel="ImageViewD">
-                                        <rect key="frame" x="240" y="0.0" width="240" height="128"/>
+                                        <rect key="frame" x="244" y="0.0" width="240" height="128"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                         </accessibility>
@@ -361,13 +353,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zkN-zy-xD9" firstAttribute="width" secondItem="7pB-Ft-bYD" secondAttribute="width" multiplier="0.5" id="0h3-Hb-yQi"/>
-                            <constraint firstItem="zkN-zy-xD9" firstAttribute="leading" secondItem="7pB-Ft-bYD" secondAttribute="leadingMargin" constant="-20" id="FoO-Kj-Nlf"/>
+                            <constraint firstItem="zkN-zy-xD9" firstAttribute="width" secondItem="7pB-Ft-bYD" secondAttribute="width" multiplier="0.47" id="0h3-Hb-yQi"/>
+                            <constraint firstItem="zkN-zy-xD9" firstAttribute="leading" secondItem="7pB-Ft-bYD" secondAttribute="leadingMargin" constant="-8" id="FoO-Kj-Nlf"/>
                             <constraint firstItem="zkN-zy-xD9" firstAttribute="height" secondItem="7pB-Ft-bYD" secondAttribute="height" multiplier="0.5" id="QD9-zP-5CA"/>
                             <constraint firstItem="9Gq-lW-Nzm" firstAttribute="height" secondItem="7pB-Ft-bYD" secondAttribute="height" multiplier="0.5" id="Tfh-hs-mfe"/>
-                            <constraint firstItem="9Gq-lW-Nzm" firstAttribute="width" secondItem="7pB-Ft-bYD" secondAttribute="width" multiplier="0.5" id="W5C-af-NmG"/>
+                            <constraint firstItem="9Gq-lW-Nzm" firstAttribute="width" secondItem="7pB-Ft-bYD" secondAttribute="width" multiplier="0.47" id="W5C-af-NmG"/>
                             <constraint firstItem="EOA-xu-7gF" firstAttribute="top" secondItem="shf-1F-k12" secondAttribute="bottom" multiplier="1.2" id="WDa-sv-gL7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Gq-lW-Nzm" secondAttribute="trailing" constant="-20" id="coG-bc-Z5B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Gq-lW-Nzm" secondAttribute="trailing" constant="-8" id="coG-bc-Z5B"/>
                             <constraint firstItem="shf-1F-k12" firstAttribute="centerX" secondItem="7pB-Ft-bYD" secondAttribute="centerX" id="dwB-Ye-nTx"/>
                             <constraint firstItem="9Gq-lW-Nzm" firstAttribute="top" secondItem="gQ4-s5-tz2" secondAttribute="bottom" id="mL2-Wa-utA"/>
                             <constraint firstItem="shf-1F-k12" firstAttribute="width" secondItem="7pB-Ft-bYD" secondAttribute="width" id="pwg-m9-HDh"/>
@@ -378,8 +370,6 @@
                                 <exclude reference="shf-1F-k12"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="dwB-Ye-nTx"/>
-                                <exclude reference="pwg-m9-HDh"/>
                                 <exclude reference="0h3-Hb-yQi"/>
                                 <exclude reference="FoO-Kj-Nlf"/>
                                 <exclude reference="QD9-zP-5CA"/>
@@ -388,6 +378,8 @@
                                 <exclude reference="coG-bc-Z5B"/>
                                 <exclude reference="mL2-Wa-utA"/>
                                 <exclude reference="uKV-ZO-8fV"/>
+                                <exclude reference="dwB-Ye-nTx"/>
+                                <exclude reference="pwg-m9-HDh"/>
                                 <exclude reference="WDa-sv-gL7"/>
                             </mask>
                         </variation>
@@ -396,8 +388,6 @@
                                 <include reference="shf-1F-k12"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="dwB-Ye-nTx"/>
-                                <include reference="pwg-m9-HDh"/>
                                 <include reference="0h3-Hb-yQi"/>
                                 <include reference="FoO-Kj-Nlf"/>
                                 <include reference="QD9-zP-5CA"/>
@@ -406,6 +396,8 @@
                                 <include reference="coG-bc-Z5B"/>
                                 <include reference="mL2-Wa-utA"/>
                                 <include reference="uKV-ZO-8fV"/>
+                                <include reference="dwB-Ye-nTx"/>
+                                <include reference="pwg-m9-HDh"/>
                                 <include reference="WDa-sv-gL7"/>
                             </mask>
                         </variation>
