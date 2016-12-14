@@ -44,6 +44,9 @@
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Start"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="184" y="672" width="46" height="36"/>
+                                </variation>
                                 <connections>
                                     <action selector="startTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxA-Pq-WNs"/>
                                 </connections>
@@ -56,6 +59,9 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-1c-bF5" userLabel="CVTwoContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="440" width="414" height="89"/>
+                                </variation>
                                 <connections>
                                     <segue destination="FIY-dB-Zg9" kind="embed" id="OFf-dN-zFR"/>
                                 </connections>
@@ -124,6 +130,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="startButton" destination="mbl-sJ-XrX" id="nco-3o-f7G"/>
                         <segue destination="1fu-ia-xTs" kind="show" identifier="questionVCSegue" id="2W3-qk-QPl"/>
                     </connections>
                 </viewController>
@@ -152,42 +159,33 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
-                                <rect key="frame" x="-50" y="285" width="250" height="30"/>
+                                <rect key="frame" x="-50" y="285" width="220" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Button"/>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="340" height="83"/>
-                                        </variation>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="0JT-jD-I57"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton">
-                                        <rect key="frame" x="68" y="0.0" width="46" height="30"/>
+                                        <rect key="frame" x="58" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="95" width="340" height="83"/>
-                                        </variation>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="430-ah-9Ng"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-Qe-sH8" userLabel="choiceCbutton">
-                                        <rect key="frame" x="136" y="0.0" width="46" height="30"/>
+                                        <rect key="frame" x="116" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="wkv-rb-06K"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton">
-                                        <rect key="frame" x="204" y="0.0" width="46" height="30"/>
+                                        <rect key="frame" x="174" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="285" width="340" height="83"/>
-                                        </variation>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="mtk-7C-S0q"/>
                                         </connections>
@@ -254,6 +252,7 @@
                                 <exclude reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="hL4-BF-Y4C"/>
                                 <exclude reference="DBF-8p-9Nm"/>
                                 <exclude reference="X1p-xD-IVq"/>
                                 <exclude reference="zzH-cg-4s7"/>
@@ -261,7 +260,6 @@
                                 <exclude reference="TUb-ug-kQB"/>
                                 <exclude reference="aXr-7E-woY"/>
                                 <exclude reference="sAC-Wf-J63"/>
-                                <exclude reference="hL4-BF-Y4C"/>
                                 <exclude reference="XhK-LX-1sC"/>
                             </mask>
                         </variation>
@@ -271,6 +269,7 @@
                                 <include reference="JAv-NC-cCV"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="hL4-BF-Y4C"/>
                                 <include reference="DBF-8p-9Nm"/>
                                 <include reference="X1p-xD-IVq"/>
                                 <include reference="zzH-cg-4s7"/>
@@ -278,7 +277,6 @@
                                 <include reference="TUb-ug-kQB"/>
                                 <include reference="aXr-7E-woY"/>
                                 <include reference="sAC-Wf-J63"/>
-                                <include reference="hL4-BF-Y4C"/>
                                 <include reference="XhK-LX-1sC"/>
                             </mask>
                         </variation>
@@ -322,7 +320,6 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <variation key="heightClass=regular"/>
                                 <connections>
                                     <segue destination="aIw-RU-tpD" kind="show" id="Q4P-Zd-uQp"/>
                                 </connections>

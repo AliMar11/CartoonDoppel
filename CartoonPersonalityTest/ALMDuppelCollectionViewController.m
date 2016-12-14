@@ -12,7 +12,7 @@
 @interface ALMDuppelCollectionViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewOne;
 @property (nonatomic, strong) NSArray *dupplePictures;
-@property (nonatomic, assign) int horiScroll;
+@property (nonatomic, assign) int horizontalScrollValue;
 
 @end
 
@@ -28,7 +28,7 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
     
     self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
 }
-
+//in viewDidAppear is when the collectionView scroll animation should happen, NSTimer creates smooth scrolling animation, NSRunLoop processes the timer, contentOffset is the actual scrolling motion.
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear: animated];
@@ -45,8 +45,8 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
 }
 -(void)scroll
 {
-    self.horiScroll += 2.5;
-    self.collectionViewOne.contentOffset = CGPointMake(self.horiScroll, 0);
+    self.horizontalScrollValue += 2.5;
+    self.collectionViewOne.contentOffset = CGPointMake(self.horizontalScrollValue, 0);
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -56,6 +56,7 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
     return 1;
 }
 
+//returning a high number allows the allusion on infinite scrolling
 - (NSInteger)collectionView: (UICollectionView *)collectionView numberOfItemsInSection: (NSInteger)section
 {
     return 10000;

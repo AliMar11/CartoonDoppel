@@ -25,7 +25,7 @@
     self.nextButton.hidden = YES;
 
     self.sharedDatastore = [ALMQuestions sharedData];
-    [self viewSetup];
+//    [self viewSetup];
     
     self.questionCounter = 0;
     [self setUpTheQuest: self.questionCounter];
@@ -33,6 +33,13 @@
     self.questionTextView.clipsToBounds = YES;
     [self.questionTextView.layer setBorderColor: [[[UIColor purpleColor] colorWithAlphaComponent: 0.2] CGColor]];
     [self.questionTextView.layer setBorderWidth: 1.0];
+}
+
+-(void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    //should call radius/fonts aesthetic stuff here?
+    [self viewSetup];
 }
 
 -(void)setUpTheQuest:(int)questionCounter
@@ -112,7 +119,7 @@
         [buttLayer setCornerRadius: 7.0f];
         [buttLayer setBorderWidth: 1.3f];
    
-        [button.titleLabel setFont: [UIFont fontWithName:@"Verdana-Bold" size:15]];
+        [button.titleLabel setFont: [UIFont fontWithName: @"Verdana-Bold" size: 15]];
         [button setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
         [button.titleLabel setAdjustsFontSizeToFitWidth: YES];
     }

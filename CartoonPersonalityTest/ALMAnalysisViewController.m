@@ -37,7 +37,7 @@
             {
                 self.duppleListWithTraits =  orderedDuppleTraits;
 
-//Here we do the work of comparing player.traits with dupple.traits and setting the images of lower 4, then passing the #1 match to as 'topDog' to nextVC.
+//Here we do the work of comparing player.traits with dupple.traits and setting the images of lower 4 of top 5 matches, then passing the #1 match to as 'topDog' to nextVC.
                 [ALMAnalysis dataAnalysis: self.topPlayerTraits : self.duppleListWithTraits withCompletion:^(NSArray *topFiveHanchos)
                  {
                      [self.characterTwo setImage: [topFiveHanchos[1]mugshot]];
@@ -59,12 +59,10 @@
                      self.topMatch = topFiveHanchos[0];
                      
                      NSLog(@"LIKENESS OF TOP 4%d\n%d\n%d\n%d\n%d",[topFiveHanchos[0]likeness], [topFiveHanchos[1]likeness], [topFiveHanchos[2]likeness], [topFiveHanchos[3]likeness], [topFiveHanchos[4]likeness]);
-                
                  }];
             }];
         }];
      }];
-        
 }
 
 - (void)didReceiveMemoryWarning

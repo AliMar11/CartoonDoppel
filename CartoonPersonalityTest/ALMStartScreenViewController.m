@@ -7,8 +7,10 @@
 //
 
 #import "ALMStartScreenViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ALMStartScreenViewController () 
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
 
 @end
 
@@ -19,9 +21,10 @@
     [super viewDidLoad];
 }
 
+//Ask for user name in order to tie their name to their player profile-->
 -(void)setUpTheUser
 {
-    UIAlertController *enterUserName = [UIAlertController alertControllerWithTitle:@"Let's get started!" message: @"Enter your name" preferredStyle: (UIAlertControllerStyleAlert)];
+    UIAlertController *enterUserName = [UIAlertController alertControllerWithTitle: @"Let's get started!" message: @"Enter your name" preferredStyle: (UIAlertControllerStyleAlert)];
         
     [enterUserName addTextFieldWithConfigurationHandler:^(UITextField *textField)
      {
@@ -30,7 +33,7 @@
          textField.borderStyle = UITextBorderStyleRoundedRect;
     
     
-    UIAlertAction *enterUserNameAction = [UIAlertAction actionWithTitle:@"Done!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+    UIAlertAction *enterUserNameAction = [UIAlertAction actionWithTitle: @"Done!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
                                           {
                                               self.userName = textField.text;
                                               
@@ -42,7 +45,7 @@
                                               [self performSegueWithIdentifier: @"questionVCSegue" sender: self];
                                           }];
 
-//TODO: come up with a better way to grab the userName Textfield
+//TODO: come up with a better way to grab the userName Textfield-- placing the action here is how I grab user's name before segue is called
     [enterUserName addAction: enterUserNameAction];
     [self presentViewController: enterUserName animated: YES completion: nil];
           }];

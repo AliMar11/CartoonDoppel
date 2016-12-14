@@ -28,18 +28,15 @@
     [self.duppleImageView setImage: self.theOne.mugshot];
     self.duppleImageView.layer.cornerRadius = 10;
     self.duppleImageView.clipsToBounds = YES;
-    
+}
+
+-(void)setUpDuppleInfo
+{
     [self.traitOne setText: self.theOne.traits.topDuppleTraits[0]];
     [self.traitTwo setText: self.theOne.traits.topDuppleTraits[1]];
     [self.traitThree setText: self.theOne.traits.topDuppleTraits[2]];
     [self.traitFour setText: self.theOne.traits.topDuppleTraits[3]];
     [self.TraitFive setText: self.theOne.traits.topDuppleTraits[4]];
-
-}
-
--(void)setUpDuppleInfo
-{
-    
 }
 
 - (void)didReceiveMemoryWarning
