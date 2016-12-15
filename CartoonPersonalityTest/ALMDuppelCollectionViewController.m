@@ -8,6 +8,7 @@
 
 #import "ALMDuppelCollectionViewController.h"
 #import "ALMDuppelCollectionViewCell.h"
+#import "ALMBackgroundLayer.h"
 
 @interface ALMDuppelCollectionViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewOne;
@@ -28,7 +29,9 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
     
     self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
 }
+
 //in viewDidAppear is when the collectionView scroll animation should happen, NSTimer creates smooth scrolling animation, NSRunLoop processes the timer, contentOffset is the actual scrolling motion.
+
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear: animated];

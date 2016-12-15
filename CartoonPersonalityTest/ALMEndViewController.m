@@ -7,6 +7,7 @@
 //
 #import <QuartzCore/QuartzCore.h>
 #import "ALMEndViewController.h"
+#import "ALMBackgroundLayer.h"
 
 @interface ALMEndViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *duppleImageView;
@@ -28,6 +29,17 @@
     [self.duppleImageView setImage: self.theOne.mugshot];
     self.duppleImageView.layer.cornerRadius = 10;
     self.duppleImageView.clipsToBounds = YES;
+    
+    [self setUpDuppleInfo];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
+    background.frame = self.view.bounds;
+    [self.view.layer insertSublayer: background atIndex: 0];
 }
 
 -(void)setUpDuppleInfo

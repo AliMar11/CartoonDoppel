@@ -10,6 +10,7 @@
 #import "ALMAnalysisViewController.h"
 #import "ALMCharacter.h"
 #import "ALMAnalysis.h"
+#import "ALMBackgroundLayer.h"
 
 @interface ALMAnalysisViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *finallyButton;
@@ -20,7 +21,19 @@
 
 @end
 
+//TODO: ANIMATE THIS PAGE
 @implementation ALMAnalysisViewController
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
+    background.frame = self.view.bounds;
+    [self.view.layer insertSublayer: background atIndex: 0];
+    self.finallyButton.layer.cornerRadius = 6;
+    self.finallyButton.clipsToBounds = YES;
+}
 
 - (void)viewDidLoad
 {

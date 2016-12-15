@@ -8,6 +8,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ALMQuestionViewController.h"
 #import "ALMQuestions.h"
+#import "ALMBackgroundLayer.h"
 
 @interface ALMQuestionViewController ()
 @property (nonatomic, strong) ALMQuestions *sharedDatastore;
@@ -25,7 +26,6 @@
     self.nextButton.hidden = YES;
 
     self.sharedDatastore = [ALMQuestions sharedData];
-//    [self viewSetup];
     
     self.questionCounter = 0;
     [self setUpTheQuest: self.questionCounter];
@@ -35,12 +35,24 @@
     [self.questionTextView.layer setBorderWidth: 1.0];
 }
 
--(void)viewWillLayoutSubviews
+//-(void)viewWillLayoutSubviews
+//{
+//    [super viewWillLayoutSubviews];
+//    //should call radius/fonts aesthetic stuff here?
+//    [self viewSetup];
+//}
+
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillLayoutSubviews];
-    //should call radius/fonts aesthetic stuff here?
+    [super viewWillAppear:animated];
+    
+    CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
+    background.frame = self.view.bounds;
+    [self.view.layer insertSublayer: background atIndex: 0];
+    
     [self viewSetup];
 }
+
 
 -(void)setUpTheQuest:(int)questionCounter
 {
@@ -91,6 +103,8 @@
 -(void)allQuestionsAnswered
 {
     self.questionStackview.hidden = YES;
+    self.nextButton.layer.cornerRadius = 6;
+    self.nextButton.clipsToBounds = YES;
     self.nextButton.hidden = NO;
 }
 
