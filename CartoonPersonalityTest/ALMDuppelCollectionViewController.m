@@ -37,6 +37,15 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
     [super viewDidAppear: animated];
     animated = NO;
     
+//    self.collectionViewOne.maskView.backgroundColor = [UIColor clearColor];
+//    self.collectionViewOne.backgroundView.backgroundColor = [UIColor clearColor];
+//    self.collectionViewOne.backgroundView.backgroundColor = [UIColor clearColor];
+//    self.collectionViewOne.backgroundView.backgroundColor = [UIColor clearColor];
+//    self.collectionViewOne.viewForLastBaselineLayout.backgroundColor = [UIColor clearColor];
+    
+    self.view.tintColor = [UIColor lightGrayColor];
+    self.view.backgroundColor= [UIColor clearColor];
+    
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 0.025
                                                       target: self
                                                     selector: @selector(scroll)

@@ -28,6 +28,7 @@
     
     self.startButton.layer.cornerRadius = 6;
     self.startButton.clipsToBounds = YES;
+   // CALayer *Tlayer = [];
     
     CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
     background.frame = self.view.bounds;

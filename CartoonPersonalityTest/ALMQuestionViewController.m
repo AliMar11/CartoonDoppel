@@ -126,10 +126,12 @@
         //[button.layer insertSublayer: buttonGrades atIndex: 0];
         //[buttLayer setBorderColor: [[UIColor colorWithRed:0 green:0 blue:0 alpha:0] CGColor]];
 
+        button.tag = 1;
         button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         CALayer *buttLayer = button.layer;
         buttonGrades.frame = button.bounds;
         button.backgroundColor = [UIColor grayColor];
+        [button setAlpha: 0.9f];
         [buttLayer setCornerRadius: 7.0f];
         [buttLayer setBorderWidth: 1.3f];
    

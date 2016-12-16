@@ -40,6 +40,25 @@
     CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
     background.frame = self.view.bounds;
     [self.view.layer insertSublayer: background atIndex: 0];
+    
+    [UIView animateWithDuration: 1.2 delay: 0.9 options: UIViewAnimationOptionCurveEaseIn animations:
+     ^{
+         self.traitOne.alpha = 0.5;
+         self.traitOne.alpha = 1;
+         
+         self.traitTwo.alpha = 0.3;
+         self.traitTwo.alpha = 1;
+         
+         self.traitThree.alpha = 0.2;
+         self.traitThree.alpha = 1;
+         
+         self.traitFour.alpha = 0.1;
+         self.traitFour.alpha = 1;
+         
+         self.TraitFive.alpha = 0.0;
+         self.TraitFive.alpha = 1;
+
+     } completion: nil];
 }
 
 -(void)setUpDuppleInfo
