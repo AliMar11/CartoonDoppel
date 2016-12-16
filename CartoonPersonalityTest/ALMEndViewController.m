@@ -8,6 +8,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ALMEndViewController.h"
 #import "ALMBackgroundLayer.h"
+#import "ALMTextField.h"
 
 @interface ALMEndViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *duppleImageView;
@@ -41,7 +42,7 @@
     background.frame = self.view.bounds;
     [self.view.layer insertSublayer: background atIndex: 0];
     
-    [UIView animateWithDuration: 1.2 delay: 0.9 options: UIViewAnimationOptionCurveEaseIn animations:
+    [UIView animateWithDuration: 0.9 delay: 0.5 options: UIViewAnimationOptionCurveEaseIn animations:
      ^{
          self.traitOne.alpha = 0.5;
          self.traitOne.alpha = 1;
@@ -57,8 +58,56 @@
          
          self.TraitFive.alpha = 0.0;
          self.TraitFive.alpha = 1;
+       
+     } completion:^(BOOL finished)
+    {
+        [self labelAnimation];
+     }];
+}
 
-     } completion: nil];
+-(void)labelAnimation
+{
+             UIColor *yellow= [UIColor yellowColor];
+             UIColor *orange= [UIColor orangeColor];
+             UIColor *red= [UIColor redColor];
+             UIColor *pink= [UIColor colorWithRed: 255 green: 35 blue: 134 alpha:1];
+             UIColor *green = [UIColor greenColor];
+    
+             NSArray *colors = [NSArray arrayWithObjects: (id)yellow.CGColor, (id)orange.CGColor, (id)red.CGColor, (id)pink.CGColor, (id)green.CGColor, nil];
+    
+             CAGradientLayer *labelLayer = [CAGradientLayer layer];
+             labelLayer.colors = colors;
+             [labelLayer setStartPoint: CGPointMake(0.0, 0.5)];
+             [labelLayer setEndPoint: CGPointMake(0.0, 1.0)];
+
+         [UIView animateWithDuration:0.5
+                               delay:0.2f
+                             options:UIViewAnimationCurveEaseInOut | UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse
+                          animations:^{
+                              
+                              
+                              CAGradientLayer *labelLayer = [CAGradientLayer layer];
+                              labelLayer.frame = self.thankYou.bounds;
+                              [self.thankYou.layer addSublayer: labelLayer];
+
+
+                              labelLayer.colors = [NSArray arrayWithObjects: (id)yellow.CGColor, nil];
+                              
+//
+//                              CAGradientLayer *labelLayer = [CAGradientLayer layer];
+//                              labelLayer.colors = colors;
+//                              [labelLayer setStartPoint: CGPointMake(0.0, 0.5)];
+//                              [labelLayer setEndPoint: CGPointMake(0.0, 1.0)];
+// labelLayer.colors = [NSArray arrayWithObjects: (id)yellow.CGColor, (id)orange.CGColor, (id)red.CGColor, (id)pink.CGColor, (id)green.CGColor, nil];
+                              
+                              labelLayer.colors = [NSArray arrayWithObjects: (id)green.CGColor, nil];
+
+                              self.thankYou.alpha = 0.0;
+                              
+                              labelLayer.colors = [NSArray arrayWithObjects: (id)green.CGColor, nil];
+                          }
+                          completion: nil
+                          ];
 }
 
 -(void)setUpDuppleInfo

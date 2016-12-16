@@ -19,8 +19,7 @@
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
   self = [super initWithCoder: aDecoder];
-    
-    
+   
     if (self)
     {
         [self drawButton];
@@ -54,14 +53,9 @@
     [CATransaction commit];
     
     [super setHighlighted: highlighted];
-    
-    if (self.tag == 1)
-    {
-        NSLog(@"\n\n\ntag 1 buttontype pressed\n\n\n");
-    }
 }
 
-//setters for all layers
+//setters for all UIbutton layers
 -(void)drawButton
 {
     CALayer *buttonLayer = self.layer;
@@ -77,7 +71,7 @@
     self.backgroundLayer = [CAGradientLayer layer];
         self.backgroundLayer.cornerRadius = 5;
     self.backgroundLayer.colors = (@[(id)[UIColor lightGrayColor].CGColor,
-                                     (id)[UIColor darkGrayColor].CGColor]);
+                                     (id)[UIColor grayColor].CGColor]);
     
     self.backgroundLayer.locations = (@[@0.0f, @1.0f]);
     
@@ -88,21 +82,19 @@
 
 -(void)drawHighlightedButtonState
 {
-    if (self.tag == 1)
     {
         if (!_highlightedStateLayer)
         {
             self.highlightedStateLayer = [CAGradientLayer layer];
             self.highlightedStateLayer.cornerRadius = 5;
-            self.highlightedStateLayer.colors = (@[(id)[UIColor darkGrayColor].CGColor,
+            self.highlightedStateLayer.colors = (@[(id)[UIColor grayColor].CGColor,
                                                    (id)[UIColor lightGrayColor].CGColor]);
             
             self.highlightedStateLayer.locations = (@[@0.0f, @1.0f]);
             
             [self.layer insertSublayer: self.highlightedStateLayer atIndex: 1];
         }
-    }
- 
+
 }
 
 /*
@@ -121,4 +113,5 @@
     }
 }
  */
+}
 @end
