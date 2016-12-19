@@ -24,6 +24,7 @@
 		2B60C3121D95713B00587B77 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C30F1D95713B00587B77 /* User+CoreDataProperties.m */; };
 		2B60C3131D95713B00587B77 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C3111D95713B00587B77 /* User.m */; };
 		2B89C1AA1E04802600A481C8 /* ALMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B89C1A91E04802600A481C8 /* ALMTextField.m */; };
+		2B89C1AD1E07571D00A481C8 /* ALMLabelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B89C1AC1E07571D00A481C8 /* ALMLabelLayer.m */; };
 		2BC1BB271DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1BB261DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m */; };
 		2BC522C51DC40D9D00A4ED02 /* ALMAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC522C41DC40D9D00A4ED02 /* ALMAnalysis.m */; };
 		2BE2EFA31E01E10E00A438EE /* ALMButtonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2EFA21E01E10E00A438EE /* ALMButtonLayer.m */; };
@@ -62,6 +63,8 @@
 		2B60C3111D95713B00587B77 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2B89C1A81E04802600A481C8 /* ALMTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMTextField.h; sourceTree = "<group>"; };
 		2B89C1A91E04802600A481C8 /* ALMTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMTextField.m; sourceTree = "<group>"; };
+		2B89C1AB1E07571D00A481C8 /* ALMLabelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMLabelLayer.h; sourceTree = "<group>"; };
+		2B89C1AC1E07571D00A481C8 /* ALMLabelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMLabelLayer.m; sourceTree = "<group>"; };
 		2BC1BB261DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMDuppelCollectionViewCell.m; sourceTree = "<group>"; };
 		2BC1BB281DC6B3EF00A680FE /* ALMDuppelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMDuppelCollectionViewCell.h; sourceTree = "<group>"; };
 		2BC522C31DC40D9D00A4ED02 /* ALMAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMAnalysis.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				2BE2EFA81E02192000A438EE /* ALMBackgroundLayer.m */,
 				2BE2EFA11E01E10E00A438EE /* ALMButtonLayer.h */,
 				2BE2EFA21E01E10E00A438EE /* ALMButtonLayer.m */,
+				2B89C1AB1E07571D00A481C8 /* ALMLabelLayer.h */,
+				2B89C1AC1E07571D00A481C8 /* ALMLabelLayer.m */,
 				2B89C1A81E04802600A481C8 /* ALMTextField.h */,
 				2B89C1A91E04802600A481C8 /* ALMTextField.m */,
 				2B60C3101D95713B00587B77 /* User.h */,
@@ -258,6 +263,7 @@
 				2B60C2EF1D93212D00587B77 /* ALMStartScreenViewController.m in Sources */,
 				2B60C3061D9449D800587B77 /* ALMCharacter.m in Sources */,
 				2B60C2EC1D93212D00587B77 /* AppDelegate.m in Sources */,
+				2B89C1AD1E07571D00A481C8 /* ALMLabelLayer.m in Sources */,
 				2B33EA6E1DAE0F1E00B71096 /* ALMAnalysisViewController.m in Sources */,
 				2B60C2E91D93212D00587B77 /* main.m in Sources */,
 				2B33EA781DAF468F00B71096 /* ALMCharacterTraits.m in Sources */,

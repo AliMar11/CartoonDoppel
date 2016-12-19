@@ -43,8 +43,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular">
+                                <variation key="heightClass=regular" misplaced="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                    <rect key="frame" x="104" y="672" width="207" height="36"/>
                                 </variation>
                                 <connections>
                                     <action selector="startTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kxA-Pq-WNs"/>
@@ -60,6 +61,9 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-1c-bF5" userLabel="CVTwoContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="440" width="414" height="89"/>
+                                </variation>
                                 <connections>
                                     <segue destination="FIY-dB-Zg9" kind="embed" id="OFf-dN-zFR"/>
                                 </connections>
@@ -475,21 +479,24 @@
                                 </subviews>
                                 <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Thanks for Playing!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c15-KZ-RHL" userLabel="thanksTextField" customClass="ALMTextField">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for Playing!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aui-ie-zcu" userLabel="thanksTextLabel" customClass="ALMLabelLayer">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fHw-ES-nCu" firstAttribute="centerY" secondItem="6pi-GK-Qfl" secondAttribute="centerY" id="AiA-p9-iXC"/>
+                            <constraint firstItem="f1M-pb-xa4" firstAttribute="top" secondItem="Aui-ie-zcu" secondAttribute="bottom" multiplier="1.05" id="Ajo-eE-BIp"/>
                             <constraint firstItem="fHw-ES-nCu" firstAttribute="height" secondItem="6pi-GK-Qfl" secondAttribute="height" multiplier="0.7" id="BRw-zh-kLt"/>
-                            <constraint firstItem="c15-KZ-RHL" firstAttribute="centerX" secondItem="6Ch-8j-XHe" secondAttribute="centerX" id="Fqv-2D-n0L"/>
-                            <constraint firstItem="c15-KZ-RHL" firstAttribute="leading" secondItem="6Ch-8j-XHe" secondAttribute="leadingMargin" id="N15-xS-8td"/>
-                            <constraint firstItem="f1M-pb-xa4" firstAttribute="top" secondItem="c15-KZ-RHL" secondAttribute="bottom" multiplier="1.05" id="SAu-zx-lXX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aui-ie-zcu" secondAttribute="trailing" id="RGY-AN-XSl"/>
                             <constraint firstItem="6pi-GK-Qfl" firstAttribute="height" secondItem="6Ch-8j-XHe" secondAttribute="height" multiplier="0.5" id="Skh-0h-K8u"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c15-KZ-RHL" secondAttribute="trailing" id="Z0g-qY-HCC"/>
+                            <constraint firstItem="Aui-ie-zcu" firstAttribute="leading" secondItem="6Ch-8j-XHe" secondAttribute="leadingMargin" id="T2N-UO-7Zk"/>
                             <constraint firstItem="6pi-GK-Qfl" firstAttribute="width" secondItem="6Ch-8j-XHe" secondAttribute="width" id="Zxw-Bu-blN"/>
                             <constraint firstItem="6pi-GK-Qfl" firstAttribute="centerX" secondItem="6Ch-8j-XHe" secondAttribute="centerX" id="cNw-RV-mh8"/>
                             <constraint firstItem="2eS-Jo-Egj" firstAttribute="width" secondItem="6Ch-8j-XHe" secondAttribute="width" id="eDL-nK-BkT"/>
@@ -503,12 +510,9 @@
                             <mask key="subviews">
                                 <exclude reference="6pi-GK-Qfl"/>
                                 <exclude reference="fHw-ES-nCu"/>
-                                <exclude reference="c15-KZ-RHL"/>
+                                <exclude reference="Aui-ie-zcu"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Fqv-2D-n0L"/>
-                                <exclude reference="N15-xS-8td"/>
-                                <exclude reference="Z0g-qY-HCC"/>
                                 <exclude reference="Skh-0h-K8u"/>
                                 <exclude reference="Zxw-Bu-blN"/>
                                 <exclude reference="cNw-RV-mh8"/>
@@ -517,9 +521,11 @@
                                 <exclude reference="BRw-zh-kLt"/>
                                 <exclude reference="rI0-YC-35q"/>
                                 <exclude reference="x7z-Zj-RgS"/>
+                                <exclude reference="RGY-AN-XSl"/>
+                                <exclude reference="T2N-UO-7Zk"/>
                                 <exclude reference="eDL-nK-BkT"/>
                                 <exclude reference="yeS-e1-7ep"/>
-                                <exclude reference="SAu-zx-lXX"/>
+                                <exclude reference="Ajo-eE-BIp"/>
                                 <exclude reference="hYu-bT-8M0"/>
                             </mask>
                         </variation>
@@ -527,12 +533,9 @@
                             <mask key="subviews">
                                 <include reference="6pi-GK-Qfl"/>
                                 <include reference="fHw-ES-nCu"/>
-                                <include reference="c15-KZ-RHL"/>
+                                <include reference="Aui-ie-zcu"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Fqv-2D-n0L"/>
-                                <include reference="N15-xS-8td"/>
-                                <include reference="Z0g-qY-HCC"/>
                                 <include reference="Skh-0h-K8u"/>
                                 <include reference="Zxw-Bu-blN"/>
                                 <include reference="cNw-RV-mh8"/>
@@ -541,9 +544,11 @@
                                 <include reference="BRw-zh-kLt"/>
                                 <include reference="rI0-YC-35q"/>
                                 <include reference="x7z-Zj-RgS"/>
+                                <include reference="RGY-AN-XSl"/>
+                                <include reference="T2N-UO-7Zk"/>
                                 <include reference="eDL-nK-BkT"/>
                                 <include reference="yeS-e1-7ep"/>
-                                <include reference="SAu-zx-lXX"/>
+                                <include reference="Ajo-eE-BIp"/>
                                 <include reference="hYu-bT-8M0"/>
                             </mask>
                         </variation>
@@ -552,7 +557,7 @@
                     <connections>
                         <outlet property="TraitFive" destination="RDm-N2-RUH" id="eBo-R8-Jja"/>
                         <outlet property="duppleImageView" destination="fHw-ES-nCu" id="lOD-9f-MAi"/>
-                        <outlet property="thankYou" destination="c15-KZ-RHL" id="M7s-nc-xow"/>
+                        <outlet property="thankYouLabel" destination="Aui-ie-zcu" id="DE6-qR-JMo"/>
                         <outlet property="traitFour" destination="rGe-aU-ehC" id="ksD-wG-Tb5"/>
                         <outlet property="traitOne" destination="P80-hG-gCh" id="8it-P3-CvY"/>
                         <outlet property="traitThree" destination="Elm-60-TSf" id="88a-ha-Wq2"/>
