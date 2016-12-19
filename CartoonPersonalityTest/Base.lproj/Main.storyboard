@@ -526,6 +526,8 @@
                                 <exclude reference="Aui-ie-zcu"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="RGY-AN-XSl"/>
+                                <exclude reference="T2N-UO-7Zk"/>
                                 <exclude reference="Skh-0h-K8u"/>
                                 <exclude reference="Zxw-Bu-blN"/>
                                 <exclude reference="cNw-RV-mh8"/>
@@ -534,8 +536,6 @@
                                 <exclude reference="BRw-zh-kLt"/>
                                 <exclude reference="rI0-YC-35q"/>
                                 <exclude reference="x7z-Zj-RgS"/>
-                                <exclude reference="RGY-AN-XSl"/>
-                                <exclude reference="T2N-UO-7Zk"/>
                                 <exclude reference="eDL-nK-BkT"/>
                                 <exclude reference="yeS-e1-7ep"/>
                                 <exclude reference="Ajo-eE-BIp"/>
@@ -549,6 +549,8 @@
                                 <include reference="Aui-ie-zcu"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="RGY-AN-XSl"/>
+                                <include reference="T2N-UO-7Zk"/>
                                 <include reference="Skh-0h-K8u"/>
                                 <include reference="Zxw-Bu-blN"/>
                                 <include reference="cNw-RV-mh8"/>
@@ -557,8 +559,6 @@
                                 <include reference="BRw-zh-kLt"/>
                                 <include reference="rI0-YC-35q"/>
                                 <include reference="x7z-Zj-RgS"/>
-                                <include reference="RGY-AN-XSl"/>
-                                <include reference="T2N-UO-7Zk"/>
                                 <include reference="eDL-nK-BkT"/>
                                 <include reference="yeS-e1-7ep"/>
                                 <include reference="Ajo-eE-BIp"/>
