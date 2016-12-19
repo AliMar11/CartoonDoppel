@@ -10,6 +10,6 @@
 
 @interface ALMLabelLayer : UILabel
 
-+(CAGradientLayer*)labelgradient;
++(void)labelgradient;
 
 @end

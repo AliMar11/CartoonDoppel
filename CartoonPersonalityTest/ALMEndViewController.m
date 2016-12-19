@@ -30,6 +30,8 @@
     [self.duppleImageView setImage: self.theOne.mugshot];
     self.duppleImageView.layer.cornerRadius = 10;
     self.duppleImageView.clipsToBounds = YES;
+    self.thankYouLabel.hidden = YES;
+    self.thankYouLabel.layer.cornerRadius = 5;
     
     
     [self setUpDuppleInfo];
@@ -63,6 +65,7 @@
      } completion:^(BOOL finished)
     {
 
+        self.thankYouLabel.hidden = NO;
         [self labelAnimation];
         
         self.thankYouLabel.layer.backgroundColor = [UIColor redColor].CGColor;
@@ -72,79 +75,43 @@
 
 -(void)labelAnimation
 {
+    
+//To make this better, create a random function that picks a color from array. Create option 'repeat' for animation meth
     self.thankYouLabel.textColor = [UIColor clearColor];
     [UIView transitionWithView: self.thankYouLabel duration:1/4 options:UIViewAnimationOptionTransitionCrossDissolve animations:
      ^{
-        self.thankYouLabel.textColor = [UIColor blueColor];
-    } completion:^(BOOL finished) { }];
-    
-    [UIView animateWithDuration: 2 animations:
-     ^{
-         self.thankYouLabel.layer.backgroundColor = [UIColor greenColor].CGColor;
+        self.thankYouLabel.textColor = [UIColor blackColor];
+     } completion:^(BOOL finished) {[UIView animateWithDuration: 2 animations:
+                                      
+          ^{
+              self.thankYouLabel.layer.backgroundColor = [UIColor greenColor].CGColor;
+              
+          } completion:^(BOOL finished) {[UIView animateWithDuration: 1 animations:
+                                          
+              ^{
+                  self.thankYouLabel.layer.backgroundColor = [UIColor orangeColor].CGColor;
+                  
+              } completion: ^(BOOL fin){ [UIView animateWithDuration: 2 animations:
+                                          
+                  ^{
+                      self.thankYouLabel.layer.backgroundColor = [UIColor yellowColor].CGColor;
+                      
+                  } completion: ^(BOOL fin) {[UIView animateWithDuration: 1 animations:
+                                              
+                      ^{
+                          self.thankYouLabel.layer.backgroundColor = [UIColor lightGrayColor].CGColor;
+                          
+                      } completion: ^(BOOL fin) {
+                          self.thankYouLabel.textColor = [UIColor purpleColor];
+                      }];
+                      
+                  }];
+              }];
+          }];
          
-    } completion: nil];
+     }];
     
-    [UIView animateWithDuration: 1 animations:
-     ^{
-         self.thankYouLabel.layer.backgroundColor = [UIColor orangeColor].CGColor;
-         
-     } completion:nil];
     
-    [UIView animateWithDuration: 2 animations:
-     ^{
-         self.thankYouLabel.layer.backgroundColor = [UIColor yellowColor].CGColor;
-         
-     } completion:nil];
-    
-    [UIView animateWithDuration: 1 animations:
-     ^{
-         self.thankYouLabel.layer.backgroundColor = [UIColor lightGrayColor].CGColor;
-         
-     } completion:nil];
-
-
-
-//             UIColor *yellow= [UIColor yellowColor];
-//             UIColor *orange= [UIColor orangeColor];
-//             UIColor *red= [UIColor redColor];
-//             UIColor *pink= [UIColor colorWithRed: 255 green: 35 blue: 134 alpha:1];
-//             UIColor *green = [UIColor greenColor];
-//    
-//             NSArray *colors = [NSArray arrayWithObjects: (id)yellow.CGColor, (id)orange.CGColor, (id)red.CGColor, (id)pink.CGColor, (id)green.CGColor, nil];
-//    
-//             CAGradientLayer *labelLayer = [CAGradientLayer layer];
-//             labelLayer.colors = colors;
-//             [labelLayer setStartPoint: CGPointMake(0.0, 0.5)];
-//             [labelLayer setEndPoint: CGPointMake(0.0, 1.0)];
-//
-//         [UIView animateWithDuration:0.5
-//                               delay:0.2f
-//                             options:UIViewAnimationCurveEaseInOut | UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse
-//                          animations:^{
-//                              
-//                              
-//                              CAGradientLayer *labelLayer = [CAGradientLayer layer];
-//                              labelLayer.frame = self.thankYou.bounds;
-//                              [self.thankYou.layer addSublayer: labelLayer];
-//
-//
-//                              labelLayer.colors = [NSArray arrayWithObjects: (id)yellow.CGColor, nil];
-//                              
-////
-////                              CAGradientLayer *labelLayer = [CAGradientLayer layer];
-////                              labelLayer.colors = colors;
-////                              [labelLayer setStartPoint: CGPointMake(0.0, 0.5)];
-////                              [labelLayer setEndPoint: CGPointMake(0.0, 1.0)];
-//// labelLayer.colors = [NSArray arrayWithObjects: (id)yellow.CGColor, (id)orange.CGColor, (id)red.CGColor, (id)pink.CGColor, (id)green.CGColor, nil];
-//                              
-//                              labelLayer.colors = [NSArray arrayWithObjects: (id)green.CGColor, nil];
-//
-//                              self.thankYou.alpha = 0.0;
-//                              
-//                              labelLayer.colors = [NSArray arrayWithObjects: (id)green.CGColor, nil];
-//                          }
-//                          completion: nil
-//                          ];
 }
 
 -(void)setUpDuppleInfo
