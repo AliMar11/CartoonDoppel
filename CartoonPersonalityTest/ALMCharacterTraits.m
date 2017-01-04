@@ -33,11 +33,11 @@
     
     self = [super init];
     if (self)
-    {           _duppleTraits = [NSMutableDictionary new];
-                _topDuppleTraits = [NSMutableArray new];
+    {           _doppelTraits = [NSMutableDictionary new];
+                _topDoppelTraits = [NSMutableArray new];
   
-        _topDuppleTraits = [@[
-        _duppleTraits = [@{@"AGGRESSIVE" : aggressive,
+        _topDoppelTraits = [@[
+        _doppelTraits = [@{@"AGGRESSIVE" : aggressive,
                            @"CAREFUL" : careful,
                            @"CLEVER" : clever,
                            @"COMEDIC" : comedic,

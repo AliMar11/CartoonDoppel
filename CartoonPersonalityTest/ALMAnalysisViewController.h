@@ -14,7 +14,11 @@
 
 @property (nonatomic, strong) ALMCharacter *topMatch;
 @property (nonatomic, strong) ALMCharacter *playerTraits;
-@property (nonatomic, strong) NSArray *duppleListWithTraits;
+@property (nonatomic, strong) NSArray *doppelListWithTraits;
 @property (nonatomic, strong) NSArray *topPlayerTraits;
+
+-(void)introduceRunnerUpsWithCompletion:(void(^)())completion;
+-(void)presentRunnerUps;
+
 
 @end

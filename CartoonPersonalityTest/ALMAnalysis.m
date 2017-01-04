@@ -49,17 +49,17 @@
     completion(sortedPlayerTraits);
 }
 
-//TODO!!! Fix dupple init so it's not crazy like so: characterList.dupple.traits.duppleTraits.... a dupple only needs dupple traits ^_^ (delete unnecessary steps)
+//TODO!!! Fix doppel init so it's not crazy like so: characterList.doppel.traits.doppelTraits.... a doppel only needs doppel traits ^_^ (delete unnecessary steps)
 +(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray * characterList))completion
 {
-    NSMutableDictionary *sortedDupple = [NSMutableDictionary new];
-    NSArray *orderedDuppleTraits = [NSArray new];
+    NSMutableDictionary *sortedDoppel = [NSMutableDictionary new];
+    NSArray *orderedDoppelTraits = [NSArray new];
 
     for (ALMCharacter *character in characterList)
     {
         NSArray *characterAnalysisArray = [[NSArray alloc] init];
         
-        characterAnalysisArray = [character.traits.duppleTraits keysSortedByValueUsingComparator: ^(id obj1, id obj2)
+        characterAnalysisArray = [character.traits.doppelTraits keysSortedByValueUsingComparator: ^(id obj1, id obj2)
                          {
                              if ([obj1 integerValue] > [obj2 integerValue])
                              {
@@ -76,16 +76,16 @@
                          }];
 
         
-        orderedDuppleTraits = [characterAnalysisArray subarrayWithRange: NSMakeRange(0, 7)];
+        orderedDoppelTraits = [characterAnalysisArray subarrayWithRange: NSMakeRange(0, 7)];
 
-        for (NSString *testTrait in orderedDuppleTraits)
+        for (NSString *testTrait in orderedDoppelTraits)
         {
-            sortedDupple[testTrait] = character.traits.duppleTraits[testTrait];
+            sortedDoppel[testTrait] = character.traits.doppelTraits[testTrait];
         }
 
-        [character.traits.topDuppleTraits removeAllObjects];
+        [character.traits.topDoppelTraits removeAllObjects];
 
-        [character.traits.topDuppleTraits addObjectsFromArray: orderedDuppleTraits];
+        [character.traits.topDoppelTraits addObjectsFromArray: orderedDoppelTraits];
 
     }
         completion(characterList);
@@ -96,40 +96,40 @@
 {
     NSArray *topFiveHanchos = [NSArray new];
  
-    for (ALMCharacter *duppel in characterList)
+    for (ALMCharacter *doppel in characterList)
     {
-        NSLog(@"\nWE ARE COMPARING %@ WITH %@", playerTraits, duppel.traits.topDuppleTraits);
-        NSArray *leTraits = [NSArray arrayWithArray: duppel.traits.topDuppleTraits];
+       // NSLog(@"\nWE ARE COMPARING %@ WITH %@", playerTraits, doppel.traits.topDoppelTraits);
+        NSArray *leTraits = [NSArray arrayWithArray: doppel.traits.topDoppelTraits];
 
         for (NSString *trait in playerTraits)
         {
-            if([duppel.traits.topDuppleTraits containsObject: [trait uppercaseString]] )
+            if([doppel.traits.topDoppelTraits containsObject: [trait uppercaseString]] )
             {
-                duppel.likeness += 1;
+                doppel.likeness += 1;
             }
         }
         
         if([[playerTraits[0] uppercaseString] isEqualToString: leTraits[0]] )
         {
-            duppel.likeness += 3;
+            doppel.likeness += 3;
         }
         
         if([[playerTraits[1] uppercaseString] isEqualToString: leTraits[1]] )
         {
-            duppel.likeness += 2;
+            doppel.likeness += 2;
         }
 
         if([[playerTraits[2] uppercaseString] isEqualToString: leTraits[2]])
         {
-            duppel.likeness += 1;
+            doppel.likeness += 1;
         }
         
         if([[playerTraits[3] uppercaseString] isEqualToString: leTraits[3]] )
         {
-            duppel.likeness += 1;
+            doppel.likeness += 1;
         }
  
-        NSLog(@"\n\nDuppName:%@\nLIKENESS POINTS:%d\n", duppel.characterName,duppel.likeness);
+       // NSLog(@"\n\nDoppName:%@\nLIKENESS POINTS:%d\n", doppel.characterName,doppel.likeness);
     }
     
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey: @"likeness" ascending: NO];

@@ -29,8 +29,8 @@
 @property (nonatomic, strong)  NSNumber *shy;
 @property (nonatomic, strong)  NSNumber  *sympathetic;
 @property (nonatomic, strong)  NSNumber  *troublemaker;
-@property (nonatomic, strong) NSMutableDictionary *duppleTraits;
-@property (nonatomic, strong) NSMutableArray *topDuppleTraits;
+@property (nonatomic, strong) NSMutableDictionary *doppelTraits;
+@property (nonatomic, strong) NSMutableArray *topDoppelTraits;
 
 -(instancetype) initWithAggressive: (NSNumber *)aggressive
                            careful: (NSNumber *)careful

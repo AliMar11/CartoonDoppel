@@ -322,80 +322,79 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shf-1F-k12" customClass="ALMButtonLayer">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <state key="normal" title="Who's your duppel?">
+                                <state key="normal" title="Next!">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="aIw-RU-tpD" kind="show" id="Q4P-Zd-uQp"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zkN-zy-xD9" userLabel="LeftStackView">
-                                <rect key="frame" x="-20" y="0.0" width="484" height="128"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="SHm-gK-cQQ">
+                                <rect key="frame" x="-8" y="0.0" width="974" height="128"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpm-Us-f7A" userLabel="ImageViewA">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                        </accessibility>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PsM-cZ-ZUn" userLabel="ImageViewB">
-                                        <rect key="frame" x="244" y="0.0" width="240" height="128"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                        </accessibility>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="zkN-zy-xD9" userLabel="LeftStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="484" height="128"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gpm-Us-f7A" userLabel="ImageViewA">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PsM-cZ-ZUn" userLabel="ImageViewB">
+                                                <rect key="frame" x="244" y="0.0" width="240" height="128"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                        </subviews>
+                                        <variation key="heightClass=regular" axis="vertical"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-lW-Nzm" userLabel="RightStackView">
+                                        <rect key="frame" x="490" y="0.0" width="484" height="128"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAO-hs-9EC" userLabel="ImageViewC">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pj6-Hx-Z2j" userLabel="ImageViewD">
+                                                <rect key="frame" x="244" y="0.0" width="240" height="128"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                            </imageView>
+                                        </subviews>
+                                        <variation key="heightClass=regular" axis="vertical"/>
+                                    </stackView>
                                 </subviews>
-                                <variation key="heightClass=regular" axis="vertical"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-lW-Nzm" userLabel="RightStackView">
-                                <rect key="frame" x="154" y="0.0" width="484" height="128"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAO-hs-9EC" userLabel="ImageViewC">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                        </accessibility>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pj6-Hx-Z2j" userLabel="ImageViewD">
-                                        <rect key="frame" x="244" y="0.0" width="240" height="128"/>
-                                        <accessibility key="accessibilityConfiguration">
-                                            <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                        </accessibility>
-                                    </imageView>
-                                </subviews>
-                                <variation key="heightClass=regular" axis="vertical"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zkN-zy-xD9" firstAttribute="width" secondItem="7pB-Ft-bYD" secondAttribute="width" multiplier="0.47" id="0h3-Hb-yQi"/>
-                            <constraint firstItem="zkN-zy-xD9" firstAttribute="leading" secondItem="7pB-Ft-bYD" secondAttribute="leadingMargin" constant="-8" id="FoO-Kj-Nlf"/>
-                            <constraint firstItem="zkN-zy-xD9" firstAttribute="height" secondItem="7pB-Ft-bYD" secondAttribute="height" multiplier="0.5" id="QD9-zP-5CA"/>
-                            <constraint firstItem="9Gq-lW-Nzm" firstAttribute="height" secondItem="7pB-Ft-bYD" secondAttribute="height" multiplier="0.5" id="Tfh-hs-mfe"/>
-                            <constraint firstItem="9Gq-lW-Nzm" firstAttribute="width" secondItem="7pB-Ft-bYD" secondAttribute="width" multiplier="0.47" id="W5C-af-NmG"/>
+                            <constraint firstItem="SHm-gK-cQQ" firstAttribute="centerX" secondItem="7pB-Ft-bYD" secondAttribute="centerX" id="75R-7x-iaa"/>
+                            <constraint firstItem="SHm-gK-cQQ" firstAttribute="centerY" secondItem="7pB-Ft-bYD" secondAttribute="centerY" multiplier="0.5" id="NS3-NB-1aG"/>
+                            <constraint firstItem="SHm-gK-cQQ" firstAttribute="width" secondItem="7pB-Ft-bYD" secondAttribute="width" multiplier="0.95" id="QV8-9p-2a9"/>
                             <constraint firstItem="EOA-xu-7gF" firstAttribute="top" secondItem="shf-1F-k12" secondAttribute="bottom" multiplier="1.2" id="WDa-sv-gL7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Gq-lW-Nzm" secondAttribute="trailing" constant="-8" id="coG-bc-Z5B"/>
+                            <constraint firstItem="SHm-gK-cQQ" firstAttribute="top" secondItem="gQ4-s5-tz2" secondAttribute="bottom" id="a0X-3v-bHm"/>
                             <constraint firstItem="shf-1F-k12" firstAttribute="centerX" secondItem="7pB-Ft-bYD" secondAttribute="centerX" id="dwB-Ye-nTx"/>
-                            <constraint firstItem="9Gq-lW-Nzm" firstAttribute="top" secondItem="gQ4-s5-tz2" secondAttribute="bottom" id="mL2-Wa-utA"/>
+                            <constraint firstItem="SHm-gK-cQQ" firstAttribute="height" secondItem="7pB-Ft-bYD" secondAttribute="height" multiplier="0.6" id="kR4-dH-IYr"/>
                             <constraint firstItem="shf-1F-k12" firstAttribute="width" secondItem="7pB-Ft-bYD" secondAttribute="width" multiplier="0.5" id="pwg-m9-HDh"/>
-                            <constraint firstItem="9Gq-lW-Nzm" firstAttribute="top" secondItem="zkN-zy-xD9" secondAttribute="top" id="uKV-ZO-8fV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="shf-1F-k12"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="75R-7x-iaa"/>
+                                <exclude reference="NS3-NB-1aG"/>
+                                <exclude reference="QV8-9p-2a9"/>
+                                <exclude reference="a0X-3v-bHm"/>
+                                <exclude reference="WDa-sv-gL7"/>
                                 <exclude reference="dwB-Ye-nTx"/>
                                 <exclude reference="pwg-m9-HDh"/>
-                                <exclude reference="0h3-Hb-yQi"/>
-                                <exclude reference="FoO-Kj-Nlf"/>
-                                <exclude reference="QD9-zP-5CA"/>
-                                <exclude reference="Tfh-hs-mfe"/>
-                                <exclude reference="W5C-af-NmG"/>
-                                <exclude reference="coG-bc-Z5B"/>
-                                <exclude reference="mL2-Wa-utA"/>
-                                <exclude reference="uKV-ZO-8fV"/>
-                                <exclude reference="WDa-sv-gL7"/>
+                                <exclude reference="kR4-dH-IYr"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -403,17 +402,14 @@
                                 <include reference="shf-1F-k12"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="75R-7x-iaa"/>
+                                <exclude reference="NS3-NB-1aG"/>
+                                <include reference="QV8-9p-2a9"/>
+                                <include reference="a0X-3v-bHm"/>
+                                <include reference="WDa-sv-gL7"/>
                                 <include reference="dwB-Ye-nTx"/>
                                 <include reference="pwg-m9-HDh"/>
-                                <include reference="0h3-Hb-yQi"/>
-                                <include reference="FoO-Kj-Nlf"/>
-                                <include reference="QD9-zP-5CA"/>
-                                <include reference="Tfh-hs-mfe"/>
-                                <include reference="W5C-af-NmG"/>
-                                <include reference="coG-bc-Z5B"/>
-                                <include reference="mL2-Wa-utA"/>
-                                <include reference="uKV-ZO-8fV"/>
-                                <include reference="WDa-sv-gL7"/>
+                                <include reference="kR4-dH-IYr"/>
                             </mask>
                         </variation>
                     </view>
@@ -423,6 +419,7 @@
                         <outlet property="characterFour" destination="lAO-hs-9EC" id="Ypk-Ie-afE"/>
                         <outlet property="characterThree" destination="PsM-cZ-ZUn" id="Eb6-QZ-sEy"/>
                         <outlet property="characterTwo" destination="Gpm-Us-f7A" id="yBf-ds-Y9R"/>
+                        <outlet property="doppelStackView" destination="SHm-gK-cQQ" id="dgO-oY-r5M"/>
                         <outlet property="finallyButton" destination="shf-1F-k12" id="Mab-hr-w85"/>
                     </connections>
                 </viewController>
@@ -488,7 +485,7 @@
                                     <constraint firstAttribute="height" constant="36" id="j5Y-Xw-WIn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -569,7 +566,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="TraitFive" destination="RDm-N2-RUH" id="eBo-R8-Jja"/>
-                        <outlet property="duppleImageView" destination="fHw-ES-nCu" id="lOD-9f-MAi"/>
+                        <outlet property="doppelImageView" destination="fHw-ES-nCu" id="ZqY-X8-Mog"/>
                         <outlet property="thankYouLabel" destination="Aui-ie-zcu" id="DE6-qR-JMo"/>
                         <outlet property="traitFour" destination="rGe-aU-ehC" id="ksD-wG-Tb5"/>
                         <outlet property="traitOne" destination="P80-hG-gCh" id="8it-P3-CvY"/>

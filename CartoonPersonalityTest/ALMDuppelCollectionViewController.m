@@ -12,7 +12,7 @@
 
 @interface ALMDuppelCollectionViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewOne;
-@property (nonatomic, strong) NSArray *dupplePictures;
+@property (nonatomic, strong) NSArray *doppelPictures;
 @property (nonatomic, assign) int horizontalScrollValue;
 
 @end
@@ -27,7 +27,7 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
     
     [self.collectionViewOne registerClass: [ALMDuppelCollectionViewCell class] forCellWithReuseIdentifier: reuseIdentifier];
     
-    self.dupplePictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
+    self.doppelPictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
 }
 
 //in viewDidAppear is when the collectionView scroll animation should happen, NSTimer creates smooth scrolling animation, NSRunLoop processes the timer, contentOffset is the actual scrolling motion.
@@ -82,8 +82,8 @@ static NSString * const reuseIdentifier = @"dupplePictureCell";
 
         if (cellOne)
         {
-            NSInteger otherIndex = indexPath.row % self.dupplePictures.count;
-            NSString *test = self.dupplePictures[otherIndex];
+            NSInteger otherIndex = indexPath.row % self.doppelPictures.count;
+            NSString *test = self.doppelPictures[otherIndex];
             
             mugshot = [UIImage imageNamed: test];
             UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
