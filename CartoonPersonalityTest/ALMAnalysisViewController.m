@@ -6,6 +6,7 @@
 //  Copyright © 2016 AliApps. All rights reserved.
 //
 
+//added name in textView and animated button for EndVC
 #import <QuartzCore/QuartzCore.h>
 #import "ALMAnalysisViewController.h"
 #import "ALMCharacter.h"
@@ -50,6 +51,8 @@
     self.characterFour.alpha = 0;
     self.characterFive.alpha = 0;
     
+    self.finallyButton.hidden = YES;
+    
     [self introduceRunnerUpsWithCompletion: nil];
     
     NSLog(@" 3 VIEW WILL APPEAR");
@@ -59,7 +62,7 @@
 {
     NSLog(@"\n\n 4 TEXT INTRO\n\n");
 
-    NSString *topFourIntro = @"Your answers have been analyzed... some honrable mentions are:";
+    NSString *topFourIntro = [NSString stringWithFormat: @"%@, answers have been analyzed... some honrable mentions are:", self.playerTraits.userName];
     
     UITextView *topFourView = [[UITextView alloc]init];
     [self.view insertSubview: topFourView atIndex: 0];
@@ -81,14 +84,14 @@
     NSLog(@"\n\n 5 MESSAGE CONSTRAINTS SET, ABOUT TO CALL TRANSITION \n\n");
 
                              [UIView transitionWithView: topFourView
-                                               duration:2.0f
-                                                options:UIViewAnimationOptionCurveEaseInOut |
+                                               duration: 3.5f
+                                                options: UIViewAnimationOptionCurveEaseInOut |
                               UIViewAnimationOptionTransitionCrossDissolve
-                                             animations:^{
+                                             animations: ^{
                                                  NSLog(@"\n\n 6 TRANSITION CALLED\n\n");
 
-                                                 topFourView.hidden = NO;
                                                  topFourView.alpha = 1;
+                                                 topFourView.hidden = NO;
                                                  topFourView.alpha = 0;
                                              
                                                  NSLog(@"\n\n 7 TRANSITION FINISHED\n\n");
@@ -146,7 +149,7 @@
                         self.characterFive.clipsToBounds = YES;
                         
                         [UIView transitionWithView: self.doppelStackView
-                                          duration:3.0f
+                                          duration:1.5f
                                            options: UIViewAnimationOptionCurveLinear
                          
                                         animations:^{
@@ -168,6 +171,12 @@
 
                                              self.topMatch = topFiveHanchos[0];
                                              
+                                             [UIView animateWithDuration: 1 animations:
+                                              ^{
+                                                 self.finallyButton.hidden = NO;
+
+                                             }];
+
                                          }];
                         
                         // NSLog(@"LIKENESS OF TOP 4%d\n%d\n%d\n%d\n%d",[topFiveHanchos[0]likeness], [topFiveHanchos[1]likeness], [topFiveHanchos[2]likeness], [topFiveHanchos[3]likeness], [topFiveHanchos[4]likeness]);
