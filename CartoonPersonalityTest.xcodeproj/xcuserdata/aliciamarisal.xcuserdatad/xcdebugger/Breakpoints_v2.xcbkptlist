@@ -36,74 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505626407.887609"
+            timestampString = "505636825.072439"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "-introduceRunnerUpsWithCompletion:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__47-[ALMAnalysisViewController introduceRunnerUps]_block_invoke_2"
-                  moduleName = "CartoonPersonalityTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aliciamarisal/Desktop/Codeland2.0/CartoonPersonalityTest/CartoonPersonalityTest/ALMAnalysisViewController.m"
-                  timestampString = "505132562.327904"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "117">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_"
-                  moduleName = "CartoonPersonalityTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aliciamarisal/Desktop/Codeland2.0/CartoonPersonalityTest/CartoonPersonalityTest/ALMAnalysisViewController.m"
-                  timestampString = "505132562.32806"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "CartoonPersonalityTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aliciamarisal/Desktop/Codeland2.0/CartoonPersonalityTest/CartoonPersonalityTest/ALMAnalysisViewController.m"
-                  timestampString = "505132562.328183"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "29">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505626407.887609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-introduceRunnerUpsWithCompletion:"
             landmarkType = "5">
          </BreakpointContent>
@@ -115,12 +52,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505626407.887609"
+            timestampString = "505637068.299645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "-introduceRunnerUpsWithCompletion:"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-presentRunnerUps"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -131,27 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505626407.887609"
+            timestampString = "505637068.299645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "-introduceRunnerUpsWithCompletion:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505626407.887609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "-presentRunnerUps"
             landmarkType = "5">
          </BreakpointContent>
