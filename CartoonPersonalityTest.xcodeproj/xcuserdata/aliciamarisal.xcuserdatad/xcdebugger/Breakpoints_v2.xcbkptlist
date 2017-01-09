@@ -36,43 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505200171.424481"
+            timestampString = "505626407.887609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "-presentRunnerUps"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505200171.424481"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "-presentRunnerUps"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505200171.424481"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-introduceRunnerUpsWithCompletion:"
             landmarkType = "5">
             <Locations>
@@ -127,15 +95,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505200171.424481"
+            timestampString = "505626407.887609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-introduceRunnerUpsWithCompletion:"
             landmarkType = "5">
          </BreakpointContent>
@@ -147,11 +115,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505200171.424481"
+            timestampString = "505626407.887609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "-introduceRunnerUpsWithCompletion:"
             landmarkType = "5">
          </BreakpointContent>
@@ -163,60 +131,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505200171.424481"
+            timestampString = "505626407.887609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-introduceRunnerUpsWithCompletion:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
+            timestampString = "505626407.887609"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "-presentRunnerUps"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505200171.424481"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "-presentRunnerUps"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505200171.424481"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "-introduceRunnerUpsWithCompletion:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "505200171.424481"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "-introduceRunnerUpsWithCompletion:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
