@@ -29,7 +29,6 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 {
     [super viewDidLoad];
     
-    
     self.doppelPictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
     
     self.dopplePicturesReversed = @[@"tina3", @"sans3", @"daffy5",@"sam", @"homer2", @"frisk2", @"louise", @"buggs", @"bob", @"flowey2", @"bart"];
@@ -57,17 +56,13 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 
 -(void)scroll
 {
-   // if (self.collectionViewTwo)
-   // {
-       // self.horizontalScrollValue -= 2.5;
-       // self.collectionViewTwo.contentOffset = CGPointMake(self.horizontalScrollValue, 0);
-   //        }
-//    else
-//    {
         self.horizontalScrollValue += 2.5;
-       // self.horizontalScrollValue -= 2.5;
         self.collectionViewOne.contentOffset = CGPointMake(self.horizontalScrollValue, 0);
-//    }
+   
+    if (self.collectionViewTwo)
+    {
+        [self.collectionViewTwo setTransform:CGAffineTransformMakeScale(-1, 1)];
+    }
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -91,10 +86,11 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 
         NSInteger doppelArrayIndex = indexPath.row % self.doppelPictures.count;
         NSString *nextCellImage = [[NSString alloc]init];
+   
     if (cell.tag == 1)
     {
        nextCellImage = self.dopplePicturesReversed[doppelArrayIndex];
-
+        [cell.contentView setTransform:CGAffineTransformMakeScale(-1, 1)];
     }
     else
     {
