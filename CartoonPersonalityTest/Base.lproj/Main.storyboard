@@ -60,9 +60,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-1c-bF5" userLabel="CVTwoContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="440" width="414" height="89"/>
-                                </variation>
                                 <connections>
                                     <segue destination="FIY-dB-Zg9" kind="embed" id="OFf-dN-zFR"/>
                                 </connections>
@@ -577,10 +574,10 @@
             </objects>
             <point key="canvasLocation" x="1867" y="357.75"/>
         </scene>
-        <!--Duppel Collection View Controller-->
+        <!--collectionViewTwo-->
         <scene sceneID="Ozn-v0-eXi">
             <objects>
-                <viewController id="Tpk-6d-ek5" customClass="ALMDuppelCollectionViewController" sceneMemberID="viewController">
+                <viewController id="Tpk-6d-ek5" userLabel="collectionViewTwo" customClass="ALMDuppelCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2xW-jx-RM5"/>
                         <viewControllerLayoutGuide type="bottom" id="xuH-x6-awC"/>
@@ -589,7 +586,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g4B-LQ-JEA" userLabel="collectionViewOne">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g4B-LQ-JEA" userLabel="collectionViewTwo">
                                 <rect key="frame" x="0.0" y="226" width="414" height="128"/>
                                 <color key="backgroundColor" red="0.33396676182746887" green="0.8485599160194397" blue="0.65521073341369629" alpha="0.33200431034482758" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zIK-ov-mJw">
@@ -599,7 +596,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" reuseIdentifier="cellTwo" id="vDs-4d-X3Y" customClass="ALMDuppleCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" reuseIdentifier="doppelPictureCell" id="vDs-4d-X3Y" customClass="ALMDuppleCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -647,11 +644,12 @@
                     </view>
                     <connections>
                         <outlet property="collectionViewOne" destination="g4B-LQ-JEA" id="Koz-GT-2yT"/>
+                        <outlet property="collectionViewTwo" destination="g4B-LQ-JEA" id="nbY-sH-yDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOF-el-qiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="579" y="799.875"/>
+            <point key="canvasLocation" x="576" y="799.125"/>
         </scene>
         <!--Duppel Collection View Controller-->
         <scene sceneID="KzT-YK-HqW">

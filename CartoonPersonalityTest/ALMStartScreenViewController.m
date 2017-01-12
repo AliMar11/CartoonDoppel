@@ -52,7 +52,7 @@
          textField.borderStyle = UITextBorderStyleRoundedRect;
          
          
-         UIAlertAction *enterUserNameAction = [UIAlertAction actionWithTitle: @"Done!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+         UIAlertAction *enterUserNameAction = [UIAlertAction actionWithTitle: @"Done" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
                                                {
                                                    self.userName = textField.text;
                                                    

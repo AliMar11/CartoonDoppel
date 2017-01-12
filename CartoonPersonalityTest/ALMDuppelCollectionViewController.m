@@ -10,13 +10,13 @@
 #import "ALMDuppelCollectionViewCell.h"
 #import "ALMBackgroundLayer.h"
 
-@interface ALMDuppelCollectionViewController ()
+@interface ALMDuppelCollectionViewController () <UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewOne;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionViewTwo;
 @property (nonatomic, strong) NSArray *doppelPictures;
 @property (nonatomic, assign) int horizontalScrollValue;
 @property (strong, nonatomic) ALMDuppelCollectionViewCell *cellOne;
 @property (strong, nonatomic) ALMDuppelCollectionViewCell *cellTwo;
-
 @property (strong, nonatomic) NSArray *dopplePicturesReversed;
 
 @end
@@ -29,9 +29,6 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 {
     [super viewDidLoad];
     
-    [self.collectionViewOne registerClass: [ALMDuppelCollectionViewCell class] forCellWithReuseIdentifier: @"doppelPictureCell"];
-    
-        [self.collectionViewOne registerClass: [ALMDuppelCollectionViewCell class] forCellWithReuseIdentifier: @"cellTwo"];
     
     self.doppelPictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
     
@@ -56,21 +53,21 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
                                                      repeats: YES];
     
     [[NSRunLoop currentRunLoop ]addTimer: timer forMode: NSRunLoopCommonModes];
-    
 }
 
 -(void)scroll
 {
-    if (self.collectionViewOne.tag == 1)
-    {
+   // if (self.collectionViewTwo)
+   // {
+       // self.horizontalScrollValue -= 2.5;
+       // self.collectionViewTwo.contentOffset = CGPointMake(self.horizontalScrollValue, 0);
+   //        }
+//    else
+//    {
+//      self.horizontalScrollValue += 2.5;
         self.horizontalScrollValue -= 2.5;
         self.collectionViewOne.contentOffset = CGPointMake(self.horizontalScrollValue, 0);
-    }
-    else
-    {
-        self.horizontalScrollValue += 2.5;
-        self.collectionViewOne.contentOffset = CGPointMake(self.horizontalScrollValue, 0);
-    }
+//    }
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -88,56 +85,27 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 
 - (UICollectionViewCell *)collectionView: (UICollectionView *)collectionView cellForItemAtIndexPath: (NSIndexPath *)indexPath
 {
-    self.cellOne = (ALMDuppelCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier: @"doppelPictureCell" forIndexPath: indexPath];
+    UICollectionViewCell *cell = (ALMDuppelCollectionViewCell *)[ collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
     
-    self.cellTwo = (ALMDuppelCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier: @"cellTwo" forIndexPath: indexPath];
-        UIImage *mugshot = [[UIImage alloc] init];
+            UIImage *mugshot = [[UIImage alloc] init];
 
-    if (self.cellTwo)
-    {
-        NSInteger nextImageIndex = indexPath.row % self.dopplePicturesReversed.count;
-        NSString *test = self.doppelPictures[nextImageIndex];
-        NSLog(@"current index: %lu, next index: %@", nextImageIndex,test);
+        NSInteger doppelArrayIndex = indexPath.row % self.doppelPictures.count;
+                    NSString *nextCellImage = self.doppelPictures[doppelArrayIndex];
         
-        mugshot = [UIImage imageNamed: test];
-        UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
+                    NSLog(@"no tag index: %li", doppelArrayIndex);
+                    mugshot = [UIImage imageNamed: nextCellImage];
+                    UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
         
-        mugshotView.autoresizingMask = NO;
-        mugshotView.autoresizesSubviews = NO;
-        mugshotView.translatesAutoresizingMaskIntoConstraints = NO;
-        mugshotView.frame = self.cellTwo.bounds;
-        mugshotView.contentMode = UIViewContentModeScaleToFill;
-        mugshotView.clipsToBounds = YES;
-        mugshotView.layer.cornerRadius = self.cellTwo.frame.size.height/2;
-        
-        [self.cellTwo addSubview: mugshotView];
-        
-        return  self.cellTwo;
-   
-    }
-        else if (self.cellOne)
-        {
-            NSInteger otherIndex = indexPath.row % self.doppelPictures.count;
-            NSString *test = self.doppelPictures[otherIndex];
+                    mugshotView.autoresizingMask = NO;
+                    mugshotView.autoresizesSubviews = NO;
+                    mugshotView.translatesAutoresizingMaskIntoConstraints = NO;
+                    mugshotView.frame = cell.bounds;
+                    mugshotView.contentMode = UIViewContentModeScaleToFill;
+                    mugshotView.clipsToBounds = YES;
+                    mugshotView.layer.cornerRadius = cell.frame.size.height/2;
             
-            NSLog(@"no tag index: %@", test);
-            mugshot = [UIImage imageNamed: test];
-            UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
-            
-            mugshotView.autoresizingMask = NO;
-            mugshotView.autoresizesSubviews = NO;
-            mugshotView.translatesAutoresizingMaskIntoConstraints = NO;
-            mugshotView.frame = self.cellOne.bounds;
-            mugshotView.contentMode = UIViewContentModeScaleToFill;
-            mugshotView.clipsToBounds = YES;
-            mugshotView.layer.cornerRadius = self.cellOne.frame.size.height/2;
-    
-            [self.cellOne addSubview: mugshotView];
-            
-            return self.cellOne;
-        }
-    return self.cellOne;
-    
+                    [cell addSubview: mugshotView];
+    return  cell;
 }
 
 #pragma mark <collectionView visualSetup>
@@ -147,7 +115,7 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
                  layout:(UICollectionViewLayout *) collectionViewLayout
  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat cellLeg = (self.collectionViewOne.frame.size.width/4.5);
+    CGFloat cellLeg = (collectionView.frame.size.width/4.5);
     
     return CGSizeMake(cellLeg, cellLeg);
 }
