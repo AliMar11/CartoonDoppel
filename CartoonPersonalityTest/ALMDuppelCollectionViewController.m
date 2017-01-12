@@ -32,7 +32,7 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
     
     self.doppelPictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
     
-    self.dopplePicturesReversed = @[@"tina3", @"sans3", @"sam", @"homer2", @"frisk2", @"daffy5", @"louise", @"buggs", @"bob", @"flowey2", @"bart"];
+    self.dopplePicturesReversed = @[@"tina3", @"sans3", @"daffy5",@"sam", @"homer2", @"frisk2", @"louise", @"buggs", @"bob", @"flowey2", @"bart"];
     
 }
 
@@ -64,8 +64,8 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
    //        }
 //    else
 //    {
-//      self.horizontalScrollValue += 2.5;
-        self.horizontalScrollValue -= 2.5;
+        self.horizontalScrollValue += 2.5;
+       // self.horizontalScrollValue -= 2.5;
         self.collectionViewOne.contentOffset = CGPointMake(self.horizontalScrollValue, 0);
 //    }
 }
@@ -90,7 +90,17 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
             UIImage *mugshot = [[UIImage alloc] init];
 
         NSInteger doppelArrayIndex = indexPath.row % self.doppelPictures.count;
-                    NSString *nextCellImage = self.doppelPictures[doppelArrayIndex];
+        NSString *nextCellImage = [[NSString alloc]init];
+    if (cell.tag == 1)
+    {
+       nextCellImage = self.dopplePicturesReversed[doppelArrayIndex];
+
+    }
+    else
+    {
+        nextCellImage = self.doppelPictures[doppelArrayIndex];
+
+    }
         
                     NSLog(@"no tag index: %li", doppelArrayIndex);
                     mugshot = [UIImage imageNamed: nextCellImage];
