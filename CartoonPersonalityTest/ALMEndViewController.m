@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *thankYouLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playAgainButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (assign, nonatomic) CGPoint *thankYouYOrigin;
 
 @end
 
@@ -90,7 +91,8 @@
          ^{
              self.thankYouLabel.layer.backgroundColor = [UIColor greenColor].CGColor;
              
-         } completion:^(BOOL finished)
+         }
+                      completion:^(BOOL finished)
     
       {[UIView animateWithDuration: 1 animations:
              ^{
@@ -106,27 +108,42 @@
                  } completion: ^(BOOL fin)
            
             {[UIView animateWithDuration: 1 animations:
-                                             
                  ^{
                      self.thankYouLabel.layer.backgroundColor = [UIColor lightGrayColor].CGColor;
                      self.thankYouLabel.textColor = [UIColor purpleColor];
                  }
                           completion: ^(BOOL fin)
                         {
-                     
-                            [UIView animateWithDuration: 1 animations:
-                             ^{
-                         
-                                 self.thankYouLabel.alpha = 0;
-                                 self.playAgainButton.alpha = 1;
-                                 self.shareButton.alpha = 1;
-                              }];
+                            [UIView transitionWithView: self.thankYouLabel duration: 1 options: UIViewAnimationOptionCurveEaseOut animations:^{
+                                
+                                CGFloat newY = self.thankYouLabel.center.y + self.view.bounds.size.width;
+                                [self.thankYouLabel setCenter: CGPointMake(self.thankYouLabel.center.x, newY)];
+                                
+                                self.playAgainButton.alpha = 1;
+                                self.shareButton.alpha = 1;
+                                
+                            } completion:^(BOOL fin)
+                             {
+                                 [UIView animateWithDuration: 0.6 animations:
+                                  ^{
+                                    
+                                     CGFloat newY = (CGFloat)self.view.bounds.size.height - 30;
+                                    
+                                     self.playAgainButton .center = CGPointMake( self.playAgainButton.center.x, newY);
+                                     
+                                     self.shareButton.center = CGPointMake(self.shareButton.center.x,  newY);
+                                 }];
+                              
+
+                             }];
+                            
+ 
                         }];
             }];
         }];
       }];
     }];
-   
+
 }
 
 -(void)setUpDoppelInfo
