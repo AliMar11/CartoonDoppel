@@ -95,9 +95,7 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
     else
     {
         nextCellImage = self.doppelPictures[doppelArrayIndex];
-
-    }
-        
+    }        
                     NSLog(@"no tag index: %li", doppelArrayIndex);
                     mugshot = [UIImage imageNamed: nextCellImage];
                     UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];

@@ -8,7 +8,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ALMEndViewController.h"
 #import "ALMBackgroundLayer.h"
-#import "ALMTextField.h"
+#import "ALMButtonLayer.h"
+//#import "ALMTextField.h"
 
 @interface ALMEndViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *doppelImageView;
@@ -17,7 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *traitThree;
 @property (weak, nonatomic) IBOutlet UITextField *traitFour;
 @property (weak, nonatomic) IBOutlet UITextField *TraitFive;
-@property (weak, nonatomic) IBOutlet UILabel *thankYouLabel; //TODO: add cool gradients here!
+@property (weak, nonatomic) IBOutlet UILabel *thankYouLabel;
+@property (weak, nonatomic) IBOutlet UIButton *playAgainButton;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 @end
 
@@ -30,9 +33,10 @@
     [self.doppelImageView setImage: self.theOne.mugshot];
     self.doppelImageView.layer.cornerRadius = 10;
     self.doppelImageView.clipsToBounds = YES;
-    self.thankYouLabel.hidden = YES;
+   // self.thankYouLabel.hidden = YES;
     self.thankYouLabel.layer.cornerRadius = 5;
-    
+    self.playAgainButton.alpha = 0;
+    self.shareButton.alpha = 0;
     
     [self setUpDoppelInfo];
 }
@@ -64,20 +68,21 @@
          
      } completion:^(BOOL finished)
      {
-         
          self.thankYouLabel.hidden = NO;
          [self labelAnimation];
          
-         self.thankYouLabel.layer.backgroundColor = [UIColor redColor].CGColor;
-         
+         self.thankYouLabel.layer.backgroundColor = [UIColor lightTextColor].CGColor;
      }];
 }
 
 -(void)labelAnimation
 {
-    //To make this better, create a random function that picks a color from array. Create option 'repeat' for animation meth
+//To make this better, create a random function that picks a color from array. Create option 'repeat' for animation meth
     self.thankYouLabel.textColor = [UIColor clearColor];
-    [UIView transitionWithView: self.thankYouLabel duration:1/4 options:UIViewAnimationOptionTransitionCrossDissolve animations:
+    [UIView transitionWithView: self.thankYouLabel
+                      duration: 1/4
+                       options: UIViewAnimationOptionTransitionCrossDissolve
+                    animations:
      ^{
          self.thankYouLabel.textColor = [UIColor blackColor];
      } completion:^(BOOL finished)
@@ -102,19 +107,26 @@
            
             {[UIView animateWithDuration: 1 animations:
                                              
-                     ^{
-                         self.thankYouLabel.layer.backgroundColor = [UIColor lightGrayColor].CGColor;
+                 ^{
+                     self.thankYouLabel.layer.backgroundColor = [UIColor lightGrayColor].CGColor;
+                     self.thankYouLabel.textColor = [UIColor purpleColor];
+                 }
+                          completion: ^(BOOL fin)
+                        {
+                     
+                            [UIView animateWithDuration: 1 animations:
+                             ^{
                          
-                     } completion: ^(BOOL fin)
-                {
-                        self.thankYouLabel.textColor = [UIColor purpleColor];
-                    }];
-                 }];
-             }];
-         }];
-     }];
-    
-    
+                                 self.thankYouLabel.alpha = 0;
+                                 self.playAgainButton.alpha = 1;
+                                 self.shareButton.alpha = 1;
+                              }];
+                        }];
+            }];
+        }];
+      }];
+    }];
+   
 }
 
 -(void)setUpDoppelInfo

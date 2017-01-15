@@ -53,7 +53,7 @@
     [self viewSetup];
 }
 
-
+//TO-DO rename properties in Questions class 
 -(void)setUpTheQuest:(int)questionCounter
 {
     [ALMQuestions createQuestions: ^(NSMutableArray * questionsArray)
