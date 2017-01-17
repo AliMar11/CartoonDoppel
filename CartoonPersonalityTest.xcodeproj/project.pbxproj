@@ -12,6 +12,7 @@
 		2B33EA6E1DAE0F1E00B71096 /* ALMAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA6D1DAE0F1E00B71096 /* ALMAnalysisViewController.m */; };
 		2B33EA711DAE1D7D00B71096 /* ALMEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA701DAE1D7D00B71096 /* ALMEndViewController.m */; };
 		2B33EA781DAF468F00B71096 /* ALMCharacterTraits.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA771DAF468F00B71096 /* ALMCharacterTraits.m */; };
+		2B3DF8221E2B473E0073D2FD /* ALMShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DF8211E2B473E0073D2FD /* ALMShareViewController.m */; };
 		2B60C2E91D93212D00587B77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2E81D93212D00587B77 /* main.m */; };
 		2B60C2EC1D93212D00587B77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2EB1D93212D00587B77 /* AppDelegate.m */; };
 		2B60C2EF1D93212D00587B77 /* ALMStartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2EE1D93212D00587B77 /* ALMStartScreenViewController.m */; };
@@ -41,6 +42,8 @@
 		2B33EA701DAE1D7D00B71096 /* ALMEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMEndViewController.m; sourceTree = "<group>"; };
 		2B33EA761DAF468F00B71096 /* ALMCharacterTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMCharacterTraits.h; sourceTree = "<group>"; };
 		2B33EA771DAF468F00B71096 /* ALMCharacterTraits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMCharacterTraits.m; sourceTree = "<group>"; };
+		2B3DF8201E2B473E0073D2FD /* ALMShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMShareViewController.h; sourceTree = "<group>"; };
+		2B3DF8211E2B473E0073D2FD /* ALMShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMShareViewController.m; sourceTree = "<group>"; };
 		2B60C2E41D93212D00587B77 /* CartoonPersonalityTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoonPersonalityTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B60C2E81D93212D00587B77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B60C2EA1D93212D00587B77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				2B33EA6D1DAE0F1E00B71096 /* ALMAnalysisViewController.m */,
 				2B33EA6F1DAE1D7C00B71096 /* ALMEndViewController.h */,
 				2B33EA701DAE1D7D00B71096 /* ALMEndViewController.m */,
+				2B3DF8201E2B473E0073D2FD /* ALMShareViewController.h */,
+				2B3DF8211E2B473E0073D2FD /* ALMShareViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				2B33EA711DAE1D7D00B71096 /* ALMEndViewController.m in Sources */,
 				2B60C3031D94493A00587B77 /* ALMQuestions.m in Sources */,
 				2BE2EFA91E02192000A438EE /* ALMBackgroundLayer.m in Sources */,
+				2B3DF8221E2B473E0073D2FD /* ALMShareViewController.m in Sources */,
 				2B60C3121D95713B00587B77 /* User+CoreDataProperties.m in Sources */,
 				2BC522C51DC40D9D00A4ED02 /* ALMAnalysis.m in Sources */,
 				2B32F0DF1DABF924009E08D9 /* ALMDuppelCollectionViewController.m in Sources */,
