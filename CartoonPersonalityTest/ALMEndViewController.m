@@ -6,10 +6,10 @@
 //  Copyright © 2016 AliApps. All rights reserved.
 //
 #import <QuartzCore/QuartzCore.h>
+#import "ALMStartScreenViewController.h"
 #import "ALMEndViewController.h"
 #import "ALMBackgroundLayer.h"
 #import "ALMButtonLayer.h"
-//#import "ALMTextField.h"
 
 @interface ALMEndViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *doppelImageView;
@@ -78,7 +78,6 @@
 
 -(void)labelAnimation
 {
-//To make this better, create a random function that picks a color from array. Create option 'repeat' for animation meth
     self.thankYouLabel.textColor = [UIColor clearColor];
     [UIView transitionWithView: self.thankYouLabel
                       duration: 1/4
@@ -133,17 +132,31 @@
                                      
                                      self.shareButton.center = CGPointMake(self.shareButton.center.x,  newY);
                                  }];
-                              
-
                              }];
-                            
- 
                         }];
             }];
         }];
       }];
     }];
 
+}
+
+-(IBAction) playAgainButtonPressed: (UIButton*) UIButton
+{
+    if (self.playAgainButton)
+    {
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController *secondViewController = [story instantiateViewControllerWithIdentifier:@"startScreenVC"];
+        
+        
+        secondViewController.modalPresentationStyle = UIModalPresentationOverFullScreen;
+        secondViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        [self presentViewController:secondViewController animated:YES completion:nil];
+ 
+ //       }
+    }
+
+    
 }
 
 -(void)setUpDoppelInfo

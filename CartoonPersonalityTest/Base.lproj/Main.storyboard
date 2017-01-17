@@ -11,7 +11,7 @@
         <!--Start Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ALMStartScreenViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startScreenVC" id="BYZ-38-t0r" customClass="ALMStartScreenViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -60,9 +60,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-1c-bF5" userLabel="CVTwoContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="440" width="414" height="89"/>
-                                </variation>
                                 <connections>
                                     <segue destination="FIY-dB-Zg9" kind="embed" id="OFf-dN-zFR"/>
                                 </connections>
@@ -503,6 +500,9 @@
                                 <state key="normal" title="Play Again?">
                                     <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="playAgainButtonPressed:" destination="aIw-RU-tpD" eventType="touchUpInside" id="o9p-ah-k2S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUD-Fi-sH1" userLabel="Share Results" customClass="ALMButtonLayer">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -639,13 +639,13 @@
         <!--Share View Controller-->
         <scene sceneID="9q4-XS-gaq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pD3-wZ-XIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OpF-Ek-Cvf" customClass="ALMShareViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ra0-qE-k1t"/>
                         <viewControllerLayoutGuide type="bottom" id="qQH-Ld-mgE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fCk-Hg-QVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUw-Jk-bgf" userLabel="faceBookButton" customClass="ALMButtonLayer">
@@ -683,18 +683,18 @@
                                 <exclude reference="Vva-KF-9JV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2Rg-s5-M6f"/>
-                                <exclude reference="JDl-DE-tH9"/>
-                                <exclude reference="X3E-Vr-bwr"/>
-                                <exclude reference="r8L-SD-VNj"/>
-                                <exclude reference="CgE-Hm-eDm"/>
-                                <exclude reference="O9y-B7-PsG"/>
-                                <exclude reference="aDZ-RP-dqP"/>
-                                <exclude reference="x98-x5-Lh3"/>
                                 <exclude reference="CZO-8u-0Pz"/>
                                 <exclude reference="TIF-dZ-l7C"/>
                                 <exclude reference="aEg-9I-KNR"/>
                                 <exclude reference="mph-dD-w8x"/>
+                                <exclude reference="CgE-Hm-eDm"/>
+                                <exclude reference="O9y-B7-PsG"/>
+                                <exclude reference="aDZ-RP-dqP"/>
+                                <exclude reference="x98-x5-Lh3"/>
+                                <exclude reference="2Rg-s5-M6f"/>
+                                <exclude reference="JDl-DE-tH9"/>
+                                <exclude reference="X3E-Vr-bwr"/>
+                                <exclude reference="r8L-SD-VNj"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -704,23 +704,24 @@
                                 <include reference="Vva-KF-9JV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2Rg-s5-M6f"/>
-                                <include reference="JDl-DE-tH9"/>
-                                <include reference="X3E-Vr-bwr"/>
-                                <include reference="r8L-SD-VNj"/>
-                                <include reference="CgE-Hm-eDm"/>
-                                <include reference="O9y-B7-PsG"/>
-                                <include reference="aDZ-RP-dqP"/>
-                                <include reference="x98-x5-Lh3"/>
                                 <include reference="CZO-8u-0Pz"/>
                                 <include reference="TIF-dZ-l7C"/>
                                 <include reference="aEg-9I-KNR"/>
                                 <include reference="mph-dD-w8x"/>
+                                <include reference="CgE-Hm-eDm"/>
+                                <include reference="O9y-B7-PsG"/>
+                                <include reference="aDZ-RP-dqP"/>
+                                <include reference="x98-x5-Lh3"/>
+                                <include reference="2Rg-s5-M6f"/>
+                                <include reference="JDl-DE-tH9"/>
+                                <include reference="X3E-Vr-bwr"/>
+                                <include reference="r8L-SD-VNj"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pD3-wZ-XIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2348" y="357"/>
         </scene>

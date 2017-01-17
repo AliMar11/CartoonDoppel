@@ -17,6 +17,18 @@
 
 @implementation ALMStartScreenViewController
 
+//- (IBAction)searchNowAction:(id)sender {
+//    
+//    UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//    UIViewController *secondViewController = [story instantiateViewControllerWithIdentifier:@"secondviewControllerSBname"];
+//    
+//    
+//    secondViewController.modalPresentationStyle = UIModalPresentationOverFullScreen;
+//    secondViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//    [self presentViewController:secondViewController animated:YES completion:nil];
+//    
+//}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -28,7 +40,6 @@
     
     self.startButton.layer.cornerRadius = 6;
     self.startButton.clipsToBounds = YES;
-   // CALayer *Tlayer = [];
     
     CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
     background.frame = self.view.bounds;
