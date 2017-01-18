@@ -9,6 +9,8 @@
 #import "ALMShareViewController.h"
 #import "ALMButtonLayer.h"
 #import "ALMBackgroundLayer.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
 
 @interface ALMShareViewController ()
 
@@ -16,12 +18,21 @@
 
 @implementation ALMShareViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
+    background.frame = self.view.bounds;
+    [self.view.layer insertSublayer: background atIndex: 0];
+
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.center = self.view.center;
+    [self.view addSubview:loginButton];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
