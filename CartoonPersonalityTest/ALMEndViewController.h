@@ -14,6 +14,6 @@
 @interface ALMEndViewController : UIViewController
 @property (nonatomic, strong) ALMCharacter *theOne;
 
--(void) playAgainButtonPressed;
+-(IBAction) playAgainButtonPressed: (UIButton*) UIButton;
 
 @end

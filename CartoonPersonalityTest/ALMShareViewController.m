@@ -9,8 +9,6 @@
 #import "ALMShareViewController.h"
 #import "ALMButtonLayer.h"
 #import "ALMBackgroundLayer.h"
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
-
 
 @interface ALMShareViewController ()
 
@@ -25,10 +23,19 @@
     CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
     background.frame = self.view.bounds;
     [self.view.layer insertSublayer: background atIndex: 0];
+    
+    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+    content.contentURL = [NSURL
+                          URLWithString:@"https://www.facebook.com/FacebookDevelopers"];
+    FBSDKShareButton *facebookShareButton = [[FBSDKShareButton alloc] init];
+    facebookShareButton.shareContent = content;
+    
+    CGFloat facebookButtonX = self.view.center.x;
+    CGFloat centerY = self.view.center.y;
+    [facebookShareButton setCenter: CGPointMake(facebookButtonX, centerY)];
+    
+    [self.view addSubview: facebookShareButton];
 
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,15 +43,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -650,77 +650,7 @@
                     <view key="view" contentMode="scaleToFill" id="fCk-Hg-QVJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUw-Jk-bgf" userLabel="faceBookButton" customClass="ALMButtonLayer">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-45-c8n" userLabel="twitterButton" customClass="ALMButtonLayer">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vva-KF-9JV" userLabel="instagramButton" customClass="ALMButtonLayer">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="iUw-Jk-bgf" firstAttribute="width" secondItem="fCk-Hg-QVJ" secondAttribute="width" multiplier="0.25" id="2Rg-s5-M6f"/>
-                            <constraint firstItem="Vva-KF-9JV" firstAttribute="width" secondItem="fCk-Hg-QVJ" secondAttribute="width" multiplier="0.25" id="CZO-8u-0Pz"/>
-                            <constraint firstItem="hdc-45-c8n" firstAttribute="centerX" secondItem="fCk-Hg-QVJ" secondAttribute="centerX" id="CgE-Hm-eDm"/>
-                            <constraint firstItem="iUw-Jk-bgf" firstAttribute="centerY" secondItem="fCk-Hg-QVJ" secondAttribute="centerY" id="JDl-DE-tH9"/>
-                            <constraint firstItem="hdc-45-c8n" firstAttribute="width" secondItem="fCk-Hg-QVJ" secondAttribute="width" multiplier="0.25" id="O9y-B7-PsG"/>
-                            <constraint firstItem="Vva-KF-9JV" firstAttribute="height" secondItem="fCk-Hg-QVJ" secondAttribute="height" multiplier="0.1" id="TIF-dZ-l7C"/>
-                            <constraint firstItem="iUw-Jk-bgf" firstAttribute="leading" secondItem="fCk-Hg-QVJ" secondAttribute="leadingMargin" id="X3E-Vr-bwr"/>
-                            <constraint firstItem="hdc-45-c8n" firstAttribute="centerY" secondItem="fCk-Hg-QVJ" secondAttribute="centerY" id="aDZ-RP-dqP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Vva-KF-9JV" secondAttribute="trailing" id="aEg-9I-KNR"/>
-                            <constraint firstItem="Vva-KF-9JV" firstAttribute="centerY" secondItem="fCk-Hg-QVJ" secondAttribute="centerY" id="mph-dD-w8x"/>
-                            <constraint firstItem="iUw-Jk-bgf" firstAttribute="height" secondItem="fCk-Hg-QVJ" secondAttribute="height" multiplier="0.1" id="r8L-SD-VNj"/>
-                            <constraint firstItem="hdc-45-c8n" firstAttribute="height" secondItem="fCk-Hg-QVJ" secondAttribute="height" multiplier="0.1" id="x98-x5-Lh3"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="iUw-Jk-bgf"/>
-                                <exclude reference="hdc-45-c8n"/>
-                                <exclude reference="Vva-KF-9JV"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="CZO-8u-0Pz"/>
-                                <exclude reference="TIF-dZ-l7C"/>
-                                <exclude reference="aEg-9I-KNR"/>
-                                <exclude reference="mph-dD-w8x"/>
-                                <exclude reference="CgE-Hm-eDm"/>
-                                <exclude reference="O9y-B7-PsG"/>
-                                <exclude reference="aDZ-RP-dqP"/>
-                                <exclude reference="x98-x5-Lh3"/>
-                                <exclude reference="2Rg-s5-M6f"/>
-                                <exclude reference="JDl-DE-tH9"/>
-                                <exclude reference="X3E-Vr-bwr"/>
-                                <exclude reference="r8L-SD-VNj"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <include reference="iUw-Jk-bgf"/>
-                                <include reference="hdc-45-c8n"/>
-                                <include reference="Vva-KF-9JV"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="CZO-8u-0Pz"/>
-                                <include reference="TIF-dZ-l7C"/>
-                                <include reference="aEg-9I-KNR"/>
-                                <include reference="mph-dD-w8x"/>
-                                <include reference="CgE-Hm-eDm"/>
-                                <include reference="O9y-B7-PsG"/>
-                                <include reference="aDZ-RP-dqP"/>
-                                <include reference="x98-x5-Lh3"/>
-                                <include reference="2Rg-s5-M6f"/>
-                                <include reference="JDl-DE-tH9"/>
-                                <include reference="X3E-Vr-bwr"/>
-                                <include reference="r8L-SD-VNj"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>

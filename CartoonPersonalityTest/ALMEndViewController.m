@@ -148,15 +148,10 @@
         UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         UIViewController *secondViewController = [story instantiateViewControllerWithIdentifier:@"startScreenVC"];
         
-        
         secondViewController.modalPresentationStyle = UIModalPresentationOverFullScreen;
         secondViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
         [self presentViewController:secondViewController animated:YES completion:nil];
- 
- //       }
     }
-
-    
 }
 
 -(void)setUpDoppelInfo
