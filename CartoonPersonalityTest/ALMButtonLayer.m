@@ -8,7 +8,6 @@
 
 #import "ALMButtonLayer.h"
 @interface ALMButtonLayer ()
-//@property (strong, nonatomic) CALayer *kaPingLayer;
 @property (strong, nonatomic) CAGradientLayer *backgroundLayer;
 @property (strong, nonatomic) CAGradientLayer *highlightedStateLayer;
 
@@ -23,7 +22,6 @@
     if (self)
     {
         [self drawButton];
-        //[self drawKaPing];
         [self drawBackground];
         [self drawHighlightedButtonState];
         self.highlightedStateLayer.hidden = YES;
@@ -34,8 +32,6 @@
 
 -(void)layoutSubviews
 {
-    //self.backgroundLayer.cornerRadius = 5;
-    //self.kaPingLayer.frame = CGRectInset(self.bounds, 1, 1);
     self.backgroundLayer.frame = self.bounds;
     self.highlightedStateLayer.frame = self.bounds;
     
@@ -94,24 +90,6 @@
             
             [self.layer insertSublayer: self.highlightedStateLayer atIndex: 1];
         }
-
-}
-
-/*
-////light topmost button layer, adds... pizzaz? ha.
--(void)drawKaPing
-{
-    if (!_kaPingLayer)
-    {
-    self.kaPingLayer = [CALayer layer];
-    self.kaPingLayer.cornerRadius = 4;
-    self.kaPingLayer.borderColor = [UIColor yellowColor].CGColor;
-    self.kaPingLayer.opacity = 0.5;
-    self.kaPingLayer.borderWidth = 1;
-    
-    [self.layer insertSublayer: self.kaPingLayer atIndex: 2];
     }
-}
- */
 }
 @end

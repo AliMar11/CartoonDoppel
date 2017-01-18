@@ -32,7 +32,6 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
     self.doppelPictures = @[@"bart", @"flowey2", @"bob", @"buggs", @"louise", @"daffy5", @"frisk2", @"homer2", @"sam", @"sans3", @"tina3"];
     
     self.dopplePicturesReversed = @[@"tina3", @"sans3", @"daffy5",@"sam", @"homer2", @"frisk2", @"louise", @"buggs", @"bob", @"flowey2", @"bart"];
-    
 }
 
 //in viewDidAppear is when the collectionView scroll animation should happen, NSTimer creates smooth scrolling animation, NSRunLoop processes the timer, contentOffset is the actual scrolling motion.
@@ -82,33 +81,33 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 {
     UICollectionViewCell *cell = (ALMDuppelCollectionViewCell *)[ collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
     
-            UIImage *mugshot = [[UIImage alloc] init];
+        UIImage *mugshot = [[UIImage alloc] init];
 
         NSInteger doppelArrayIndex = indexPath.row % self.doppelPictures.count;
         NSString *nextCellImage = [[NSString alloc]init];
    
     if (cell.tag == 1)
     {
-       nextCellImage = self.dopplePicturesReversed[doppelArrayIndex];
+        nextCellImage = self.dopplePicturesReversed[doppelArrayIndex];
         [cell.contentView setTransform:CGAffineTransformMakeScale(-1, 1)];
     }
     else
     {
         nextCellImage = self.doppelPictures[doppelArrayIndex];
     }        
-                    NSLog(@"no tag index: %li", doppelArrayIndex);
-                    mugshot = [UIImage imageNamed: nextCellImage];
-                    UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
-        
-                    mugshotView.autoresizingMask = NO;
-                    mugshotView.autoresizesSubviews = NO;
-                    mugshotView.translatesAutoresizingMaskIntoConstraints = NO;
-                    mugshotView.frame = cell.bounds;
-                    mugshotView.contentMode = UIViewContentModeScaleToFill;
-                    mugshotView.clipsToBounds = YES;
-                    mugshotView.layer.cornerRadius = cell.frame.size.height/2;
-            
-                    [cell addSubview: mugshotView];
+        NSLog(@"no tag index: %li", (long)doppelArrayIndex);
+        mugshot = [UIImage imageNamed: nextCellImage];
+        UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
+
+        mugshotView.autoresizingMask = NO;
+        mugshotView.autoresizesSubviews = NO;
+        mugshotView.translatesAutoresizingMaskIntoConstraints = NO;
+        mugshotView.frame = cell.bounds;
+        mugshotView.contentMode = UIViewContentModeScaleToFill;
+        mugshotView.clipsToBounds = YES;
+        mugshotView.layer.cornerRadius = cell.frame.size.height/2;
+
+        [cell addSubview: mugshotView];
     return  cell;
 }
 

@@ -35,13 +35,6 @@
     [self.questionTextView.layer setBorderWidth: 1.0];
 }
 
-//-(void)viewWillLayoutSubviews
-//{
-//    [super viewWillLayoutSubviews];
-//    //should call radius/fonts aesthetic stuff here?
-//    [self viewSetup];
-//}
-
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -118,15 +111,10 @@
     self.questionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
     NSArray *buttonArray = [NSArray arrayWithObjects: self.choiceAbutton, self.choiceBbutton, self.choiceCbutton, self.choiceDbutton, nil];
     
-//TODO: implement cool button gradients here ^_^
     CAGradientLayer *buttonGrades = [CAGradientLayer layer];
 
     for (UIButton *button in buttonArray)
     {
-        //[button.layer insertSublayer: buttonGrades atIndex: 0];
-        //[buttLayer setBorderColor: [[UIColor colorWithRed:0 green:0 blue:0 alpha:0] CGColor]];
-
-        button.tag = 1;
         button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         CALayer *buttLayer = button.layer;
         buttonGrades.frame = button.bounds;
