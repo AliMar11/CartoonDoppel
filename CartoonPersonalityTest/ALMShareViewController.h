@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKShareKit/FBSDKShareKit.h>
+#import "ALMCharacter.h"
 
 @interface ALMShareViewController : UIViewController
+@property (strong, nonatomic) ALMCharacter *doppel;
 
 @end

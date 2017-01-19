@@ -53,7 +53,7 @@
 
 -(void)introduceRunnerUpsWithCompletion:(void(^)())completion
 {
-    NSString *topFourIntro = [NSString stringWithFormat: @"%@, your choices have been analyzed... some honrable mentions are:", self.playerTraits.userName];
+    NSString *topFourIntro = [NSString stringWithFormat: @"%@, your choices have been analyzed... some honorable mentions are:", self.playerTraits.userName];
     
     UITextView *topFourView = [[UITextView alloc]init];
     [self.view insertSubview: topFourView atIndex: 0];

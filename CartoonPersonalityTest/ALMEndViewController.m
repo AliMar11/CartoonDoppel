@@ -9,6 +9,7 @@
 #import "ALMStartScreenViewController.h"
 #import "ALMEndViewController.h"
 #import "ALMBackgroundLayer.h"
+#import "ALMShareViewController.h"
 
 @interface ALMEndViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *doppelImageView;
@@ -170,6 +171,13 @@
     [self.traitThree setText: self.theOne.traits.topDoppelTraits[2]];
     [self.traitFour setText: self.theOne.traits.topDoppelTraits[3]];
     [self.TraitFive setText: self.theOne.traits.topDoppelTraits[4]];
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ALMShareViewController *shareVC = segue.destinationViewController;
+    shareVC.doppel = self.theOne;
 }
 
 - (void)didReceiveMemoryWarning
