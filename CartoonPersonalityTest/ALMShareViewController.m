@@ -9,7 +9,7 @@
 #import "ALMShareViewController.h"
 #import "ALMButtonLayer.h"
 #import "ALMBackgroundLayer.h"
-#import <TwitterKit/TwitterKit.h>
+#import "ALMTwitterViewController.h"
 
 @interface ALMShareViewController ()
 @property (strong, nonatomic)  NSString *blurb;
@@ -26,59 +26,58 @@
     
         self.blurb = [NSString stringWithFormat: @"Ever wonder what cartoon character you'd be? Find out by playing Cartoon Doppel app! I got %@ %@", self.doppel.characterName, self.doppel.mugshot];
     
-    NSString *mugshotPath = [NSString stringWithFormat: @"/CartoonPErsonalityTest/Assets/%@", self.doppel.characterName];
+    [self createMediaButtons];
     
-    NSURL *doppelMugshot = [[NSURL alloc]initFileURLWithPath: mugshotPath];
+}
+
+-(void)createMediaButtons
+{
+    // NSString *mugshotPath = [NSString stringWithFormat: @"/CartoonPErsonalityTest/Assets/%@", self.doppel.characterName];
     
-    CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
-    background.frame = self.view.bounds;
-    [self.view.layer insertSublayer: background atIndex: 0];
+    //  NSURL *doppelMugshot = [[NSURL alloc]initFileURLWithPath: mugshotPath];
     
     //here link to store page?? Or just delete and use photo and description?
     //include user's dupple
-    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-    content.contentURL = [NSURL URLWithString:@"https://developers.facebook.com"];
+    
     
     //this is what I would want for custome sharing info
-//    content.contentTitle = @"I just played Who's your Doppel";
-//    content.contentDescription = self.blurb;
-//    content.imageURL = doppelMugshot;
-    
+    //    content.contentTitle = @"I just played Who's your Doppel";
+    //    content.contentDescription = self.blurb;
+    //    content.imageURL = doppelMugshot;
+
+    FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+    content.contentURL = [NSURL URLWithString:@"https://developers.facebook.com"];
     FBSDKShareButton *facebookShareButton = [[FBSDKShareButton alloc] init];
     facebookShareButton.shareContent = content;
-    
     CGFloat facebookButtonX = self.view.center.x;
     CGFloat centerY = self.view.center.y;
     [facebookShareButton setCenter: CGPointMake(facebookButtonX, centerY)];
-    
     [self.view addSubview: facebookShareButton];
     
-    [self composeTweet];
+    
+    CGFloat twitterX = self.view.center.x;
+    CGFloat twitterY = self.view.center.y;
+
+    UIButton *twitterButton = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x, self.view.center.y, 70, 30)];
+      [twitterButton setCenter: CGPointMake(twitterX, twitterY + 70)];
+    
+    [self.view addSubview: twitterButton];
+    twitterButton.backgroundColor = [UIColor darkGrayColor];
+
 }
 
--(void)composeTweet
+-(void)viewWillAppear:(BOOL)animated
 {
-    TWTRComposer *composer = [[TWTRComposer alloc] init];
-    
-    //we can also send a url in the blurb
-    [composer setText: self.blurb];
-    
-    //Here get a picture of the app icon
-    [composer setImage:[UIImage imageNamed: @"fabric"]];
-    
-    // Called from the viewController
-    [composer showFromViewController: self completion:^(TWTRComposerResult result)
-    {
-        if (result == TWTRComposerResultCancelled)
-        {
-            NSLog(@"Tweet composition cancelled");
-        }
-        
-        else
-        {
-            NSLog(@"Sending Tweet!");
-        }
-    }];
+    CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
+    background.frame = self.view.bounds;
+    [self.view.layer insertSublayer: background atIndex: 0];
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ALMTwitterViewController *TwitterVC = segue.destinationViewController;
+    TwitterVC.doppel = self.doppel;
     
 }
 

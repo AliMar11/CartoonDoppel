@@ -37,25 +37,25 @@
                 _topDoppelTraits = [NSMutableArray new];
   
         _topDoppelTraits = [@[
-        _doppelTraits = [@{@"AGGRESSIVE" : aggressive,
-                           @"CAREFUL" : careful,
-                           @"CLEVER" : clever,
-                           @"COMEDIC" : comedic,
-                           @"COURAGE" : courage,
-                           @"CREATIVITY" : creativity,
-                           @"DESPICABLE" : despicableness,
-                           @"DETERMINED" : determination,
-                           @"DORKY" : dorky,
-                           @"ECCENTRIC" : eccentricity,
-                           @"ENTHUSIASM" : enthusiasm,
-                           @"NAIVE" : naive,
-                           @"OPTIMISTIC" : optimistic,
-                           @"NEGATIVE" : negative,
-                           @"PASSIVE" : passive,
-                           @"SASSY" : sassy,
-                           @"SHY" : shy,
-                           @"SYMPATHETHIC" : sympathy,
-                           @"TROUBLEMAKER" : troublemaker} mutableCopy] ] mutableCopy];
+        _doppelTraits = [@{@"Aggressive" : aggressive,
+                              @"Careful" : careful,
+                               @"Clever" : clever,
+                              @"Comedic" : comedic,
+                              @"Comedic" : courage,
+                             @"Creative" : creativity,
+                           @"Despicable" : despicableness,
+                           @"Determined" : determination,
+                                @"Dorky" : dorky,
+                            @"Eccentric" : eccentricity,
+                         @"Enthusiastic" : enthusiasm,
+                                @"Naive" : naive,
+                           @"Optimistic" : optimistic,
+                             @"Negative" : negative,
+                              @"Passive" : passive,
+                                @"Sassy" : sassy,
+                                  @"Shy" : shy,
+                          @"Sympathetic" : sympathy,
+                         @"Troublemaker" : troublemaker} mutableCopy] ] mutableCopy];
     }
 
     return self;

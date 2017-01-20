@@ -658,6 +658,24 @@
             </objects>
             <point key="canvasLocation" x="2348" y="357"/>
         </scene>
+        <!--TwitterVC-->
+        <scene sceneID="zw1-T2-WR9">
+            <objects>
+                <viewController title="TwitterVC" id="D8v-8H-mMH" customClass="ALMTwitterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dIH-ft-Vja"/>
+                        <viewControllerLayoutGuide type="bottom" id="6h9-V5-c6J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iEm-zK-7Bc">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVs-Zm-0VW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2832" y="357.75"/>
+        </scene>
         <!--collectionViewTwo-->
         <scene sceneID="Ozn-v0-eXi">
             <objects>
