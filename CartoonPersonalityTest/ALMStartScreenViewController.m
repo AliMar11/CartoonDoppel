@@ -11,7 +11,7 @@
 #import "ALMBackgroundLayer.h"
 
 @interface ALMStartScreenViewController () 
-@property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (strong, nonatomic) IBOutlet UIButton *startButton;
 
 @end
 

@@ -9,10 +9,11 @@
 #import "ALMShareViewController.h"
 #import "ALMButtonLayer.h"
 #import "ALMBackgroundLayer.h"
-#import "ALMTwitterViewController.h"
 
 @interface ALMShareViewController ()
 @property (strong, nonatomic)  NSString *blurb;
+@property (strong, nonatomic) UIButton *TwitterButton;
+@property (strong, nonatomic) UIStoryboardSegue *twitterSegue;
 
 @end
 
@@ -27,7 +28,13 @@
         self.blurb = [NSString stringWithFormat: @"Ever wonder what cartoon character you'd be? Find out by playing Cartoon Doppel app! I got %@ %@", self.doppel.characterName, self.doppel.mugshot];
     
     [self createMediaButtons];
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
+    background.frame = self.view.bounds;
+    [self.view.layer insertSublayer: background atIndex: 0];
 }
 
 -(void)createMediaButtons
@@ -44,7 +51,18 @@
     //    content.contentTitle = @"I just played Who's your Doppel";
     //    content.contentDescription = self.blurb;
     //    content.imageURL = doppelMugshot;
-
+    
+    CGFloat twitterX = self.view.center.x;
+    CGFloat twitterY = self.view.center.y;
+    
+    UIButton *twitterButton = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x, self.view.center.y, 70, 30)];
+    [twitterButton setCenter: CGPointMake(twitterX, twitterY + 70)];
+    
+    [self.view addSubview: twitterButton];
+    twitterButton.backgroundColor = [UIColor darkGrayColor];
+    
+    [twitterButton addTarget: self action: @selector(triggerSegue) forControlEvents: UIControlEventTouchUpInside];
+    
     FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
     content.contentURL = [NSURL URLWithString:@"https://developers.facebook.com"];
     FBSDKShareButton *facebookShareButton = [[FBSDKShareButton alloc] init];
@@ -53,38 +71,24 @@
     CGFloat centerY = self.view.center.y;
     [facebookShareButton setCenter: CGPointMake(facebookButtonX, centerY)];
     [self.view addSubview: facebookShareButton];
-    
-    
-    CGFloat twitterX = self.view.center.x;
-    CGFloat twitterY = self.view.center.y;
-
-    UIButton *twitterButton = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x, self.view.center.y, 70, 30)];
-      [twitterButton setCenter: CGPointMake(twitterX, twitterY + 70)];
-    
-    [self.view addSubview: twitterButton];
-    twitterButton.backgroundColor = [UIColor darkGrayColor];
-
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    CAGradientLayer *background = [ALMBackgroundLayer blueGradient];
-    background.frame = self.view.bounds;
-    [self.view.layer insertSublayer: background atIndex: 0];
 }
 
 #pragma mark - Navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
+-(void)triggerSegue
 {
-    ALMTwitterViewController *TwitterVC = segue.destinationViewController;
-    TwitterVC.doppel = self.doppel;
-    
+    [self performSegueWithIdentifier: @"tweetSegue" sender: self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)_twitterSegue sender:(id)sender
+{
+    ALMTwitterViewController *twitterVC = self.twitterSegue.destinationViewController;
+    twitterVC.doppel = self.doppel;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

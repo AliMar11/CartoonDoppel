@@ -41,7 +41,7 @@
                               @"Careful" : careful,
                                @"Clever" : clever,
                               @"Comedic" : comedic,
-                              @"Comedic" : courage,
+                           @"Courageous" : courage,
                              @"Creative" : creativity,
                            @"Despicable" : despicableness,
                            @"Determined" : determination,

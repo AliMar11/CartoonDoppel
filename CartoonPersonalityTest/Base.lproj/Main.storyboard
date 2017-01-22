@@ -60,9 +60,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-1c-bF5" userLabel="CVTwoContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="440" width="414" height="89"/>
-                                </variation>
                                 <connections>
                                     <segue destination="FIY-dB-Zg9" kind="embed" id="OFf-dN-zFR"/>
                                 </connections>
@@ -653,20 +650,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="D8v-8H-mMH" kind="show" identifier="tweetSegue" id="LEL-1T-xf1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pD3-wZ-XIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2348" y="357"/>
         </scene>
-        <!--TwitterVC-->
+        <!--twitterVC-->
         <scene sceneID="zw1-T2-WR9">
             <objects>
-                <viewController title="TwitterVC" id="D8v-8H-mMH" customClass="ALMTwitterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="twitterVC" title="TwitterVC" id="D8v-8H-mMH" userLabel="twitterVC" customClass="ALMTwitterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dIH-ft-Vja"/>
                         <viewControllerLayoutGuide type="bottom" id="6h9-V5-c6J"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iEm-zK-7Bc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -698,7 +699,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" reuseIdentifier="doppelPictureCell" id="vDs-4d-X3Y" customClass="ALMDuppleCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="center" reuseIdentifier="doppelPictureCell" id="vDs-4d-X3Y" customClass="ALMDuppelCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -775,7 +776,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="doppelPictureCell" id="dbi-fW-CLu" customClass="ALMDuppleCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="doppelPictureCell" id="dbi-fW-CLu" customClass="ALMDuppelCollectionViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="84" height="81"/>

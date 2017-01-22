@@ -40,25 +40,25 @@
 
 +(void)createUser: (NSString *)userName  withCompletion: (void(^)())completion
 {
-    NSMutableDictionary *traitDictionary = [NSMutableDictionary dictionaryWithDictionary:@{@"aggressive": @0,
-                                     @"careful" : @0,
-                                      @"clever" : @0,
-                                     @"comedic" : @0,
-                                     @"courage" : @0,
-                                    @"creative" : @0,
-                                  @"despicable" : @0,
-                                  @"determined" : @0,
-                                       @"dorky" : @0,
-                                   @"eccentric" : @0,
-                                @"enthusiastic" : @0,
-                                       @"naive" : @0,
-                                  @"optimistic" : @0,
-                                    @"negative" : @0,
-                                     @"passive" : @0,
-                                       @"sassy" : @0,
-                                         @"shy" : @0,
-                                 @"sympathetic" : @0,
-                                @"troublemaker" : @0}];
+    NSMutableDictionary *traitDictionary = [NSMutableDictionary dictionaryWithDictionary:@{@"Aggressive": @0,
+                                     @"Careful" : @0,
+                                      @"Clever" : @0,
+                                     @"Comedic" : @0,
+                                  @"Courageous" : @0,
+                                    @"Creative" : @0,
+                                  @"Despicable" : @0,
+                                  @"Determined" : @0,
+                                       @"Dorky" : @0,
+                                   @"Eccentric" : @0,
+                                @"Enthusiastic" : @0,
+                                       @"Naive" : @0,
+                                  @"Optimistic" : @0,
+                                    @"Negative" : @0,
+                                     @"Passive" : @0,
+                                       @"Sassy" : @0,
+                                         @"Shy" : @0,
+                                 @"Sympathetic" : @0,
+                                @"Troublemaker" : @0}];
     
     ALMCharacter *user = [[ALMCharacter alloc] initWithUserCharacter: userName characterTraits: traitDictionary];
                     

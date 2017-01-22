@@ -43,7 +43,7 @@
     
     for (NSString *trait in sortedPlayerTraits)
     {
-        topPlayerTraits[trait] =  [playerTraits.traitDictionary valueForKey:trait];
+        topPlayerTraits[trait] =  [playerTraits.traitDictionary valueForKey: trait];
     }
     
     completion(sortedPlayerTraits);
@@ -52,6 +52,7 @@
 //TODO!!! Fix doppel init so it's not crazy like so: characterList.doppel.traits.doppelTraits.... a doppel only needs doppel traits ^_^ (delete unnecessary steps)
 +(void)characterSort:(NSArray*)characterList withCompletion: (void(^)(NSArray * characterList))completion
 {
+    //NSLog(@"\ncharacterSort:\n%@\n", characterList);
     NSMutableDictionary *sortedDoppel = [NSMutableDictionary new];
     NSArray *orderedDoppelTraits = [NSArray new];
 
@@ -94,42 +95,43 @@
 
 +(void)dataAnalysis:(NSArray*)playerTraits :(NSArray*)characterList withCompletion: (void(^)(NSArray *topFiveHanchos))completion
 {
+    //NSLog(@"\ndata analysist:\n%@\n", characterList);
     NSArray *topFiveHanchos = [NSArray new];
  
     for (ALMCharacter *doppel in characterList)
     {
-       // NSLog(@"\nWE ARE COMPARING %@ WITH %@", playerTraits, doppel.traits.topDoppelTraits);
+       // NSLog(@"\nWE ARE COMPARING userTraits:%@ WITH %@", playerTraits, doppel.traits.topDoppelTraits);
         NSArray *leTraits = [NSArray arrayWithArray: doppel.traits.topDoppelTraits];
 
         for (NSString *trait in playerTraits)
         {
-            if([doppel.traits.topDoppelTraits containsObject: [trait uppercaseString]] )
+            if([doppel.traits.topDoppelTraits containsObject: trait] )
             {
                 doppel.likeness += 1;
             }
         }
         
-        if([[playerTraits[0] uppercaseString] isEqualToString: leTraits[0]] )
+        if([playerTraits[0]  isEqualToString: leTraits[0]] )
         {
             doppel.likeness += 3;
         }
         
-        if([[playerTraits[1] uppercaseString] isEqualToString: leTraits[1]] )
+        if([playerTraits[1] isEqualToString: leTraits[1]] )
         {
             doppel.likeness += 2;
         }
 
-        if([[playerTraits[2] uppercaseString] isEqualToString: leTraits[2]])
+        if([playerTraits[2] isEqualToString: leTraits[2]])
         {
             doppel.likeness += 1;
         }
         
-        if([[playerTraits[3] uppercaseString] isEqualToString: leTraits[3]] )
+        if([playerTraits[3] isEqualToString: leTraits[3]] )
         {
             doppel.likeness += 1;
         }
  
-       // NSLog(@"\n\nDoppName:%@\nLIKENESS POINTS:%d\n", doppel.characterName,doppel.likeness);
+        NSLog(@"\n\nDoppName:%@\nLIKENESS POINTS:%d\n", doppel.characterName,doppel.likeness);
     }
     
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey: @"likeness" ascending: NO];

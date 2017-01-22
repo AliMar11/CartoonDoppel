@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ALMCharacter.h"
 #import "ALMStartScreenViewController.h"
-#import "ALMStartScreenViewController.h"
 
 @interface ALMEndViewController : UIViewController
 @property (nonatomic, strong) ALMCharacter *theOne;

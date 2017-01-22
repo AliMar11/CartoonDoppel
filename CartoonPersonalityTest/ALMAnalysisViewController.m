@@ -6,8 +6,8 @@
 //  Copyright © 2016 AliApps. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
 #import "ALMAnalysisViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #import "ALMCharacter.h"
 #import "ALMAnalysis.h"
 #import "ALMBackgroundLayer.h"
@@ -159,7 +159,7 @@
                                           }
                                                 completion: nil];
                                 }];
-                                             // NSLog(@"LIKENESS OF TOP 4%d\n%d\n%d\n%d\n%d",[topFiveHanchos[0]likeness], [topFiveHanchos[1]likeness], [topFiveHanchos[2]likeness], [topFiveHanchos[3]likeness], [topFiveHanchos[4]likeness]);
+                                             // NSLog(@"LIKENESS OF TOP 4\n%d\n%d\n%d\n%d\n%d",[topFiveHanchos[0]likeness], [topFiveHanchos[1]likeness], [topFiveHanchos[2]likeness], [topFiveHanchos[3]likeness], [topFiveHanchos[4]likeness]);
                         }];
                 }];
             }];
@@ -174,6 +174,7 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+   // NSLog(@"\ntop match:%@\n", self.topMatch.characterName);
     ALMEndViewController *endVC = segue.destinationViewController;
     ALMCharacter *firstPlace = self.topMatch;
     endVC.theOne = firstPlace;
