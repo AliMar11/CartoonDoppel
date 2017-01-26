@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *playAgainButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (assign, nonatomic) CGPoint *thankYouYOrigin;
+@property (weak, nonatomic) IBOutlet UILabel *doppelNameLabel;
 
 @end
 
@@ -51,6 +52,7 @@
     
     [UIView animateWithDuration: 0.9 delay: 0.4 options: UIViewAnimationOptionCurveEaseIn animations:
      ^{
+         self.doppelNameLabel.text = self.theOne.characterName;
          self.traitOne.alpha = 0.5;
          self.traitOne.alpha = 1;
          

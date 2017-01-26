@@ -64,7 +64,7 @@
     topFourView.layer.shadowColor = [UIColor clearColor].CGColor;
     [topFourView setFont: [UIFont fontWithName: @"Verdana-Bold" size: 15]];
     
-    CGFloat textViewX =  (self.view.frame.origin.x) + 30;
+    CGFloat textViewX =  (self.view.frame.origin.x) + 35;
     CGFloat textViewY =  (self.view.frame.origin.y) + 25;
     CGFloat textViewWidth = CGRectGetWidth(self.view.bounds) / 1.1;
     CGFloat textViewheight = CGRectGetHeight(self.view.bounds) / 3;
@@ -147,7 +147,7 @@
                                      presentNextButton.layer.shadowColor = [UIColor clearColor].CGColor;
                                      [presentNextButton setFont: [UIFont fontWithName: @"Verdana-Bold" size: 15]];
                                          
-                                    [UIView animateWithDuration: 2.0f
+                                    [UIView animateWithDuration: 1.0f
                                                           delay: 0
                                          usingSpringWithDamping: 1
                                           initialSpringVelocity: 0.5

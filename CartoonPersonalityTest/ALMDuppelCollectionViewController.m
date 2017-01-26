@@ -81,6 +81,7 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 {
     UICollectionViewCell *cell = (ALMDuppelCollectionViewCell *)[ collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
     
+    
         UIImage *mugshot = [[UIImage alloc] init];
 
         NSInteger doppelArrayIndex = indexPath.row % self.doppelPictures.count;
@@ -89,7 +90,7 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
     if (cell.tag == 1)
     {
         nextCellImage = self.dopplePicturesReversed[doppelArrayIndex];
-        [cell.contentView setTransform:CGAffineTransformMakeScale(-1, 1)];
+        [cell.contentView setTransform: CGAffineTransformMakeScale(-1, 1)];
     }
     else
     {
@@ -98,6 +99,19 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
         mugshot = [UIImage imageNamed: nextCellImage];
         UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
 
+//    
+//    if ([self.dopplePicturesReversed[indexPath.row] isEqual: @"sans"])
+//    {
+//        mugshotView.backgroundColor = [UIColor clearColor];
+//        
+//    }
+//    
+//    if ([self.doppelPictures[indexPath.row] isEqual: @"sans"])
+//    {
+//        mugshotView.backgroundColor = [UIColor clearColor];
+//
+//    }
+    
         mugshotView.autoresizingMask = NO;
         mugshotView.autoresizesSubviews = NO;
         mugshotView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -105,7 +119,7 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
         mugshotView.contentMode = UIViewContentModeScaleToFill;
         mugshotView.clipsToBounds = YES;
         mugshotView.layer.cornerRadius = cell.frame.size.height/2;
-
+  
         [cell addSubview: mugshotView];
     return  cell;
 }

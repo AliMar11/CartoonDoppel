@@ -20,7 +20,6 @@
 		2B33EA711DAE1D7D00B71096 /* ALMEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA701DAE1D7D00B71096 /* ALMEndViewController.m */; };
 		2B33EA781DAF468F00B71096 /* ALMCharacterTraits.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA771DAF468F00B71096 /* ALMCharacterTraits.m */; };
 		2B3DF8221E2B473E0073D2FD /* ALMShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DF8211E2B473E0073D2FD /* ALMShareViewController.m */; };
-		2B5993701E3147AB007DEF6A /* ALMTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B59936F1E3147AB007DEF6A /* ALMTwitterViewController.m */; };
 		2B60C2E91D93212D00587B77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2E81D93212D00587B77 /* main.m */; };
 		2B60C2EC1D93212D00587B77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2EB1D93212D00587B77 /* AppDelegate.m */; };
 		2B60C2EF1D93212D00587B77 /* ALMStartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2EE1D93212D00587B77 /* ALMStartScreenViewController.m */; };
@@ -32,6 +31,7 @@
 		2B89C1AD1E07571D00A481C8 /* ALMLabelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B89C1AC1E07571D00A481C8 /* ALMLabelLayer.m */; };
 		2BC1BB271DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1BB261DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m */; };
 		2BC522C51DC40D9D00A4ED02 /* ALMAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC522C41DC40D9D00A4ED02 /* ALMAnalysis.m */; };
+		2BCB52411E395B1800F1DCB1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCB52401E395B1700F1DCB1 /* Social.framework */; };
 		2BE2EFA31E01E10E00A438EE /* ALMButtonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2EFA21E01E10E00A438EE /* ALMButtonLayer.m */; };
 		2BE2EFA91E02192000A438EE /* ALMBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2EFA81E02192000A438EE /* ALMBackgroundLayer.m */; };
 /* End PBXBuildFile section */
@@ -56,8 +56,6 @@
 		2B33EA771DAF468F00B71096 /* ALMCharacterTraits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMCharacterTraits.m; sourceTree = "<group>"; };
 		2B3DF8201E2B473E0073D2FD /* ALMShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMShareViewController.h; sourceTree = "<group>"; };
 		2B3DF8211E2B473E0073D2FD /* ALMShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMShareViewController.m; sourceTree = "<group>"; };
-		2B59936E1E3147AB007DEF6A /* ALMTwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMTwitterViewController.h; sourceTree = "<group>"; };
-		2B59936F1E3147AB007DEF6A /* ALMTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMTwitterViewController.m; sourceTree = "<group>"; };
 		2B60C2E41D93212D00587B77 /* CartoonPersonalityTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoonPersonalityTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B60C2E81D93212D00587B77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B60C2EA1D93212D00587B77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +76,7 @@
 		2BC1BB281DC6B3EF00A680FE /* ALMDuppelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMDuppelCollectionViewCell.h; sourceTree = "<group>"; };
 		2BC522C31DC40D9D00A4ED02 /* ALMAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMAnalysis.h; sourceTree = "<group>"; };
 		2BC522C41DC40D9D00A4ED02 /* ALMAnalysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMAnalysis.m; sourceTree = "<group>"; };
+		2BCB52401E395B1700F1DCB1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2BE2EFA11E01E10E00A438EE /* ALMButtonLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMButtonLayer.h; sourceTree = "<group>"; };
 		2BE2EFA21E01E10E00A438EE /* ALMButtonLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMButtonLayer.m; sourceTree = "<group>"; };
 		2BE2EFA71E02192000A438EE /* ALMBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMBackgroundLayer.h; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BCB52411E395B1800F1DCB1 /* Social.framework in Frameworks */,
 				2B316BD11E2F5584007D1182 /* Bolts.framework in Frameworks */,
 				2B19BF4C1E30A94D00855B2A /* TwitterCore.framework in Frameworks */,
 				2B19BF4A1E30A94D00855B2A /* TwitterKit.framework in Frameworks */,
@@ -118,8 +118,6 @@
 				2B33EA701DAE1D7D00B71096 /* ALMEndViewController.m */,
 				2B3DF8201E2B473E0073D2FD /* ALMShareViewController.h */,
 				2B3DF8211E2B473E0073D2FD /* ALMShareViewController.m */,
-				2B59936E1E3147AB007DEF6A /* ALMTwitterViewController.h */,
-				2B59936F1E3147AB007DEF6A /* ALMTwitterViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -127,6 +125,7 @@
 		2B60C2DB1D93212D00587B77 = {
 			isa = PBXGroup;
 			children = (
+				2BCB52401E395B1700F1DCB1 /* Social.framework */,
 				2B19BF451E30A94D00855B2A /* Fabric.framework */,
 				2B19BF461E30A94D00855B2A /* TwitterKit.framework */,
 				2B19BF471E30A94D00855B2A /* TwitterKitResources.bundle */,
@@ -279,7 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run c22a0e0c4245528fd834842ea3a7947d2996f2e3 9c4e76081db5ecea38868cb07a18b5b877d988aeaf2f6a90c434d490085dce82";
+			shellScript = "./Fabric.framework/run c22a0e0c4245528fd834842ea3a7947d2996f2e3 9c4e76081db5ecea38868cb07a18b5b877d988aeaf2f6a90c434d490085dce82\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -294,7 +293,6 @@
 				2B3DF8221E2B473E0073D2FD /* ALMShareViewController.m in Sources */,
 				2BC522C51DC40D9D00A4ED02 /* ALMAnalysis.m in Sources */,
 				2B32F0DF1DABF924009E08D9 /* ALMDuppelCollectionViewController.m in Sources */,
-				2B5993701E3147AB007DEF6A /* ALMTwitterViewController.m in Sources */,
 				2BC1BB271DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m in Sources */,
 				2B60C2EF1D93212D00587B77 /* ALMStartScreenViewController.m in Sources */,
 				2B60C3061D9449D800587B77 /* ALMCharacter.m in Sources */,
