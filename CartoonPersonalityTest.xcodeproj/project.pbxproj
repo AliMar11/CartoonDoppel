@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B19BF491E30A94D00855B2A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B19BF451E30A94D00855B2A /* Fabric.framework */; };
-		2B19BF4A1E30A94D00855B2A /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B19BF461E30A94D00855B2A /* TwitterKit.framework */; };
-		2B19BF4B1E30A94D00855B2A /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B19BF471E30A94D00855B2A /* TwitterKitResources.bundle */; };
 		2B19BF4C1E30A94D00855B2A /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B19BF481E30A94D00855B2A /* TwitterCore.framework */; };
 		2B316BD11E2F5584007D1182 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B316BCD1E2F5584007D1182 /* Bolts.framework */; };
 		2B316BD21E2F5584007D1182 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B316BCE1E2F5584007D1182 /* FBSDKCoreKit.framework */; };
@@ -20,6 +18,8 @@
 		2B33EA711DAE1D7D00B71096 /* ALMEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA701DAE1D7D00B71096 /* ALMEndViewController.m */; };
 		2B33EA781DAF468F00B71096 /* ALMCharacterTraits.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B33EA771DAF468F00B71096 /* ALMCharacterTraits.m */; };
 		2B3DF8221E2B473E0073D2FD /* ALMShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DF8211E2B473E0073D2FD /* ALMShareViewController.m */; };
+		2B5A96BD1E3B1D12006B888B /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5A96BC1E3B1D12006B888B /* TwitterKit.framework */; };
+		2B5A96BF1E3B1EB0006B888B /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A96BE1E3B1EB0006B888B /* TwitterKitResources.bundle */; };
 		2B60C2E91D93212D00587B77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2E81D93212D00587B77 /* main.m */; };
 		2B60C2EC1D93212D00587B77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2EB1D93212D00587B77 /* AppDelegate.m */; };
 		2B60C2EF1D93212D00587B77 /* ALMStartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B60C2EE1D93212D00587B77 /* ALMStartScreenViewController.m */; };
@@ -38,8 +38,6 @@
 
 /* Begin PBXFileReference section */
 		2B19BF451E30A94D00855B2A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		2B19BF461E30A94D00855B2A /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
-		2B19BF471E30A94D00855B2A /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		2B19BF481E30A94D00855B2A /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		2B316BCD1E2F5584007D1182 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Framework/Bolts.framework; sourceTree = "<group>"; };
 		2B316BCE1E2F5584007D1182 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Framework/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -56,6 +54,8 @@
 		2B33EA771DAF468F00B71096 /* ALMCharacterTraits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMCharacterTraits.m; sourceTree = "<group>"; };
 		2B3DF8201E2B473E0073D2FD /* ALMShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMShareViewController.h; sourceTree = "<group>"; };
 		2B3DF8211E2B473E0073D2FD /* ALMShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMShareViewController.m; sourceTree = "<group>"; };
+		2B5A96BC1E3B1D12006B888B /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = Framework/TwitterKit.framework; sourceTree = "<group>"; };
+		2B5A96BE1E3B1EB0006B888B /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = Framework/TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		2B60C2E41D93212D00587B77 /* CartoonPersonalityTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoonPersonalityTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B60C2E81D93212D00587B77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B60C2EA1D93212D00587B77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,10 +88,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5A96BD1E3B1D12006B888B /* TwitterKit.framework in Frameworks */,
 				2BCB52411E395B1800F1DCB1 /* Social.framework in Frameworks */,
 				2B316BD11E2F5584007D1182 /* Bolts.framework in Frameworks */,
 				2B19BF4C1E30A94D00855B2A /* TwitterCore.framework in Frameworks */,
-				2B19BF4A1E30A94D00855B2A /* TwitterKit.framework in Frameworks */,
 				2B316BD21E2F5584007D1182 /* FBSDKCoreKit.framework in Frameworks */,
 				2B316BD41E2F5584007D1182 /* FBSDKShareKit.framework in Frameworks */,
 				2B19BF491E30A94D00855B2A /* Fabric.framework in Frameworks */,
@@ -125,10 +125,10 @@
 		2B60C2DB1D93212D00587B77 = {
 			isa = PBXGroup;
 			children = (
+				2B5A96BE1E3B1EB0006B888B /* TwitterKitResources.bundle */,
+				2B5A96BC1E3B1D12006B888B /* TwitterKit.framework */,
 				2BCB52401E395B1700F1DCB1 /* Social.framework */,
 				2B19BF451E30A94D00855B2A /* Fabric.framework */,
-				2B19BF461E30A94D00855B2A /* TwitterKit.framework */,
-				2B19BF471E30A94D00855B2A /* TwitterKitResources.bundle */,
 				2B19BF481E30A94D00855B2A /* TwitterCore.framework */,
 				2B316BCD1E2F5584007D1182 /* Bolts.framework */,
 				2B316BCE1E2F5584007D1182 /* FBSDKCoreKit.framework */,
@@ -257,7 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B19BF4B1E30A94D00855B2A /* TwitterKitResources.bundle in Resources */,
+				2B5A96BF1E3B1EB0006B888B /* TwitterKitResources.bundle in Resources */,
 				2B60C2FA1D93212D00587B77 /* LaunchScreen.storyboard in Resources */,
 				2B60C2F71D93212D00587B77 /* Assets.xcassets in Resources */,
 				2B60C2F21D93212D00587B77 /* Main.storyboard in Resources */,
@@ -348,7 +348,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
