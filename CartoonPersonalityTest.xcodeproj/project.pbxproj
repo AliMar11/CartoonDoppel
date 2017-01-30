@@ -106,8 +106,6 @@
 			children = (
 				2B60C2ED1D93212D00587B77 /* ALMStartScreenViewController.h */,
 				2B60C2EE1D93212D00587B77 /* ALMStartScreenViewController.m */,
-				2BC1BB281DC6B3EF00A680FE /* ALMDuppelCollectionViewCell.h */,
-				2BC1BB261DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m */,
 				2B32F0DD1DABF924009E08D9 /* ALMDuppelCollectionViewController.h */,
 				2B32F0DE1DABF924009E08D9 /* ALMDuppelCollectionViewController.m */,
 				2B33EA691DADF55A00B71096 /* ALMQuestionViewController.h */,
@@ -195,6 +193,8 @@
 				2B60C2EB1D93212D00587B77 /* AppDelegate.m */,
 				2BC522C31DC40D9D00A4ED02 /* ALMAnalysis.h */,
 				2BC522C41DC40D9D00A4ED02 /* ALMAnalysis.m */,
+				2BC1BB281DC6B3EF00A680FE /* ALMDuppelCollectionViewCell.h */,
+				2BC1BB261DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

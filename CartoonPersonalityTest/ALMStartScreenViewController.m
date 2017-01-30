@@ -24,7 +24,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewWillAppear: animated];
     
     self.startButton.layer.cornerRadius = 6;
     self.startButton.clipsToBounds = YES;

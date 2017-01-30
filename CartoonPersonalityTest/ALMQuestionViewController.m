@@ -14,6 +14,8 @@
 @property (nonatomic, strong) ALMQuestions *sharedDatastore;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIStackView *questionStackview;
+@property (weak, nonatomic) IBOutlet UILabel *progressIndicatorLabel;
+@property (assign, nonatomic) int progress;
 
 @end
 
@@ -28,6 +30,9 @@
     self.sharedDatastore = [ALMQuestions sharedData];
     
     self.questionCounter = 0;
+    self.progress = 1;
+    
+    self.progressIndicatorLabel.text = [NSString stringWithFormat: @"%d / 10", self.progress];
     [self setUpTheQuest: self.questionCounter];
     self.questionTextView.layer.cornerRadius = 5;
     self.questionTextView.clipsToBounds = YES;
@@ -63,6 +68,7 @@
          
          if (self.questionCounter == 10)
          {
+             self.progressIndicatorLabel.hidden = YES;
              [self allQuestionsAnswered];
          }
      }];
@@ -75,7 +81,7 @@
     
     for (NSDictionary *possibleAnswer in [self.questionList[self.questionCounter] answers])
     {
-        if ([possibleAnswer.allKeys[0] isEqualToString: [selected titleForState:UIControlStateNormal]])
+        if ([possibleAnswer.allKeys[0] isEqualToString: [selected titleForState: UIControlStateNormal]])
         {
             [ALMAnalysis tallyUserAnswers: self.theUser :possibleAnswer.allValues[0]];
         }
@@ -89,6 +95,11 @@
      */
     
     self.questionCounter += 1;
+//    NSNumberFormatter *number = [[NSNumberFormatter alloc] init];
+//    number.numberStyle = NSNumberFormatterNoStyle;
+//    NSNumber *numberString = [number numberFromString: self.progress];
+    self.progress += 1;
+    self.progressIndicatorLabel.text = [NSString stringWithFormat: @"%d/10", self.progress];
     [self setUpTheQuest: self.questionCounter];
 
 }

@@ -56,10 +56,10 @@
                                                            choiceD: @{@"Give them a piece of youe mind! Who do they think they are?!" : @"Aggressive"}];
     [questionArray addObject: emotionalOne];
     
-    ALMQuestions *esteemOne = [[ALMQuestions alloc] initWithQuestion: @"Your dream job includes..."
+    ALMQuestions *esteemOne = [[ALMQuestions alloc] initWithQuestion: @"Your dream job entails..."
                                                              answers: @[]
                                                                choiceA: @{@"Idk, I'm just trying to do my own thing." : @"Passive"}
-                                                               choiceB: @{@"I to do something people look up to." : @"Careful"}
+                                                               choiceB: @{@"Something people look up to." : @"Careful"}
                                                                choiceC: @{@"I'm gonna lead!" : @"Determined"}
                                                                choiceD: @{@"I want to create." : @"Courage"}];
     

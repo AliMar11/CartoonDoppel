@@ -50,7 +50,7 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
                                                     userInfo: nil
                                                      repeats: YES];
     
-    [[NSRunLoop currentRunLoop ]addTimer: timer forMode: NSRunLoopCommonModes];
+    [[NSRunLoop currentRunLoop]addTimer: timer forMode: NSRunLoopCommonModes];
 }
 
 -(void)scroll
