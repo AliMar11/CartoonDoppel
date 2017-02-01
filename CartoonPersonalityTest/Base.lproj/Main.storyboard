@@ -60,6 +60,9 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-1c-bF5" userLabel="CVTwoContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="440" width="414" height="89"/>
+                                </variation>
                                 <connections>
                                     <segue destination="FIY-dB-Zg9" kind="embed" id="OFf-dN-zFR"/>
                                 </connections>
@@ -232,7 +235,7 @@
                                     <constraint firstAttribute="height" constant="45" id="wl4-ed-Lu2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -274,6 +277,10 @@
                                 <exclude reference="N6m-G5-ed7"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="1uW-HA-ndZ"/>
+                                <exclude reference="hL4-BF-Y4C"/>
+                                <exclude reference="20e-dS-0GP"/>
+                                <exclude reference="T4b-23-8mm"/>
                                 <exclude reference="DBF-8p-9Nm"/>
                                 <exclude reference="X1p-xD-IVq"/>
                                 <exclude reference="zzH-cg-4s7"/>
@@ -281,10 +288,6 @@
                                 <exclude reference="TUb-ug-kQB"/>
                                 <exclude reference="aXr-7E-woY"/>
                                 <exclude reference="sAC-Wf-J63"/>
-                                <exclude reference="20e-dS-0GP"/>
-                                <exclude reference="T4b-23-8mm"/>
-                                <exclude reference="1uW-HA-ndZ"/>
-                                <exclude reference="hL4-BF-Y4C"/>
                                 <exclude reference="XhK-LX-1sC"/>
                             </mask>
                         </variation>
@@ -295,6 +298,10 @@
                                 <include reference="N6m-G5-ed7"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="1uW-HA-ndZ"/>
+                                <include reference="hL4-BF-Y4C"/>
+                                <include reference="20e-dS-0GP"/>
+                                <include reference="T4b-23-8mm"/>
                                 <include reference="DBF-8p-9Nm"/>
                                 <include reference="X1p-xD-IVq"/>
                                 <include reference="zzH-cg-4s7"/>
@@ -302,10 +309,6 @@
                                 <include reference="TUb-ug-kQB"/>
                                 <include reference="aXr-7E-woY"/>
                                 <include reference="sAC-Wf-J63"/>
-                                <include reference="20e-dS-0GP"/>
-                                <include reference="T4b-23-8mm"/>
-                                <include reference="1uW-HA-ndZ"/>
-                                <include reference="hL4-BF-Y4C"/>
                                 <include reference="XhK-LX-1sC"/>
                             </mask>
                         </variation>
@@ -540,7 +543,7 @@
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

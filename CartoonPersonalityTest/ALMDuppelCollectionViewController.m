@@ -29,9 +29,9 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 {
     [super viewDidLoad];
     
-    self.doppelPictures = @[@"jake3", @"bart", @"bender", @"flowey", @"PBsTwo", @"bob", @"buggsB", @"louise", @"daffy duck", @"leela2", @"homer", @"sam", @"sans", @"tina"];
+    self.doppelPictures = @[ @"leela",@"bart", @"flowey", @"PBsTwoCloseUp", @"sans", @"bob", @"louise", @"daffyCloseUp",@"jake3", @"buggsB", @"rick",@"bender", @"MtVCloseUp", @"homer", @"sam", @"tina"];
     
-    self.dopplePicturesReversed = @[@"tina", @"sans", @"daffy duck", @"sam", @"homer", @"leela2", @"louise", @"buggsB", @"bob", @"PBsTwo" ,@"flowey", @"bender", @"bart", @"jake3"];
+    self.dopplePicturesReversed = @[@"tina", @"sans", @"daffyCloseUp", @"MtVCloseUp", @"sam", @"homer", @"leela", @"bob", @"PBsTwoCloseUp" ,@"flowey",@"louise", @"rick", @"bender", @"bart", @"buggsB", @"jake3"];
 }
 
 //in viewDidAppear is when the collectionView scroll animation should happen, NSTimer creates smooth scrolling animation, NSRunLoop processes the timer, contentOffset is the actual scrolling motion.
