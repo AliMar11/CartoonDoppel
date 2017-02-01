@@ -83,9 +83,9 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
     
     
         UIImage *mugshot = [[UIImage alloc] init];
-
         NSInteger doppelArrayIndex = indexPath.row % self.doppelPictures.count;
         NSString *nextCellImage = [[NSString alloc]init];
+    
    
     if (cell.tag == 1)
     {
@@ -98,19 +98,6 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
     }        
         mugshot = [UIImage imageNamed: nextCellImage];
         UIImageView *mugshotView = [[UIImageView alloc] initWithImage: mugshot];
-
-//    
-//    if ([self.dopplePicturesReversed[indexPath.row] isEqual: @"sans"])
-//    {
-//        mugshotView.backgroundColor = [UIColor clearColor];
-//        
-//    }
-//    
-//    if ([self.doppelPictures[indexPath.row] isEqual: @"sans"])
-//    {
-//        mugshotView.backgroundColor = [UIColor clearColor];
-//
-//    }
     
         mugshotView.autoresizingMask = NO;
         mugshotView.autoresizesSubviews = NO;
