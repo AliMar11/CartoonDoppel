@@ -100,12 +100,30 @@
     
     [characterList addObject: flowey];
 
-ALMCharacter *frisk = [[ALMCharacter alloc] initWithCharacter: @"Frisk"
-                                                 picture: [UIImage imageNamed: @"frisk"]
-                                         characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive: @0 careful: @1 clever: @1 comedic: @0 courage: @2 creative: @1 despicable: @0 determined: @4 dorky: @0 eccentric: @0 enthusiastic: @0 naive: @2 optimistic: @2 negative: @0 passive: @3 sassy: @0 shy: @1 sympathetic: @3 troublemaker: @0]];
-
-[characterList addObject: frisk];
-
+   //    ALMCharacter *rick = [[ALMCharacter alloc] initWithCharacter: @"Rick Sanchez" picture: @"rick" characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @5 careful: @0 clever: @5 comedic: @3 courage: @1 creative: @5 despicable: @5 determined: @2 dorky: @0 eccentric: @4 enthusiastic: @0 naive: @0 optimistic: @0 negative: @5 passive: @2 sassy: @4 shy: @0 sympathetic: @0 troublemaker: @4]];
+//    
+//    [characterList addObject: rick];
+//    
+//    ALMCharacter *marceline = [[ALMCharacter alloc]initWithCharacter: @"Marceline the Vampire Queen" picture: @"marcy" characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @4 careful: @3 clever: @3 comedic: @2 courage: @4 creative: @5 despicable: @2 determined: @5 dorky: @1 eccentric: @0 enthusiastic: @3 naive: @0 optimistic: @3 negative: @2 passive: @5 sassy: @3 shy: @0 sympathetic: @3 troublemaker: @5]];
+//    
+//    [characterList addObject: marceline];
+    
+    ALMCharacter *jake = [[ALMCharacter alloc]initWithCharacter: @"Jake The Dog" picture: [UIImage imageNamed: @"jake3"] characterTraits:[[ALMCharacterTraits alloc] initWithAggressive: @2 careful: @2 clever: @3 comedic: @4 courage: @5 creative: @5 despicable: @0 determined: @3 dorky: @2 eccentric: @1 enthusiastic: @3 naive: @2 optimistic: @4 negative: @3 passive: @4 sassy: @3 shy: @0 sympathetic: @3 troublemaker: @2]];
+    
+    [characterList addObject: jake];
+    
+    ALMCharacter *pbles = [[ALMCharacter alloc]initWithCharacter: @"Princess Bubblegum" picture: [UIImage imageNamed: @"PBsTwo"] characterTraits:[[ALMCharacterTraits alloc] initWithAggressive: @3 careful: @5 clever: @5 comedic: @1 courage: @5 creative: @5 despicable: @0 determined: @4 dorky: @2 eccentric: @0 enthusiastic: @2 naive: @0 optimistic:@3 negative: @0 passive: @2 sassy: @3  shy:@0 sympathetic: @4 troublemaker: @0]];
+    
+    [characterList addObject: pbles];
+    
+    ALMCharacter *bender = [[ALMCharacter alloc] initWithCharacter: @"Bender" picture: [UIImage imageNamed: @"bender"] characterTraits:[[ALMCharacterTraits alloc] initWithAggressive: @4 careful: @0 clever: @4 comedic: @5 courage: @2 creative: @3 despicable: @5 determined: @1 dorky: @0 eccentric: @0 enthusiastic: @0 naive: @0 optimistic: @0 negative: @4 passive: @3 sassy: @5 shy: @0 sympathetic: @0 troublemaker: @4]];
+    
+    [characterList addObject: bender];
+    
+    ALMCharacter *leela = [[ALMCharacter alloc]initWithCharacter: @"Leela" picture: [UIImage imageNamed: @"leela2"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @2 careful: @4 clever: @5 comedic: @2 courage: @4 creative: @3 despicable: @0 determined: @3 dorky: @0 eccentric: @0 enthusiastic: @3 naive: @0 optimistic: @3 negative: @3 passive: @2 sassy: @3 shy: @0 sympathetic: @5 troublemaker: @0]];
+    
+    [characterList addObject: leela];
+    
     ALMCharacter *bob = [[ALMCharacter alloc] initWithCharacter: @"Bob Belcher"
                                                      picture: [UIImage imageNamed: @"bob"]
                                              characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive: @1 careful: @2 clever: @2 comedic: @1 courage: @2 creative: @2 despicable: @0 determined: @3 dorky: @1 eccentric: @0 enthusiastic: @1 naive: @1 optimistic: @1 negative: @2 passive: @2 sassy: @0 shy: @1 sympathetic: @0 troublemaker: @2]];
