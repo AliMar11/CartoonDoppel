@@ -62,7 +62,7 @@
     topFourView.text = topFourIntro;
     topFourView.backgroundColor = [UIColor clearColor];
     topFourView.layer.shadowColor = [UIColor clearColor].CGColor;
-    [topFourView setFont: [UIFont fontWithName: @"Verdana-Bold" size: 15]];
+    [topFourView setFont: [UIFont fontWithName: @"Verdana-Bold" size: 18]];
     
     CGFloat textViewX =  (self.view.frame.origin.x) + 35;
     CGFloat textViewY =  (self.view.frame.origin.y) + 25;
@@ -134,13 +134,13 @@
                                      
                                      UITextView *presentNextButton = [[UITextView alloc] init];
                                      NSString *buttonIntro = @"and your doppel is...";
-                                     CGFloat textViewX = (self.finallyButton.frame.origin.x) - 20;
-                                     CGFloat textViewY = (self.finallyButton.frame.origin.y) - 55;
-                                     CGFloat textViewWidth = CGRectGetWidth(self.self.doppelStackView.bounds);
-                                     CGFloat textViewheight = CGRectGetHeight(self.doppelStackView.bounds) / 2;
+                                     CGFloat buttonIntroTextViewX = (self.finallyButton.frame.origin.x) - 20;
+                                     CGFloat buttonIntrtoTextViewY = (self.finallyButton.frame.origin.y) - 55;
+                                     CGFloat buttonIntroTextViewWidth = CGRectGetWidth(self.self.doppelStackView.bounds);
+                                     CGFloat buttonIntroTextViewheight = CGRectGetHeight(self.doppelStackView.bounds) / 2;
                                      
-                                     CGRect textViewFrame = CGRectMake(textViewX, textViewY, textViewWidth, textViewheight);
-                                     presentNextButton.frame = textViewFrame;
+                                     CGRect buttonIntroTextViewFrame = CGRectMake(buttonIntroTextViewX, buttonIntrtoTextViewY, buttonIntroTextViewWidth, buttonIntroTextViewheight);
+                                     presentNextButton.frame = buttonIntroTextViewFrame;
                                      
                                      presentNextButton.text = buttonIntro;
                                      presentNextButton.backgroundColor = [UIColor clearColor];

@@ -21,7 +21,7 @@
                              dorky: (NSNumber *)dorky
                          eccentric: (NSNumber *)eccentricity
                       enthusiastic: (NSNumber *)enthusiasm
-                             naive: (NSNumber *)naive
+                           sincere: (NSNumber *)sincere
                         optimistic: (NSNumber *)optimistic
                           negative: (NSNumber *)negative
                            passive: (NSNumber *)passive
@@ -48,7 +48,7 @@
                                 @"Dorky" : dorky,
                             @"Eccentric" : eccentricity,
                          @"Enthusiastic" : enthusiasm,
-                                @"Naive" : naive,
+                              @"Sincere" : sincere,
                            @"Optimistic" : optimistic,
                              @"Negative" : negative,
                               @"Passive" : passive,

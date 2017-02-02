@@ -106,7 +106,7 @@
                                                     choiceA: @{@"What! This is amazing- can't wait!" : @"Courage"}
                                                     choiceB: @{@"There are a million things that can go wrong." : @"Careful"}
                                                     choiceC: @{@"Ha! Time to do all the things I usually can't!." : @"Despicable"}
-                                                    choiceD: @{@"Why me?" : @"Naive"}];
+                                                    choiceD: @{@"Why me?" : @"Sincere"}];
     
     [questionArray addObject: esteemTwo];
     
@@ -114,7 +114,7 @@
                                                                answers: @[]
                                                     choiceA: @{@"Let them know they're wrong." : @"Courage"}
                                                     choiceB: @{@"You'll talk to them one-on-one." : @"Careful"}
-                                                    choiceC: @{@"Wow, they must really not like me." : @"Naive"}
+                                                    choiceC: @{@"Wow, they must really not like me." : @"Sincere"}
                                                     choiceD: @{@"Ooooh you want to do that? It's on." : @"Troublemaker"}];
     
     [questionArray addObject: esteemThree];
@@ -132,7 +132,7 @@
                                                               answers: @[]
                                                     choiceA: @{@"Go get him!" : @"Courage"}
                                                     choiceB: @{@"Wait is this a prank?" : @"Troublemaker"}
-                                                    choiceC: @{@"I'm sure it'll be fine, I'm not going out there." : @"Naive"}
+                                                    choiceC: @{@"I'm sure it'll be fine, I'm not going out there." : @"Sincere"}
                                                     choiceD: @{@"Call it to you from the edge of the street when it's clear." : @"Careful"}];
     
     [questionArray addObject: esteemFour];

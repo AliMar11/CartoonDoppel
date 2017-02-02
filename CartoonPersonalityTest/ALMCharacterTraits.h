@@ -21,7 +21,7 @@
 @property (nonatomic, strong)  NSNumber  *dorky;
 @property (nonatomic, strong)  NSNumber  *eccentric;
 @property (nonatomic, strong)  NSNumber  *enthusiastic;
-@property (nonatomic, strong)  NSNumber  *naive;
+@property (nonatomic, strong)  NSNumber  *sincere;
 @property (nonatomic, strong)  NSNumber  *optimistic;
 @property (nonatomic, strong)  NSNumber  *negative;
 @property (nonatomic, strong)  NSNumber *passive;
@@ -43,7 +43,7 @@
                              dorky: (NSNumber *)dorky
                          eccentric: (NSNumber *)eccentricity
                       enthusiastic: (NSNumber *)enthusiasm
-                             naive: (NSNumber *)naive
+                           sincere: (NSNumber *)sincere
                         optimistic: (NSNumber *)optimistic
                           negative: (NSNumber *)negative
                            passive: (NSNumber *)passive
