@@ -28,16 +28,17 @@
     self.nextButton.hidden = YES;
 
     self.sharedDatastore = [ALMQuestions sharedData];
-    
     self.questionCounter = 0;
     self.progress = 1;
+    [self viewSetup];
     
-    self.progressIndicatorLabel.text = [NSString stringWithFormat: @"%d / 10", self.progress];
     [self setUpTheQuest: self.questionCounter];
     self.questionTextView.layer.cornerRadius = 5;
     self.questionTextView.clipsToBounds = YES;
     [self.questionTextView.layer setBorderColor: [[[UIColor purpleColor] colorWithAlphaComponent: 0.2] CGColor]];
     [self.questionTextView.layer setBorderWidth: 1.0];
+    
+ 
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -48,15 +49,21 @@
     background.frame = self.view.bounds;
     [self.view.layer insertSublayer: background atIndex: 0];
     
-    [self viewSetup];
 }
 
 //TO-DO rename properties in Questions class 
 -(void)setUpTheQuest:(int)questionCounter
 {
+//    if (self.progress == self.questionList.count)
+//    {
+//        self.progressIndicatorLabel.hidden = YES;
+//    }
+    
     [ALMQuestions createQuestions: ^(NSMutableArray * questionsArray)
      {
          self.questionList = questionsArray;
+         self.progressIndicatorLabel.text = [NSString stringWithFormat: @"%d / %lu", self.progress, self.questionList.count -1];
+
          ALMQuestions *question = self.questionList[self.questionCounter];
 
         self.questionTextView.text = question.question;
@@ -66,12 +73,13 @@
         [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceC.allKeys[0]] forState: UIControlStateNormal];
         [self.choiceDbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceD.allKeys[0]] forState: UIControlStateNormal];
          
-         if (self.questionCounter == 10)
-         {
-             self.progressIndicatorLabel.hidden = YES;
-             [self allQuestionsAnswered];
-         }
-     }];
+            }];
+    
+    if (self.questionCounter == self.questionList.count -1)
+    {
+        self.progressIndicatorLabel.hidden = YES;
+        [self allQuestionsAnswered];
+    }
 }
 
 -(IBAction)buttClicked:(id)sender
@@ -95,11 +103,8 @@
      */
     
     self.questionCounter += 1;
-//    NSNumberFormatter *number = [[NSNumberFormatter alloc] init];
-//    number.numberStyle = NSNumberFormatterNoStyle;
-//    NSNumber *numberString = [number numberFromString: self.progress];
     self.progress += 1;
-    self.progressIndicatorLabel.text = [NSString stringWithFormat: @"%d/10", self.progress];
+
     [self setUpTheQuest: self.questionCounter];
 
 }
