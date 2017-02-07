@@ -8,7 +8,6 @@
 
 #import "ALMAnalysisViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "ALMCharacter.h"
 #import "ALMAnalysis.h"
 #import "ALMBackgroundLayer.h"
 
@@ -208,9 +207,7 @@
                             self.characterFive.alpha = 1;
                          }
                                 completion:^(BOOL finished)
-                                {
-                                     self.topMatch = topFiveHanchos[0];
-                                     
+                                {                                     
                                      UITextView *presentNextButton = [[UITextView alloc] init];
                                      NSString *buttonIntro = @"and your doppel is...";
                                      CGFloat buttonIntroTextViewX = (self.finallyButton.frame.origin.x) - 20;
@@ -256,9 +253,6 @@
 {
     ALMEndViewController *endVC = segue.destinationViewController;
     endVC.analysisData = self.analysisData;
-        
-//    ALMCharacter *firstPlace = self.topMatch;
-//    endVC.theOne = firstPlace;
 }
 
 @end

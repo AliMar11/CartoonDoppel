@@ -32,7 +32,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMShareViewController.m"
@@ -48,16 +48,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMEndViewController.m"
-            timestampString = "508120038.533978"
+            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
+            timestampString = "508200972.066519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "-presentRunnerUps"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -67,29 +67,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CartoonPersonalityTest/ALMAnalysisViewController.m"
-            timestampString = "508134585.064918"
+            filePath = "CartoonPersonalityTest/ALMEndViewController.m"
+            timestampString = "508200972.066519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "-presentRunnerUps"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CartoonPersonalityTest/ALMEndViewController.m"
-            timestampString = "508135343.002717"
+            timestampString = "508200972.066519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

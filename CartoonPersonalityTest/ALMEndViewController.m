@@ -6,7 +6,6 @@
 //  Copyright © 2016 AliApps. All rights reserved.
 //
 #import <QuartzCore/QuartzCore.h>
-#import "ALMStartScreenViewController.h"
 #import "ALMEndViewController.h"
 #import "ALMBackgroundLayer.h"
 #import "ALMShareViewController.h"
@@ -77,12 +76,11 @@
      {
          self.thankYouLabel.hidden = NO;
          
-         NSLog(@"\nENDVC...COUNTER:%@\n ANALYSIS COUNTER: %@\n", self.counter, self.analysisData[2]);
+       //  NSLog(@"\nENDVC...COUNTER:%@\n ANALYSIS COUNTER: %@\n", self.counter, self.analysisData[2]);
          
          if (self.counter.intValue <= 2)
          {
              [self labelAnimation];
-
          }
          else
          {

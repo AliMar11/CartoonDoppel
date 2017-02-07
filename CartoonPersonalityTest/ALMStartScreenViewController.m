@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  ALMStartScreenViewController.m
 //  CartoonPersonalityTest
 //
 //  Created by Alicia Marisal on 9/21/16.
@@ -7,7 +7,6 @@
 //
 
 #import "ALMStartScreenViewController.h"
-#import <QuartzCore/QuartzCore.h>
 #import "ALMBackgroundLayer.h"
 
 @interface ALMStartScreenViewController () 

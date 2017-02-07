@@ -12,7 +12,6 @@
 
 @interface ALMAnalysisViewController : UIViewController
 
-@property (nonatomic, strong) ALMCharacter *topMatch;
 @property (nonatomic, strong) ALMCharacter *playerTraits;
 @property (nonatomic, strong) NSArray *doppelListWithTraits;
 @property (nonatomic, strong) NSArray *topPlayerTraits;

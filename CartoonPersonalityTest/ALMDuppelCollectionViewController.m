@@ -29,13 +29,13 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 {
     [super viewDidLoad];
     
+//below are the arrays the collectionViews get the images from.
     self.doppelPictures = @[ @"leela",@"bart", @"flowey", @"PBsTwoCloseUp2", @"garnet",@"sans", @"bob", @"louise", @"daffyCloseUp",@"jake3", @"buggsB", @"rickCloseUp",@"bender", @"steven2", @"MtVCloseUp", @"homer", @"samCloseUp", @"tina"];
     
     self.dopplePicturesReversed = @[@"tina", @"sans", @"steven2", @"daffyCloseUp", @"MtVCloseUp", @"samCloseUp", @"homer", @"leela", @"bob", @"PBsTwoCloseUp2", @"garnet", @"flowey",@"louise", @"rickCloseUp", @"bender", @"bart", @"buggsB", @"jake3"];
 }
 
-//in viewDidAppear is when the collectionView scroll animation should happen, NSTimer creates smooth scrolling animation, NSRunLoop processes the timer, contentOffset is the actual scrolling motion.
-
+//NSTimer creates smooth scrolling animation, NSRunLoop processes the timer, contentOffset is the automatic scrolling motion.
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear: animated];
@@ -74,7 +74,8 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 //returning a high number allows the allusion on infinite scrolling
 - (NSInteger)collectionView: (UICollectionView *)collectionView numberOfItemsInSection: (NSInteger)section
 {
-    return 10000;
+    return INFINITY;
+   // return 10000;
 }
 
 - (UICollectionViewCell *)collectionView: (UICollectionView *)collectionView cellForItemAtIndexPath: (NSIndexPath *)indexPath

@@ -53,7 +53,7 @@
                                                            choiceA: @{@"Apologize and inform them there's a line." : @"Sympathetic"}
                                                            choiceB: @{@"Get mad but decide it's best not to say anything." : @"Negative"}
                                                            choiceC: @{@"Sheepishly tell them you've been waiting in line." : @"Shy"}
-                                                           choiceD: @{@"Give them a piece of youe mind! Who do they think they are?!" : @"Aggressive"}];
+                                                           choiceD: @{@"Give them a piece of your mind!Who do they think they are?" : @"Aggressive"}];
     [questionArray addObject: questionOne];
     
     ALMQuestions *questionTwo = [[ALMQuestions alloc] initWithQuestion: @"Your dream job entails..."
@@ -65,12 +65,12 @@
     
     [questionArray addObject: questionTwo];
     
-    ALMQuestions *questionThree = [[ALMQuestions alloc] initWithQuestion: @"When confronted with a problem at work or at home..."
+    ALMQuestions *questionThree = [[ALMQuestions alloc] initWithQuestion: @"When confronted with a problem at work or at home you tend to..."
                                                                   answers: @[]
-                                                               choiceA: @{@"I break up the problem in order to reach my goal, step by step." : @"Clever"}
-                                                               choiceB: @{@"I tend to think of a solution that avoids the obstacle while obtaining my goal." : @"Creative"}
+                                                               choiceA: @{@"Break up the problem in order to reach my goal, step by step." : @"Clever"}
+                                                               choiceB: @{@"Think of a solution that avoids the obstacle while obtaining my goal." : @"Creative"}
                                                                choiceC: @{@"I fight whatever is in my way." : @"Sassy"}
-                                                               choiceD: @{@"I tend to think the problem must be there for a reason. It's probably not worth fighting." : @"Shy"}];
+                                                               choiceD: @{@"Think the problem must be there for a reason. It's probably not worth fighting." : @"Shy"}];
     
     [questionArray addObject: questionThree];
     

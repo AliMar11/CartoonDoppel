@@ -37,8 +37,6 @@
     self.questionTextView.clipsToBounds = YES;
     [self.questionTextView.layer setBorderColor: [[[UIColor purpleColor] colorWithAlphaComponent: 0.2] CGColor]];
     [self.questionTextView.layer setBorderWidth: 1.0];
-    
- 
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -54,20 +52,22 @@
 //TO-DO rename properties in Questions class 
 -(void)setUpTheQuest:(int)questionCounter
 {
-//    if (self.progress == self.questionList.count)
-//    {
-//        self.progressIndicatorLabel.hidden = YES;
-//    }
-    
+//Here we are grabbing data from ALMQuestions model class to present in this VC
     [ALMQuestions createQuestions: ^(NSMutableArray * questionsArray)
      {
          self.questionList = questionsArray;
-         self.progressIndicatorLabel.text = [NSString stringWithFormat: @"%d / %lu", self.progress, self.questionList.count -1];
+         self.progressIndicatorLabel.text = [NSString stringWithFormat: @"%d / %u", self.progress, self.questionList.count -1];
 
          ALMQuestions *question = self.questionList[self.questionCounter];
-
         self.questionTextView.text = question.question;
 
+//the code below resizes font in the questionsTextView- so all words fit(otherwise some questions will get cut off in smaller devices)
+         while (((CGSize) [self.questionTextView sizeThatFits:self.questionTextView.frame.size]).height > self.questionTextView.frame.size.height)
+         {
+             self.questionTextView.font = [self.questionTextView.font fontWithSize:self.questionTextView.font.pointSize-1];
+         }
+         
+//below is how each possible answer is given to each button
         [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceA.allKeys[0]] forState:UIControlStateNormal];
         [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceB.allKeys[0]] forState: UIControlStateNormal];
         [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceC.allKeys[0]] forState: UIControlStateNormal];
@@ -75,6 +75,7 @@
          
             }];
     
+//if all questions are answered, trigger the 'next' button
     if (self.questionCounter == self.questionList.count -1)
     {
         self.progressIndicatorLabel.hidden = YES;
@@ -124,6 +125,7 @@
 
 -(void)viewSetup
 {
+//below is a customer UI setup for all questions
     self.questionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
     NSArray *buttonArray = [NSArray arrayWithObjects: self.choiceAbutton, self.choiceBbutton, self.choiceCbutton, self.choiceDbutton, nil];
     
@@ -132,6 +134,10 @@
     for (UIButton *button in buttonArray)
     {
         button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        button.titleLabel.adjustsFontSizeToFitWidth = YES;
+        button.titleLabel.numberOfLines = 3;
+        button.titleLabel.minimumScaleFactor = 0.6;
+        button.titleLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
         CALayer *buttLayer = button.layer;
         buttonGrades.frame = button.bounds;
         button.backgroundColor = [UIColor grayColor];
