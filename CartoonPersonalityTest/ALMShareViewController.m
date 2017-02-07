@@ -11,7 +11,7 @@
 #import "ALMBackgroundLayer.h"
 
 @interface ALMShareViewController ()
-@property (strong, nonatomic)  NSString *blurb;
+@property (strong, nonatomic) NSString *blurb;
 
 @end
 
@@ -21,12 +21,11 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"\n\nTHE ONE ==> %@ \n\n", self.doppel.characterName);
+    self.doppel = self.analysisData[1][0];
     
-        self.blurb = [NSString stringWithFormat: @"Ever wonder what cartoon character you'd be? Find out by downloading the Cartoon Doppel app on the App Store- coming out next week! I'm awesome and got to play it early by going to Playcrafter's Winter Game Expo : p I got %@!", self.doppel.characterName];
-    
-//    self.blurb = [NSString stringWithFormat: @"Ever wonder what cartoon character you'd be? Find out by downloading the Cartoon Doppel app on the App Store I got %@!", self.doppel.characterName];
+    self.counter = @(self.counter.intValue + 1);
 
+    self.blurb = [NSString stringWithFormat: @"Ever wonder what cartoon character you'd be? Find out by downloading the Cartoon Doppel app on the App Store! I got %@!", self.doppel.characterName];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -56,12 +55,18 @@
     [controller addImage: self.doppel.mugshot];
     
     [self presentViewController: controller animated: YES completion: Nil];
-
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ALMEndViewController *endVC = segue.destinationViewController;
+    endVC.analysisData = self.analysisData;
 }
 
 @end

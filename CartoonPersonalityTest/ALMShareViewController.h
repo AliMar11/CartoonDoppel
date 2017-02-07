@@ -12,8 +12,11 @@
 #import <Social/Social.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "ALMCharacter.h"
+#import "ALMEndViewController.h"
 
 @interface ALMShareViewController : UIViewController
 @property (strong, nonatomic) ALMCharacter *doppel;
+@property (nonatomic, strong) NSMutableArray *analysisData;
+@property (nonatomic, assign) NSNumber *counter;
 
 @end

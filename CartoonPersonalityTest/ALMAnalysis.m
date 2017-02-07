@@ -131,7 +131,7 @@
             doppel.likeness += 1;
         }
  
-        NSLog(@"\n\nDoppName:%@\nLIKENESS POINTS:%d\n", doppel.characterName,doppel.likeness);
+       // NSLog(@"\n\nDoppName:%@\nLIKENESS POINTS:%d\n", doppel.characterName,doppel.likeness);
     }
     
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey: @"likeness" ascending: NO];

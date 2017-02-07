@@ -17,10 +17,10 @@
     
     NSArray *colors = [NSArray arrayWithObjects:(id)colorOne.CGColor, colorTwo.CGColor, nil];
     
-    NSNumber *devisionOne = [NSNumber numberWithFloat:0.0];
-    NSNumber *stopTwo = [NSNumber numberWithFloat:1.0];
+    NSNumber *colorOneBounds = [NSNumber numberWithFloat:0.0];
+    NSNumber *colorTwoBounds = [NSNumber numberWithFloat:1.0];
     
-    NSArray *locations = [NSArray arrayWithObjects:devisionOne, stopTwo, nil];
+    NSArray *locations = [NSArray arrayWithObjects:colorOneBounds, colorTwoBounds, nil];
     
     CAGradientLayer *backgroundLayer = [CAGradientLayer layer];
     

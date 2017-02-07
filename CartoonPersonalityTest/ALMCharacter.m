@@ -103,7 +103,7 @@
     
     [characterList addObject: rick];
     
-    ALMCharacter *marceline = [[ALMCharacter alloc]initWithCharacter: @"Marceline the Vampire Queen/ /nMarshall Lee the Vampire King" picture: [UIImage imageNamed: @"MtV"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @4 careful: @3 clever: @3 comedic: @2 courage: @4 creative: @5 despicable: @2 determined: @3 dorky: @1 eccentric: @0 enthusiastic: @2 sincere: @0 optimistic: @3 negative: @2 passive: @4 sassy: @3 shy: @0 sympathetic: @3 troublemaker: @5]];
+    ALMCharacter *marceline = [[ALMCharacter alloc]initWithCharacter: @"Marceline the Vampire Queen/ n/ Marshall Lee the Vampire King" picture: [UIImage imageNamed: @"MtV"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @4 careful: @3 clever: @3 comedic: @2 courage: @4 creative: @5 despicable: @2 determined: @3 dorky: @1 eccentric: @0 enthusiastic: @2 sincere: @0 optimistic: @3 negative: @2 passive: @4 sassy: @3 shy: @0 sympathetic: @3 troublemaker: @5]];
     
     [characterList addObject: marceline];
     
@@ -111,7 +111,7 @@
     
     [characterList addObject: jake];
     
-    ALMCharacter *pbles = [[ALMCharacter alloc]initWithCharacter: @"Princess Bubblegum/ /n Prince Gumball" picture: [UIImage imageNamed: @"PBsTwo"] characterTraits:[[ALMCharacterTraits alloc] initWithAggressive: @3 careful: @4 clever: @5 comedic: @1 courage: @4 creative: @5 despicable: @0 determined: @4 dorky: @2 eccentric: @0 enthusiastic: @2 sincere: @0 optimistic:@3 negative: @0 passive: @2 sassy: @3  shy:@0 sympathetic: @4 troublemaker: @0]];
+    ALMCharacter *pbles = [[ALMCharacter alloc]initWithCharacter: @"Princess Bubblegum/ n/ Prince Gumball" picture: [UIImage imageNamed: @"PBsTwo"] characterTraits:[[ALMCharacterTraits alloc] initWithAggressive: @3 careful: @4 clever: @5 comedic: @1 courage: @4 creative: @5 despicable: @0 determined: @4 dorky: @2 eccentric: @0 enthusiastic: @2 sincere: @0 optimistic:@3 negative: @0 passive: @2 sassy: @3  shy:@0 sympathetic: @4 troublemaker: @0]];
     
     [characterList addObject: pbles];
     

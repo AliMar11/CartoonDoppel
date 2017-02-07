@@ -16,9 +16,10 @@
 @property (nonatomic, strong) ALMCharacter *playerTraits;
 @property (nonatomic, strong) NSArray *doppelListWithTraits;
 @property (nonatomic, strong) NSArray *topPlayerTraits;
+@property (nonatomic, strong) NSMutableArray *analysisData;
+@property (nonatomic, assign) NSNumber *counter;
 
 -(void)introduceRunnerUpsWithCompletion:(void(^)())completion;
 -(void)presentRunnerUps;
-
 
 @end

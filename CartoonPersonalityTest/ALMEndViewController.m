@@ -21,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *thankYouLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playAgainButton;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
-@property (assign, nonatomic) CGPoint *thankYouYOrigin;
 @property (weak, nonatomic) IBOutlet UILabel *doppelNameLabel;
 
 @end
@@ -32,12 +31,19 @@
 {
     [super viewDidLoad];
     
-    [self.doppelImageView setImage: self.theOne.mugshot];
+    self.counter = self.analysisData[2];
+    self.counter = @(self.counter.intValue + 1);
+    NSLog(@"ANAYSIS DATA IN ENDVC: \n%@", self.analysisData);
     self.doppelImageView.layer.cornerRadius = 10;
     self.doppelImageView.clipsToBounds = YES;
     self.thankYouLabel.layer.cornerRadius = 5;
     self.playAgainButton.alpha = 0;
     self.shareButton.alpha = 0;
+    
+    
+//    self.analysisData[2][0] = self.counter;
+    self.analysisData[2] = @(self.counter.intValue + 1);
+
     
     [self setUpDoppelInfo];
 }
@@ -52,7 +58,6 @@
     
     [UIView animateWithDuration: 0.9 delay: 0.4 options: UIViewAnimationOptionCurveEaseIn animations:
      ^{
-         self.doppelNameLabel.text = self.theOne.characterName;
          self.traitOne.alpha = 0.5;
          self.traitOne.alpha = 1;
          
@@ -71,8 +76,37 @@
      } completion:^(BOOL finished)
      {
          self.thankYouLabel.hidden = NO;
-         [self labelAnimation];
          
+         NSLog(@"\nENDVC...COUNTER:%@\n ANALYSIS COUNTER: %@\n", self.counter, self.analysisData[2]);
+         
+         if (self.counter.intValue <= 2)
+         {
+             [self labelAnimation];
+
+         }
+         else
+         {
+             [UIView transitionWithView: self.thankYouLabel duration: 0.9 options: UIViewAnimationOptionCurveEaseOut animations:^{
+                 
+                 CGFloat newY = self.thankYouLabel.center.y + self.view.bounds.size.width;
+                 [self.thankYouLabel setCenter: CGPointMake(self.thankYouLabel.center.x, newY)];
+                 
+                 self.playAgainButton.alpha = 1;
+                 self.shareButton.alpha = 1;
+                 
+             } completion:^(BOOL fin)
+              {
+                  [UIView animateWithDuration: 0.4 animations:
+                   ^{
+                       CGFloat newY = (CGFloat)self.view.bounds.size.height - 30;
+                       
+                       self.playAgainButton .center = CGPointMake( self.playAgainButton.center.x, newY);
+                       
+                       self.shareButton.center = CGPointMake(self.shareButton.center.x,  newY);
+                   }];
+              }];
+         }
+     
          self.thankYouLabel.layer.backgroundColor = [UIColor lightTextColor].CGColor;
      }];
 }
@@ -124,7 +158,7 @@
                         
                     } completion:^(BOOL fin)
                      {
-                         [UIView animateWithDuration: 0.4 animations:
+                         [UIView animateWithDuration: 0.3 animations:
                           ^{
                              CGFloat newY = (CGFloat)self.view.bounds.size.height - 30;
                             
@@ -153,7 +187,6 @@
             self.traitThree.alpha = 0;
             self.traitFour.alpha = 0;
             self.TraitFive.alpha = 0;
-
         }];
 
         UIStoryboard *story = [UIStoryboard storyboardWithName: @"Main"
@@ -168,18 +201,45 @@
 
 -(void)setUpDoppelInfo
 {
-    [self.traitOne setText: self.theOne.traits.topDoppelTraits[0]];
-    [self.traitTwo setText: self.theOne.traits.topDoppelTraits[1]];
-    [self.traitThree setText: self.theOne.traits.topDoppelTraits[2]];
-    [self.traitFour setText: self.theOne.traits.topDoppelTraits[3]];
-    [self.TraitFive setText: self.theOne.traits.topDoppelTraits[4]];
+    //this is the character most like the user... we call him/her 'topDog'.
+    //self.topDog = self.analysisData[1][0];
+    
+    if (!self.topDog)
+    {
+       self.topDog = self.analysisData[1][0];
+    }
+    
+    [self.doppelImageView setImage: self.topDog.mugshot];
+    self.doppelNameLabel.text = [self.analysisData[1][0]characterName];
+
+    //these are the top Five character traits for topDog.
+    ALMCharacterTraits *topDoppTraitOne = self.topDog.traits.topDoppelTraits[0];
+    ALMCharacterTraits *topDoppTraitTwo = self.topDog.traits.topDoppelTraits[1];
+    ALMCharacterTraits *topDoppTraitThree = self.topDog.traits.topDoppelTraits[2];
+    ALMCharacterTraits *topDoppTraitFour = self.topDog.traits.topDoppelTraits[3];
+    ALMCharacterTraits *topDoppTraitFive = self.topDog.traits.topDoppelTraits[4];
+    
+     [self.traitOne setText: (NSString*)topDoppTraitOne];
+     [self.traitTwo setText: (NSString*)topDoppTraitTwo];
+     [self.traitThree setText: (NSString*)topDoppTraitThree];
+     [self.traitFour setText: (NSString*)topDoppTraitFour];
+     [self.TraitFive setText: (NSString*)topDoppTraitFive];
+
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.identifier isEqual: @"backButtonSegue"])
+    {
+        ALMAnalysisViewController *analysisVC = segue.destinationViewController;
+        analysisVC.analysisData = self.analysisData;
+    }
+    else
+    {
     ALMShareViewController *shareVC = segue.destinationViewController;
-    shareVC.doppel = self.theOne;
+    shareVC.analysisData = self.analysisData;
+    }
 }
 
 - (void)didReceiveMemoryWarning
