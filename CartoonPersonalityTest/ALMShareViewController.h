@@ -15,5 +15,6 @@
 @interface ALMShareViewController : UIViewController
 @property (strong, nonatomic) ALMCharacter *doppel;
 @property (nonatomic, strong) NSMutableArray *analysisData;
+@property (nonatomic, strong) NSNumber *counter;
 
 @end

@@ -103,15 +103,15 @@
     
     [characterList addObject: rick];
     
-    ALMCharacter *marceline = [[ALMCharacter alloc]initWithCharacter: @"Marceline the Vampire Queen/ n/ Marshall Lee the Vampire King" picture: [UIImage imageNamed: @"MtV"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @4 careful: @3 clever: @3 comedic: @2 courage: @4 creative: @5 despicable: @2 determined: @3 dorky: @1 eccentric: @0 enthusiastic: @2 sincere: @0 optimistic: @3 negative: @2 passive: @4 sassy: @3 shy: @0 sympathetic: @3 troublemaker: @5]];
+    ALMCharacter *marceline = [[ALMCharacter alloc]initWithCharacter: [NSString stringWithFormat:@"%@\n%@", @"Marceline the Vampire Queen/", @"Marshall Lee the Vampire King" ] picture: [UIImage imageNamed: @"MtV"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @4 careful: @3 clever: @3 comedic: @2 courage: @4 creative: @5 despicable: @2 determined: @3 dorky: @1 eccentric: @0 enthusiastic: @2 sincere: @0 optimistic: @3 negative: @2 passive: @4 sassy: @3 shy: @0 sympathetic: @3 troublemaker: @5]];
     
     [characterList addObject: marceline];
     
-    ALMCharacter *jake = [[ALMCharacter alloc]initWithCharacter: @"Jake The Dog" picture: [UIImage imageNamed: @"jake3"] characterTraits:[[ALMCharacterTraits alloc] initWithAggressive: @2 careful: @2 clever: @3 comedic: @4 courage: @5 creative: @5 despicable: @0 determined: @3 dorky: @2 eccentric: @1 enthusiastic: @3 sincere: @2 optimistic: @4 negative: @3 passive: @3 sassy: @3 shy: @0 sympathetic: @3 troublemaker: @2]];
+    ALMCharacter *jake = [[ALMCharacter alloc]initWithCharacter: @"Jake The Dog" picture: [UIImage imageNamed: @"jake"] characterTraits:[[ALMCharacterTraits alloc] initWithAggressive: @2 careful: @2 clever: @3 comedic: @4 courage: @5 creative: @5 despicable: @0 determined: @3 dorky: @2 eccentric: @1 enthusiastic: @3 sincere: @2 optimistic: @4 negative: @3 passive: @3 sassy: @3 shy: @0 sympathetic: @3 troublemaker: @2]];
     
     [characterList addObject: jake];
     
-    ALMCharacter *pbles = [[ALMCharacter alloc]initWithCharacter: @"Princess Bubblegum/ n/ Prince Gumball" picture: [UIImage imageNamed: @"PBsTwo"] characterTraits:[[ALMCharacterTraits alloc] initWithAggressive: @3 careful: @4 clever: @5 comedic: @1 courage: @4 creative: @5 despicable: @0 determined: @4 dorky: @2 eccentric: @0 enthusiastic: @2 sincere: @0 optimistic:@3 negative: @0 passive: @2 sassy: @3  shy:@0 sympathetic: @4 troublemaker: @0]];
+    ALMCharacter *pbles = [[ALMCharacter alloc]initWithCharacter: [NSString stringWithFormat:@"%@\n%@", @"Princess Bubblegum/", @"Prince Gumball"] picture: [UIImage imageNamed: @"PBsTwo"] characterTraits:[[ALMCharacterTraits alloc] initWithAggressive: @3 careful: @4 clever: @5 comedic: @1 courage: @4 creative: @5 despicable: @0 determined: @4 dorky: @2 eccentric: @0 enthusiastic: @2 sincere: @0 optimistic:@3 negative: @0 passive: @2 sassy: @3  shy:@0 sympathetic: @4 troublemaker: @0]];
     
     [characterList addObject: pbles];
     
@@ -153,11 +153,11 @@
                                                  characterTraits: traits = [[ALMCharacterTraits alloc] initWithAggressive: @2 careful: @0 clever: @3 comedic: @4 courage: @2 creative: @1 despicable: @3 determined: @1 dorky: @0 eccentric: @0 enthusiastic: @1 sincere: @0 optimistic: @0 negative: @1 passive: @1 sassy: @3 shy: @0 sympathetic: @0 troublemaker: @5]];
     [characterList addObject: bart];
     
-    ALMCharacter *garnet = [[ALMCharacter alloc] initWithCharacter: @"Garnet" picture: [UIImage imageNamed: @"garnet2"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @0 careful: @3 clever: @4 comedic: @2 courage:@5 creative: @3 despicable: @0 determined: @3 dorky: @2 eccentric: @0 enthusiastic: @3 sincere: @4 optimistic: @4 negative: @0 passive: @2 sassy: @0 shy: @0 sympathetic: @3 troublemaker: @0]];
+    ALMCharacter *garnet = [[ALMCharacter alloc] initWithCharacter: @"Garnet1" picture: [UIImage imageNamed: @"garnet1"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @0 careful: @3 clever: @4 comedic: @2 courage:@5 creative: @3 despicable: @0 determined: @3 dorky: @2 eccentric: @0 enthusiastic: @3 sincere: @4 optimistic: @4 negative: @0 passive: @2 sassy: @0 shy: @0 sympathetic: @3 troublemaker: @0]];
     
     [characterList addObject: garnet];
     
-    ALMCharacter *steven = [[ALMCharacter alloc] initWithCharacter: @"Steven Universe" picture: [UIImage imageNamed: @"steven3"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @0 careful: @1 clever: @2 comedic: @1 courage: @5 creative: @4 despicable: @0 determined: @5 dorky: @4 eccentric: @0 enthusiastic: @3 sincere: @3 optimistic: @5 negative: @0 passive: @1 sassy: @1 shy: @0 sympathetic: @4 troublemaker: @0]];
+    ALMCharacter *steven = [[ALMCharacter alloc] initWithCharacter: @"Steven Universe" picture: [UIImage imageNamed: @"steven1"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @0 careful: @1 clever: @2 comedic: @1 courage: @5 creative: @4 despicable: @0 determined: @5 dorky: @4 eccentric: @0 enthusiastic: @3 sincere: @3 optimistic: @5 negative: @0 passive: @1 sassy: @1 shy: @0 sympathetic: @4 troublemaker: @0]];
     
     [characterList addObject: steven];
     
