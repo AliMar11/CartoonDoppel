@@ -97,6 +97,8 @@
     }];
     
     }
+    
+    
 //ELSE if self.analysisData has a value, then the user came back to this VC via use of the 'back' button and we don't
 //want to show the animations.
         else
@@ -109,7 +111,6 @@
 
             [self presentRunnerUps];
         }
-    
 }
 
 -(void)presentRunnerUps
@@ -156,6 +157,9 @@
 //ELSE this is the first playthough and we need to find the player's top 5 doppels, with VC animations
     else
     {
+        
+        dispatch_async(dispatch_get_main_queue(),
+                       ^{
     //TODO break up the sizable code below
     [ALMAnalysis sortUserTraits: self.playerTraits withCompletion:^(NSArray *sortedTraitsArray)
      {
@@ -239,7 +243,9 @@
                         }];
                 }];
             }];
+         
         }]; 
+                       });
     }
 }
 

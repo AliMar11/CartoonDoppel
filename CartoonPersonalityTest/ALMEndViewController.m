@@ -80,10 +80,15 @@
          
          if (self.counter.intValue <= 2)
          {
+             dispatch_async(dispatch_get_main_queue(),
+                            ^{
              [self labelAnimation];
+                            });
          }
          else
          {
+             dispatch_async(dispatch_get_main_queue(),
+                            ^{
              [UIView transitionWithView: self.thankYouLabel duration: 0.9 options: UIViewAnimationOptionCurveEaseOut animations:^{
                  
                  CGFloat newY = self.thankYouLabel.center.y + self.view.bounds.size.width;
@@ -103,6 +108,7 @@
                        self.shareButton.center = CGPointMake(self.shareButton.center.x,  newY);
                    }];
               }];
+                            });
          }
      
          self.thankYouLabel.layer.backgroundColor = [UIColor lightTextColor].CGColor;
@@ -111,6 +117,8 @@
 
 -(void)labelAnimation
 {
+    dispatch_async(dispatch_get_main_queue(),
+                   ^{
     self.thankYouLabel.textColor = [UIColor clearColor];
     [UIView transitionWithView: self.thankYouLabel
                       duration: 1/4
@@ -118,7 +126,8 @@
                     animations:
      ^{
          self.thankYouLabel.textColor = [UIColor blackColor];
-     } completion:^(BOOL finished)
+     }
+                    completion:^(BOOL finished)
     {[UIView animateWithDuration: 1.2 animations:
          ^{
              self.thankYouLabel.layer.backgroundColor = [UIColor greenColor].CGColor;
@@ -170,14 +179,14 @@
         }];
       }];
     }];
-
+                       
+                   });
 }
 
 -(IBAction) playAgainButtonPressed: (UIButton*) UIButton
 {
     if (self.playAgainButton)
     {
-        
         [UIView animateWithDuration: 0.8 animations:
          ^{
             self.traitOne.alpha = 0;
@@ -193,17 +202,17 @@
         
         secondViewController.modalPresentationStyle = UIModalPresentationOverFullScreen;
         secondViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        [self presentViewController:secondViewController animated:YES completion:nil];
+        [self presentViewController:secondViewController animated: YES completion: nil];
     }
 }
 
 -(void)setUpDoppelInfo
 {
-    //this is the character most like the user... we call him/her 'topDog'.
-    //self.topDog = self.analysisData[1][0];
-    
+//during a first playthrough, topDog will not have a value, grab it from self.analysisData. If topDog has a value, don't bother doing the extra work.
     if (!self.topDog)
     {
+
+//this is the character most like the user... we call him/her 'topDog'.
        self.topDog = self.analysisData[1][0];
     }
     
@@ -222,22 +231,24 @@
      [self.traitThree setText: (NSString*)topDoppTraitThree];
      [self.traitFour setText: (NSString*)topDoppTraitFour];
      [self.TraitFive setText: (NSString*)topDoppTraitFive];
-
 }
 
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqual: @"backButtonSegue"])
-    {
-        ALMAnalysisViewController *analysisVC = segue.destinationViewController;
-        analysisVC.analysisData = self.analysisData;
-    }
-    else
-    {
-    ALMShareViewController *shareVC = segue.destinationViewController;
-    shareVC.analysisData = self.analysisData;
-    }
+    
+        if ([segue.identifier isEqual: @"backButtonSegue"])
+        {
+          
+            ALMAnalysisViewController *analysisVC = segue.destinationViewController;
+            analysisVC.analysisData = self.analysisData;
+        }
+        else
+        {
+            ALMShareViewController *shareVC = segue.destinationViewController;
+            shareVC.analysisData = self.analysisData;
+        }
+  
 }
 
 - (void)didReceiveMemoryWarning

@@ -540,7 +540,7 @@
                                     <segue destination="OpF-Ek-Cvf" kind="show" id="Wrk-Du-yPj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwx-As-0hg" userLabel="doppelNameLabel" customClass="ALMLabelLayer">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwx-As-0hg" userLabel="doppelNameLabel" customClass="ALMLabelLayer">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -723,7 +723,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="aIw-RU-tpD" kind="show" id="0MU-lx-4xN"/>
+                                    <segue destination="aIw-RU-tpD" kind="show" id="Vb4-dF-bL6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -943,7 +943,7 @@
         <image name="twitter" width="1280" height="1280"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Q4P-Zd-uQp"/>
-        <segue reference="Pfz-6d-0Ig"/>
+        <segue reference="Vb4-dF-bL6"/>
+        <segue reference="aaz-A3-x1C"/>
     </inferredMetricsTieBreakers>
 </document>

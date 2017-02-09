@@ -65,8 +65,13 @@
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+//    dispatch_async(dispatch_get_main_queue(),
+//                   ^{
+    
+                       
     ALMEndViewController *endVC = segue.destinationViewController;
     endVC.analysisData = self.analysisData;
+              //     });
 }
 
 @end
