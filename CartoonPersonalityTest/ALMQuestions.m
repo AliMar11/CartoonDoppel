@@ -53,7 +53,7 @@
                                                            choiceA: @{@"Apologize and inform them there's a line." : @"Sympathetic"}
                                                            choiceB: @{@"Get mad but decide it's best not to say anything." : @"Negative"}
                                                            choiceC: @{@"Sheepishly tell them you've been waiting in line." : @"Shy"}
-                                                           choiceD: @{@"Give them a piece of your mind!Who do they think they are?" : @"Aggressive"}];
+                                                           choiceD: @{@"Give them a piece of your mind! Who do they think they are?" : @"Aggressive"}];
     [questionArray addObject: questionOne];
     
     ALMQuestions *questionTwo = [[ALMQuestions alloc] initWithQuestion: @"Your dream job entails..."
@@ -67,10 +67,10 @@
     
     ALMQuestions *questionThree = [[ALMQuestions alloc] initWithQuestion: @"When confronted with a problem at work or at home you tend to..."
                                                                   answers: @[]
-                                                               choiceA: @{@"Break up the problem in order to reach my goal, step by step." : @"Clever"}
-                                                               choiceB: @{@"Think of a solution that avoids the obstacle while obtaining my goal." : @"Creative"}
+                                                               choiceA: @{@"Break up the issue, step by step, in order to reach my goal." : @"Clever"}
+                                                               choiceB: @{@"Think of a solution that avoids the issue and still reaches my goal." : @"Creative"}
                                                                choiceC: @{@"I fight whatever is in my way." : @"Sassy"}
-                                                               choiceD: @{@"Think the problem must be there for a reason. It's probably not worth fighting." : @"Shy"}];
+                                                               choiceD: @{@"The problem must be there for a reason. It's probably not worth fighting." : @"Shy"}];
     
     [questionArray addObject: questionThree];
     
@@ -113,7 +113,7 @@
     ALMQuestions *questionEight = [[ALMQuestions alloc] initWithQuestion: @"Someone just wrongly put you on blast... what do you do?"
                                                                answers: @[]
                                                     choiceA: @{@"Let them know they're wrong." : @"Courage"}
-                                                    choiceB: @{@"You'll talk to them one-on-one. I don't want to cause a fight." : @"Careful"}
+                                                    choiceB: @{@"Talk to them one-on-one. I don't want to cause a fight." : @"Careful"}
                                                     choiceC: @{@"That sucks but I'll clear things up later." : @"Determined"}
                                                     choiceD: @{@"Ooooh you want to do that? It's on." : @"Troublemaker"}];
     
@@ -122,7 +122,7 @@
     ALMQuestions *questionNine = [[ALMQuestions alloc] initWithQuestion: @"Time to pick a movie with your friends! What are you thinking?"
                                                                    answers: @[]
                                                     choiceA: @{@"I'll watch whatever." : @"Enthusiastic"}
-                                                    choiceB: @{@"I'm interested in one or two, we can choose from one of those." : @"Despicable"}
+                                                    choiceB: @{@"I'm interested in one or two, we can choose from those." : @"Despicable"}
                                                     choiceC: @{@"I don't know what to watch... you pick." : @"Dorky"}
                                                     choiceD: @{@"We are watching this one." : @"Sassy"}];
     
@@ -133,11 +133,16 @@
                                                     choiceA: @{@"Go get him!" : @"Courage"}
                                                     choiceB: @{@"Ha! Who's dog got loose?" : @"Troublemaker"}
                                                     choiceC: @{@"It must be so scared!" : @"Sincere"}
-                                                    choiceD: @{@"Call it to you from the edge of the street when it's clear." : @"Careful"}];
+                                                    choiceD: @{@"Call it from the edge of the street when it's clear." : @"Careful"}];
     
     [questionArray addObject: questionTen];
     
-    ALMQuestions *questionEleven = [[ALMQuestions alloc] initWithQuestion: @"Someone complimented your work. How do you react?" answers: @[] choiceA: @{@"You thank them try to find a point to compliment them as well." : @"Sincere"} choiceB: @{@"That was so nice!": @"Optimistic"} choiceC:@{@"Thank them and share more information about the job with them.": @"Creative"} choiceD: @{@"Thank them and come back with a joke." :@"Clever"}];
+    ALMQuestions *questionEleven = [[ALMQuestions alloc] initWithQuestion: @"Someone complimented your work. How do you react?"
+                                                                  answers: @[]
+                                                                  choiceA: @{@"Thank them and think of a point to compliment them as well." : @"Sincere"}
+                                                                  choiceB: @{@"That was so nice!": @"Optimistic"}
+                                                                  choiceC:@{@"Thank them and share more information about the job.": @"Creative"}
+                                                                  choiceD: @{@"Thank them and come back with a joke." :@"Clever"}];
     
     [questionArray addObject: questionEleven];
 

@@ -60,9 +60,6 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZe-1c-bF5" userLabel="CVTwoContainerView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="440" width="414" height="89"/>
-                                </variation>
                                 <connections>
                                     <segue destination="FIY-dB-Zg9" kind="embed" id="OFf-dN-zFR"/>
                                 </connections>
@@ -89,7 +86,7 @@
                             <constraint firstItem="lxz-i1-GPl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="rdQ-9v-DX8"/>
                             <constraint firstItem="AZe-1c-bF5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tAG-gq-Ppk"/>
                             <constraint firstItem="AZe-1c-bF5" firstAttribute="height" secondItem="qXa-Cy-1a9" secondAttribute="height" id="veO-FJ-VUf">
-                                <variation key="heightClass=regular" constant="1"/>
+                                <variation key="heightClass=regular" constant="0.0"/>
                             </constraint>
                         </constraints>
                         <variation key="default">
@@ -168,7 +165,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-lR-IKm">
                                 <rect key="frame" x="-50" y="285" width="220" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton" customClass="ALMButtonLayer">
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Nk-hnF" userLabel="choiceAbutton" customClass="ALMButtonLayer">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Button"/>
@@ -176,21 +173,22 @@
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="0JT-jD-I57"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton" customClass="ALMButtonLayer">
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlk-PZ-qan" userLabel="choiceBbutton" customClass="ALMButtonLayer">
                                         <rect key="frame" x="58" y="0.0" width="46" height="30"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="2"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="430-ah-9Ng"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-Qe-sH8" userLabel="choiceCbutton" customClass="ALMButtonLayer">
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anf-Qe-sH8" userLabel="choiceCbutton" customClass="ALMButtonLayer">
                                         <rect key="frame" x="116" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="buttClicked:" destination="1fu-ia-xTs" eventType="touchUpInside" id="wkv-rb-06K"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton" customClass="ALMButtonLayer">
+                                    <button autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zp8-QL-pff" userLabel="choiceDbutton" customClass="ALMButtonLayer">
                                         <rect key="frame" x="174" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -464,10 +462,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6pi-GK-Qfl" userLabel="backgroundImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fHw-ES-nCu" userLabel="duppleMugShotImageView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fHw-ES-nCu" userLabel="duppelMugShotImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2eS-Jo-Egj" userLabel="duppleTraintsStackView">
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2eS-Jo-Egj" userLabel="duppelTraitsStackView">
                                 <rect key="frame" x="139" y="435" width="25" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P80-hG-gCh">
@@ -540,7 +538,7 @@
                                     <segue destination="OpF-Ek-Cvf" kind="show" id="Wrk-Du-yPj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwx-As-0hg" userLabel="doppelNameLabel" customClass="ALMLabelLayer">
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="none" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cwx-As-0hg" userLabel="doppelNameLabel" customClass="ALMLabelLayer">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
@@ -563,11 +561,12 @@
                             <constraint firstItem="Cwx-As-0hg" firstAttribute="top" secondItem="fHw-ES-nCu" secondAttribute="bottom" id="0fu-LC-elO"/>
                             <constraint firstItem="BrZ-7n-MNf" firstAttribute="width" secondItem="Aui-ie-zcu" secondAttribute="width" multiplier="0.4" id="0kC-si-O30"/>
                             <constraint firstItem="Cwx-As-0hg" firstAttribute="centerX" secondItem="6Ch-8j-XHe" secondAttribute="centerX" id="5qg-nq-Q07"/>
+                            <constraint firstItem="2eS-Jo-Egj" firstAttribute="top" relation="lessThanOrEqual" secondItem="Cwx-As-0hg" secondAttribute="bottom" multiplier="1.1" id="9Zy-kj-e4L"/>
                             <constraint firstItem="cNM-3h-3W3" firstAttribute="top" secondItem="61N-qp-8eZ" secondAttribute="bottom" constant="8" id="AUz-SD-dc7"/>
                             <constraint firstItem="fHw-ES-nCu" firstAttribute="centerY" secondItem="6pi-GK-Qfl" secondAttribute="centerY" id="AiA-p9-iXC"/>
                             <constraint firstItem="f1M-pb-xa4" firstAttribute="top" secondItem="Aui-ie-zcu" secondAttribute="bottom" multiplier="1.05" id="Ajo-eE-BIp"/>
                             <constraint firstItem="fHw-ES-nCu" firstAttribute="height" secondItem="6pi-GK-Qfl" secondAttribute="height" multiplier="0.7" id="BRw-zh-kLt"/>
-                            <constraint firstItem="Cwx-As-0hg" firstAttribute="height" secondItem="RDm-N2-RUH" secondAttribute="height" id="E4q-OE-kuS"/>
+                            <constraint firstItem="Cwx-As-0hg" firstAttribute="height" relation="greaterThanOrEqual" secondItem="RDm-N2-RUH" secondAttribute="height" id="E4q-OE-kuS"/>
                             <constraint firstItem="Cwx-As-0hg" firstAttribute="width" secondItem="fHw-ES-nCu" secondAttribute="width" id="EKL-Ch-dtZ"/>
                             <constraint firstItem="dUD-Fi-sH1" firstAttribute="trailing" secondItem="Aui-ie-zcu" secondAttribute="trailing" id="Ic8-kE-Uax"/>
                             <constraint firstItem="dUD-Fi-sH1" firstAttribute="width" secondItem="Aui-ie-zcu" secondAttribute="width" multiplier="0.4" id="M5b-ik-mKe"/>
@@ -600,6 +599,25 @@
                                 <exclude reference="cNM-3h-3W3"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Skh-0h-K8u"/>
+                                <exclude reference="Zxw-Bu-blN"/>
+                                <exclude reference="cNw-RV-mh8"/>
+                                <exclude reference="eoL-Rn-86v"/>
+                                <exclude reference="AUz-SD-dc7"/>
+                                <exclude reference="vG3-dq-AAw"/>
+                                <exclude reference="AiA-p9-iXC"/>
+                                <exclude reference="BRw-zh-kLt"/>
+                                <exclude reference="rI0-YC-35q"/>
+                                <exclude reference="x7z-Zj-RgS"/>
+                                <exclude reference="0fu-LC-elO"/>
+                                <exclude reference="5qg-nq-Q07"/>
+                                <exclude reference="E4q-OE-kuS"/>
+                                <exclude reference="EKL-Ch-dtZ"/>
+                                <exclude reference="9Zy-kj-e4L"/>
+                                <exclude reference="eDL-nK-BkT"/>
+                                <exclude reference="yeS-e1-7ep"/>
+                                <exclude reference="RGY-AN-XSl"/>
+                                <exclude reference="T2N-UO-7Zk"/>
                                 <exclude reference="Ajo-eE-BIp"/>
                                 <exclude reference="R4M-iY-tv7"/>
                                 <exclude reference="XK3-ub-bng"/>
@@ -607,27 +625,9 @@
                                 <exclude reference="0kC-si-O30"/>
                                 <exclude reference="NxI-66-SpC"/>
                                 <exclude reference="VsZ-hd-wPD"/>
-                                <exclude reference="AUz-SD-dc7"/>
-                                <exclude reference="vG3-dq-AAw"/>
                                 <exclude reference="Ic8-kE-Uax"/>
                                 <exclude reference="M5b-ik-mKe"/>
                                 <exclude reference="flr-wH-cDc"/>
-                                <exclude reference="RGY-AN-XSl"/>
-                                <exclude reference="T2N-UO-7Zk"/>
-                                <exclude reference="0fu-LC-elO"/>
-                                <exclude reference="5qg-nq-Q07"/>
-                                <exclude reference="E4q-OE-kuS"/>
-                                <exclude reference="EKL-Ch-dtZ"/>
-                                <exclude reference="Skh-0h-K8u"/>
-                                <exclude reference="Zxw-Bu-blN"/>
-                                <exclude reference="cNw-RV-mh8"/>
-                                <exclude reference="eoL-Rn-86v"/>
-                                <exclude reference="AiA-p9-iXC"/>
-                                <exclude reference="BRw-zh-kLt"/>
-                                <exclude reference="rI0-YC-35q"/>
-                                <exclude reference="x7z-Zj-RgS"/>
-                                <exclude reference="eDL-nK-BkT"/>
-                                <exclude reference="yeS-e1-7ep"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -641,6 +641,25 @@
                                 <include reference="cNM-3h-3W3"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Skh-0h-K8u"/>
+                                <include reference="Zxw-Bu-blN"/>
+                                <include reference="cNw-RV-mh8"/>
+                                <include reference="eoL-Rn-86v"/>
+                                <include reference="AUz-SD-dc7"/>
+                                <include reference="vG3-dq-AAw"/>
+                                <include reference="AiA-p9-iXC"/>
+                                <include reference="BRw-zh-kLt"/>
+                                <include reference="rI0-YC-35q"/>
+                                <include reference="x7z-Zj-RgS"/>
+                                <include reference="0fu-LC-elO"/>
+                                <include reference="5qg-nq-Q07"/>
+                                <include reference="E4q-OE-kuS"/>
+                                <include reference="EKL-Ch-dtZ"/>
+                                <include reference="9Zy-kj-e4L"/>
+                                <include reference="eDL-nK-BkT"/>
+                                <include reference="yeS-e1-7ep"/>
+                                <include reference="RGY-AN-XSl"/>
+                                <include reference="T2N-UO-7Zk"/>
                                 <include reference="Ajo-eE-BIp"/>
                                 <include reference="R4M-iY-tv7"/>
                                 <include reference="XK3-ub-bng"/>
@@ -648,27 +667,9 @@
                                 <include reference="0kC-si-O30"/>
                                 <include reference="NxI-66-SpC"/>
                                 <include reference="VsZ-hd-wPD"/>
-                                <include reference="AUz-SD-dc7"/>
-                                <include reference="vG3-dq-AAw"/>
                                 <include reference="Ic8-kE-Uax"/>
                                 <include reference="M5b-ik-mKe"/>
                                 <include reference="flr-wH-cDc"/>
-                                <include reference="RGY-AN-XSl"/>
-                                <include reference="T2N-UO-7Zk"/>
-                                <include reference="0fu-LC-elO"/>
-                                <include reference="5qg-nq-Q07"/>
-                                <include reference="E4q-OE-kuS"/>
-                                <include reference="EKL-Ch-dtZ"/>
-                                <include reference="Skh-0h-K8u"/>
-                                <include reference="Zxw-Bu-blN"/>
-                                <include reference="cNw-RV-mh8"/>
-                                <include reference="eoL-Rn-86v"/>
-                                <include reference="AiA-p9-iXC"/>
-                                <include reference="BRw-zh-kLt"/>
-                                <include reference="rI0-YC-35q"/>
-                                <include reference="x7z-Zj-RgS"/>
-                                <include reference="eDL-nK-BkT"/>
-                                <include reference="yeS-e1-7ep"/>
                             </mask>
                         </variation>
                     </view>

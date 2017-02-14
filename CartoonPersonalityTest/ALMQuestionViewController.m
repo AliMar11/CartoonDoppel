@@ -60,14 +60,8 @@
 
          ALMQuestions *question = self.questionList[self.questionCounter];
         self.questionTextView.text = question.question;
-
-//the code below resizes font in the questionsTextView- so all words fit(otherwise some questions will get cut off in smaller devices)
-         while (((CGSize) [self.questionTextView sizeThatFits:self.questionTextView.frame.size]).height > self.questionTextView.frame.size.height)
-         {
-             self.questionTextView.font = [self.questionTextView.font fontWithSize:self.questionTextView.font.pointSize-1];
-         }
          
-//below is how each possible answer is given to each button
+//below is how answers are set to each button
         [self.choiceAbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceA.allKeys[0]] forState:UIControlStateNormal];
         [self.choiceBbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceB.allKeys[0]] forState: UIControlStateNormal];
         [self.choiceCbutton setTitle: [NSString stringWithFormat: @"%@", question.choiceC.allKeys[0]] forState: UIControlStateNormal];
@@ -125,7 +119,7 @@
 
 -(void)viewSetup
 {
-//below is a customer UI setup for all questions
+//below is a customer UI setup for all 4 buttons
     self.questionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
     NSArray *buttonArray = [NSArray arrayWithObjects: self.choiceAbutton, self.choiceBbutton, self.choiceCbutton, self.choiceDbutton, nil];
     
@@ -133,21 +127,23 @@
 
     for (UIButton *button in buttonArray)
     {
-        button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        button.titleLabel.adjustsFontSizeToFitWidth = YES;
-        button.titleLabel.numberOfLines = 3;
-        button.titleLabel.minimumScaleFactor = 0.6;
-        button.titleLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
         CALayer *buttLayer = button.layer;
         buttonGrades.frame = button.bounds;
         button.backgroundColor = [UIColor grayColor];
         [button setAlpha: 0.9f];
         [buttLayer setCornerRadius: 7.0f];
         [buttLayer setBorderWidth: 1.3f];
-   
+        
+        button.titleLabel.numberOfLines = 3;
+        [button.titleLabel setAdjustsFontSizeToFitWidth: YES];
         [button.titleLabel setFont: [UIFont fontWithName: @"Verdana-Bold" size: 15]];
         [button setTitleColor: [UIColor purpleColor] forState: UIControlStateNormal];
-        [button.titleLabel setAdjustsFontSizeToFitWidth: YES];
+
+//the code below helps to adjust the text for each button, if the frame of the text is bigger than the frame of the button, make the text a tad smaller...
+        while (((CGSize) [button sizeThatFits: button.frame.size]).height > self.nextButton.frame.size.height)
+        {
+            button.titleLabel.font = [button.titleLabel.font fontWithSize: button.titleLabel.font.pointSize-1];
+        }
     }
 }
 

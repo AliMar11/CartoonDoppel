@@ -76,8 +76,7 @@
      {
          self.thankYouLabel.hidden = NO;
          
-       //  NSLog(@"\nENDVC...COUNTER:%@\n ANALYSIS COUNTER: %@\n", self.counter, self.analysisData[2]);
-         
+//if the counter is less than or equal to 2, then this is the players first time on this VC, trigger all the animations
          if (self.counter.intValue <= 2)
          {
              dispatch_async(dispatch_get_main_queue(),
@@ -85,6 +84,7 @@
              [self labelAnimation];
                             });
          }
+//if the counter is more than two then the player hit the back button, skip animations and just give info
          else
          {
              dispatch_async(dispatch_get_main_queue(),
@@ -111,7 +111,7 @@
                             });
          }
      
-         self.thankYouLabel.layer.backgroundColor = [UIColor lightTextColor].CGColor;
+        // self.thankYouLabel.layer.backgroundColor = [UIColor lightTextColor].CGColor;
      }];
 }
 

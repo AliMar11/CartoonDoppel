@@ -34,12 +34,12 @@
 {
     self.backgroundLayer.frame = self.bounds;
     self.highlightedStateLayer.frame = self.bounds;
-    
     [super layoutSubviews];
 }
 
 -(void)setHighlighted:(BOOL)highlighted
 {
+//!!!buttons with tag == 2 is a share button located in ALMShareVC, they should not be setup like any other button throughout the app. !!!
     if (self.tag != 2)
     {
     [CATransaction begin];
@@ -57,20 +57,17 @@
 //setters for all UIbutton layers
 -(void)drawButton
 {
+    CALayer *buttonLayer = self.layer;
+    buttonLayer.cornerRadius = 5;
+    buttonLayer.borderWidth = 1;
+    
     if (self.tag != 2)
     {
-        CALayer *buttonLayer = self.layer;
-        buttonLayer.cornerRadius = 5;
-        buttonLayer.borderWidth = 1;
         buttonLayer.borderColor = [UIColor darkGrayColor].CGColor;
     }
         else
         {
-            CALayer *buttonLayer = self.layer;
-            buttonLayer.cornerRadius = 5;
-            buttonLayer.borderWidth = 1;
             buttonLayer.borderColor = [UIColor clearColor].CGColor;
-        
         }
 }
 
@@ -78,7 +75,8 @@
 {
     if (self.tag != 2)
     {
-        
+//to be safe, we check if the background layer is set
+
         if (!_backgroundLayer)
         {
         self.backgroundLayer = [CAGradientLayer layer];
@@ -90,15 +88,14 @@
         
         [self.layer insertSublayer: self.backgroundLayer atIndex: 0];
         }
-    }
-        
+    }        
 }
 
 -(void)drawHighlightedButtonState
 {
     if (self.tag != 2)
     {
-        
+//to be safe, we check if the highlighted state layer is set
         if (!_highlightedStateLayer)
         {
             self.highlightedStateLayer = [CAGradientLayer layer];
@@ -111,20 +108,5 @@
             [self.layer insertSublayer: self.highlightedStateLayer atIndex: 1];
         }
     }
-    else
-    {
-//        if (!_highlightedStateLayer)
-//        {
-//            self.highlightedStateLayer = [CAGradientLayer layer];
-//            self.highlightedStateLayer.cornerRadius = 5;
-//            self.highlightedStateLayer.colors = (@[(id)[UIColor clearColor].CGColor,
-//                                                   (id)[UIColor clearColor].CGColor]);
-//           
-//            self.highlightedStateLayer.locations = (@[@0.0f, @1.0f]);
-//            
-//            [self.layer insertSublayer: self.highlightedStateLayer atIndex: 1];
-//        }
-    }
-    
 }
 @end
