@@ -63,8 +63,8 @@
 // if self.analysisData is empty, then this is the first playthrough and we want to show all animations.
     if (!self.analysisData)
     {
-         self.topFourIntro = [NSString stringWithFormat: @"%@, your choices have been analyzed... some honorable mentions are:", self.playerTraits.userName];
-    
+        
+        self.topFourIntro = [NSString stringWithFormat: @"%@, your choices have been analyzed... some characters you might identify with are:", self.playerTraits.userName];
     
     UITextView *topFourView = [[UITextView alloc]init];
     [self.view insertSubview: topFourView atIndex: 0];
@@ -83,7 +83,7 @@
     CGRect textViewFrame = CGRectMake(textViewX, textViewY, textViewWidth, textViewheight);
     topFourView.frame = textViewFrame;
     
-    [UIView animateWithDuration: 2.0f
+    [UIView animateWithDuration: 3.5f
                           delay: 1.5f
                         options: UIViewAnimationOptionTransitionNone animations:
      ^{
@@ -104,11 +104,7 @@
         else
         {
             NSLog(@"COUNTER1:%@", self.counter);
-
-            //self.counter = @(self.counter.intValue + 1); // this makes counter == 2
             
-            NSLog(@"COUNTER 1.5 :%@", self.counter);
-
             [self presentRunnerUps];
         }
 }
@@ -193,12 +189,6 @@
                         self.analysisData = [NSMutableArray arrayWithObjects: self.playerTraits.userName, topFiveHanchos, self.counter, nil];
 
                         NSLog(@"COUNTER2:%@", self.counter);
- //self.analysisData = [NSMutableArray arrayWithObjects:
-                        //[self.analysisData addObject: self.playerTraits.userName];
-//                        [self.analysisData addObjectsFromArray: topFiveHanchos];
-//                        [self.analysisData arrayByAddingObject: self.counter];
-
-                        
                         
                         [UIView transitionWithView: self.doppelStackView
                                           duration:1.2f
@@ -240,7 +230,7 @@
                                                 completion: nil];
                                 }];
                                             //  NSLog(@"LIKENESS OF TOP 4\n%d\n%d\n%d\n%d\n%d",[topFiveHanchos[0]likeness], [topFiveHanchos[1]likeness], [topFiveHanchos[2]likeness], [topFiveHanchos[3]likeness], [topFiveHanchos[4]likeness]);
-                        }];
+                    }];
                 }];
             }];
          

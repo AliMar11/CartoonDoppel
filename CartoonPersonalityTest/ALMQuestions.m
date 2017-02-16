@@ -106,7 +106,7 @@
                                                     choiceA: @{@"What! This is amazing- can't wait!" : @"Courage"}
                                                     choiceB: @{@"There are a million things that can go wrong." : @"Careful"}
                                                     choiceC: @{@"Ha! Time to do all the things I usually can't!" : @"Despicable"}
-                                                    choiceD: @{@"I wonder what the culture will be like?" : @"Sympathetic"}];
+                                                    choiceD: @{@"I wonder what the culture will be like." : @"Sympathetic"}];
     
     [questionArray addObject: questionSeven];
     

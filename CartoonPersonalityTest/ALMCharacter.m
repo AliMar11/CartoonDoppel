@@ -117,7 +117,7 @@
     
     [characterList addObject: jake];
     
-    ALMCharacter *leela = [[ALMCharacter alloc]initWithCharacter: @"Leela" picture: [UIImage imageNamed: @"leela"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @2 careful: @4 clever: @4 comedic: @2 courage: @5 creative: @3 despicable: @0 determined: @3 dorky: @0 eccentric: @0 enthusiastic: @3 sincere: @0 optimistic: @3 negative: @3 passive: @2 sassy: @3 shy: @0 sympathetic: @5 troublemaker: @0]];
+    ALMCharacter *leela = [[ALMCharacter alloc]initWithCharacter: @"Leela" picture: [UIImage imageNamed: @"leela"] characterTraits: [[ALMCharacterTraits alloc] initWithAggressive: @3 careful: @3 clever: @4 comedic: @2 courage: @5 creative: @3 despicable: @0 determined: @5 dorky: @0 eccentric: @0 enthusiastic: @3 sincere: @0 optimistic: @2 negative: @2 passive: @1 sassy: @4 shy: @0 sympathetic: @5 troublemaker: @0]];
     
     [characterList addObject: leela];
 
