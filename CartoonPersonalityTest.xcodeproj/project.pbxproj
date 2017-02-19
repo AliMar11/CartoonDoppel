@@ -431,7 +431,7 @@
 				);
 				INFOPLIST_FILE = CartoonPersonalityTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FLKY4JYBS5.com.aliApps.CartoonDoppel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliApps.CartoonDoppel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -450,7 +450,7 @@
 				);
 				INFOPLIST_FILE = CartoonPersonalityTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FLKY4JYBS5.com.aliApps.CartoonDoppel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aliApps.CartoonDoppel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

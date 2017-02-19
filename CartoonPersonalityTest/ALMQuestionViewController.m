@@ -56,7 +56,7 @@
     [ALMQuestions createQuestions: ^(NSMutableArray * questionsArray)
      {
          self.questionList = questionsArray;
-         self.progressIndicatorLabel.text = [NSString stringWithFormat: @"%d / %lu", self.progress, self.questionList.count -1];
+         self.progressIndicatorLabel.text = [NSString stringWithFormat: @"%d / %u", self.progress, (int)self.questionList.count -1];
 
          ALMQuestions *question = self.questionList[self.questionCounter];
         self.questionTextView.text = question.question;

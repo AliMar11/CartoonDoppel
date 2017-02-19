@@ -93,6 +93,7 @@
       }
          completion:^(BOOL finished)
         {
+            
             [self presentRunnerUps];
     }];
     

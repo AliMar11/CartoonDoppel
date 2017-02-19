@@ -146,7 +146,7 @@
     
     [questionArray addObject: questionEleven];
 
-    ALMQuestions *questionTwelve = [[ALMQuestions alloc] initWithQuestion: @"One of your favorite passtimes include..." answers: @[] choiceA: @{@"Man, I don't know." : @"Negative"} choiceB: @{@"I enjoy hanging out with my friends.": @"Comedic"} choiceC: @{@"Playing an instrument or making crafts.": @"Creative"} choiceD: @{@"I priortitize chores and play- that feels good to me.": @"Clever"}];
+    ALMQuestions *questionTwelve = [[ALMQuestions alloc] initWithQuestion: @"One of your favorite pastimes include..." answers: @[] choiceA: @{@"Man, I don't know." : @"Negative"} choiceB: @{@"I enjoy hanging out with my friends.": @"Comedic"} choiceC: @{@"Playing an instrument or making crafts.": @"Creative"} choiceD: @{@"I priortitize chores and play- that feels good to me.": @"Clever"}];
     
     [questionArray addObject: questionTwelve];
     
