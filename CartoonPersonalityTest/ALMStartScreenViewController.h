@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ALMStartScreenViewController.h
 //  CartoonPersonalityTest
 //
 //  Created by Alicia Marisal on 9/21/16.

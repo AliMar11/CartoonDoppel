@@ -1,5 +1,5 @@
 //
-//  ALMDuppleCollectionViewCell.h
+//  ALMDoppelCollectionViewCell.h
 //  CartoonPersonalityTest
 //
 //  Created by Alicia Marisal on 10/12/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALMDuppelCollectionViewCell : UICollectionViewCell
+@interface ALMDoppelCollectionViewCell : UICollectionViewCell
 
 @end

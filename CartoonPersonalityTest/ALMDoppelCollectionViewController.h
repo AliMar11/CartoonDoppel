@@ -1,5 +1,5 @@
 //
-//  ALMDuppleCollectionViewController.h
+//  ALMDoppelCollectionViewController.h
 //  CartoonPersonalityTest
 //
 //  Created by Alicia Marisal on 10/10/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALMDuppelCollectionViewController : UIViewController
+@interface ALMDoppelCollectionViewController : UIViewController
 
 @end

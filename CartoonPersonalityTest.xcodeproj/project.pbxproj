@@ -42,7 +42,7 @@
 		2B316BCD1E2F5584007D1182 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Framework/Bolts.framework; sourceTree = "<group>"; };
 		2B316BCE1E2F5584007D1182 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Framework/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		2B316BD01E2F5584007D1182 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Framework/FBSDKShareKit.framework; sourceTree = "<group>"; };
-		2B32F0DD1DABF924009E08D9 /* ALMDuppelCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMDuppelCollectionViewController.h; sourceTree = "<group>"; };
+		2B32F0DD1DABF924009E08D9 /* ALMDoppelCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMDoppelCollectionViewController.h; sourceTree = "<group>"; };
 		2B32F0DE1DABF924009E08D9 /* ALMDuppelCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMDuppelCollectionViewController.m; sourceTree = "<group>"; };
 		2B33EA691DADF55A00B71096 /* ALMQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMQuestionViewController.h; sourceTree = "<group>"; };
 		2B33EA6A1DADF55A00B71096 /* ALMQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMQuestionViewController.m; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		2B89C1AB1E07571D00A481C8 /* ALMLabelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMLabelLayer.h; sourceTree = "<group>"; };
 		2B89C1AC1E07571D00A481C8 /* ALMLabelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMLabelLayer.m; sourceTree = "<group>"; };
 		2BC1BB261DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMDuppelCollectionViewCell.m; sourceTree = "<group>"; };
-		2BC1BB281DC6B3EF00A680FE /* ALMDuppelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMDuppelCollectionViewCell.h; sourceTree = "<group>"; };
+		2BC1BB281DC6B3EF00A680FE /* ALMDoppelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMDoppelCollectionViewCell.h; sourceTree = "<group>"; };
 		2BC522C31DC40D9D00A4ED02 /* ALMAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMAnalysis.h; sourceTree = "<group>"; };
 		2BC522C41DC40D9D00A4ED02 /* ALMAnalysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMAnalysis.m; sourceTree = "<group>"; };
 		2BCB52401E395B1700F1DCB1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -106,7 +106,7 @@
 			children = (
 				2B60C2ED1D93212D00587B77 /* ALMStartScreenViewController.h */,
 				2B60C2EE1D93212D00587B77 /* ALMStartScreenViewController.m */,
-				2B32F0DD1DABF924009E08D9 /* ALMDuppelCollectionViewController.h */,
+				2B32F0DD1DABF924009E08D9 /* ALMDoppelCollectionViewController.h */,
 				2B32F0DE1DABF924009E08D9 /* ALMDuppelCollectionViewController.m */,
 				2B33EA691DADF55A00B71096 /* ALMQuestionViewController.h */,
 				2B33EA6A1DADF55A00B71096 /* ALMQuestionViewController.m */,
@@ -193,7 +193,7 @@
 				2B60C2EB1D93212D00587B77 /* AppDelegate.m */,
 				2BC522C31DC40D9D00A4ED02 /* ALMAnalysis.h */,
 				2BC522C41DC40D9D00A4ED02 /* ALMAnalysis.m */,
-				2BC1BB281DC6B3EF00A680FE /* ALMDuppelCollectionViewCell.h */,
+				2BC1BB281DC6B3EF00A680FE /* ALMDoppelCollectionViewCell.h */,
 				2BC1BB261DC6B3D600A680FE /* ALMDuppelCollectionViewCell.m */,
 			);
 			name = Controller;
@@ -226,11 +226,12 @@
 		2B60C2DC1D93212D00587B77 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = AliApps;
 				TargetAttributes = {
 					2B60C2E31D93212D00587B77 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = FLKY4JYBS5;
 					};
 				};
 			};
@@ -342,8 +343,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -387,8 +390,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -417,6 +422,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = FLKY4JYBS5;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/aliciamarisal/Desktop/Codeland.20/CartoonPersonalityTest/Framework,
 					"$(PROJECT_DIR)/Framework",
@@ -424,7 +431,7 @@
 				);
 				INFOPLIST_FILE = CartoonPersonalityTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aliApps.CartoonPersonalityTest;
+				PRODUCT_BUNDLE_IDENTIFIER = FLKY4JYBS5.com.aliApps.CartoonDoppel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -434,6 +441,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = FLKY4JYBS5;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Users/aliciamarisal/Desktop/Codeland.20/CartoonPersonalityTest/Framework,
 					"$(PROJECT_DIR)/Framework",
@@ -441,7 +450,7 @@
 				);
 				INFOPLIST_FILE = CartoonPersonalityTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aliApps.CartoonPersonalityTest;
+				PRODUCT_BUNDLE_IDENTIFIER = FLKY4JYBS5.com.aliApps.CartoonDoppel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

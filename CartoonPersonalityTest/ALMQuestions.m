@@ -74,10 +74,10 @@
     
     [questionArray addObject: questionThree];
     
-    ALMQuestions *questionFour = [[ALMQuestions alloc] initWithQuestion: @"You tend to look back at past problems and..."
+    ALMQuestions *questionFour = [[ALMQuestions alloc] initWithQuestion: @"How do you view past problems?"
                                                                   answers: @[]
-                                                    choiceA: @{@"Make fun of them." : @"Comedic"}
-                                                    choiceB: @{@"Think of how I'll do better next time!" : @"Enthusiastic"}
+                                                    choiceA: @{@"I make fun of them." : @"Comedic"}
+                                                    choiceB: @{@"I think of how I'll do better next time!" : @"Enthusiastic"}
                                                     choiceC: @{@"Hmmm... that sucked." : @"Dorky"}
                                                     choiceD: @{@"I... am always right." : @"Sassy"}];
     

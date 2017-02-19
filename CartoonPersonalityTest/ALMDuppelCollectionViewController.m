@@ -6,22 +6,22 @@
 //  Copyright © 2016 AliApps. All rights reserved.
 //
 
-#import "ALMDuppelCollectionViewController.h"
-#import "ALMDuppelCollectionViewCell.h"
+#import "ALMDoppelCollectionViewController.h"
+#import "ALMDoppelCollectionViewCell.h"
 #import "ALMBackgroundLayer.h"
 
-@interface ALMDuppelCollectionViewController () <UICollectionViewDataSource>
+@interface ALMDoppelCollectionViewController () <UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewOne;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewTwo;
 @property (nonatomic, strong) NSArray *doppelPictures;
 @property (nonatomic, assign) int horizontalScrollValue;
-@property (strong, nonatomic) ALMDuppelCollectionViewCell *cellOne;
-@property (strong, nonatomic) ALMDuppelCollectionViewCell *cellTwo;
+@property (strong, nonatomic) ALMDoppelCollectionViewCell *cellOne;
+@property (strong, nonatomic) ALMDoppelCollectionViewCell *cellTwo;
 @property (strong, nonatomic) NSArray *dopplePicturesReversed;
 
 @end
 
-@implementation ALMDuppelCollectionViewController
+@implementation ALMDoppelCollectionViewController
 
 static NSString * const reuseIdentifier = @"doppelPictureCell";
 
@@ -79,7 +79,7 @@ static NSString * const reuseIdentifier = @"doppelPictureCell";
 
 - (UICollectionViewCell *)collectionView: (UICollectionView *)collectionView cellForItemAtIndexPath: (NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = (ALMDuppelCollectionViewCell *)[ collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
+    UICollectionViewCell *cell = (ALMDoppelCollectionViewCell *)[ collectionView dequeueReusableCellWithReuseIdentifier: reuseIdentifier forIndexPath: indexPath];
     
     
         UIImage *mugshot = [[UIImage alloc] init];
